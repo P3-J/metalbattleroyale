@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://40lu3m3gihnu"
+path="res://.godot/imported/plains.1.map-ea3fc2b0cd6f57b61edd84a1188fb8d9.tres"
+
+[deps]
+
+source_file="res://trenchmaps/autosave/plains.1.map"
+dest_files=["res://.godot/imported/plains.1.map-ea3fc2b0cd6f57b61edd84a1188fb8d9.tres"]
+
+[params]
+

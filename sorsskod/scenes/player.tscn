@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://ci68fw2n1ryfk"]
+
+[ext_resource type="Script" uid="uid://bas57x0npfova" path="res://sorsskod/kood/Player.cs" id="1_whmsy"]
+[ext_resource type="Shader" uid="uid://g5a0bn1xs00x" path="res://sorsskod/shaders/ps1.gdshader" id="2_4o5ng"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_wygqo"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4o5ng"]
+shader = ExtResource("2_4o5ng")
+shader_parameter/resolution_x = 640
+shader_parameter/resolution_y = 480
+shader_parameter/color_bit_depth = 4
+shader_parameter/dither_strength = 0.01
+shader_parameter/jitter_amount = 0.008
+shader_parameter/jitter_speed = 0.4
+shader_parameter/jitter_frequency = 10.0
+shader_parameter/chromatic_aberration_strength = 0.015
+shader_parameter/vignette_strength = 0.8
+shader_parameter/vignette_radius = 0.9
+
+[node name="player" type="CharacterBody3D" node_paths=PackedStringArray("_head", "_camera")]
+script = ExtResource("1_whmsy")
+_head = NodePath("head")
+_camera = NodePath("head/Camera3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_wygqo")
+
+[node name="head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3045752, 0)
+
+[node name="Camera3D" type="Camera3D" parent="head"]
+
+[node name="Control" type="Control" parent="head/Camera3D"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="head/Camera3D/Control"]
+material = SubResource("ShaderMaterial_4o5ng")
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 480.0
+mouse_filter = 2
+
+[node name="SpotLight3D" type="SpotLight3D" parent="head"]
+visible = false
+light_energy = 1.965
+shadow_enabled = true
+spot_range = 7.487002
+spot_angle = 29.531246
