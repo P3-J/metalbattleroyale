@@ -1,10 +1,12 @@
-[gd_scene load_steps=39 format=4 uid="uid://rjus68fpo076"]
+[gd_scene load_steps=52 format=4 uid="uid://rjus68fpo076"]
 
 [ext_resource type="Script" uid="uid://cn46hnbpnmitv" path="res://addons/func_godot/src/map/func_godot_map.gd" id="1_0hbar"]
 [ext_resource type="Resource" uid="uid://bkhxcqsquw1yg" path="res://addons/func_godot/func_godot_default_map_settings.tres" id="2_o6v2o"]
 [ext_resource type="Material" uid="uid://du0ql81a46hdg" path="res://textures/rock_wall_13_diff_1k.tres" id="3_o6v2o"]
 [ext_resource type="Material" uid="uid://crm5nfuokh35v" path="res://textures/japanese_stone_wall_diff_1k.tres" id="4_d5suu"]
 [ext_resource type="PackedScene" uid="uid://ci68fw2n1ryfk" path="res://sorsskod/scenes/player.tscn" id="4_o6v2o"]
+[ext_resource type="Shader" uid="uid://bjsorxc7qq02b" path="res://sorsskod/shaders/ripbutton.gdshader" id="6_6elju"]
+[ext_resource type="Texture2D" uid="uid://ojs2biwgyuwi" path="res://sorsskod/assets/SMPJ_Luigi.png" id="7_0e5fs"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_d5suu"]
 _surfaces = [{
@@ -133,112 +135,278 @@ sky_material = SubResource("ProceduralSkyMaterial_d5suu")
 [sub_resource type="Environment" id="Environment_6elju"]
 background_mode = 1
 background_color = Color(0.737193, 0.7371929, 0.7371929, 1)
+background_energy_multiplier = 0.07
 sky = SubResource("Sky_nc5hy")
-ssil_enabled = true
+glow_intensity = 2.53
+glow_bloom = 0.13
+glow_blend_mode = 0
+glow_hdr_threshold = 0.18
+volumetric_fog_emission_energy = 0.1
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_nc5hy"]
+viewport_path = NodePath("general/SubViewport")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6elju"]
+shader = ExtResource("6_6elju")
+shader_parameter/glitch_chance = 0.2
+shader_parameter/glitch_speed = 7.0
+shader_parameter/slice_density = 14.0
+shader_parameter/slice_strength = 0.38
+shader_parameter/shake_strength = 0.02
+shader_parameter/chroma_offset = 0.016
+shader_parameter/noise_strength = 0.2
+shader_parameter/color_flash_strength = 0.4
+shader_parameter/scanline_strength = 0.18
+shader_parameter/local_warp_strength = 0.14
+shader_parameter/flip_chance = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0e5fs"]
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+grow_amount = -0.214
+
+[sub_resource type="SphereMesh" id="SphereMesh_2vewt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6elju"]
+emission_enabled = true
+emission = Color(1, 0.2, 0, 1)
+emission_energy_multiplier = 1.11
+grow_amount = -0.214
+
+[sub_resource type="SphereMesh" id="SphereMesh_0e5fs"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2vewt"]
+emission_enabled = true
+emission = Color(0.9254902, 0, 0.9137255, 1)
+grow = true
+
+[sub_resource type="TextMesh" id="TextMesh_films"]
+material = SubResource("StandardMaterial3D_2vewt")
+text = "TEXT MESH LMAO"
+pixel_size = 0.02
+depth = 1.0
+
+[sub_resource type="Animation" id="Animation_6elju"]
+resource_name = "rot"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:mesh:material:grow")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:mesh:material:grow_amount")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 3.985, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_0e5fs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:mesh:material:grow")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:mesh:material:grow_amount")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2vewt"]
+_data = {
+&"RESET": SubResource("Animation_0e5fs"),
+&"rot": SubResource("Animation_6elju")
+}
 
 [node name="master" type="Node3D"]
 
-[node name="FuncGodotMap" type="Node3D" parent="."]
+[node name="worldDefaults" type="Node3D" parent="."]
+
+[node name="FuncGodotMap" type="Node3D" parent="worldDefaults"]
 script = ExtResource("1_0hbar")
 local_map_file = "uid://b2fn3kuppdhhl"
 map_settings = ExtResource("2_o6v2o")
 metadata/_custom_type_script = "uid://cn46hnbpnmitv"
 
-[node name="entity_0_worldspawn" type="StaticBody3D" parent="FuncGodotMap"]
+[node name="entity_0_worldspawn" type="StaticBody3D" parent="worldDefaults/FuncGodotMap"]
 collision_mask = 0
 
-[node name="entity_0_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_0_worldspawn"]
+[node name="entity_0_mesh_instance" type="MeshInstance3D" parent="worldDefaults/FuncGodotMap/entity_0_worldspawn"]
 mesh = SubResource("ArrayMesh_d5suu")
 
-[node name="entity_0_occluder_instance" type="OccluderInstance3D" parent="FuncGodotMap/entity_0_worldspawn"]
+[node name="entity_0_occluder_instance" type="OccluderInstance3D" parent="worldDefaults/FuncGodotMap/entity_0_worldspawn"]
 occluder = SubResource("ArrayOccluder3D_nc5hy")
 
-[node name="entity_0_brush_0_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_0_worldspawn"]
+[node name="entity_0_brush_0_collision_shape" type="CollisionShape3D" parent="worldDefaults/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_6elju")
 
-[node name="entity_0_brush_1_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_0_worldspawn"]
+[node name="entity_0_brush_1_collision_shape" type="CollisionShape3D" parent="worldDefaults/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_0e5fs")
 
-[node name="entity_0_brush_2_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_0_worldspawn"]
+[node name="entity_0_brush_2_collision_shape" type="CollisionShape3D" parent="worldDefaults/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_2vewt")
 
-[node name="entity_0_brush_3_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_0_worldspawn"]
+[node name="entity_0_brush_3_collision_shape" type="CollisionShape3D" parent="worldDefaults/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_films")
 
-[node name="entity_0_brush_4_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_0_worldspawn"]
+[node name="entity_0_brush_4_collision_shape" type="CollisionShape3D" parent="worldDefaults/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_s0mvu")
 
-[node name="entity_0_brush_5_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_0_worldspawn"]
+[node name="entity_0_brush_5_collision_shape" type="CollisionShape3D" parent="worldDefaults/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_nidp8")
 
-[node name="entity_0_brush_6_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_0_worldspawn"]
+[node name="entity_0_brush_6_collision_shape" type="CollisionShape3D" parent="worldDefaults/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_2gf31")
 
-[node name="entity_0_brush_7_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_0_worldspawn"]
+[node name="entity_0_brush_7_collision_shape" type="CollisionShape3D" parent="worldDefaults/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_xxwdm")
 
-[node name="entity_0_brush_8_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_0_worldspawn"]
+[node name="entity_0_brush_8_collision_shape" type="CollisionShape3D" parent="worldDefaults/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_jq3ec")
 
-[node name="entity_0_brush_9_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_0_worldspawn"]
+[node name="entity_0_brush_9_collision_shape" type="CollisionShape3D" parent="worldDefaults/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_pewn0")
 
-[node name="entity_0_brush_10_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_0_worldspawn"]
+[node name="entity_0_brush_10_collision_shape" type="CollisionShape3D" parent="worldDefaults/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_i515x")
 
-[node name="entity_0_brush_11_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_0_worldspawn"]
+[node name="entity_0_brush_11_collision_shape" type="CollisionShape3D" parent="worldDefaults/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_if2ws")
 
-[node name="entity_0_brush_12_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_0_worldspawn"]
+[node name="entity_0_brush_12_collision_shape" type="CollisionShape3D" parent="worldDefaults/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_6u4cd")
 
-[node name="entity_0_brush_13_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_0_worldspawn"]
+[node name="entity_0_brush_13_collision_shape" type="CollisionShape3D" parent="worldDefaults/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_k21yd")
 
-[node name="entity_0_brush_14_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_0_worldspawn"]
+[node name="entity_0_brush_14_collision_shape" type="CollisionShape3D" parent="worldDefaults/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_4c50p")
 
-[node name="entity_0_brush_15_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_0_worldspawn"]
+[node name="entity_0_brush_15_collision_shape" type="CollisionShape3D" parent="worldDefaults/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_rqfl5")
 
-[node name="entity_0_brush_16_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_0_worldspawn"]
+[node name="entity_0_brush_16_collision_shape" type="CollisionShape3D" parent="worldDefaults/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_uv8jj")
 
-[node name="entity_0_brush_17_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_0_worldspawn"]
+[node name="entity_0_brush_17_collision_shape" type="CollisionShape3D" parent="worldDefaults/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_y1jau")
 
-[node name="entity_0_brush_18_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_0_worldspawn"]
+[node name="entity_0_brush_18_collision_shape" type="CollisionShape3D" parent="worldDefaults/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_sw5gx")
 
-[node name="entity_0_brush_19_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_0_worldspawn"]
+[node name="entity_0_brush_19_collision_shape" type="CollisionShape3D" parent="worldDefaults/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_lanq2")
 
-[node name="entity_0_brush_20_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_0_worldspawn"]
+[node name="entity_0_brush_20_collision_shape" type="CollisionShape3D" parent="worldDefaults/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_n7aui")
 
-[node name="entity_0_brush_21_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_0_worldspawn"]
+[node name="entity_0_brush_21_collision_shape" type="CollisionShape3D" parent="worldDefaults/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_agx2u")
 
-[node name="entity_0_brush_22_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_0_worldspawn"]
+[node name="entity_0_brush_22_collision_shape" type="CollisionShape3D" parent="worldDefaults/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_x3aoq")
 
-[node name="entity_0_brush_23_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_0_worldspawn"]
+[node name="entity_0_brush_23_collision_shape" type="CollisionShape3D" parent="worldDefaults/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_xhtei")
 
-[node name="entity_0_brush_24_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_0_worldspawn"]
+[node name="entity_0_brush_24_collision_shape" type="CollisionShape3D" parent="worldDefaults/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_r7jfr")
 
-[node name="entity_0_brush_25_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_0_worldspawn"]
+[node name="entity_0_brush_25_collision_shape" type="CollisionShape3D" parent="worldDefaults/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_pgv0f")
 
-[node name="entity_0_brush_26_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_0_worldspawn"]
+[node name="entity_0_brush_26_collision_shape" type="CollisionShape3D" parent="worldDefaults/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_f2tx7")
 
-[node name="entity_0_brush_27_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_0_worldspawn"]
+[node name="entity_0_brush_27_collision_shape" type="CollisionShape3D" parent="worldDefaults/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_d2q17")
 
-[node name="player" parent="." instance=ExtResource("4_o6v2o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.108194, 0)
+[node name="player" parent="worldDefaults" instance=ExtResource("4_o6v2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.969677, 4.108194, 0)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="worldDefaults"]
 environment = SubResource("Environment_6elju")
+
+[node name="general" type="Node3D" parent="."]
+
+[node name="Sprite3D" type="Sprite3D" parent="general"]
+transform = Transform3D(0.120274976, 0, -0.4853184, 0, 0.5, 0, 0.4853184, 0, 0.120274976, -23.463226, 3.5376358, 3.4826517)
+billboard = 1
+texture = SubResource("ViewportTexture_nc5hy")
+
+[node name="SubViewport" type="SubViewport" parent="general"]
+transparent_bg = true
+size = Vector2i(1000, 1000)
+
+[node name="Sprite2D" type="Sprite2D" parent="general/SubViewport"]
+material = SubResource("ShaderMaterial_6elju")
+position = Vector2(500, 500)
+texture = ExtResource("7_0e5fs")
+
+[node name="lighttest" type="MeshInstance3D" parent="general"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5037885, 6.4112854, 2.553564)
+material_override = SubResource("StandardMaterial3D_0e5fs")
+mesh = SubResource("SphereMesh_2vewt")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="general/lighttest"]
+shadow_enabled = true
+omni_range = 7.487
+
+[node name="lighttest2" type="MeshInstance3D" parent="general"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.385956, -2.9715412, 9.138017)
+material_override = SubResource("StandardMaterial3D_6elju")
+mesh = SubResource("SphereMesh_0e5fs")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="general/lighttest2"]
+shadow_enabled = true
+omni_range = 7.487
+
+[node name="lighttest3" type="MeshInstance3D" parent="general"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.45987844, 6.4112854, -1.1138289)
+material_override = SubResource("StandardMaterial3D_6elju")
+mesh = SubResource("SphereMesh_0e5fs")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="general/lighttest3"]
+light_color = Color(1, 0.25490198, 0, 1)
+shadow_enabled = true
+omni_range = 7.487
+
+[node name="rot" type="MeshInstance3D" parent="general"]
+transform = Transform3D(0.05529867, 0, 0.9984698, 0, 1, 0, -0.9984698, 0, 0.05529867, 0.8283187, 3.8498828, -1.2290399)
+mesh = SubResource("TextMesh_films")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="general/rot"]
+libraries = {
+&"": SubResource("AnimationLibrary_2vewt")
+}
+autoplay = "rot"
