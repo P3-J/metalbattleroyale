@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dxlgbjj63plkh"]
+
+[ext_resource type="Texture2D" uid="uid://dhfni2578yld0" path="res://textures/FoxTex_Vol1/Textures/F1/CNCC/CNCC12.png" id="1_74t7x"]
+
+[resource]
+albedo_texture = ExtResource("1_74t7x")
+metallic = 0.46
+roughness = 0.59
+texture_filter = 0

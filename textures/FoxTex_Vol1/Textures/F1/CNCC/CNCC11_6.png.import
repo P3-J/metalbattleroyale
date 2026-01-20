@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0t2r5uw4o0b6"
-path.s3tc="res://.godot/imported/stone3.png-2a707af21c4fcd3b135bf95d47b7e48d.s3tc.ctex"
+uid="uid://b78kcn2sqaswn"
+path.s3tc="res://.godot/imported/CNCC11_6.png-dd8a07b21ca7e2eaec979f58a14c1d4e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/stone3.png"
-dest_files=["res://.godot/imported/stone3.png-2a707af21c4fcd3b135bf95d47b7e48d.s3tc.ctex"]
+source_file="res://textures/FoxTex_Vol1/Textures/F1/CNCC/CNCC11_6.png"
+dest_files=["res://.godot/imported/CNCC11_6.png-dd8a07b21ca7e2eaec979f58a14c1d4e.s3tc.ctex"]
 
 [params]
 

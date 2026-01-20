@@ -33,7 +33,7 @@ public partial class Player : CharacterBody3D
 
         if (!IsOnFloor())
             velocity.Y -= ProjectSettings.GetSetting("physics/3d/default_gravity").AsSingle() * (float)delta;
-
+    
         if (Input.IsActionJustPressed("jump") && IsOnFloor())
             velocity.Y = JumpVelocity;
 
