@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://crbfunnr2djnl"]
+
+[ext_resource type="Texture2D" uid="uid://b647siwmep372" path="res://textures/FoxTex_Vol1/Textures/F1/CNCC/CNCC2_5.png" id="1_scbtg"]
+
+[resource]
+albedo_texture = ExtResource("1_scbtg")
+metallic_specular = 0.0
+emission_enabled = true
+emission = Color(0.9351471, 0.75760233, 0.86418986, 1)
+emission_energy_multiplier = 6.59
+texture_filter = 0
