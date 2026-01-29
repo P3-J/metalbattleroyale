@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c07i4l7rcto6p"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_xvedt"]
+
+[node name="Skeleton3D" type="Skeleton3D" unique_id=1803520041]
+
+[node name="PhysicalBone3D" type="PhysicalBone3D" parent="." unique_id=206078124]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PhysicalBone3D" unique_id=63905820]
+shape = SubResource("SphereShape3D_xvedt")

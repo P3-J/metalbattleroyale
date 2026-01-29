@@ -80,26 +80,33 @@ func _exit_tree() -> void:
 
 ## Create the toolbar controls for [FuncGodotMap] instances in the editor
 func create_func_godot_map_control() -> Control:
-	var separator = VSeparator.new()
-	
-	var icon = TextureRect.new()
+	var separator_wrap := Control.new()
+	separator_wrap.custom_minimum_size = Vector2(4, 0)
+
+	var separator := VSeparator.new()
+	separator.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+	separator_wrap.add_child(separator)
+
+	var icon := TextureRect.new()
 	icon.texture = preload("res://addons/func_godot/icons/icon_slipgate3d.svg")
+	icon.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	icon.size_flags_vertical = Control.SIZE_SHRINK_CENTER
-	
-	var build_button = Button.new()
+	icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+
+	var build_button := Button.new()
 	build_button.text = "Build"
-	build_button.connect("pressed",Callable(self,"func_godot_map_build"))
-	
-	var unwrap_uv2_button = Button.new()
+	build_button.pressed.connect(func_godot_map_build)
+
+	var unwrap_uv2_button := Button.new()
 	unwrap_uv2_button.text = "Unwrap UV2"
-	unwrap_uv2_button.connect("pressed",Callable(self,"func_godot_map_unwrap_uv2"))
-	
-	var control = HBoxContainer.new()
-	control.add_child(separator)
+	unwrap_uv2_button.pressed.connect(func_godot_map_unwrap_uv2)
+
+	var control := HBoxContainer.new()
+	control.add_child(separator_wrap)
 	control.add_child(icon)
 	control.add_child(build_button)
 	control.add_child(unwrap_uv2_button)
-	
+
 	return control
 
 ## Create a progress bar for building a [FuncGodotMap]
