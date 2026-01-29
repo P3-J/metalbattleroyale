@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2w2wkdlw5x7i"
-path.s3tc="res://.godot/imported/wood2.png-99b6ddcd58d1cee43a4c290f1c3e76d5.s3tc.ctex"
+uid="uid://btprgwfdiak7y"
+path.s3tc="res://.godot/imported/water_waves.png-4159d488ec68be4387b9291ded4f56e8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/wood2.png"
-dest_files=["res://.godot/imported/wood2.png-99b6ddcd58d1cee43a4c290f1c3e76d5.s3tc.ctex"]
+source_file="res://sorsskod/assets/water_waves.png"
+dest_files=["res://.godot/imported/water_waves.png-4159d488ec68be4387b9291ded4f56e8.s3tc.ctex"]
 
 [params]
 
