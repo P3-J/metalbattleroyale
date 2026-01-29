@@ -11,8 +11,7 @@ public partial class Player : CharacterBody3D
 	public override void _Ready()
 	{
 
-		Input.MouseMode = Input.MouseModeEnum.Captured;  git config --global user.email "jako.keskkyla@gmail.com"
-  															git config --global user.name "Your Name"
+		Input.MouseMode = Input.MouseModeEnum.Captured;
 
 	}
 
