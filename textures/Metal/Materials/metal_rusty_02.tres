@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cx5c43rqhj8wx"]
+
+[ext_resource type="Texture2D" uid="uid://pca8xxkyb6oo" path="res://textures/Metal/Materials/metal_rusty_02.png" id="1_qimfy"]
+
+[resource]
+albedo_texture = ExtResource("1_qimfy")
+metallic_specular = 0.0
+texture_filter = 0

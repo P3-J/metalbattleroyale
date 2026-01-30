@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b8uxendavtkbp"]
+
+[ext_resource type="Texture2D" uid="uid://byi22et0kf6xt" path="res://textures/Industrial/Materials/panel_army_02.jpg" id="1_0h2fd"]
+
+[resource]
+albedo_texture = ExtResource("1_0h2fd")
+metallic_specular = 0.0
+texture_filter = 0

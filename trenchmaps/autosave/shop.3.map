@@ -1,0 +1,635 @@
+// Game: Generic
+// Format: Standard
+// entity 0
+{
+"classname" "worldspawn"
+// brush 0
+{
+( -64 -64 -16 ) ( -64 -63 -16 ) ( -64 -64 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -64 -68 -16 ) ( -64 -68 -15 ) ( -63 -68 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -64 -64 -16 ) ( -63 -64 -16 ) ( -64 -63 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 64 64 16 ) ( 64 65 16 ) ( 65 64 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2 0 0 0 0.5 0.5
+( 64 64 16 ) ( 65 64 16 ) ( 64 64 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 64 64 16 ) ( 64 64 17 ) ( 64 65 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+}
+// brush 1
+{
+( -192 -64 -16 ) ( -192 -63 -16 ) ( -192 -64 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -192 -64 -16 ) ( -192 -64 -15 ) ( -191 -64 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -192 -64 -16 ) ( -191 -64 -16 ) ( -192 -63 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -64 64 16 ) ( -64 65 16 ) ( -63 64 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2 0 0 0 0.5 0.5
+( -64 64 16 ) ( -63 64 16 ) ( -64 64 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -64 64 16 ) ( -64 64 17 ) ( -64 65 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+}
+// brush 2
+{
+( -192 64 -16 ) ( -192 65 -16 ) ( -192 64 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -192 64 -16 ) ( -192 64 -15 ) ( -191 64 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -192 64 -16 ) ( -191 64 -16 ) ( -192 65 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -64 192 16 ) ( -64 193 16 ) ( -63 192 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2 0 0 0 0.5 0.5
+( -64 192 16 ) ( -63 192 16 ) ( -64 192 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -64 192 16 ) ( -64 192 17 ) ( -64 193 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+}
+// brush 3
+{
+( -64 64 -16 ) ( -64 65 -16 ) ( -64 64 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -64 64 -16 ) ( -64 64 -15 ) ( -63 64 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -64 64 -16 ) ( -63 64 -16 ) ( -64 65 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 64 192 16 ) ( 64 193 16 ) ( 65 192 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2 0 0 0 0.5 0.5
+( 64 192 16 ) ( 65 192 16 ) ( 64 192 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 64 192 16 ) ( 64 192 17 ) ( 64 193 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+}
+// brush 4
+{
+( -320 64 -32 ) ( -320 65 -32 ) ( -320 64 -31 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 -16 0 1 1
+( -320 -736 -32 ) ( -320 -736 -31 ) ( -319 -736 -32 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 -16 0 1 1
+( -320 64 -32 ) ( -319 64 -32 ) ( -320 65 -32 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -192 192 0 ) ( -192 193 0 ) ( -191 192 0 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC1_1 0 0 0 0.1 0.1
+( -192 480 0 ) ( -191 480 0 ) ( -192 480 1 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 -16 0 1 1
+( -192 192 0 ) ( -192 192 1 ) ( -192 193 0 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 -16 0 1 1
+}
+// brush 5
+{
+( -192 -192 -16 ) ( -192 -191 -16 ) ( -192 -192 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC7_6 32 0 90 0.2 0.2
+( -192 -736 -16 ) ( -192 -736 -15 ) ( -191 -736 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC8_2 0 0 90 0.25 0.25
+( -192 -192 -16 ) ( -191 -192 -16 ) ( -192 -191 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC8_2 0 0 90 0.25 0.25
+( -64 -64 584 ) ( -64 -63 584 ) ( -63 -64 584 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC8_2 0 0 90 0.25 0.25
+( -64 -64 16 ) ( -63 -64 16 ) ( -64 -64 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4_1 0 0 0 0.2 0.2
+( -64 -64 16 ) ( -64 -64 17 ) ( -64 -63 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC8_2 0 0 90 0.25 0.25
+}
+// brush 6
+{
+( -64 -192 -16 ) ( -64 -191 -16 ) ( -64 -192 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -64 -736 -16 ) ( -64 -736 -15 ) ( -63 -736 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -64 -192 -16 ) ( -63 -192 -16 ) ( -64 -191 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 64 -64 224 ) ( 64 -63 224 ) ( 65 -64 224 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 64 -68 16 ) ( 65 -68 16 ) ( 64 -68 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4_1 0 0 0 0.2 0.2
+( 96 -64 16 ) ( 96 -64 17 ) ( 96 -63 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+}
+// brush 7
+{
+( -192 720 -16 ) ( -192 721 -16 ) ( -192 720 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 -16 0 0 1 1
+( -192 176 -16 ) ( -192 176 -15 ) ( -191 176 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4_1 0 0 0 0.2 0.2
+( -192 720 -16 ) ( -191 720 -16 ) ( -192 721 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 16 0 1 1
+( -64 848 224 ) ( -64 849 224 ) ( -63 848 224 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 16 0 1 1
+( -64 848 16 ) ( -63 848 16 ) ( -64 848 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -64 848 16 ) ( -64 848 17 ) ( -64 849 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 -16 0 0 1 1
+}
+// brush 8
+{
+( -64 720 -16 ) ( -64 721 -16 ) ( -64 720 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 -16 0 0 1 1
+( -64 176 -16 ) ( -64 176 -15 ) ( -63 176 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4_1 0 0 0 0.2 0.2
+( -64 720 -16 ) ( -63 720 -16 ) ( -64 721 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 16 0 1 1
+( 64 848 224 ) ( 64 849 224 ) ( 65 848 224 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 16 0 1 1
+( 64 848 16 ) ( 65 848 16 ) ( 64 848 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 64 848 16 ) ( 64 848 17 ) ( 64 849 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 -16 0 0 1 1
+}
+// brush 9
+{
+( 64 64 -16 ) ( 64 65 -16 ) ( 64 64 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 64 64 -16 ) ( 64 64 -15 ) ( 65 64 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 64 64 -16 ) ( 65 64 -16 ) ( 64 65 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 192 16 ) ( 192 193 16 ) ( 193 192 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 192 16 ) ( 193 192 16 ) ( 192 192 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 192 16 ) ( 192 192 17 ) ( 192 193 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+}
+// brush 10
+{
+( 64 -64 -16 ) ( 64 -63 -16 ) ( 64 -64 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 64 -64 -16 ) ( 64 -64 -15 ) ( 65 -64 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 64 -64 -16 ) ( 65 -64 -16 ) ( 64 -63 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 64 16 ) ( 192 65 16 ) ( 193 64 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 64 16 ) ( 193 64 16 ) ( 192 64 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 64 16 ) ( 192 64 17 ) ( 192 65 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+}
+// brush 11
+{
+( 64 -192 -16 ) ( 64 -191 -16 ) ( 64 -192 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 64 -192 -16 ) ( 64 -192 -15 ) ( 65 -192 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 64 -192 -16 ) ( 65 -192 -16 ) ( 64 -191 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 -64 16 ) ( 192 -63 16 ) ( 193 -64 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 -64 16 ) ( 193 -64 16 ) ( 192 -64 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 -64 16 ) ( 192 -64 17 ) ( 192 -63 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+}
+// brush 12
+{
+( 192 -192 -16 ) ( 192 -191 -16 ) ( 192 -192 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 -192 -16 ) ( 192 -192 -15 ) ( 193 -192 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 -192 -16 ) ( 193 -192 -16 ) ( 192 -191 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 320 -64 16 ) ( 320 -63 16 ) ( 321 -64 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 320 -64 16 ) ( 321 -64 16 ) ( 320 -64 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 320 -64 16 ) ( 320 -64 17 ) ( 320 -63 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+}
+// brush 13
+{
+( 192 -64 -16 ) ( 192 -63 -16 ) ( 192 -64 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 -64 -16 ) ( 192 -64 -15 ) ( 193 -64 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 -64 -16 ) ( 193 -64 -16 ) ( 192 -63 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 320 64 16 ) ( 320 65 16 ) ( 321 64 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 320 64 16 ) ( 321 64 16 ) ( 320 64 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 320 64 16 ) ( 320 64 17 ) ( 320 65 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+}
+// brush 14
+{
+( 64 -320 -16 ) ( 64 -319 -16 ) ( 64 -320 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 64 -864 -16 ) ( 64 -864 -15 ) ( 65 -864 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 64 -320 -16 ) ( 65 -320 -16 ) ( 64 -319 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 -192 224 ) ( 192 -191 224 ) ( 193 -192 224 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 -192 16 ) ( 193 -192 16 ) ( 192 -192 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 -192 16 ) ( 192 -192 17 ) ( 192 -191 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+}
+// brush 15
+{
+( 192 -320 -16 ) ( 192 -319 -16 ) ( 192 -320 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 -864 -16 ) ( 192 -864 -15 ) ( 193 -864 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 -320 -16 ) ( 193 -320 -16 ) ( 192 -319 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 320 -192 224 ) ( 320 -191 224 ) ( 321 -192 224 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 320 -192 16 ) ( 321 -192 16 ) ( 320 -192 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 320 -192 16 ) ( 320 -192 17 ) ( 320 -191 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+}
+// brush 16
+{
+( 288 -64 -16 ) ( 288 -63 -16 ) ( 288 -64 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 288 -608 -16 ) ( 288 -608 -15 ) ( 289 -608 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 32 0 0 1 1
+( 288 -64 -16 ) ( 289 -64 -16 ) ( 288 -63 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 32 0 0 1 1
+( 416 64 224 ) ( 416 65 224 ) ( 417 64 224 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 32 0 0 1 1
+( 416 64 16 ) ( 417 64 16 ) ( 416 64 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 32 0 0 1 1
+( 416 64 16 ) ( 416 64 17 ) ( 416 65 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+}
+// brush 17
+{
+( 64 720 -16 ) ( 64 721 -16 ) ( 64 720 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 -16 0 0 1 1
+( 64 176 -16 ) ( 64 176 -15 ) ( 65 176 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4_1 0 0 0 0.2 0.2
+( 64 720 -16 ) ( 65 720 -16 ) ( 64 721 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 16 0 1 1
+( 192 848 224 ) ( 192 849 224 ) ( 193 848 224 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 16 0 1 1
+( 192 848 16 ) ( 193 848 16 ) ( 192 848 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 848 16 ) ( 192 848 17 ) ( 192 849 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 -16 0 0 1 1
+}
+// brush 18
+{
+( 192 608 -16 ) ( 192 609 -16 ) ( 192 608 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 96 0 0 1 1
+( 192 64 -16 ) ( 192 64 -15 ) ( 193 64 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 608 -16 ) ( 193 608 -16 ) ( 192 609 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 -96 0 1 1
+( 320 736 224 ) ( 320 737 224 ) ( 321 736 224 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 -96 0 1 1
+( 320 736 16 ) ( 321 736 16 ) ( 320 736 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 320 736 16 ) ( 320 736 17 ) ( 320 737 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 96 0 0 1 1
+}
+// brush 19
+{
+( -176 -128 224 ) ( -176 -127 224 ) ( -176 -128 225 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -192 -208 224 ) ( -192 -208 225 ) ( -191 -208 224 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -192 -128 144 ) ( -191 -128 144 ) ( -192 -127 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 288 208 664 ) ( 288 209 664 ) ( 289 208 664 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 288 384 240 ) ( 289 384 240 ) ( 288 384 241 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 288 208 240 ) ( 288 208 241 ) ( 288 209 240 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+}
+// brush 20
+{
+( 80 576 -16 ) ( 80 577 -16 ) ( 80 576 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4_1 0 0 0 0.2 0.2
+( 80 -24 -16 ) ( 80 -24 -15 ) ( 81 -24 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 112 0 0 1 1
+( 80 576 -16 ) ( 81 576 -16 ) ( 80 577 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 112 0 0 1 1
+( 208 704 224 ) ( 208 705 224 ) ( 209 704 224 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 112 0 0 1 1
+( 208 704 16 ) ( 209 704 16 ) ( 208 704 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 112 0 0 1 1
+( 96 704 16 ) ( 96 704 17 ) ( 96 705 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+}
+// brush 21
+{
+( -188 4 24 ) ( -188 5 24 ) ( -188 4 25 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5 -68 8 0 1 1
+( -188 4 24 ) ( -188 4 25 ) ( -187 4 24 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5 12 8 0 1 1
+( -188 4 52 ) ( -187 4 52 ) ( -188 5 52 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5 12 68 0 1 1
+( -180 68 108 ) ( -180 69 108 ) ( -179 68 108 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5 12 68 0 1 1
+( -180 60 32 ) ( -179 60 32 ) ( -180 60 33 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5 12 8 0 1 1
+( -184 68 32 ) ( -184 68 33 ) ( -184 69 32 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5 -68 8 0 1 1
+}
+// brush 22
+{
+( -192 0 176 ) ( -200 0 128 ) ( -200 176 128 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 0 0 0 1 1
+( -192 0 176 ) ( -176 0 176 ) ( -176 0 128 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -176 0 108 ) ( -176 176 108 ) ( -200 176 108 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -192 176 176 ) ( -176 176 176 ) ( -176 0 176 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -176 176 128 ) ( -176 176 176 ) ( -192 176 176 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -176 0 176 ) ( -176 176 176 ) ( -176 176 128 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4_1 0 0 0 0.2 0.2
+}
+// brush 23
+{
+( -192 -64 72 ) ( -192 -63 72 ) ( -192 -64 73 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 56 0 1 1
+( -176 -64 72 ) ( -176 -64 73 ) ( -175 -64 72 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 56 0 1 1
+( -176 -64 92 ) ( -175 -64 92 ) ( -176 -63 92 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -168 0 176 ) ( -168 1 176 ) ( -167 0 176 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -168 0 80 ) ( -167 0 80 ) ( -168 0 81 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 56 0 1 1
+( -168 0 80 ) ( -168 0 81 ) ( -168 1 80 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4_1 0 0 0 0.2 0.2
+}
+// brush 24
+{
+( -448 776 -16 ) ( -448 777 -16 ) ( -448 776 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC7_6 32 0 90 0.2 0.2
+( -448 232 -16 ) ( -448 232 -15 ) ( -447 232 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC7_6 32 0 90 0.2 0.2
+( -448 776 -16 ) ( -447 776 -16 ) ( -448 777 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC7_6 32 0 90 0.2 0.2
+( -320 904 480 ) ( -320 905 480 ) ( -319 904 480 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC7_6 32 0 90 0.2 0.2
+( -320 904 16 ) ( -319 904 16 ) ( -320 904 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC7_6 32 0 90 0.2 0.2
+( -320 904 16 ) ( -320 904 17 ) ( -320 905 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC7_6 32 0 90 0.2 0.2
+}
+// brush 25
+{
+( -320 456 -16 ) ( -320 456 -15 ) ( -320 455 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC7_6 8 0 90 0.2 0.2
+( -96 328 16 ) ( -96 328 17 ) ( -95 328 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC7_6 32 0 90 0.2 0.2
+( -224 456 -16 ) ( -224 455 -16 ) ( -223 456 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC7_6 8 -32 90 0.2 0.2
+( -96 328 456 ) ( -95 328 456 ) ( -96 327 456 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC7_6 8 -32 90 0.2 0.2
+( -224 456 -16 ) ( -223 456 -16 ) ( -224 456 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC7_6 32 0 90 0.2 0.2
+( -96 328 16 ) ( -96 327 16 ) ( -96 328 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC7_6 8 0 90 0.2 0.2
+}
+// brush 26
+{
+( -1536 288 -32 ) ( -1536 288 -31 ) ( -1536 287 -32 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 -32 -16 180 1 1
+( -608 160 0 ) ( -608 160 1 ) ( -607 160 0 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 32 -16 0 1 1
+( -736 288 -32 ) ( -736 287 -32 ) ( -735 288 -32 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 -32 -32 270 1 1
+( -608 160 0 ) ( -607 160 0 ) ( -608 159 0 ) japanese_stone_wall_diff_1k -32 -32 180 0.1 0.1
+( -736 288 -32 ) ( -735 288 -32 ) ( -736 288 -31 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 32 -16 0 1 1
+( -320 160 0 ) ( -320 159 0 ) ( -320 160 1 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 -32 -16 180 1 1
+}
+// brush 27
+{
+( -984 32 -16 ) ( -984 33 -16 ) ( -984 32 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 32 0 0 1 1
+( -448 -288 -16 ) ( -448 -288 -15 ) ( -447 -288 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -448 32 -16 ) ( -447 32 -16 ) ( -448 33 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 -32 0 1 1
+( -320 160 536 ) ( -320 161 536 ) ( -319 160 536 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 -32 0 1 1
+( -320 160 16 ) ( -319 160 16 ) ( -320 160 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -320 160 16 ) ( -320 160 17 ) ( -320 161 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 32 0 0 1 1
+}
+// brush 28
+{
+( -1120 360 -16 ) ( -1120 360 -15 ) ( -1120 359 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 40 0 180 1 1
+( -448 232 16 ) ( -448 232 17 ) ( -447 232 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -576 360 -16 ) ( -576 359 -16 ) ( -575 360 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 40 0 270 1 1
+( -448 232 536 ) ( -447 232 536 ) ( -448 231 536 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 40 0 270 1 1
+( -576 360 -16 ) ( -575 360 -16 ) ( -576 360 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -448 232 16 ) ( -448 231 16 ) ( -448 232 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 40 0 180 1 1
+}
+// brush 29
+{
+( -304 -184 56 ) ( -304 -248 72 ) ( -304 -248 8 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 248 8 0 1 1
+( -304 -248 72 ) ( -208 -248 72 ) ( -208 -248 8 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 48 8 0 1 1
+( -208 -248 8 ) ( -208 -184 8 ) ( -304 -184 8 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 48 -248 0 1 1
+( -304 -184 56 ) ( -208 -184 56 ) ( -208 -248 72 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 -59.666656 8 0 1.548387 1
+( -208 -184 8 ) ( -208 -184 56 ) ( -304 -184 56 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 -59.666656 8 0 1.548387 1
+( -208 -248 72 ) ( -208 -184 56 ) ( -208 -184 8 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 248 8 0 1 1
+}
+// brush 30
+{
+( -624 -640 224 ) ( -856 -928 224 ) ( -856 -928 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 32 0 0 1 1
+( -192 -480 -16 ) ( -192 -480 224 ) ( -624 -640 224 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -856 -928 224 ) ( -192 -928 224 ) ( -192 -928 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -192 -928 -16 ) ( -192 -480 -16 ) ( -624 -640 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 -32 0 1 1
+( -624 -640 600 ) ( -192 -480 600 ) ( -192 -928 600 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 -32 0 1 1
+( -192 -928 224 ) ( -192 -480 224 ) ( -192 -480 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 32 0 0 1 1
+}
+// brush 31
+{
+( -320 -264 0 ) ( -320 -263 0 ) ( -320 -264 1 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -320 -264 0 ) ( -320 -264 1 ) ( -319 -264 0 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -320 -264 0 ) ( -319 -264 0 ) ( -320 -263 0 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -192 -256 16 ) ( -192 -255 16 ) ( -191 -256 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -192 -256 8 ) ( -191 -256 8 ) ( -192 -256 9 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -192 -256 8 ) ( -192 -256 9 ) ( -192 -255 8 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+}
+// brush 32
+{
+( -320 -264 24 ) ( -320 -263 24 ) ( -320 -264 25 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 24 0 1 1
+( -320 -264 24 ) ( -320 -264 25 ) ( -319 -264 24 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 24 0 1 1
+( -320 -264 24 ) ( -319 -264 24 ) ( -320 -263 24 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -192 -256 40 ) ( -192 -255 40 ) ( -191 -256 40 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -192 -256 32 ) ( -191 -256 32 ) ( -192 -256 33 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 24 0 1 1
+( -192 -256 32 ) ( -192 -256 33 ) ( -192 -255 32 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 24 0 1 1
+}
+// brush 33
+{
+( -320 -264 48 ) ( -320 -263 48 ) ( -320 -264 49 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 48 0 1 1
+( -320 -264 48 ) ( -320 -264 49 ) ( -319 -264 48 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 48 0 1 1
+( -320 -264 48 ) ( -319 -264 48 ) ( -320 -263 48 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -192 -256 64 ) ( -192 -255 64 ) ( -191 -256 64 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -192 -256 56 ) ( -191 -256 56 ) ( -192 -256 57 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 48 0 1 1
+( -192 -256 56 ) ( -192 -256 57 ) ( -192 -255 56 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 48 0 1 1
+}
+// brush 34
+{
+( -320 -264 72 ) ( -320 -263 72 ) ( -320 -264 73 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 72 0 1 1
+( -320 -264 72 ) ( -320 -264 73 ) ( -319 -264 72 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 72 0 1 1
+( -320 -264 72 ) ( -319 -264 72 ) ( -320 -263 72 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -192 -256 88 ) ( -192 -255 88 ) ( -191 -256 88 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -192 -256 80 ) ( -191 -256 80 ) ( -192 -256 81 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 72 0 1 1
+( -192 -256 80 ) ( -192 -256 81 ) ( -192 -255 80 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 72 0 1 1
+}
+// brush 35
+{
+( -320 -264 96 ) ( -320 -263 96 ) ( -320 -264 97 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 96 0 1 1
+( -320 -264 96 ) ( -320 -264 97 ) ( -319 -264 96 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 96 0 1 1
+( -320 -264 96 ) ( -319 -264 96 ) ( -320 -263 96 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -192 -256 112 ) ( -192 -255 112 ) ( -191 -256 112 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -192 -256 104 ) ( -191 -256 104 ) ( -192 -256 105 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 96 0 1 1
+( -192 -256 104 ) ( -192 -256 105 ) ( -192 -255 104 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 96 0 1 1
+}
+// brush 36
+{
+( -192 0 16 ) ( -192 1 16 ) ( -192 0 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -192 0 16 ) ( -192 0 17 ) ( -191 0 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -192 0 16 ) ( -191 0 16 ) ( -192 1 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -184 176 48 ) ( -184 177 48 ) ( -183 176 48 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -184 176 24 ) ( -183 176 24 ) ( -184 176 25 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -184 176 24 ) ( -184 176 25 ) ( -184 177 24 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4_1 0 0 0 0.2 0.2
+}
+// brush 37
+{
+( -192 168 48 ) ( -192 169 48 ) ( -192 168 49 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -192 172 48 ) ( -192 172 49 ) ( -191 172 48 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -192 168 48 ) ( -191 168 48 ) ( -192 169 48 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -184 176 128 ) ( -184 177 128 ) ( -183 176 128 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -184 176 56 ) ( -183 176 56 ) ( -184 176 57 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -184 176 56 ) ( -184 176 57 ) ( -184 177 56 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+}
+// brush 38
+{
+( -192 4 48 ) ( -192 5 48 ) ( -192 4 49 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -192 4 48 ) ( -192 4 49 ) ( -191 4 48 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -192 4 48 ) ( -191 4 48 ) ( -192 5 48 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -180 172 52 ) ( -180 173 52 ) ( -179 172 52 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -180 172 52 ) ( -179 172 52 ) ( -180 172 53 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -180 172 52 ) ( -180 172 53 ) ( -180 173 52 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+}
+// brush 39
+{
+( -192 0 48 ) ( -192 1 48 ) ( -192 0 49 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -192 0 48 ) ( -192 0 49 ) ( -191 0 48 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -192 0 48 ) ( -191 0 48 ) ( -192 1 48 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -184 4 128 ) ( -184 5 128 ) ( -183 4 128 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -184 4 52 ) ( -183 4 52 ) ( -184 4 53 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -184 4 52 ) ( -184 4 53 ) ( -184 5 52 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+}
+// brush 40
+{
+( -192 -64 16 ) ( -192 -63 16 ) ( -192 -64 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 32 0 1 1
+( -192 -16 16 ) ( -192 -16 17 ) ( -191 -16 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 32 0 1 1
+( -192 -64 16 ) ( -191 -64 16 ) ( -192 -63 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -64 64 92 ) ( -64 65 92 ) ( -63 64 92 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -64 0 48 ) ( -63 0 48 ) ( -64 0 49 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 32 0 1 1
+( -168 64 48 ) ( -168 64 49 ) ( -168 65 48 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4_1 0 0 0 0.2 0.2
+}
+// brush 41
+{
+( 80 -16 140 ) ( 80 -15 140 ) ( 80 -16 141 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4_1 0 0 0 0.2 0.2
+( 80 -68 140 ) ( 80 -68 141 ) ( 81 -68 140 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( 80 -16 84 ) ( 81 -16 84 ) ( 80 -15 84 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( 92 -8 144 ) ( 92 -7 144 ) ( 93 -8 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( 92 -24 144 ) ( 93 -24 144 ) ( 92 -24 145 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( 92 -8 144 ) ( 92 -8 145 ) ( 92 -7 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+}
+// brush 42
+{
+( -320 48 336 ) ( -320 49 336 ) ( -320 48 337 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC1_3 0 0 90 0.1 0.1
+( -320 48 336 ) ( -320 48 337 ) ( -319 48 336 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC1_3 0 0 90 0.1 0.1
+( -320 48 336 ) ( -319 48 336 ) ( -320 49 336 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC1_3 0 0 90 0.1 0.1
+( -304 112 384 ) ( -304 113 384 ) ( -303 112 384 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC1_3 0 0 90 0.1 0.1
+( -304 112 344 ) ( -303 112 344 ) ( -304 112 345 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC1_3 0 0 90 0.1 0.1
+( -152 112 344 ) ( -152 112 345 ) ( -152 113 344 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC1_3 0 0 90 0.1 0.1
+}
+// brush 43
+{
+( -520 -168 560 ) ( -520 -167 560 ) ( -520 -168 561 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC1_3 -192 -144 90 0.1 0.1
+( -312 -168 560 ) ( -312 -168 561 ) ( -311 -168 560 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC1_3 -192 -80 90 0.1 0.1
+( -312 -168 560 ) ( -311 -168 560 ) ( -312 -167 560 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC1_3 -144 -80 90 0.1 0.1
+( -296 -104 608 ) ( -296 -103 608 ) ( -295 -104 608 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC1_3 -144 -80 90 0.1 0.1
+( -296 -104 568 ) ( -295 -104 568 ) ( -296 -104 569 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC1_3 -192 -80 90 0.1 0.1
+( -144 -104 568 ) ( -144 -104 569 ) ( -144 -103 568 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC1_3 -192 -144 90 0.1 0.1
+}
+// brush 44
+{
+( -408 160 240 ) ( -408 161 240 ) ( -408 160 241 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -408 160 240 ) ( -408 160 241 ) ( -407 160 240 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -408 160 240 ) ( -407 160 240 ) ( -408 161 240 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -360 248 320 ) ( -360 249 320 ) ( -359 248 320 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -360 248 248 ) ( -359 248 248 ) ( -360 248 249 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -360 248 248 ) ( -360 248 249 ) ( -360 249 248 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+}
+// brush 45
+{
+( -216 -192 0 ) ( -216 -191 0 ) ( -216 -192 1 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 0 0 0 1 1
+( -216 -192 0 ) ( -216 -192 1 ) ( -215 -192 0 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 0 0 0 1 1
+( -216 -192 0 ) ( -215 -192 0 ) ( -216 -191 0 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 0 0 0 1 1
+( -200 -184 8 ) ( -200 -183 8 ) ( -199 -184 8 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 0 0 0 1 1
+( -200 -184 8 ) ( -199 -184 8 ) ( -200 -184 9 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 0 0 0 1 1
+( -208 -184 8 ) ( -208 -184 9 ) ( -208 -183 8 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 0 0 0 1 1
+}
+// brush 46
+{
+( -304 -192 0 ) ( -304 -191 0 ) ( -304 -192 1 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 0 0 0 1 1
+( -304 -192 0 ) ( -304 -192 1 ) ( -303 -192 0 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 88 0 0 1 1
+( -304 -192 0 ) ( -303 -192 0 ) ( -304 -191 0 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 88 0 0 1 1
+( -288 -184 8 ) ( -288 -183 8 ) ( -287 -184 8 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 88 0 0 1 1
+( -288 -184 8 ) ( -287 -184 8 ) ( -288 -184 9 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 88 0 0 1 1
+( -296 -184 8 ) ( -296 -184 9 ) ( -296 -183 8 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 0 0 0 1 1
+}
+// brush 47
+{
+( -216 -248 0 ) ( -216 -247 0 ) ( -216 -248 1 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 56 0 0 1 1
+( -216 -248 0 ) ( -216 -248 1 ) ( -215 -248 0 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 0 0 0 1 1
+( -216 -248 0 ) ( -215 -248 0 ) ( -216 -247 0 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 0 -56 0 1 1
+( -200 -240 8 ) ( -200 -239 8 ) ( -199 -240 8 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 0 -56 0 1 1
+( -200 -240 8 ) ( -199 -240 8 ) ( -200 -240 9 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 0 0 0 1 1
+( -208 -240 8 ) ( -208 -240 9 ) ( -208 -239 8 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 56 0 0 1 1
+}
+// brush 48
+{
+( -304 -248 0 ) ( -304 -247 0 ) ( -304 -248 1 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 56 0 0 1 1
+( -304 -248 0 ) ( -304 -248 1 ) ( -303 -248 0 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 88 0 0 1 1
+( -304 -248 0 ) ( -303 -248 0 ) ( -304 -247 0 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 88 -56 0 1 1
+( -288 -240 8 ) ( -288 -239 8 ) ( -287 -240 8 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 88 -56 0 1 1
+( -288 -240 8 ) ( -287 -240 8 ) ( -288 -240 9 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 88 0 0 1 1
+( -296 -240 8 ) ( -296 -240 9 ) ( -296 -239 8 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 56 0 0 1 1
+}
+// brush 49
+{
+( 56 52 16 ) ( 56 53 16 ) ( 56 52 17 ) wood2 -4 0 0 1 1
+( 32 52 16 ) ( 32 52 17 ) ( 33 52 16 ) wood2 -8 0 0 1 1
+( 32 52 16 ) ( 33 52 16 ) ( 32 53 16 ) wood2 -8 4 0 1 1
+( 80 180 56 ) ( 80 181 56 ) ( 81 180 56 ) wood2 -8 4 0 1 1
+( 80 180 24 ) ( 81 180 24 ) ( 80 180 25 ) wood2 -8 0 0 1 1
+( 80 180 24 ) ( 80 180 25 ) ( 80 181 24 ) wood2 -4 0 0 1 1
+}
+// brush 50
+{
+( -12 50 16 ) ( -12 51 16 ) ( -12 50 17 ) wood2 -2 0 0 1 1
+( -36 50 16 ) ( -36 50 17 ) ( -35 50 16 ) wood2 60 0 0 1 1
+( -36 50 16 ) ( -35 50 16 ) ( -36 51 16 ) wood2 60 2 0 1 1
+( 12 178 56 ) ( 12 179 56 ) ( 13 178 56 ) wood2 60 2 0 1 1
+( 12 178 24 ) ( 13 178 24 ) ( 12 178 25 ) wood2 60 0 0 1 1
+( 12 178 24 ) ( 12 178 25 ) ( 12 179 24 ) wood2 -2 0 0 1 1
+}
+// brush 51
+{
+( 62 52 52 ) ( 62 53 52 ) ( 62 52 53 ) wood2 -4 36 0 1 1
+( 32 52 52 ) ( 32 52 53 ) ( 33 52 52 ) wood2 -8 36 0 1 1
+( 32 52 78 ) ( 33 52 78 ) ( 32 53 78 ) wood2 -8 4 0 1 1
+( 80 180 80 ) ( 80 181 80 ) ( 81 180 80 ) wood2 -8 4 0 1 1
+( 80 180 60 ) ( 81 180 60 ) ( 80 180 61 ) wood2 -8 36 0 1 1
+( 80 180 60 ) ( 80 180 61 ) ( 80 181 60 ) wood2 -4 36 0 1 1
+}
+// brush 52
+{
+( 62 52 66 ) ( 62 53 66 ) ( 62 52 67 ) wood2 -4 50 0 1 1
+( 32 52 66 ) ( 32 52 67 ) ( 33 52 66 ) wood2 -8 50 0 1 1
+( 32 52 92 ) ( 33 52 92 ) ( 32 53 92 ) wood2 -8 4 0 1 1
+( 80 180 94 ) ( 80 181 94 ) ( 81 180 94 ) wood2 -8 4 0 1 1
+( 80 180 74 ) ( 81 180 74 ) ( 80 180 75 ) wood2 -8 50 0 1 1
+( 80 180 74 ) ( 80 180 75 ) ( 80 181 74 ) wood2 -4 50 0 1 1
+}
+// brush 53
+{
+( 62 52 80 ) ( 62 53 80 ) ( 62 52 81 ) wood2 -4 64 0 1 1
+( 32 52 80 ) ( 32 52 81 ) ( 33 52 80 ) wood2 -8 64 0 1 1
+( 32 52 106 ) ( 33 52 106 ) ( 32 53 106 ) wood2 -8 4 0 1 1
+( 80 180 108 ) ( 80 181 108 ) ( 81 180 108 ) wood2 -8 4 0 1 1
+( 80 180 88 ) ( 81 180 88 ) ( 80 180 89 ) wood2 -8 64 0 1 1
+( 80 180 88 ) ( 80 180 89 ) ( 80 181 88 ) wood2 -4 64 0 1 1
+}
+// brush 54
+{
+( -240 -64 0 ) ( -240 -63 0 ) ( -240 -64 1 ) wood2 0 0 0 1 1
+( -220 -64 0 ) ( -220 -64 1 ) ( -219 -64 0 ) wood2 0 0 0 1 1
+( -220 -64 0 ) ( -219 -64 0 ) ( -220 -63 0 ) wood2 0 0 0 1 1
+( -192 -14 16 ) ( -192 -13 16 ) ( -191 -14 16 ) wood2 0 0 0 1 1
+( -192 -14 2 ) ( -191 -14 2 ) ( -192 -14 3 ) wood2 0 0 0 1 1
+( -192 -14 2 ) ( -192 -14 3 ) ( -192 -13 2 ) wood2 0 0 0 1 1
+}
+// brush 55
+{
+( -240 -16 16 ) ( -240 -16 0 ) ( -240 88 0 ) wood2 -48 0 0 1 1
+( -240 -16 16 ) ( -192 -16 16 ) ( -192 -16 0 ) wood2 0 0 0 1 1
+( -192 -16 0 ) ( -192 88 0 ) ( -240 88 0 ) wood2 0 48 0 1 1
+( -192 -16 16 ) ( -240 -16 16 ) ( -240 88 0 ) wood2 0 48 0 1 1
+( -192 -16 16 ) ( -192 88 0 ) ( -192 -16 0 ) wood2 -48 0 0 1 1
+}
+// brush 56
+{
+( -248 -64 0 ) ( -248 -63 0 ) ( -248 -64 1 ) wood2 0 0 0 1 1
+( -248 -64 0 ) ( -248 -64 1 ) ( -247 -64 0 ) wood2 0 0 0 1 1
+( -248 -64 0 ) ( -247 -64 0 ) ( -248 -63 0 ) wood2 0 0 0 1 1
+( -240 -16 8 ) ( -240 -15 8 ) ( -239 -16 8 ) wood2 0 0 0 1 1
+( -240 -16 8 ) ( -239 -16 8 ) ( -240 -16 9 ) wood2 0 0 0 1 1
+( -240 -16 8 ) ( -240 -16 9 ) ( -240 -15 8 ) wood2 0 0 0 1 1
+}
+// brush 57
+{
+( -120 108 136 ) ( -120 109 136 ) ( -120 108 137 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 12 0 0 1 1
+( -120 108 136 ) ( -120 108 137 ) ( -119 108 136 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 0 0 0 1 1
+( -120 108 132 ) ( -119 108 132 ) ( -120 109 132 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 0 -12 0 1 1
+( -112 116 144 ) ( -112 117 144 ) ( -111 116 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 0 -12 0 1 1
+( -112 116 144 ) ( -111 116 144 ) ( -112 116 145 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 0 0 0 1 1
+( -112 116 144 ) ( -112 116 145 ) ( -112 117 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 12 0 0 1 1
+}
+// brush 58
+{
+( -120 52 136 ) ( -120 53 136 ) ( -120 52 137 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 68 0 0 1 1
+( -120 52 136 ) ( -120 52 137 ) ( -119 52 136 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 0 0 0 1 1
+( -120 52 132 ) ( -119 52 132 ) ( -120 53 132 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 0 -68 0 1 1
+( -112 60 144 ) ( -112 61 144 ) ( -111 60 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 0 -68 0 1 1
+( -112 60 144 ) ( -111 60 144 ) ( -112 60 145 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 0 0 0 1 1
+( -112 60 144 ) ( -112 60 145 ) ( -112 61 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 68 0 0 1 1
+}
+// brush 59
+{
+( -128 48 124 ) ( -128 49 124 ) ( -128 48 125 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 0 4 0 1 1
+( -120 48 124 ) ( -120 48 125 ) ( -119 48 124 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 0 4 0 1 1
+( -120 48 128 ) ( -119 48 128 ) ( -120 49 128 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_5 0 0 0 1 1
+( -112 128 132 ) ( -112 129 132 ) ( -111 128 132 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 0 0 0 1 1
+( -112 128 132 ) ( -111 128 132 ) ( -112 128 133 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 0 4 0 1 1
+( -104 128 132 ) ( -104 128 133 ) ( -104 129 132 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 0 4 0 1 1
+}
+// brush 60
+{
+( -36 112 136 ) ( -36 113 136 ) ( -36 112 137 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 8 0 0 1 1
+( -36 112 136 ) ( -36 112 137 ) ( -35 112 136 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -84 0 0 1 1
+( -36 112 132 ) ( -35 112 132 ) ( -36 113 132 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -84 -8 0 1 1
+( -28 120 144 ) ( -28 121 144 ) ( -27 120 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -84 -8 0 1 1
+( -28 120 144 ) ( -27 120 144 ) ( -28 120 145 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -84 0 0 1 1
+( -28 120 144 ) ( -28 120 145 ) ( -28 121 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 8 0 0 1 1
+}
+// brush 61
+{
+( -44 52 124 ) ( -44 53 124 ) ( -44 52 125 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -4 4 0 1 1
+( -36 52 124 ) ( -36 52 125 ) ( -35 52 124 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -84 4 0 1 1
+( -36 52 128 ) ( -35 52 128 ) ( -36 53 128 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_5 -84 4 0 1 1
+( -28 132 132 ) ( -28 133 132 ) ( -27 132 132 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -84 4 0 1 1
+( -28 132 132 ) ( -27 132 132 ) ( -28 132 133 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -84 4 0 1 1
+( -20 132 132 ) ( -20 132 133 ) ( -20 133 132 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -4 4 0 1 1
+}
+// brush 62
+{
+( -36 56 136 ) ( -36 57 136 ) ( -36 56 137 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 64 0 0 1 1
+( -36 56 136 ) ( -36 56 137 ) ( -35 56 136 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -84 0 0 1 1
+( -36 56 132 ) ( -35 56 132 ) ( -36 57 132 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -84 -64 0 1 1
+( -28 64 144 ) ( -28 65 144 ) ( -27 64 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -84 -64 0 1 1
+( -28 64 144 ) ( -27 64 144 ) ( -28 64 145 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -84 0 0 1 1
+( -28 64 144 ) ( -28 64 145 ) ( -28 65 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 64 0 0 1 1
+}
+// brush 63
+{
+( -192 56 48 ) ( -192 57 48 ) ( -192 56 49 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 112 0 0 1 1
+( -192 60 48 ) ( -192 60 49 ) ( -191 60 48 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -192 56 48 ) ( -191 56 48 ) ( -192 57 48 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 -112 0 1 1
+( -184 64 128 ) ( -184 65 128 ) ( -183 64 128 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 -112 0 1 1
+( -184 64 56 ) ( -183 64 56 ) ( -184 64 57 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -184 64 56 ) ( -184 64 57 ) ( -184 65 56 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 112 0 0 1 1
+}
+// brush 64
+{
+( -188 64 24 ) ( -188 65 24 ) ( -188 64 25 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5 -128 8 0 1 1
+( -188 64 24 ) ( -188 64 25 ) ( -187 64 24 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5 12 8 0 1 1
+( -188 64 52 ) ( -187 64 52 ) ( -188 65 52 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5 12 128 0 1 1
+( -180 128 108 ) ( -180 129 108 ) ( -179 128 108 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5 12 128 0 1 1
+( -180 120 32 ) ( -179 120 32 ) ( -180 120 33 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5 12 8 0 1 1
+( -184 128 32 ) ( -184 128 33 ) ( -184 129 32 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5 -128 8 0 1 1
+}
+// brush 65
+{
+( -188 124 24 ) ( -188 125 24 ) ( -188 124 25 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5 -188 8 0 1 1
+( -188 124 24 ) ( -188 124 25 ) ( -187 124 24 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5 12 8 0 1 1
+( -188 124 52 ) ( -187 124 52 ) ( -188 125 52 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5 12 188 0 1 1
+( -180 188 108 ) ( -180 189 108 ) ( -179 188 108 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5 12 188 0 1 1
+( -180 172 32 ) ( -179 172 32 ) ( -180 172 33 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5 12 8 0 1 1
+( -184 188 32 ) ( -184 188 33 ) ( -184 189 32 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5 -188 8 0 1 1
+}
+// brush 66
+{
+( -192 116 48 ) ( -192 117 48 ) ( -192 116 49 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 52 0 0 1 1
+( -192 120 48 ) ( -192 120 49 ) ( -191 120 48 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -192 116 48 ) ( -191 116 48 ) ( -192 117 48 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 -52 0 1 1
+( -184 124 128 ) ( -184 125 128 ) ( -183 124 128 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 -52 0 1 1
+( -184 124 56 ) ( -183 124 56 ) ( -184 124 57 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -184 124 56 ) ( -184 124 57 ) ( -184 125 56 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 52 0 0 1 1
+}
+// brush 67
+{
+( -732 168 376 ) ( -732 169 376 ) ( -732 168 377 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 -8 136 0 1 1
+( -484 80 376 ) ( -484 80 377 ) ( -483 80 376 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 76 136 0 1 1
+( -484 168 376 ) ( -483 168 376 ) ( -484 169 376 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 76 8 0 1 1
+( -436 256 456 ) ( -436 257 456 ) ( -435 256 456 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 76 8 0 1 1
+( -436 256 384 ) ( -435 256 384 ) ( -436 256 385 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 76 136 0 1 1
+( -436 256 384 ) ( -436 256 385 ) ( -436 257 384 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 -8 136 0 1 1
+}
+// brush 68
+{
+( -400 240 512 ) ( -400 241 512 ) ( -400 240 513 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 -32 0 1 1
+( -400 240 512 ) ( -400 240 513 ) ( -399 240 512 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 -32 0 1 1
+( -400 240 464 ) ( -399 240 464 ) ( -400 241 464 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 -32 0 1 1
+( -176 288 528 ) ( -176 289 528 ) ( -175 288 528 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 -32 0 1 1
+( -176 288 528 ) ( -175 288 528 ) ( -176 288 529 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 -32 0 1 1
+( -176 288 528 ) ( -176 288 529 ) ( -176 289 528 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 -32 0 1 1
+}
+// brush 69
+{
+( -400 -192 368 ) ( -400 -191 368 ) ( -400 -192 369 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -208 -192 368 ) ( -208 -192 369 ) ( -207 -192 368 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -208 -192 368 ) ( -207 -192 368 ) ( -208 -191 368 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -192 -160 384 ) ( -192 -159 384 ) ( -191 -160 384 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -192 -160 384 ) ( -191 -160 384 ) ( -192 -160 385 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -192 -160 384 ) ( -192 -160 385 ) ( -192 -159 384 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+}
+}

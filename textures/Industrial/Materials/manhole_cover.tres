@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b7aq84futjks8"]
+
+[ext_resource type="Texture2D" uid="uid://dli5m0pwv6r2m" path="res://textures/Industrial/Materials/manhole_cover.png" id="1_j82s8"]
+
+[resource]
+albedo_texture = ExtResource("1_j82s8")
+metallic_specular = 0.0
+texture_filter = 2

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://jd1crpnl7s4l"]
+
+[ext_resource type="Texture2D" uid="uid://cvnhufr322a0l" path="res://textures/Windows/Materials/window_shutter_blue_01.jpg" id="1_ot47b"]
+
+[resource]
+albedo_texture = ExtResource("1_ot47b")
+metallic_specular = 0.0
+texture_filter = 0

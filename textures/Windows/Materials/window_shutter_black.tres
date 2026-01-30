@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ednp72ti875j"]
+
+[ext_resource type="Texture2D" uid="uid://c5snonpldrltj" path="res://textures/Windows/Materials/window_shutter_black.png" id="1_nu2uo"]
+
+[resource]
+albedo_texture = ExtResource("1_nu2uo")
+metallic_specular = 0.0
+texture_filter = 2

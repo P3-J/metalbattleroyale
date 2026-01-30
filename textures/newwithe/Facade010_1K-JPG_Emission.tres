@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d0lss8enrcbln"]
+
+[ext_resource type="Texture2D" uid="uid://dharxtma7ahr8" path="res://textures/newwithe/Facade010_1K-JPG_Emission.jpg" id="1_ptpdl"]
+
+[resource]
+albedo_texture = ExtResource("1_ptpdl")
+metallic_specular = 0.0
+texture_filter = 0

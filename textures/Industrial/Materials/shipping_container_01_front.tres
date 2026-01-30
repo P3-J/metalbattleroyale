@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b3ljhu7g5gpj"]
+
+[ext_resource type="Texture2D" uid="uid://b0x3al4ki37e1" path="res://textures/Industrial/Materials/shipping_container_01_front.jpg" id="1_50i6n"]
+
+[resource]
+albedo_texture = ExtResource("1_50i6n")
+metallic_specular = 0.0
+texture_filter = 2
