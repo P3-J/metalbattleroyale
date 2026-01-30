@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://btdmrxxnkra8w"]
+
+[ext_resource type="Script" uid="uid://bi5kn5h6saj8u" path="res://sorsskod/kood/Enemy.cs" id="1_exyjx"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_n8ye6"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_vfwir"]
+
+[node name="enemy" type="CharacterBody3D" unique_id=1130431865 node_paths=PackedStringArray("navagent")]
+script = ExtResource("1_exyjx")
+navagent = NodePath("NavigationAgent3D")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=529733028]
+avoidance_enabled = true
+debug_enabled = true
+debug_use_custom = true
+debug_path_custom_color = Color(1, 0, 0, 1)
+debug_path_custom_point_size = 10.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=466785562]
+mesh = SubResource("SphereMesh_n8ye6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=113824533]
+shape = SubResource("SphereShape3D_vfwir")
+
+[node name="recalc" type="Timer" parent="." unique_id=1086444567]
+autostart = true
+
+[connection signal="timeout" from="recalc" to="." method="_on_recalc_timeout"]
