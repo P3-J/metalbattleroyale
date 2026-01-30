@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ho0tvps0lr0s"]
+
+[ext_resource type="Texture2D" uid="uid://b21hk5kv1vfd" path="res://textures/all.png" id="1_qvsfe"]
+
+[resource]
+albedo_texture = ExtResource("1_qvsfe")
+metallic_specular = 0.0
+emission_enabled = true
+emission = Color(0.18717623, 0.18717608, 0.18717614, 1)
+emission_energy_multiplier = 1.16
+texture_filter = 0

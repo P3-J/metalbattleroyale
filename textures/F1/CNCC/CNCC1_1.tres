@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ces44g8vvqufp"]
+
+[ext_resource type="Texture2D" uid="uid://bn1jjsfs8cvlw" path="res://textures/F1/CNCC/CNCC1_1.png" id="1_tx0xx"]
+
+[resource]
+albedo_texture = ExtResource("1_tx0xx")
+metallic_specular = 0.0
+texture_filter = 2

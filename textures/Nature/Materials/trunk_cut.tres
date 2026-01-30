@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://1m5w812cmfve"]
+
+[ext_resource type="Texture2D" uid="uid://cnkgi686cnfh8" path="res://textures/Nature/Materials/trunk_cut.png" id="1_sidfd"]
+
+[resource]
+albedo_texture = ExtResource("1_sidfd")
+metallic_specular = 0.0
+texture_filter = 0

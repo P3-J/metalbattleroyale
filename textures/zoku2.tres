@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c7q177xahvi5c"]
+
+[ext_resource type="Texture2D" uid="uid://b8hrugo3grxxc" path="res://textures/zoku2.png" id="1_52tcp"]
+
+[resource]
+albedo_texture = ExtResource("1_52tcp")
+metallic_specular = 0.0
+emission_enabled = true
+emission = Color(0.41598046, 0.41598043, 0.4159804, 1)
+texture_filter = 0

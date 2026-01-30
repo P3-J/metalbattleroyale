@@ -278,14 +278,14 @@ sky_horizon_color = Color(0.5570026, 0.630964, 0.95882386, 1)
 ground_energy_multiplier = 0.12
 sun_angle_max = 79.48
 
-[sub_resource type="Sky" id="Sky_nc5hy"]
+[sub_resource type="Sky" id="Sky_jq3ec"]
 sky_material = SubResource("ProceduralSkyMaterial_d5suu")
 
 [sub_resource type="Environment" id="Environment_6elju"]
 background_mode = 1
 background_color = Color(0.52236986, 0.0007298547, 0.6283715, 1)
 background_energy_multiplier = 0.17
-sky = SubResource("Sky_nc5hy")
+sky = SubResource("Sky_jq3ec")
 tonemap_mode = 2
 tonemap_agx_white = 1000.0
 ssr_enabled = true
