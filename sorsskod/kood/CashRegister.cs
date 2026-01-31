@@ -158,16 +158,21 @@ public partial class CashRegister : PanelContainer
             ChangeSumAmount(sum[..^1]);
         }
 
-        if (eventKey.Keycode == Key.Enter && orderInProgress)
-        {
-            HandleSumSubmit();
-        }
-
         /* if (!orderInProgress && eventKey.Keycode == Key.Space)
         {
             orderInProgress = true;
             GenerateOrder();
         } */
+    }
+
+    public int SubmitOrder(InputEventKey eventKey)
+    {
+        if (orderInProgress)
+        {
+            return HandleSumSubmit();
+        }
+
+        return 0;
     }
 
     private void OrderCameIn()
@@ -194,23 +199,33 @@ public partial class CashRegister : PanelContainer
         HandleRegisterUIState();
     }
 
-    private void HandleSumSubmit()
+    private int HandleSumSubmit()
     {
-        bool entryValidity = CheckSumEntryValidity();
+        if (!(sum.Length > 0))
+        {
+            return 0;
+        }
 
-        if (entryValidity == false || !masksInCurrentOrder.All(mask => mask.IsFulfilled == true))
+        int realSum = masksInCurrentOrder.Sum(mask => mask.Price);
+        long userSum = Convert.ToInt64(sum);
+
+        int returnSum = 0;
+
+        if (realSum == userSum || masksInCurrentOrder.All(mask => mask.IsFulfilled == true))
+        {
+            returnSum = realSum;
+            MakeResultMessageLabel("SOLD!");
+            glob.EmitSignal("OrderDone", true);
+        }
+        else
         {
             MakeResultMessageLabel("FAIL!");
             glob.EmitSignal("OrderDone", true); // fix this later
         }
-        else
-        {
-            MakeResultMessageLabel("SOLD!");
-            glob.EmitSignal("OrderDone", true);
-            ClearState();
-        }
 
+        ClearState();
         ChangeSumAmount("0");
+        return returnSum;
     }
 
     private void ChangeSumAmount(string sumInput)
@@ -218,18 +233,6 @@ public partial class CashRegister : PanelContainer
         sum = sumInput;
 
         sumAmountLabel.Text = $"${sum}";
-    }
-
-    private bool CheckSumEntryValidity()
-    {
-        if (!(sum.Length > 0))
-        {
-            return false;
-        }
-        int realSum = masksInCurrentOrder.Sum(mask => mask.Price);
-        long userSum = Convert.ToInt64(sum);
-
-        return realSum == userSum;
     }
 
     private void MakeResultMessageLabel(string message)

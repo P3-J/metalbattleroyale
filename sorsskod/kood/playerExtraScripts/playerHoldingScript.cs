@@ -25,6 +25,8 @@ public partial class Player
 	private readonly MoveDirs[] fireRecipe = { MoveDirs.UP, MoveDirs.UP, MoveDirs.DOWN, MoveDirs.RIGHT };
 	private readonly MoveDirs[] iceRecipe = { MoveDirs.RIGHT, MoveDirs.UP, MoveDirs.DOWN, MoveDirs.DOWN };
 
+    public int moneyBalance = 0;
+
 	private void CheckHandCollisionAndHoldItem()
 	{
 		if (!tryingToHoldItem)
@@ -184,6 +186,13 @@ public partial class Player
 
 	private void HandleConsoleInput(InputEvent e)
 	{
+        if (e is InputEventKey eventKey && eventKey.Keycode == Key.Enter)
+        {
+            moneyBalance += reg.SubmitOrder(eventKey);
+            GD.Print(moneyBalance);
+            return;
+        }
+
 		if (e is InputEventKey)
 		{
 			reg.UseKeyInput((InputEventKey)e);
