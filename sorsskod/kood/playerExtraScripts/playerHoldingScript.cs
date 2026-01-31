@@ -19,8 +19,11 @@ public partial class Player
 	private bool canUseBench = false;
 	private bool inConsoleMode = false;
 	private bool canUseConsole = false;
+	private Globals glob;
 
-	private readonly MoveDirs[] secretRecipe = { MoveDirs.UP, MoveDirs.UP, MoveDirs.DOWN, MoveDirs.RIGHT };
+	// sorri oleks ilusam viis teha ma ei viitsi
+	private readonly MoveDirs[] fireRecipe = { MoveDirs.UP, MoveDirs.UP, MoveDirs.DOWN, MoveDirs.RIGHT };
+	private readonly MoveDirs[] iceRecipe = { MoveDirs.RIGHT, MoveDirs.UP, MoveDirs.DOWN, MoveDirs.DOWN };
 
 	private void CheckHandCollisionAndHoldItem()
 	{
@@ -97,14 +100,18 @@ public partial class Player
 		{
 			if (e.IsActionPressed("lmb"))
 			{
-
-				inBenchMode = false;
-				benchCam.Current = false;
-				keysParent.Visible = false;
-				lmbParent.Visible = true;
+				DisableBenchMode();
 			}
 		}
 
+	}
+
+	private void DisableBenchMode()
+	{
+		inBenchMode = false;
+		benchCam.Current = false;
+		keysParent.Visible = false;
+		lmbParent.Visible = true;
 	}
 
 	private void AddInput(MoveDirs dir)
@@ -152,20 +159,24 @@ public partial class Player
 
 	private async void ConfirmCombination()
 	{
-		bool isCorrect = currentDirs.SequenceEqual(secretRecipe);
+		bool isFireMask = currentDirs.SequenceEqual(fireRecipe);
+		bool isIceMask = currentDirs.SequenceEqual(iceRecipe);
 
-		if (isCorrect)
+
+		if (isFireMask)
 		{
-			GD.Print("Success!");
+			glob.EmitSignal("SpawnItem", "FireMask");
+			DisableBenchMode();
 		}
-		else
+
+		if (isIceMask)
 		{
-			GD.Print("Failed!");
+			glob.EmitSignal("SpawnItem", "IceMask");
+			DisableBenchMode();
 		}
+		
 
 		await Task.Delay(1000);
-		currentDirs.Clear();
-
 		currentDirs.Clear();
 		RefreshInputUi();
 	}

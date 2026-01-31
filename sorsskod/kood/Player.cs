@@ -21,6 +21,7 @@ public partial class Player : CharacterBody3D
 	{
 
 		Input.MouseMode = Input.MouseModeEnum.Captured;
+		glob = GetNode<Globals>("/root/Globals");
 
 	}
 

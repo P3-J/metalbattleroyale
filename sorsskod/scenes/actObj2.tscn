@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://dfke1ppgaoyi6"]
+[gd_scene format=3 uid="uid://bd0aujv7pb4t4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fl53h"]
-albedo_color = Color(1, 0, 0, 1)
+albedo_color = Color(0.5018618, 0.36175337, 1, 1)
 emission_enabled = true
-emission = Color(1, 0, 0, 1)
+emission = Color(0.21727562, 0.50941503, 1, 1)
 
 [sub_resource type="SphereMesh" id="SphereMesh_fl53h"]
 material = SubResource("StandardMaterial3D_fl53h")
@@ -21,4 +21,5 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 shape = SubResource("SphereShape3D_fl53h")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=251267107]
-light_color = Color(1, 0.07450981, 0, 1)
+light_color = Color(0.3461009, 0.49073452, 1, 1)
+shadow_enabled = true
