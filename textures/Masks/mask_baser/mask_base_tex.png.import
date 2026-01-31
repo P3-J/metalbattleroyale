@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mfpsaacv500y"
-path="res://.godot/imported/devil_mask_tex.png-8fff5c18563a80b0291f02b4522d8ddb.ctex"
+uid="uid://bfx2if15suvj0"
+path="res://.godot/imported/mask_base_tex.png-53ac7f988d1baebd9cde13cc3a7dbb77.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/Masks/devil_mask/devil_mask_tex.png"
-dest_files=["res://.godot/imported/devil_mask_tex.png-8fff5c18563a80b0291f02b4522d8ddb.ctex"]
+source_file="res://textures/Masks/mask_baser/mask_base_tex.png"
+dest_files=["res://.godot/imported/mask_base_tex.png-53ac7f988d1baebd9cde13cc3a7dbb77.ctex"]
 
 [params]
 
