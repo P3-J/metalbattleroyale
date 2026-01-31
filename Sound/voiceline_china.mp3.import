@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://uj3foo5mevb7"
-path="res://.godot/imported/voiceline_china.mp3-8a76b35d00db8814683aa1a39969ecff.mp3str"
+path="res://.godot/imported/voiceline_china.mp3-3acf72073b90fe860e93dbdd2807b280.mp3str"
 
 [deps]
 
-source_file="res://sound/voiceline_china.mp3"
-dest_files=["res://.godot/imported/voiceline_china.mp3-8a76b35d00db8814683aa1a39969ecff.mp3str"]
+source_file="res://Sound/voiceline_china.mp3"
+dest_files=["res://.godot/imported/voiceline_china.mp3-3acf72073b90fe860e93dbdd2807b280.mp3str"]
 
 [params]
 
