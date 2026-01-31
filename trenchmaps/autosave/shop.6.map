@@ -1,0 +1,1346 @@
+// Game: Generic
+// Format: Standard
+// entity 0
+{
+"classname" "worldspawn"
+"_tb_textures" "textures"
+// brush 0
+{
+( -64 -64 -16 ) ( -64 -63 -16 ) ( -64 -64 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -64 -68 -16 ) ( -64 -68 -15 ) ( -63 -68 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -64 -64 -16 ) ( -63 -64 -16 ) ( -64 -63 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 64 64 16 ) ( 64 65 16 ) ( 65 64 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2 0 0 0 0.3 0.3
+( 64 64 16 ) ( 65 64 16 ) ( 64 64 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 64 64 16 ) ( 64 64 17 ) ( 64 65 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+}
+// brush 1
+{
+( -192 -64 -16 ) ( -192 -63 -16 ) ( -192 -64 -15 ) 128x128/Brick/Brick_07-128x128 0 0 0 0.2 0.2
+( -192 -64 -16 ) ( -192 -64 -15 ) ( -191 -64 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -192 -64 -16 ) ( -191 -64 -16 ) ( -192 -63 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -64 64 16 ) ( -64 65 16 ) ( -63 64 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2 0 0 0 0.3 0.3
+( -64 64 16 ) ( -63 64 16 ) ( -64 64 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -64 64 16 ) ( -64 64 17 ) ( -64 65 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+}
+// brush 2
+{
+( -192 64 -16 ) ( -192 65 -16 ) ( -192 64 -15 ) 128x128/Brick/Brick_07-128x128 0 0 0 0.2 0.2
+( -192 64 -16 ) ( -192 64 -15 ) ( -191 64 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -192 64 -16 ) ( -191 64 -16 ) ( -192 65 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -64 192 16 ) ( -64 193 16 ) ( -63 192 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2 0 0 0 0.3 0.3
+( -64 177 16 ) ( -63 177 16 ) ( -64 177 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -64 192 16 ) ( -64 192 17 ) ( -64 193 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+}
+// brush 3
+{
+( -64 64 -16 ) ( -64 65 -16 ) ( -64 64 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -64 64 -16 ) ( -64 64 -15 ) ( -63 64 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -64 64 -16 ) ( -63 64 -16 ) ( -64 65 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 64 192 16 ) ( 64 193 16 ) ( 65 192 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2 0 0 0 0.3 0.3
+( 64 192 16 ) ( 65 192 16 ) ( 64 192 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 64 192 16 ) ( 64 192 17 ) ( 64 193 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+}
+// brush 4
+{
+( -192 -192 -16 ) ( -192 -191 -16 ) ( -192 -192 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC7_6 32 0 90 0.2 0.2
+( -192 -736 -16 ) ( -192 -736 -15 ) ( -191 -736 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC8_2 0 0 90 0.25 0.25
+( -192 -192 -16 ) ( -191 -192 -16 ) ( -192 -191 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC8_2 0 0 90 0.25 0.25
+( -64 -64 584 ) ( -64 -63 584 ) ( -63 -64 584 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC8_2 0 0 90 0.25 0.25
+( -64 -64 16 ) ( -63 -64 16 ) ( -64 -64 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4_1 0 0 0 0.2 0.2
+( -64 -64 16 ) ( -64 -64 17 ) ( -64 -63 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC8_2 0 0 90 0.25 0.25
+}
+// brush 5
+{
+( -64 -192 -16 ) ( -64 -191 -16 ) ( -64 -192 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -64 -736 -16 ) ( -64 -736 -15 ) ( -63 -736 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -64 -192 -16 ) ( -63 -192 -16 ) ( -64 -191 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 64 -64 224 ) ( 64 -63 224 ) ( 65 -64 224 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 64 -68 16 ) ( 65 -68 16 ) ( 64 -68 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4_1 0 0 0 0.2 0.2
+( 96 -64 16 ) ( 96 -64 17 ) ( 96 -63 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+}
+// brush 6
+{
+( -192 720 -16 ) ( -192 721 -16 ) ( -192 720 -15 ) 128x128/Brick/Brick_07-128x128 -16 0 0 0.2 0.2
+( -192 176 -16 ) ( -192 176 -15 ) ( -191 176 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4_1 0 0 0 0.2 0.2
+( -192 720 -16 ) ( -191 720 -16 ) ( -192 721 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 16 0 1 1
+( -64 848 224 ) ( -64 849 224 ) ( -63 848 224 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 16 0 1 1
+( -64 848 16 ) ( -63 848 16 ) ( -64 848 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -64 848 16 ) ( -64 848 17 ) ( -64 849 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 -16 0 0 1 1
+}
+// brush 7
+{
+( -64 720 -16 ) ( -64 721 -16 ) ( -64 720 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 -16 0 0 1 1
+( -64 176 -16 ) ( -64 176 -15 ) ( -63 176 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4_1 0 0 0 0.2 0.2
+( -64 720 -16 ) ( -63 720 -16 ) ( -64 721 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 16 0 1 1
+( 64 848 224 ) ( 64 849 224 ) ( 65 848 224 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 16 0 1 1
+( 64 848 16 ) ( 65 848 16 ) ( 64 848 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 64 848 16 ) ( 64 848 17 ) ( 64 849 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 -16 0 0 1 1
+}
+// brush 8
+{
+( 64 64 -16 ) ( 64 65 -16 ) ( 64 64 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 64 64 -16 ) ( 64 64 -15 ) ( 65 64 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 64 64 -16 ) ( 65 64 -16 ) ( 64 65 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 192 16 ) ( 192 193 16 ) ( 193 192 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 192 16 ) ( 193 192 16 ) ( 192 192 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 192 16 ) ( 192 192 17 ) ( 192 193 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+}
+// brush 9
+{
+( 64 -64 -16 ) ( 64 -63 -16 ) ( 64 -64 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 64 -64 -16 ) ( 64 -64 -15 ) ( 65 -64 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 64 -64 -16 ) ( 65 -64 -16 ) ( 64 -63 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 64 16 ) ( 192 65 16 ) ( 193 64 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 64 16 ) ( 193 64 16 ) ( 192 64 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 64 16 ) ( 192 64 17 ) ( 192 65 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+}
+// brush 10
+{
+( 64 -192 -16 ) ( 64 -191 -16 ) ( 64 -192 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 64 -192 -16 ) ( 64 -192 -15 ) ( 65 -192 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 64 -192 -16 ) ( 65 -192 -16 ) ( 64 -191 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 -64 16 ) ( 192 -63 16 ) ( 193 -64 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 -64 16 ) ( 193 -64 16 ) ( 192 -64 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 -64 16 ) ( 192 -64 17 ) ( 192 -63 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+}
+// brush 11
+{
+( 192 -192 -16 ) ( 192 -191 -16 ) ( 192 -192 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 -192 -16 ) ( 192 -192 -15 ) ( 193 -192 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 -192 -16 ) ( 193 -192 -16 ) ( 192 -191 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 320 -64 16 ) ( 320 -63 16 ) ( 321 -64 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 320 -64 16 ) ( 321 -64 16 ) ( 320 -64 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 320 -64 16 ) ( 320 -64 17 ) ( 320 -63 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+}
+// brush 12
+{
+( 192 -64 -16 ) ( 192 -63 -16 ) ( 192 -64 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 -64 -16 ) ( 192 -64 -15 ) ( 193 -64 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 -64 -16 ) ( 193 -64 -16 ) ( 192 -63 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 320 64 16 ) ( 320 65 16 ) ( 321 64 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 320 64 16 ) ( 321 64 16 ) ( 320 64 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 320 64 16 ) ( 320 64 17 ) ( 320 65 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+}
+// brush 13
+{
+( 64 -320 -16 ) ( 64 -319 -16 ) ( 64 -320 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 64 -864 -16 ) ( 64 -864 -15 ) ( 65 -864 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 64 -320 -16 ) ( 65 -320 -16 ) ( 64 -319 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 -192 224 ) ( 192 -191 224 ) ( 193 -192 224 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 -192 16 ) ( 193 -192 16 ) ( 192 -192 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 -192 16 ) ( 192 -192 17 ) ( 192 -191 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+}
+// brush 14
+{
+( 192 -320 -16 ) ( 192 -319 -16 ) ( 192 -320 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 -864 -16 ) ( 192 -864 -15 ) ( 193 -864 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 -320 -16 ) ( 193 -320 -16 ) ( 192 -319 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 320 -192 224 ) ( 320 -191 224 ) ( 321 -192 224 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 320 -192 16 ) ( 321 -192 16 ) ( 320 -192 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 320 -192 16 ) ( 320 -192 17 ) ( 320 -191 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+}
+// brush 15
+{
+( 288 -64 -16 ) ( 288 -63 -16 ) ( 288 -64 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 288 -608 -16 ) ( 288 -608 -15 ) ( 289 -608 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 32 0 0 1 1
+( 288 -64 -16 ) ( 289 -64 -16 ) ( 288 -63 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 32 0 0 1 1
+( 416 64 224 ) ( 416 65 224 ) ( 417 64 224 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 32 0 0 1 1
+( 416 64 16 ) ( 417 64 16 ) ( 416 64 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 32 0 0 1 1
+( 416 64 16 ) ( 416 64 17 ) ( 416 65 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+}
+// brush 16
+{
+( 64 720 -16 ) ( 64 721 -16 ) ( 64 720 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 -16 0 0 1 1
+( 64 176 -16 ) ( 64 176 -15 ) ( 65 176 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4_1 0 0 0 0.2 0.2
+( 64 720 -16 ) ( 65 720 -16 ) ( 64 721 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 16 0 1 1
+( 192 848 224 ) ( 192 849 224 ) ( 193 848 224 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 16 0 1 1
+( 192 848 16 ) ( 193 848 16 ) ( 192 848 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 848 16 ) ( 192 848 17 ) ( 192 849 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 -16 0 0 1 1
+}
+// brush 17
+{
+( 192 608 -16 ) ( 192 609 -16 ) ( 192 608 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 96 0 0 1 1
+( 192 64 -16 ) ( 192 64 -15 ) ( 193 64 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 192 608 -16 ) ( 193 608 -16 ) ( 192 609 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 -96 0 1 1
+( 320 736 224 ) ( 320 737 224 ) ( 321 736 224 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 -96 0 1 1
+( 320 736 16 ) ( 321 736 16 ) ( 320 736 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 320 736 16 ) ( 320 736 17 ) ( 320 737 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 96 0 0 1 1
+}
+// brush 18
+{
+( -176 -128 224 ) ( -176 -127 224 ) ( -176 -128 225 ) 128x128/Brick/Brick_07-128x128 0 0 0 0.2 0.2
+( -192 -208 224 ) ( -192 -208 225 ) ( -191 -208 224 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -192 -128 144 ) ( -191 -128 144 ) ( -192 -127 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 288 208 664 ) ( 288 209 664 ) ( 289 208 664 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 288 384 240 ) ( 289 384 240 ) ( 288 384 241 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( 288 208 240 ) ( 288 208 241 ) ( 288 209 240 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+}
+// brush 19
+{
+( 80 576 -16 ) ( 80 577 -16 ) ( 80 576 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4_1 0 0 0 0.2 0.2
+( 80 -20 -16 ) ( 80 -20 -15 ) ( 81 -20 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 112 0 0 1 1
+( 80 576 -16 ) ( 81 576 -16 ) ( 80 577 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 112 0 0 1 1
+( 208 704 224 ) ( 208 705 224 ) ( 209 704 224 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 112 0 0 1 1
+( 208 704 16 ) ( 209 704 16 ) ( 208 704 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 112 0 0 1 1
+( 96 704 16 ) ( 96 704 17 ) ( 96 705 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+}
+// brush 20
+{
+( -188 4 24 ) ( -188 5 24 ) ( -188 4 25 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5 -68 8 0 1 1
+( -188 4 24 ) ( -188 4 25 ) ( -187 4 24 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5 12 8 0 1 1
+( -188 4 52 ) ( -187 4 52 ) ( -188 5 52 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5 12 68 0 1 1
+( -180 68 108 ) ( -180 69 108 ) ( -179 68 108 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5 12 68 0 1 1
+( -180 60 32 ) ( -179 60 32 ) ( -180 60 33 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5 12 8 0 1 1
+( -184 68 32 ) ( -184 68 33 ) ( -184 69 32 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5 -68 8 0 1 1
+}
+// brush 21
+{
+( -192 0 176 ) ( -203.33333333332484 0 108 ) ( -203.33333333332484 176 108 ) F1/CNSP8B 0 0 0 0.5 0.7
+( -177.06666666666666 176 168.53333333333333 ) ( -161.06666666666666 176 200.53333333333333 ) ( -161.06666666666666 0 200.53333333333333 ) F1/CNSP8B -24 75.55554 0 0.8 0.6
+( -192 0 176 ) ( -176 0 208 ) ( -176 0 108 ) F1/CNSP8B 0 0 0 1 1
+( -176 0 104 ) ( -176 176 104 ) ( -203.33333333332484 176 104 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4_1 0 0 0 0.2 0.2
+( -176 176 108 ) ( -176 176 208 ) ( -192 176 176 ) F1/CNSP8B 0 0 0 1 1
+( -176 0 208 ) ( -176 176 208 ) ( -176 176 108 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4_1 0 0 0 0.2 0.2
+}
+// brush 22
+{
+( -176 -64 144 ) ( -192 -64 92 ) ( -192 0 92 ) 128x128/Brick/Brick_07-128x128 0 0 0 0.2 0.2
+( -176 -64 144 ) ( -168 -64 144 ) ( -168 -64 92 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 56 0 1 1
+( -168 -64 92 ) ( -168 0 92 ) ( -192 0 92 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -176 0 144 ) ( -168 0 144 ) ( -168 -64 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -168 0 92 ) ( -168 0 144 ) ( -176 0 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 56 0 1 1
+( -168 -64 144 ) ( -168 0 144 ) ( -168 0 92 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4_1 0 0 0 0.2 0.2
+}
+// brush 23
+{
+( -448 776 -16 ) ( -448 777 -16 ) ( -448 776 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC7_6 32 0 90 0.2 0.2
+( -448 232 -16 ) ( -448 232 -15 ) ( -447 232 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC7_6 32 0 90 0.2 0.2
+( -448 776 -16 ) ( -447 776 -16 ) ( -448 777 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC7_6 32 0 90 0.2 0.2
+( -320 904 480 ) ( -320 905 480 ) ( -319 904 480 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC7_6 32 0 90 0.2 0.2
+( -320 904 16 ) ( -319 904 16 ) ( -320 904 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC7_6 32 0 90 0.2 0.2
+( -320 904 16 ) ( -320 904 17 ) ( -320 905 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC7_6 32 0 90 0.2 0.2
+}
+// brush 24
+{
+( -320 456 -16 ) ( -320 456 -15 ) ( -320 455 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC7_6 8 0 90 0.2 0.2
+( -96 328 16 ) ( -96 328 17 ) ( -95 328 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC7_6 32 0 90 0.2 0.2
+( -224 456 -16 ) ( -224 455 -16 ) ( -223 456 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC7_6 8 -32 90 0.2 0.2
+( -96 328 456 ) ( -95 328 456 ) ( -96 327 456 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC7_6 8 -32 90 0.2 0.2
+( -224 456 -16 ) ( -223 456 -16 ) ( -224 456 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC7_6 32 0 90 0.2 0.2
+( -96 328 16 ) ( -96 327 16 ) ( -96 328 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC7_6 8 0 90 0.2 0.2
+}
+// brush 25
+{
+( -1536 288 -32 ) ( -1536 288 -31 ) ( -1536 287 -32 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 -32 -16 180 1 1
+( -608 160 0 ) ( -608 160 1 ) ( -607 160 0 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 32 -16 0 1 1
+( -736 288 -32 ) ( -736 287 -32 ) ( -735 288 -32 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 -32 -32 270 1 1
+( -608 160 0 ) ( -607 160 0 ) ( -608 159 0 ) rock_wall_13_diff_1k -32 -32 180 0.1 0.1
+( -736 288 -32 ) ( -735 288 -32 ) ( -736 288 -31 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 32 -16 0 1 1
+( -320 160 0 ) ( -320 159 0 ) ( -320 160 1 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 -32 -16 180 1 1
+}
+// brush 26
+{
+( -984 32 -16 ) ( -984 33 -16 ) ( -984 32 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 32 0 0 1 1
+( -448 -288 -16 ) ( -448 -288 -15 ) ( -447 -288 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -448 32 -16 ) ( -447 32 -16 ) ( -448 33 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 -32 0 1 1
+( -320 160 536 ) ( -320 161 536 ) ( -319 160 536 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 -32 0 1 1
+( -320 160 16 ) ( -319 160 16 ) ( -320 160 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -320 160 16 ) ( -320 160 17 ) ( -320 161 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 32 0 0 1 1
+}
+// brush 27
+{
+( -304 -184 56 ) ( -304 -248 72 ) ( -304 -248 8 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 248 8 0 1 1
+( -304 -248 72 ) ( -208 -248 72 ) ( -208 -248 8 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 48 8 0 1 1
+( -208 -248 8 ) ( -208 -184 8 ) ( -304 -184 8 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 48 -248 0 1 1
+( -304 -184 56 ) ( -208 -184 56 ) ( -208 -248 72 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 -59.666656 8 0 1.548387 1
+( -208 -184 8 ) ( -208 -184 56 ) ( -304 -184 56 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 -59.666656 8 0 1.548387 1
+( -208 -248 72 ) ( -208 -184 56 ) ( -208 -184 8 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 248 8 0 1 1
+}
+// brush 28
+{
+( -624 -640 224 ) ( -856 -928 224 ) ( -856 -928 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 32 0 0 1 1
+( -192 -480 -16 ) ( -192 -480 224 ) ( -624 -640 224 ) newwithe/Facade010_1K-JPG_Emission 0 0 0 3.1 3
+( -856 -928 224 ) ( -192 -928 224 ) ( -192 -928 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -192 -928 -16 ) ( -192 -480 -16 ) ( -624 -640 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 -32 0 1 1
+( -624 -640 2844 ) ( -192 -480 2844 ) ( -192 -928 2844 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 -32 0 1 1
+( -192 -928 224 ) ( -192 -480 224 ) ( -192 -480 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 32 0 0 1 1
+}
+// brush 29
+{
+( -320 -272 16 ) ( -320 -272 17 ) ( -320 -273 16 ) F1/CNAL9 176 24 90 1 1
+( -312 -280 144 ) ( -312 -280 145 ) ( -311 -280 144 ) F1/CNAL9 176 -64 90 1 -1
+( -320 -272 16 ) ( -320 -273 16 ) ( -319 -272 16 ) F1/CNAL9 -24 -64 270 1 1
+( -312 -280 144 ) ( -311 -280 144 ) ( -312 -281 144 ) F1/CNAL9 -24 -64 270 1 1
+( -320 -272 16 ) ( -319 -272 16 ) ( -320 -272 17 ) F1/CNAL9 176 -64 90 1 -1
+( -312 -280 144 ) ( -312 -281 144 ) ( -312 -280 145 ) F1/CNAL9 176 24 90 1 1
+}
+// brush 30
+{
+( -192 0 16 ) ( -192 1 16 ) ( -192 0 17 ) 128x128/Brick/Brick_07-128x128 0 0 0 0.2 0.2
+( -192 0 16 ) ( -192 0 17 ) ( -191 0 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -192 0 16 ) ( -191 0 16 ) ( -192 1 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -184 176 48 ) ( -184 177 48 ) ( -183 176 48 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -184 176 24 ) ( -183 176 24 ) ( -184 176 25 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -184 176 24 ) ( -184 176 25 ) ( -184 177 24 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4_1 0 0 0 0.2 0.2
+}
+// brush 31
+{
+( -192 168 48 ) ( -192 169 48 ) ( -192 168 49 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -192 172 48 ) ( -192 172 49 ) ( -191 172 48 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -192 168 48 ) ( -191 168 48 ) ( -192 169 48 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -184 176 128 ) ( -184 177 128 ) ( -183 176 128 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -184 176 56 ) ( -183 176 56 ) ( -184 176 57 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -184 176 56 ) ( -184 176 57 ) ( -184 177 56 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+}
+// brush 32
+{
+( -192 4 48 ) ( -192 5 48 ) ( -192 4 49 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -192 4 48 ) ( -192 4 49 ) ( -191 4 48 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -192 4 48 ) ( -191 4 48 ) ( -192 5 48 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -180 172 52 ) ( -180 173 52 ) ( -179 172 52 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -180 172 52 ) ( -179 172 52 ) ( -180 172 53 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -180 172 52 ) ( -180 172 53 ) ( -180 173 52 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+}
+// brush 33
+{
+( -192 0 48 ) ( -192 1 48 ) ( -192 0 49 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -192 0 48 ) ( -192 0 49 ) ( -191 0 48 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -192 0 48 ) ( -191 0 48 ) ( -192 1 48 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -184 4 128 ) ( -184 5 128 ) ( -183 4 128 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -184 4 52 ) ( -183 4 52 ) ( -184 4 53 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -184 4 52 ) ( -184 4 53 ) ( -184 5 52 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+}
+// brush 34
+{
+( -192 -64 16 ) ( -192 -63 16 ) ( -192 -64 17 ) 128x128/Brick/Brick_07-128x128 0 0 0 0.2 0.2
+( -192 -16 16 ) ( -192 -16 17 ) ( -191 -16 16 ) F1/CNSP8A -16 0 0 0.2 0.2
+( -192 -64 16 ) ( -191 -64 16 ) ( -192 -63 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -64 64 92 ) ( -64 65 92 ) ( -63 64 92 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -64 0 48 ) ( -63 0 48 ) ( -64 0 49 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 32 0 1 1
+( -168 64 48 ) ( -168 64 49 ) ( -168 65 48 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4_1 0 0 0 0.2 0.2
+}
+// brush 35
+{
+( 80 -16 140 ) ( 80 -15 140 ) ( 80 -16 141 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4_1 0 0 0 0.2 0.2
+( 80 -68 140 ) ( 80 -68 141 ) ( 81 -68 140 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( 80 -16 84 ) ( 81 -16 84 ) ( 80 -15 84 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( 92 -8 144 ) ( 92 -7 144 ) ( 93 -8 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( 92 -20 144 ) ( 93 -20 144 ) ( 92 -20 145 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( 92 -8 144 ) ( 92 -8 145 ) ( 92 -7 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+}
+// brush 36
+{
+( -336 57.14285714285513 379.4285714285712 ) ( -336 68.57142857142577 345.1428571428567 ) ( -336 91.4285714285671 345.1428571428567 ) Metal/Materials/metal_rusty_02 -16 9.599991 0 1.4285715 1.4285715
+( -152 57.14285714285513 379.4285714285712 ) ( -152 68.57142857142577 345.1428571428567 ) ( -272 68.57142857142577 345.1428571428567 ) Metal/Materials/metal_rusty_02 30.399994 9.599991 0 1.4285715 1.4285715
+( -152 68.57142857142577 345.1428571428567 ) ( -152 91.4285714285671 345.1428571428567 ) ( -272 91.4285714285671 345.1428571428567 ) Metal/Materials/metal_rusty_02 32.399994 48 0 1.4285715 1.4285715
+( -272 102.85714285713775 368 ) ( -152 102.85714285713775 368 ) ( -152 57.14285714285513 368 ) Metal/Materials/metal_rusty_02 30.399994 16 0 1.4285715 1.4285715
+( -152 91.4285714285671 345.1428571428567 ) ( -152 102.85714285713775 379.4285714285712 ) ( -272 102.85714285713775 379.4285714285712 ) Metal/Materials/metal_rusty_02 30.399994 9.599991 0 1.4285715 1.4285715
+( -152 57.14285714285513 379.4285714285712 ) ( -152 102.85714285713775 379.4285714285712 ) ( -152 91.4285714285671 345.1428571428567 ) Metal/Materials/metal_rusty_02 -16 9.599991 0 1.4285715 1.4285715
+}
+// brush 37
+{
+( -408 160 240 ) ( -408 161 240 ) ( -408 160 241 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -408 160 240 ) ( -408 160 241 ) ( -407 160 240 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -408 160 240 ) ( -407 160 240 ) ( -408 161 240 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -360 248 320 ) ( -360 249 320 ) ( -359 248 320 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -360 248 248 ) ( -359 248 248 ) ( -360 248 249 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -360 248 248 ) ( -360 248 249 ) ( -360 249 248 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+}
+// brush 38
+{
+( -216 -192 0 ) ( -216 -191 0 ) ( -216 -192 1 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 0 0 0 1 1
+( -216 -192 0 ) ( -216 -192 1 ) ( -215 -192 0 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 0 0 0 1 1
+( -216 -192 0 ) ( -215 -192 0 ) ( -216 -191 0 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 0 0 0 1 1
+( -200 -184 8 ) ( -200 -183 8 ) ( -199 -184 8 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 0 0 0 1 1
+( -200 -184 8 ) ( -199 -184 8 ) ( -200 -184 9 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 0 0 0 1 1
+( -208 -184 8 ) ( -208 -184 9 ) ( -208 -183 8 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 0 0 0 1 1
+}
+// brush 39
+{
+( -304 -192 0 ) ( -304 -191 0 ) ( -304 -192 1 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 0 0 0 1 1
+( -304 -192 0 ) ( -304 -192 1 ) ( -303 -192 0 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 88 0 0 1 1
+( -304 -192 0 ) ( -303 -192 0 ) ( -304 -191 0 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 88 0 0 1 1
+( -288 -184 8 ) ( -288 -183 8 ) ( -287 -184 8 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 88 0 0 1 1
+( -288 -184 8 ) ( -287 -184 8 ) ( -288 -184 9 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 88 0 0 1 1
+( -296 -184 8 ) ( -296 -184 9 ) ( -296 -183 8 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 0 0 0 1 1
+}
+// brush 40
+{
+( -216 -248 0 ) ( -216 -247 0 ) ( -216 -248 1 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 56 0 0 1 1
+( -216 -248 0 ) ( -216 -248 1 ) ( -215 -248 0 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 0 0 0 1 1
+( -216 -248 0 ) ( -215 -248 0 ) ( -216 -247 0 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 0 -56 0 1 1
+( -200 -240 8 ) ( -200 -239 8 ) ( -199 -240 8 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 0 -56 0 1 1
+( -200 -240 8 ) ( -199 -240 8 ) ( -200 -240 9 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 0 0 0 1 1
+( -208 -240 8 ) ( -208 -240 9 ) ( -208 -239 8 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 56 0 0 1 1
+}
+// brush 41
+{
+( -304 -248 0 ) ( -304 -247 0 ) ( -304 -248 1 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 56 0 0 1 1
+( -304 -248 0 ) ( -304 -248 1 ) ( -303 -248 0 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 88 0 0 1 1
+( -304 -248 0 ) ( -303 -248 0 ) ( -304 -247 0 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 88 -56 0 1 1
+( -288 -240 8 ) ( -288 -239 8 ) ( -287 -240 8 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 88 -56 0 1 1
+( -288 -240 8 ) ( -287 -240 8 ) ( -288 -240 9 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 88 0 0 1 1
+( -296 -240 8 ) ( -296 -240 9 ) ( -296 -239 8 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5 56 0 0 1 1
+}
+// brush 42
+{
+( 56 52 16 ) ( 56 53 16 ) ( 56 52 17 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
+( 32 52 16 ) ( 32 52 17 ) ( 33 52 16 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
+( 32 52 16 ) ( 33 52 16 ) ( 32 53 16 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
+( 80 180 56 ) ( 80 181 56 ) ( 81 180 56 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
+( 80 180 24 ) ( 81 180 24 ) ( 80 180 25 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
+( 80 180 24 ) ( 80 180 25 ) ( 80 181 24 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
+}
+// brush 43
+{
+( -8 50 16 ) ( -8 51 16 ) ( -8 50 17 ) Roof/Materials/shingles_wood_01 -2 0 0 0.4 0.4
+( -28 50 16 ) ( -28 50 17 ) ( -27 50 16 ) Roof/Materials/shingles_wood_01 40 0 0 0.4 0.4
+( -28 50 16 ) ( -27 50 16 ) ( -28 51 16 ) Roof/Materials/shingles_wood_01 40 2 0 0.4 0.4
+( 20 178 56 ) ( 20 179 56 ) ( 21 178 56 ) Roof/Materials/shingles_wood_01 40 2 0 0.4 0.4
+( 20 178 24 ) ( 21 178 24 ) ( 20 178 25 ) Roof/Materials/shingles_wood_01 40 0 0 0.4 0.4
+( 20 178 24 ) ( 20 178 25 ) ( 20 179 24 ) Roof/Materials/shingles_wood_01 -2 0 0 0.4 0.4
+}
+// brush 44
+{
+( 62 52 52 ) ( 62 53 52 ) ( 62 52 53 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
+( 32 52 52 ) ( 32 52 53 ) ( 33 52 52 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
+( 32 52 78 ) ( 33 52 78 ) ( 32 53 78 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
+( 80 180 80 ) ( 80 181 80 ) ( 81 180 80 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
+( 80 180 60 ) ( 81 180 60 ) ( 80 180 61 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
+( 80 180 60 ) ( 80 180 61 ) ( 80 181 60 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
+}
+// brush 45
+{
+( 62 52 66 ) ( 62 53 66 ) ( 62 52 67 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
+( 32 52 66 ) ( 32 52 67 ) ( 33 52 66 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
+( 32 52 92 ) ( 33 52 92 ) ( 32 53 92 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
+( 80 180 94 ) ( 80 181 94 ) ( 81 180 94 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
+( 80 180 74 ) ( 81 180 74 ) ( 80 180 75 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
+( 80 180 74 ) ( 80 180 75 ) ( 80 181 74 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
+}
+// brush 46
+{
+( 62 52 80 ) ( 62 53 80 ) ( 62 52 81 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
+( 32 52 80 ) ( 32 52 81 ) ( 33 52 80 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
+( 32 52 106 ) ( 33 52 106 ) ( 32 53 106 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
+( 80 180 108 ) ( 80 181 108 ) ( 81 180 108 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
+( 80 180 88 ) ( 81 180 88 ) ( 80 180 89 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
+( 80 180 88 ) ( 80 180 89 ) ( 80 181 88 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
+}
+// brush 47
+{
+( -240 -64 0 ) ( -240 -63 0 ) ( -240 -64 1 ) Metal/Materials/metal_diamondplate_04 0 0 0 0.6 0.5
+( -220 -64 0 ) ( -220 -64 1 ) ( -219 -64 0 ) Metal/Materials/metal_diamondplate_04 0 0 0 0.6 0.5
+( -220 -64 0 ) ( -219 -64 0 ) ( -220 -63 0 ) Metal/Materials/metal_diamondplate_04 0 0 0 0.6 0.5
+( -192 -14 16 ) ( -192 -13 16 ) ( -191 -14 16 ) Metal/Materials/metal_diamondplate_04 0 0 0 0.6 0.5
+( -192 -14 2 ) ( -191 -14 2 ) ( -192 -14 3 ) Metal/Materials/metal_diamondplate_04 0 0 0 0.6 0.5
+( -192 -14 2 ) ( -192 -14 3 ) ( -192 -13 2 ) Metal/Materials/metal_diamondplate_04 0 0 0 0.6 0.5
+}
+// brush 48
+{
+( -240 -16 16 ) ( -240 -16 0 ) ( -240 88 0 ) Metal/Materials/metal_diamondplate_04 -48 0 0 0.6 0.5
+( -240 -16 16 ) ( -192 -16 16 ) ( -192 -16 0 ) Metal/Materials/metal_diamondplate_04 0 0 0 0.6 0.5
+( -192 -16 0 ) ( -192 88 0 ) ( -240 88 0 ) Metal/Materials/metal_diamondplate_04 0 48 0 0.6 0.5
+( -192 -16 16 ) ( -240 -16 16 ) ( -240 88 0 ) Metal/Materials/metal_diamondplate_04 0 48 0 0.6 0.5
+( -192 -16 16 ) ( -192 88 0 ) ( -192 -16 0 ) Metal/Materials/metal_diamondplate_04 -48 0 0 0.6 0.5
+}
+// brush 49
+{
+( -248 -64 0 ) ( -248 -63 0 ) ( -248 -64 1 ) Metal/Materials/metal_diamondplate_04 0 0 0 0.6 0.5
+( -248 -64 0 ) ( -248 -64 1 ) ( -247 -64 0 ) Metal/Materials/metal_diamondplate_04 0 0 0 0.6 0.5
+( -248 -64 0 ) ( -247 -64 0 ) ( -248 -63 0 ) Metal/Materials/metal_diamondplate_04 0 0 0 0.6 0.5
+( -240 -16 8 ) ( -240 -15 8 ) ( -239 -16 8 ) Metal/Materials/metal_diamondplate_04 0 0 0 0.6 0.5
+( -240 -16 8 ) ( -239 -16 8 ) ( -240 -16 9 ) Metal/Materials/metal_diamondplate_04 0 0 0 0.6 0.5
+( -240 -16 8 ) ( -240 -16 9 ) ( -240 -15 8 ) Metal/Materials/metal_diamondplate_04 0 0 0 0.6 0.5
+}
+// brush 50
+{
+( -120 108 136 ) ( -120 109 136 ) ( -120 108 137 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 12 0 0 1 1
+( -120 108 136 ) ( -120 108 137 ) ( -119 108 136 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 0 0 0 1 1
+( -120 108 132 ) ( -119 108 132 ) ( -120 109 132 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 0 -12 0 1 1
+( -112 116 144 ) ( -112 117 144 ) ( -111 116 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 0 -12 0 1 1
+( -112 116 144 ) ( -111 116 144 ) ( -112 116 145 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 0 0 0 1 1
+( -112 116 144 ) ( -112 116 145 ) ( -112 117 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 12 0 0 1 1
+}
+// brush 51
+{
+( -120 52 136 ) ( -120 53 136 ) ( -120 52 137 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 68 0 0 1 1
+( -120 52 136 ) ( -120 52 137 ) ( -119 52 136 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 0 0 0 1 1
+( -120 52 132 ) ( -119 52 132 ) ( -120 53 132 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 0 -68 0 1 1
+( -112 60 144 ) ( -112 61 144 ) ( -111 60 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 0 -68 0 1 1
+( -112 60 144 ) ( -111 60 144 ) ( -112 60 145 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 0 0 0 1 1
+( -112 60 144 ) ( -112 60 145 ) ( -112 61 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 68 0 0 1 1
+}
+// brush 52
+{
+( -128 48 124 ) ( -128 49 124 ) ( -128 48 125 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 0 4 0 1 1
+( -120 48 124 ) ( -120 48 125 ) ( -119 48 124 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 0 4 0 1 1
+( -120 48 128 ) ( -119 48 128 ) ( -120 49 128 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_5 0 0 0 1 1
+( -112 128 132 ) ( -112 129 132 ) ( -111 128 132 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 0 0 0 1 1
+( -112 128 132 ) ( -111 128 132 ) ( -112 128 133 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 0 4 0 1 1
+( -104 128 132 ) ( -104 128 133 ) ( -104 129 132 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 0 4 0 1 1
+}
+// brush 53
+{
+( -36 112 136 ) ( -36 113 136 ) ( -36 112 137 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 8 0 0 1 1
+( -36 112 136 ) ( -36 112 137 ) ( -35 112 136 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -84 0 0 1 1
+( -36 112 132 ) ( -35 112 132 ) ( -36 113 132 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -84 -8 0 1 1
+( -28 120 144 ) ( -28 121 144 ) ( -27 120 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -84 -8 0 1 1
+( -28 120 144 ) ( -27 120 144 ) ( -28 120 145 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -84 0 0 1 1
+( -28 120 144 ) ( -28 120 145 ) ( -28 121 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 8 0 0 1 1
+}
+// brush 54
+{
+( -44 52 124 ) ( -44 53 124 ) ( -44 52 125 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -4 4 0 1 1
+( -36 52 124 ) ( -36 52 125 ) ( -35 52 124 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -84 4 0 1 1
+( -36 52 128 ) ( -35 52 128 ) ( -36 53 128 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_5 -84 4 0 1 1
+( -28 132 132 ) ( -28 133 132 ) ( -27 132 132 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -84 4 0 1 1
+( -28 132 132 ) ( -27 132 132 ) ( -28 132 133 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -84 4 0 1 1
+( -20 132 132 ) ( -20 132 133 ) ( -20 133 132 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -4 4 0 1 1
+}
+// brush 55
+{
+( -36 56 136 ) ( -36 57 136 ) ( -36 56 137 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 64 0 0 1 1
+( -36 56 136 ) ( -36 56 137 ) ( -35 56 136 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -84 0 0 1 1
+( -36 56 132 ) ( -35 56 132 ) ( -36 57 132 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -84 -64 0 1 1
+( -28 64 144 ) ( -28 65 144 ) ( -27 64 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -84 -64 0 1 1
+( -28 64 144 ) ( -27 64 144 ) ( -28 64 145 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -84 0 0 1 1
+( -28 64 144 ) ( -28 64 145 ) ( -28 65 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 64 0 0 1 1
+}
+// brush 56
+{
+( -192 56 48 ) ( -192 57 48 ) ( -192 56 49 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 112 0 0 1 1
+( -192 60 48 ) ( -192 60 49 ) ( -191 60 48 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -192 56 48 ) ( -191 56 48 ) ( -192 57 48 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 -112 0 1 1
+( -184 64 128 ) ( -184 65 128 ) ( -183 64 128 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 -112 0 1 1
+( -184 64 56 ) ( -183 64 56 ) ( -184 64 57 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -184 64 56 ) ( -184 64 57 ) ( -184 65 56 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 112 0 0 1 1
+}
+// brush 57
+{
+( -188 64 24 ) ( -188 65 24 ) ( -188 64 25 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5 -128 8 0 1 1
+( -188 64 24 ) ( -188 64 25 ) ( -187 64 24 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5 12 8 0 1 1
+( -188 64 52 ) ( -187 64 52 ) ( -188 65 52 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5 12 128 0 1 1
+( -180 128 108 ) ( -180 129 108 ) ( -179 128 108 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5 12 128 0 1 1
+( -180 120 32 ) ( -179 120 32 ) ( -180 120 33 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5 12 8 0 1 1
+( -184 128 32 ) ( -184 128 33 ) ( -184 129 32 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5 -128 8 0 1 1
+}
+// brush 58
+{
+( -188 124 24 ) ( -188 125 24 ) ( -188 124 25 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5 -188 8 0 1 1
+( -188 124 24 ) ( -188 124 25 ) ( -187 124 24 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5 12 8 0 1 1
+( -188 124 52 ) ( -187 124 52 ) ( -188 125 52 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5 12 188 0 1 1
+( -180 188 108 ) ( -180 189 108 ) ( -179 188 108 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5 12 188 0 1 1
+( -180 172 32 ) ( -179 172 32 ) ( -180 172 33 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5 12 8 0 1 1
+( -184 188 32 ) ( -184 188 33 ) ( -184 189 32 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5 -188 8 0 1 1
+}
+// brush 59
+{
+( -192 116 48 ) ( -192 117 48 ) ( -192 116 49 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 52 0 0 1 1
+( -192 120 48 ) ( -192 120 49 ) ( -191 120 48 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -192 116 48 ) ( -191 116 48 ) ( -192 117 48 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 -52 0 1 1
+( -184 124 128 ) ( -184 125 128 ) ( -183 124 128 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 -52 0 1 1
+( -184 124 56 ) ( -183 124 56 ) ( -184 124 57 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -184 124 56 ) ( -184 124 57 ) ( -184 125 56 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 52 0 0 1 1
+}
+// brush 60
+{
+( -732 168 376 ) ( -732 169 376 ) ( -732 168 377 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 -8 136 0 1 1
+( -484 80 376 ) ( -484 80 377 ) ( -483 80 376 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 76 136 0 1 1
+( -484 168 376 ) ( -483 168 376 ) ( -484 169 376 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 76 8 0 1 1
+( -436 256 456 ) ( -436 257 456 ) ( -435 256 456 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 76 8 0 1 1
+( -436 256 384 ) ( -435 256 384 ) ( -436 256 385 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 76 136 0 1 1
+( -436 256 384 ) ( -436 256 385 ) ( -436 257 384 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 -8 136 0 1 1
+}
+// brush 61
+{
+( -400 240 512 ) ( -400 241 512 ) ( -400 240 513 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 -32 0 1 1
+( -400 240 512 ) ( -400 240 513 ) ( -399 240 512 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 -32 0 1 1
+( -400 240 464 ) ( -399 240 464 ) ( -400 241 464 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 -32 0 1 1
+( -176 288 528 ) ( -176 289 528 ) ( -175 288 528 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 -32 0 1 1
+( -176 288 528 ) ( -175 288 528 ) ( -176 288 529 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 -32 0 1 1
+( -176 288 528 ) ( -176 288 529 ) ( -176 289 528 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 -32 0 1 1
+}
+// brush 62
+{
+( -400 -192 368 ) ( -400 -191 368 ) ( -400 -192 369 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -208 -192 368 ) ( -208 -192 369 ) ( -207 -192 368 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -208 -192 368 ) ( -207 -192 368 ) ( -208 -191 368 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -192 -160 384 ) ( -192 -159 384 ) ( -191 -160 384 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -192 -160 384 ) ( -191 -160 384 ) ( -192 -160 385 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+( -192 -160 384 ) ( -192 -160 385 ) ( -192 -159 384 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4 0 0 0 1 1
+}
+// brush 63
+{
+( -192 -112 16 ) ( -192 -111 16 ) ( -192 -112 17 ) 128x128/Brick/Brick_07-128x128 0 0 0 0.2 0.2
+( -192 -64 16 ) ( -192 -64 17 ) ( -191 -64 16 ) F1/CNSP8A -16 0 0 0.2 0.2
+( -192 -112 16 ) ( -191 -112 16 ) ( -192 -111 16 ) F1/CNSP8A -16 0 0 0.2 0.2
+( -64 16 92 ) ( -64 17 92 ) ( -63 16 92 ) F1/CNSP8A -16 0 0 0.2 0.2
+( -64 -56 48 ) ( -63 -56 48 ) ( -64 -56 49 ) F1/CNSP8A -16 0 0 0.2 0.2
+( -168 16 48 ) ( -168 16 49 ) ( -168 17 48 ) F1/CNSP8A -16 0 0 0.2 0.2
+}
+// brush 64
+{
+( 80 -68 16 ) ( 80 -67 16 ) ( 80 -68 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4_1 0 0 0 0.2 0.2
+( 80 -68 16 ) ( 80 -68 17 ) ( 81 -68 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4_1 0 0 0 0.2 0.2
+( 80 -68 16 ) ( 81 -68 16 ) ( 80 -67 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4_1 0 0 0 0.2 0.2
+( 88 -64 84 ) ( 88 -63 84 ) ( 89 -64 84 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4_1 0 0 0 0.2 0.2
+( 88 -60 20 ) ( 89 -60 20 ) ( 88 -60 21 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4_1 0 0 0 0.2 0.2
+( 88 -64 20 ) ( 88 -64 21 ) ( 88 -63 20 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4_1 0 0 0 0.2 0.2
+}
+// brush 65
+{
+( -2928 296 -240 ) ( -2928 297 -240 ) ( -2928 296 -239 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 -232 -224 0 1 1
+( -2392 -24 -240 ) ( -2392 -24 -239 ) ( -2391 -24 -240 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 -104 -224 0 1 1
+( -2392 296 -240 ) ( -2391 296 -240 ) ( -2392 297 -240 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 -104 232 0 1 1
+( -2264 424 2016 ) ( -2264 425 2016 ) ( -2263 424 2016 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 -104 232 0 1 1
+( -2264 424 -208 ) ( -2263 424 -208 ) ( -2264 424 -207 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 -104 -224 0 1 1
+( -2264 424 -208 ) ( -2264 424 -207 ) ( -2264 425 -208 ) newwithe/Facade011_1K-JPG_Color -232 -224 0 1 1
+}
+// brush 66
+{
+( -1208 -72 -8 ) ( -1208 -71 -8 ) ( -1208 -72 -7 ) Nature/Materials/trunk_cut 16 -8 0 1 1
+( -1104 -352 -8 ) ( -1104 -352 -7 ) ( -1103 -352 -8 ) Nature/Materials/trunk_cut -64 -8 0 1 1
+( -1104 -72 -8 ) ( -1103 -72 -8 ) ( -1104 -71 -8 ) Nature/Materials/trunk_cut -64 -144 0 1 1
+( -1096 112 144 ) ( -1096 113 144 ) ( -1095 112 144 ) Nature/Materials/trunk_cut -64 -144 0 1 1
+( -1096 232 0 ) ( -1095 232 0 ) ( -1096 232 1 ) Nature/Materials/trunk_cut -64 -8 0 1 1
+( -1064 112 0 ) ( -1064 112 1 ) ( -1064 113 0 ) 128x128/Metal/Metal_08-128x128 0 -8 0 0.3 0.2
+}
+// brush 67
+{
+( -112 -560 584 ) ( -112 -559 584 ) ( -112 -560 585 ) newwithe/Facade010_1K-JPG_Color 24 -80 0 2.5 2.1
+( -112 -560 584 ) ( -112 -560 585 ) ( -111 -560 584 ) newwithe/Facade010_1K-JPG_Color -72 -80 0 2.5 2.1
+( -112 -560 544 ) ( -111 -560 544 ) ( -112 -559 544 ) newwithe/Facade010_1K-JPG_Color -72 -280 0 2.5 2.1
+( 144 -320 3520 ) ( 144 -319 3520 ) ( 145 -320 3520 ) newwithe/Facade010_1K-JPG_Color -72 -280 0 2.5 2.1
+( 144 -192 592 ) ( 145 -192 592 ) ( 144 -192 593 ) newwithe/Facade010_1K-JPG_Color -72 -80 0 2.5 2.1
+( 768 -320 592 ) ( 768 -320 593 ) ( 768 -319 592 ) newwithe/Facade010_1K-JPG_Color 24 -80 0 2.5 2.1
+}
+// brush 68
+{
+( -162.2741699796954 -854.6274169979694 584 ) ( -162.2741699796954 -854.6274169979694 585 ) ( -161.56706319850883 -855.3345237791559 584 ) Nature/Materials/trunk_cut -112.62573 -80 0 -0.70710677 1
+( -164.2152954766338 -852.686291501031 584 ) ( -163.50818869544725 -851.9791847198444 584 ) ( -164.2152954766338 -852.686291501031 585 ) newwithe/Facade010_1K-JPG_Color 29.880554 -80 0 0.70710677 1
+( -162.2741699796954 -854.6274169979694 544 ) ( -161.56706319850883 -855.3345237791559 544 ) ( -161.56706319850883 -853.9203102167828 544 ) Nature/Materials/trunk_cut -33.567688 152.94202 315 1 1
+( 188.45079348883226 -865.9411254969546 1568 ) ( 189.1579002700188 -865.234018715768 1568 ) ( 189.15790027001887 -866.648232278141 1568 ) Nature/Materials/trunk_cut -33.567688 152.94202 315 1 1
+( 278.9604614807105 -775.4314575050767 592 ) ( 279.66756826189703 -776.1385642862631 592 ) ( 278.9604614807105 -775.4314575050767 593 ) Nature/Materials/trunk_cut -66.509674 -80 0 0.70710677 1
+( 188.45079348883226 -865.9411254969546 592 ) ( 188.45079348883226 -865.9411254969546 593 ) ( 189.1579002700188 -865.234018715768 592 ) Nature/Materials/trunk_cut 32.625732 -80 0 0.70710677 1
+}
+// brush 69
+{
+( -848 496 424 ) ( -848 497 424 ) ( -848 496 425 ) newwithe/Facade009_1K-JPG_Emission -398.39996 -156.19055 0 2.5 2.1
+( -848 496 424 ) ( -848 496 425 ) ( -847 496 424 ) newwithe/Facade009_1K-JPG_Emission 222.4 -156.19055 0 2.5 2.1
+( -848 496 384 ) ( -847 496 384 ) ( -848 497 384 ) newwithe/Facade009_1K-JPG_Emission 222.4 222.85715 0 2.5 2.1
+( -592 736 3680 ) ( -592 737 3680 ) ( -591 736 3680 ) newwithe/Facade009_1K-JPG_Emission 222.4 222.85715 0 2.5 2.1
+( -592 864 432 ) ( -591 864 432 ) ( -592 864 433 ) newwithe/Facade009_1K-JPG_Emission 222.4 -156.19055 0 2.5 2.1
+( 32 736 432 ) ( 32 736 433 ) ( 32 737 432 ) newwithe/Facade009_1K-JPG_Emission -398.39996 -156.19055 0 2.5 2.1
+}
+// brush 70
+{
+( 27.451660040609738 350.3919189857867 424 ) ( 27.451660040609738 350.3919189857867 425 ) ( 28.158766821796178 349.6848122046001 424 ) newwithe/Facade010_1K-JPG_Color 81.4116 -156.19055 180 1.7677668 -2.1
+( 27.451660040609738 350.3919189857867 424 ) ( 28.158766821796178 351.09902576697317 424 ) ( 27.451660040609738 350.3919189857867 425 ) newwithe/Facade010_1K-JPG_Color -398.21158 -156.19055 0 1.7677668 2.1
+( 27.451660040609738 350.3919189857867 384 ) ( 28.158766821796178 349.6848122046001 384 ) ( 28.158766821796178 351.09902576697317 384 ) newwithe/Facade010_1K-JPG_Color -25.458702 113.89325 315 2.5 2.1
+( 378.1766235091373 339.07821048680194 2368 ) ( 378.88373029032385 339.78531726798843 2368 ) ( 378.8837302903238 338.3711037056154 2368 ) newwithe/Facade010_1K-JPG_Color -25.458702 113.89325 315 2.5 2.1
+( 819.411254969543 -102.1564209736037 432 ) ( 819.411254969543 -102.1564209736037 433 ) ( 820.1183617507296 -101.44931419241723 432 ) newwithe/Facade010_1K-JPG_Color -567.52905 -156.19055 0 1.7677668 2.1
+( 468.6862915010154 429.58787847868007 432 ) ( 469.39339828220193 428.8807716974934 432 ) ( 468.6862915010154 429.58787847868007 433 ) newwithe/Facade010_1K-JPG_Color 228.61162 -156.19055 180 1.7677668 -2.1
+}
+// brush 71
+{
+( -2123.313708498985 825.8435790263961 -240 ) ( -2123.313708498985 825.8435790263961 -239 ) ( -2122.606601717798 825.1364722452095 -240 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 -48.08081 -224 180 0.70710677 -1
+( -2276.0487732352794 1431.1269837220807 -240 ) ( -2275.341666454093 1431.8340905032674 -240 ) ( -2276.0487732352794 1431.1269837220807 -239 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 -167.91919 -224 0 0.70710677 1
+( -1897.0395385192899 1052.1177490060913 -240 ) ( -1896.3324317381032 1051.4106422249047 -240 ) ( -1896.3324317381034 1052.8248557872776 -240 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 101.36914 -149.44995 315 1 1
+( -1716.0202025355336 1052.117749006091 2912 ) ( -1715.3130957543472 1052.8248557872776 2912 ) ( -1715.313095754347 1051.4106422249047 2912 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 101.36914 -149.44995 315 1 1
+( -1424.1379515417705 1344 -208 ) ( -1423.4308447605838 1343.2928932188554 -208 ) ( -1424.1379515417705 1344 -207 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 -97.96484 -224 0 0.70710677 1
+( -1716.0202025355336 1052.117749006091 -208 ) ( -1716.0202025355336 1052.117749006091 -207 ) ( -1715.3130957543472 1052.8248557872776 -208 ) newwithe/Facade011_1K-JPG_Color -271.9192 -224 0 0.70710677 1
+}
+// brush 72
+{
+( -320 64 -32 ) ( -320 65 -32 ) ( -320 64 -31 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 -16 0 1 1
+( -320 -736 -32 ) ( -320 -736 -31 ) ( -319 -736 -32 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 -16 0 1 1
+( -320 64 -32 ) ( -319 64 -32 ) ( -320 65 -32 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -192 192 0 ) ( -192 193 0 ) ( -191 192 0 ) rock_wall_13_diff_1k 0 0 0 0.1 0.1
+( -192 480 0 ) ( -191 480 0 ) ( -192 480 1 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 -16 0 1 1
+( -192 192 0 ) ( -192 192 1 ) ( -192 193 0 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 -16 0 1 1
+}
+// brush 73
+{
+( -248 304 0 ) ( -248 305 0 ) ( -248 304 1 ) Metal/Materials/metal_diamondplate_04 -32 0 0 1 1
+( -248 304 0 ) ( -248 304 1 ) ( -247 304 0 ) Industrial/Materials/panel_army_02 50.57138 0 0 0.47457632 0.4375
+( -248 304 0 ) ( -247 304 0 ) ( -248 305 0 ) Metal/Materials/metal_diamondplate_04 0 32 0 1 1
+( -192 352 56 ) ( -192 353 56 ) ( -191 352 56 ) Metal/Materials/metal_diamondplate_04 0 32 0 1 1
+( -192 352 8 ) ( -191 352 8 ) ( -192 352 9 ) Metal/Materials/metal_diamondplate_04 0 0 0 1 1
+( -192 352 8 ) ( -192 352 9 ) ( -192 353 8 ) Metal/Materials/metal_diamondplate_04 -32 0 0 1 1
+}
+// brush 74
+{
+( -248 312 56 ) ( -248 313 56 ) ( -248 312 57 ) Metal/Materials/metal_diamondplate_04 -40 -8 0 1 1
+( -248 312 56 ) ( -248 312 57 ) ( -247 312 56 ) Industrial/Materials/panel_army_02 50.57138 0 0 0.47457632 0.4375
+( -248 312 56 ) ( -247 312 56 ) ( -248 313 56 ) Metal/Materials/metal_diamondplate_04 0 40 0 1 1
+( -192 360 112 ) ( -192 361 112 ) ( -191 360 112 ) Metal/Materials/metal_diamondplate_04 0 40 0 1 1
+( -192 360 64 ) ( -191 360 64 ) ( -192 360 65 ) Metal/Materials/metal_diamondplate_04 0 -8 0 1 1
+( -192 360 64 ) ( -192 360 65 ) ( -192 361 64 ) Metal/Materials/metal_diamondplate_04 -40 -8 0 1 1
+}
+// brush 75
+{
+( -300 318.66666666666606 -4 ) ( -300 320 -4 ) ( -300 318.66666666666606 -2.666666666667375 ) Industrial/Materials/panel_army_02 81.000046 -3 0 1.3333336 1.3333336
+( -330 326 -4 ) ( -330 326 -2.666666666667375 ) ( -328.6666666666666 326 -4 ) Doors/Materials/door_grungy_02 -60.06427 -6 0 0.6666668 0.6666668
+( -330 318.66666666666606 -4 ) ( -328.6666666666666 318.66666666666606 -4 ) ( -330 320 -4 ) Industrial/Materials/panel_army_02 -64.500046 -81.000046 0 1.3333336 1.3333336
+( -255.33333333333337 329.33333333333104 92 ) ( -255.33333333333337 330.66666666666436 92 ) ( -254 329.33333333333104 92 ) Industrial/Materials/panel_army_02 -64.500046 -81.000046 0 1.3333336 1.3333336
+( -255.33333333333337 329.33333333333104 6.666666666666892 ) ( -254 329.33333333333104 6.666666666666892 ) ( -255.33333333333337 329.33333333333104 8 ) Industrial/Materials/panel_army_02 -64.500046 -3 0 1.3333336 1.3333336
+( -258 329.33333333333104 6.666666666666892 ) ( -258 329.33333333333104 8 ) ( -258 330.66666666666436 6.666666666666892 ) Industrial/Materials/panel_army_02 81.000046 -3 0 1.3333336 1.3333336
+}
+// brush 76
+{
+( -321.33333333333104 -119.33333333333337 6.666666666666892 ) ( -321.33333333333104 -118 6.666666666666892 ) ( -321.33333333333104 -119.33333333333337 8 ) Industrial/Materials/panel_army_02 69.49999 -3 0 1.3333336 1.3333336
+( -310.66666666666606 -164 -4 ) ( -312 -164 -4 ) ( -310.66666666666606 -164 -2.666666666667375 ) Industrial/Materials/panel_army_02 -30.999954 -3 0 -1.3333336 1.3333336
+( -310.66666666666606 -194 -4 ) ( -310.66666666666606 -192.66666666666657 -4 ) ( -312 -194 -4 ) Industrial/Materials/panel_army_02 69.49999 -87.000046 90 1.3333336 1.3333336
+( -321.33333333333104 -119.33333333333337 92 ) ( -322.66666666666436 -119.33333333333337 92 ) ( -321.33333333333104 -118 92 ) Industrial/Materials/panel_army_02 69.49999 -87.000046 90 1.3333336 1.3333336
+( -321.33333333333104 -122 6.666666666666892 ) ( -321.33333333333104 -122 8 ) ( -322.66666666666436 -122 6.666666666666892 ) Industrial/Materials/panel_army_02 -30.999954 -3 0 -1.3333336 1.3333336
+( -319 -194 -4 ) ( -319 -194 -2.666666666667375 ) ( -319 -192.66666666666657 -4 ) Doors/Materials/door_business_01 55.935776 -6 0 0.6666668 0.6666668
+}
+// brush 77
+{
+( -320 -88 104 ) ( -320 -192 104 ) ( -320 -192 88 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 24 -8 0 1 1
+( -320 -192 104 ) ( -304 -192 88 ) ( -320 -192 88 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 -8 0 1 1
+( -304 -192 88 ) ( -304 -88 88 ) ( -320 -88 88 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 -24 0 1 1
+( -320 -88 88 ) ( -304 -88 88 ) ( -320 -88 104 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 -8 0 1 1
+( -320 -88 104 ) ( -304 -88 88 ) ( -304 -192 88 ) F1/CNAL11_1 188 -236 0 1 1
+}
+// brush 78
+{
+( -193.142857142858 240 347 ) ( -193.142857142858 240 347.7142857142858 ) ( -193.142857142858 239.28571428571428 347 ) Industrial/Materials/panel_army_02 0 -41.599976 0 -0.3389831 0.3125
+( -158.85714285714283 200 352.7142857142858 ) ( -158.85714285714283 200 353.42857142857144 ) ( -158.14285714285708 200 352.7142857142858 ) Metal/Materials/metal_diamondplate_04 30.399994 37.799988 0 0.71428573 0.71428573
+( -193.142857142858 240 347 ) ( -193.142857142858 239.28571428571428 347 ) ( -192.42857142857224 240 347 ) Metal/Materials/metal_diamondplate_04 24 -30.399994 270 0.71428573 0.71428573
+( -158.85714285714283 200 387 ) ( -158.14285714285708 200 387 ) ( -158.85714285714283 199.2857142857143 387 ) Metal/Materials/metal_diamondplate_04 24 -30.399994 270 0.71428573 0.71428573
+( -193.142857142858 240 347 ) ( -192.42857142857224 240 347 ) ( -193.142857142858 240 347.7142857142858 ) Metal/Materials/metal_diamondplate_04 30.399994 37.799988 0 0.71428573 0.71428573
+( -158.85714285714283 200 352.7142857142858 ) ( -158.85714285714283 199.2857142857143 352.7142857142858 ) ( -158.85714285714283 200 353.42857142857144 ) Metal/Materials/metal_diamondplate_04 24 37.799988 180 0.71428573 -0.71428573
+}
+// brush 79
+{
+( -345.14285714285717 -88 293.7142857142858 ) ( -345.14285714285717 -87.28571428571428 293.7142857142858 ) ( -345.14285714285717 -88 294.42857142857144 ) Metal/Materials/metal_diamondplate_04 -4.800003 -44.80002 0 0.71428573 0.71428573
+( -310.857142857142 -128 288 ) ( -311.57142857142776 -128 288 ) ( -310.857142857142 -128 288.7142857142858 ) Metal/Materials/metal_diamondplate_04 -35.19998 -44.80002 180 0.71428573 -0.71428573
+( -310.857142857142 -128 288 ) ( -310.857142857142 -127.28571428571428 288 ) ( -311.57142857142776 -128 288 ) Metal/Materials/metal_diamondplate_04 -4.800003 35.19998 90 0.71428573 0.71428573
+( -345.14285714285717 -88 328 ) ( -345.8571428571429 -88 328 ) ( -345.14285714285717 -87.28571428571428 328 ) Metal/Materials/metal_diamondplate_04 -4.800003 35.19998 90 0.71428573 0.71428573
+( -345.14285714285717 -88 293.7142857142858 ) ( -345.14285714285717 -88 294.42857142857144 ) ( -345.8571428571429 -88 293.7142857142858 ) Metal/Materials/metal_diamondplate_04 -35.19998 -44.80002 180 0.71428573 -0.71428573
+( -310.857142857142 -128 288 ) ( -310.857142857142 -128 288.7142857142858 ) ( -310.857142857142 -127.28571428571428 288 ) Industrial/Materials/panel_army_02 23.599976 -102.400024 0 0.3389831 0.3125
+}
+// brush 80
+{
+( -304 -272 16 ) ( -304 -272 17 ) ( -304 -273 16 ) F1/CNAL9 176 24 90 1 1
+( -296 -280 144 ) ( -296 -280 145 ) ( -295 -280 144 ) F1/CNAL9 176 -48 90 1 -1
+( -304 -272 16 ) ( -304 -273 16 ) ( -303 -272 16 ) F1/CNAL9 -24 -48 270 1 1
+( -296 -280 144 ) ( -295 -280 144 ) ( -296 -281 144 ) F1/CNAL9 -24 -48 270 1 1
+( -304 -272 16 ) ( -303 -272 16 ) ( -304 -272 17 ) F1/CNAL9 176 -48 90 1 -1
+( -296 -280 144 ) ( -296 -281 144 ) ( -296 -280 145 ) F1/CNAL9 176 24 90 1 1
+}
+// brush 81
+{
+( -272 -272 16 ) ( -272 -272 17 ) ( -272 -273 16 ) F1/CNAL9 176 24 90 1 1
+( -264 -280 144 ) ( -264 -280 145 ) ( -263 -280 144 ) F1/CNAL9 176 -16 90 1 -1
+( -272 -272 16 ) ( -272 -273 16 ) ( -271 -272 16 ) F1/CNAL9 -24 -16 270 1 1
+( -264 -280 144 ) ( -263 -280 144 ) ( -264 -281 144 ) F1/CNAL9 -24 -16 270 1 1
+( -272 -272 16 ) ( -271 -272 16 ) ( -272 -272 17 ) F1/CNAL9 176 -16 90 1 -1
+( -264 -280 144 ) ( -264 -281 144 ) ( -264 -280 145 ) F1/CNAL9 176 24 90 1 1
+}
+// brush 82
+{
+( -288 -272 16 ) ( -288 -272 17 ) ( -288 -273 16 ) F1/CNAL9 176 24 90 1 1
+( -280 -280 144 ) ( -280 -280 145 ) ( -279 -280 144 ) F1/CNAL9 176 -32 90 1 -1
+( -288 -272 16 ) ( -288 -273 16 ) ( -287 -272 16 ) F1/CNAL9 -24 -32 270 1 1
+( -280 -280 144 ) ( -279 -280 144 ) ( -280 -281 144 ) F1/CNAL9 -24 -32 270 1 1
+( -288 -272 16 ) ( -287 -272 16 ) ( -288 -272 17 ) F1/CNAL9 176 -32 90 1 -1
+( -280 -280 144 ) ( -280 -281 144 ) ( -280 -280 145 ) F1/CNAL9 176 24 90 1 1
+}
+// brush 83
+{
+( -240 -272 16 ) ( -240 -272 17 ) ( -240 -273 16 ) F1/CNAL9 176 24 90 1 1
+( -232 -280 144 ) ( -232 -280 145 ) ( -231 -280 144 ) F1/CNAL9 176 16 90 1 -1
+( -240 -272 16 ) ( -240 -273 16 ) ( -239 -272 16 ) F1/CNAL9 -24 16 270 1 1
+( -232 -280 144 ) ( -231 -280 144 ) ( -232 -281 144 ) F1/CNAL9 -24 16 270 1 1
+( -240 -272 16 ) ( -239 -272 16 ) ( -240 -272 17 ) F1/CNAL9 176 16 90 1 -1
+( -232 -280 144 ) ( -232 -281 144 ) ( -232 -280 145 ) F1/CNAL9 176 24 90 1 1
+}
+// brush 84
+{
+( -256 -272 16 ) ( -256 -272 17 ) ( -256 -273 16 ) F1/CNAL9 176 24 90 1 1
+( -248 -280 144 ) ( -248 -280 145 ) ( -247 -280 144 ) F1/CNAL9 176 0 90 1 -1
+( -256 -272 16 ) ( -256 -273 16 ) ( -255 -272 16 ) F1/CNAL9 -24 0 270 1 1
+( -248 -280 144 ) ( -247 -280 144 ) ( -248 -281 144 ) F1/CNAL9 -24 0 270 1 1
+( -256 -272 16 ) ( -255 -272 16 ) ( -256 -272 17 ) F1/CNAL9 176 0 90 1 -1
+( -248 -280 144 ) ( -248 -281 144 ) ( -248 -280 145 ) F1/CNAL9 176 24 90 1 1
+}
+// brush 85
+{
+( -224 -272 16 ) ( -224 -272 17 ) ( -224 -273 16 ) F1/CNAL9 176 24 90 1 1
+( -216 -280 144 ) ( -216 -280 145 ) ( -215 -280 144 ) F1/CNAL9 176 32 90 1 -1
+( -224 -272 16 ) ( -224 -273 16 ) ( -223 -272 16 ) F1/CNAL9 -24 32 270 1 1
+( -216 -280 144 ) ( -215 -280 144 ) ( -216 -281 144 ) F1/CNAL9 -24 32 270 1 1
+( -224 -272 16 ) ( -223 -272 16 ) ( -224 -272 17 ) F1/CNAL9 176 32 90 1 -1
+( -216 -280 144 ) ( -216 -281 144 ) ( -216 -280 145 ) F1/CNAL9 176 24 90 1 1
+}
+// brush 86
+{
+( -208 -272 16 ) ( -208 -272 17 ) ( -208 -273 16 ) F1/CNAL9 176 24 90 1 1
+( -200 -280 144 ) ( -200 -280 145 ) ( -199 -280 144 ) F1/CNAL9 176 48 90 1 -1
+( -208 -272 16 ) ( -208 -273 16 ) ( -207 -272 16 ) F1/CNAL9 -24 48 270 1 1
+( -200 -280 144 ) ( -199 -280 144 ) ( -200 -281 144 ) F1/CNAL9 -24 48 270 1 1
+( -208 -272 16 ) ( -207 -272 16 ) ( -208 -272 17 ) F1/CNAL9 176 48 90 1 -1
+( -192 -280 144 ) ( -192 -281 144 ) ( -192 -280 145 ) F1/CNAL9 176 24 90 1 1
+}
+// brush 87
+{
+( -320 -280 144 ) ( -320 -279 144 ) ( -320 -280 145 ) F1/CNAL9 0 0 0 1 1
+( -320 -280 144 ) ( -320 -280 145 ) ( -319 -280 144 ) F1/CNAL9 0 0 0 1 1
+( -320 -280 144 ) ( -319 -280 144 ) ( -320 -279 144 ) F1/CNAL9 0 0 0 1 1
+( -192 -272 160 ) ( -192 -271 160 ) ( -191 -272 160 ) F1/CNAL9 0 0 0 1 1
+( -192 -272 152 ) ( -191 -272 152 ) ( -192 -272 153 ) F1/CNAL9 0 0 0 1 1
+( -192 -272 152 ) ( -192 -272 153 ) ( -192 -271 152 ) F1/CNAL9 0 0 0 1 1
+}
+// brush 88
+{
+( -193 -227 533 ) ( -193 -226 533 ) ( -193 -227 534 ) newwithe/Facade007_1K-JPG_Emission 291 62.5 0 1 2
+( -191 -227 533 ) ( -191 -227 534 ) ( -190 -227 533 ) F1/CNSP8A 15 109 0 1 1
+( -191 -227 469 ) ( -190 -227 469 ) ( -191 -226 469 ) F1/CNSP8A 15 -91 0 1 1
+( -183 -187 541 ) ( -183 -186 541 ) ( -182 -187 541 ) F1/CNSP8A 15 -91 0 1 1
+( -183 -187 541 ) ( -182 -187 541 ) ( -183 -187 542 ) F1/CNSP8A 15 109 0 1 1
+( -183 -187 541 ) ( -183 -187 542 ) ( -183 -186 541 ) F1/CNSP8A 91 109 0 1 1
+}
+// brush 89
+{
+( -320 102.85714285713775 356.5714285714282 ) ( -320 91.4285714285671 390.85714285714283 ) ( -320 68.57142857142577 390.85714285714283 ) Metal/Materials/metal_rusty_02 -54 6.399994 180 1.4285715 1.4285715
+( -152 68.57142857142577 390.85714285714283 ) ( -152 57.14285714285513 356.5714285714282 ) ( -272 57.14285714285513 356.5714285714282 ) Metal/Materials/metal_rusty_02 30.399994 6.399994 0 1.4285715 -1.4285715
+( -272 57.14285714285513 368 ) ( -152 57.14285714285513 368 ) ( -152 102.85714285713775 368 ) Metal/Materials/metal_rusty_02 30.399994 32 0 1.4285715 -1.4285715
+( -152 91.4285714285671 390.85714285714283 ) ( -152 68.57142857142577 390.85714285714283 ) ( -272 68.57142857142577 390.85714285714283 ) Metal/Materials/metal_rusty_02 32.399994 0 0 1.4285715 -1.4285715
+( -152 102.85714285713775 356.5714285714282 ) ( -152 91.4285714285671 390.85714285714283 ) ( -272 91.4285714285671 390.85714285714283 ) Metal/Materials/metal_rusty_02 30.399994 6.399994 0 1.4285715 -1.4285715
+( -152 102.85714285713775 356.5714285714282 ) ( -152 57.14285714285513 356.5714285714282 ) ( -152 68.57142857142577 390.85714285714283 ) Metal/Materials/metal_rusty_02 -54 6.399994 180 1.4285715 1.4285715
+}
+// brush 90
+{
+( -336 54.857142857137745 356.5714285714282 ) ( -336 43.428571428567096 390.85714285714283 ) ( -336 20.57142857142577 390.85714285714283 ) Metal/Materials/metal_rusty_02 -87.6 6.399994 180 1.4285715 1.4285715
+( -152 20.57142857142577 390.85714285714283 ) ( -152 9.142857142855128 356.5714285714282 ) ( -272 9.142857142855128 356.5714285714282 ) Metal/Materials/metal_rusty_02 30.399994 6.399994 0 1.4285715 -1.4285715
+( -272 9.142857142855128 368 ) ( -152 9.142857142855128 368 ) ( -152 54.857142857137745 368 ) Metal/Materials/metal_rusty_02 30.399994 1.5999966 0 1.4285715 -1.4285715
+( -152 43.428571428567096 390.85714285714283 ) ( -152 20.57142857142577 390.85714285714283 ) ( -272 20.57142857142577 390.85714285714283 ) Metal/Materials/metal_rusty_02 32.399994 -30.400002 0 1.4285715 -1.4285715
+( -152 54.857142857137745 356.5714285714282 ) ( -152 43.428571428567096 390.85714285714283 ) ( -272 43.428571428567096 390.85714285714283 ) Metal/Materials/metal_rusty_02 30.399994 6.399994 0 1.4285715 -1.4285715
+( -152 54.857142857137745 356.5714285714282 ) ( -152 9.142857142855128 356.5714285714282 ) ( -152 20.57142857142577 390.85714285714283 ) Metal/Materials/metal_rusty_02 -87.6 6.399994 180 1.4285715 1.4285715
+}
+// brush 91
+{
+( -336 9.142857142855128 379.4285714285712 ) ( -336 20.57142857142577 345.1428571428567 ) ( -336 43.428571428567096 345.1428571428567 ) Metal/Materials/metal_rusty_02 17.6 9.599991 0 1.4285715 1.4285715
+( -152 9.142857142855128 379.4285714285712 ) ( -152 20.57142857142577 345.1428571428567 ) ( -272 20.57142857142577 345.1428571428567 ) Metal/Materials/metal_rusty_02 30.399994 9.599991 0 1.4285715 1.4285715
+( -152 20.57142857142577 345.1428571428567 ) ( -152 43.428571428567096 345.1428571428567 ) ( -272 43.428571428567096 345.1428571428567 ) Metal/Materials/metal_rusty_02 32.399994 14.399999 0 1.4285715 1.4285715
+( -272 54.857142857137745 368 ) ( -152 54.857142857137745 368 ) ( -152 9.142857142855128 368 ) Metal/Materials/metal_rusty_02 30.399994 -17.6 0 1.4285715 1.4285715
+( -152 43.428571428567096 345.1428571428567 ) ( -152 54.857142857137745 379.4285714285712 ) ( -272 54.857142857137745 379.4285714285712 ) Metal/Materials/metal_rusty_02 30.399994 9.599991 0 1.4285715 1.4285715
+( -152 9.142857142855128 379.4285714285712 ) ( -152 54.857142857137745 379.4285714285712 ) ( -152 43.428571428567096 345.1428571428567 ) Metal/Materials/metal_rusty_02 17.6 9.599991 0 1.4285715 1.4285715
+}
+// brush 92
+{
+( -295 350 115 ) ( -295 351 115 ) ( -295 350 116 ) F1/CNSP8A -14 51 0 1 1
+( -263 326 99 ) ( -264 326 99 ) ( -263 326 100 ) zoku2 -14 226.2857 0 -0.50000024 0.4375
+( -263 334 99 ) ( -263 335 99 ) ( -264 334 99 ) F1/CNSP8A -14 71 90 1 1
+( -295 350 211 ) ( -296 350 211 ) ( -295 351 211 ) F1/CNSP8A -14 71 90 1 1
+( -295 334 115 ) ( -295 334 116 ) ( -296 334 115 ) F1/CNSP8A -71 51 180 1 -1
+( -263 334 99 ) ( -263 334 100 ) ( -263 335 99 ) F1/CNSP8A -14 51 0 1 1
+}
+// brush 93
+{
+( -312 -232 168 ) ( -312 -232 169 ) ( -312 -233 168 ) F1/CNSP8A 88 120 180 1 -1
+( -280 -232 184 ) ( -280 -232 185 ) ( -279 -232 184 ) F1/CNSP8A -8 120 0 1 1
+( -312 -232 168 ) ( -312 -233 168 ) ( -311 -232 168 ) F1/CNSP8A 88 8 270 1 1
+( -280 -248 280 ) ( -279 -248 280 ) ( -280 -249 280 ) F1/CNSP8A 88 8 270 1 1
+( -312 -224 168 ) ( -311 -224 168 ) ( -312 -224 169 ) torizoku -15.999939 128 0 0.50000024 0.4375
+( -280 -248 184 ) ( -280 -249 184 ) ( -280 -248 185 ) F1/CNSP8A 88 120 180 1 -1
+}
+// brush 94
+{
+( -320 -232 176 ) ( -320 -231 176 ) ( -320 -232 177 ) Windows/Materials/window_shutter_blue_01 -8 8 0 1 1
+( -320 -232 176 ) ( -320 -232 177 ) ( -319 -232 176 ) Windows/Materials/window_shutter_blue_01 0 8 0 1 1
+( -320 -232 176 ) ( -319 -232 176 ) ( -320 -231 176 ) Windows/Materials/window_shutter_blue_01 0 8 0 1 1
+( -304 -224 184 ) ( -304 -223 184 ) ( -303 -224 184 ) Windows/Materials/window_shutter_blue_01 0 8 0 1 1
+( -304 -224 184 ) ( -303 -224 184 ) ( -304 -224 185 ) Windows/Materials/window_shutter_blue_01 0 8 0 1 1
+( -312 -224 184 ) ( -312 -224 185 ) ( -312 -223 184 ) Windows/Materials/window_shutter_blue_01 -8 8 0 1 1
+}
+// brush 95
+{
+( -320 -232 264 ) ( -320 -231 264 ) ( -320 -232 265 ) Windows/Materials/window_shutter_blue_01 -8 96 0 1 1
+( -320 -232 264 ) ( -320 -232 265 ) ( -319 -232 264 ) Windows/Materials/window_shutter_blue_01 0 96 0 1 1
+( -320 -232 264 ) ( -319 -232 264 ) ( -320 -231 264 ) Windows/Materials/window_shutter_blue_01 0 8 0 1 1
+( -304 -224 272 ) ( -304 -223 272 ) ( -303 -224 272 ) Windows/Materials/window_shutter_blue_01 0 8 0 1 1
+( -304 -224 272 ) ( -303 -224 272 ) ( -304 -224 273 ) Windows/Materials/window_shutter_blue_01 0 96 0 1 1
+( -312 -224 272 ) ( -312 -224 273 ) ( -312 -223 272 ) Windows/Materials/window_shutter_blue_01 -8 96 0 1 1
+}
+// brush 96
+{
+( -224 -112 304 ) ( -224 -112 305 ) ( -224 -113 304 ) F1/CNSP8A 208 0 180 1 -1
+( -192 -112 320 ) ( -192 -112 321 ) ( -191 -112 320 ) F1/CNSP8A -96 0 0 1 1
+( -224 -112 304 ) ( -224 -113 304 ) ( -223 -112 304 ) F1/CNSP8A 208 96 270 1 1
+( -192 -128 416 ) ( -191 -128 416 ) ( -192 -129 416 ) F1/CNSP8A 208 96 270 1 1
+( -224 -104 304 ) ( -223 -104 304 ) ( -224 -104 305 ) all -197.99963 210.57141 90 0.50000024 0.4375
+( -192 -128 320 ) ( -192 -129 320 ) ( -192 -128 321 ) F1/CNSP8A 208 0 180 1 -1
+}
+// brush 97
+{
+( -177 113 176 ) ( -177 114 176 ) ( -177 113 177 ) all -13 -305 0 1 1
+( -191 13 176 ) ( -191 13 177 ) ( -190 13 176 ) all -1 72 0 1 1
+( -191 113 176 ) ( -190 113 176 ) ( -191 114 176 ) all -1 177 0 1 1
+( -175 169 232 ) ( -175 170 232 ) ( -174 169 232 ) all -1 177 0 1 1
+( -175 169 184 ) ( -174 169 184 ) ( -175 169 185 ) all -1 72 0 1 1
+( -175 169 184 ) ( -175 169 185 ) ( -175 170 184 ) all -177 72 0 1 1
+}
+// brush 98
+{
+( -400 159 19 ) ( -400 159 20 ) ( -400 158 19 ) F1/CNSP8A -33 -29 180 1 -1
+( -368 159 35 ) ( -368 159 36 ) ( -367 159 35 ) F1/CNSP8A 80 -29 0 1 1
+( -400 159 19 ) ( -400 158 19 ) ( -399 159 19 ) F1/CNSP8A -33 -80 270 1 1
+( -368 143 122 ) ( -367 143 122 ) ( -368 142 122 ) F1/CNSP8A -33 -80 270 1 1
+( -400 163 19 ) ( -399 163 19 ) ( -400 163 20 ) all 131.00006 1.9484253 90 0.50000024 0.65972805
+( -368 143 35 ) ( -368 142 35 ) ( -368 143 36 ) F1/CNSP8A -33 -29 180 1 -1
+}
+// brush 99
+{
+( -436 158 19 ) ( -436 158 20 ) ( -436 157 19 ) F1/CNSP8A -34 -29 180 1 -1
+( -404 158 35 ) ( -404 158 36 ) ( -403 158 35 ) F1/CNSP8A 116 -29 0 1 1
+( -436 158 19 ) ( -436 157 19 ) ( -435 158 19 ) F1/CNSP8A -34 -116 270 1 1
+( -404 142 122 ) ( -403 142 122 ) ( -404 141 122 ) F1/CNSP8A -34 -116 270 1 1
+( -436 162 19 ) ( -435 162 19 ) ( -436 162 20 ) all 127.00006 7.5163574 90 0.50000024 0.65972805
+( -404 142 35 ) ( -404 141 35 ) ( -404 142 36 ) F1/CNSP8A -34 -29 180 1 -1
+}
+// brush 100
+{
+( -476 157 19 ) ( -476 157 20 ) ( -476 156 19 ) F1/CNSP8A -35 -29 180 1 -1
+( -444 157 35 ) ( -444 157 36 ) ( -443 157 35 ) F1/CNSP8A 156 -29 0 1 1
+( -476 157 19 ) ( -476 156 19 ) ( -475 157 19 ) F1/CNSP8A -35 -156 270 1 1
+( -444 141 122 ) ( -443 141 122 ) ( -444 140 122 ) F1/CNSP8A -35 -156 270 1 1
+( -476 161 19 ) ( -475 161 19 ) ( -476 161 20 ) all -393.99982 -141.99542 90 0.50000024 0.65972805
+( -444 141 35 ) ( -444 140 35 ) ( -444 141 36 ) F1/CNSP8A -35 -29 180 1 -1
+}
+// brush 101
+{
+( -320 297 272 ) ( -320 298 272 ) ( -320 297 273 ) 128x128/Metal/Metal_05-128x128 -1 0 0 1 1
+( -320 303 272 ) ( -320 303 273 ) ( -319 303 272 ) 128x128/Metal/Metal_05-128x128 12 0 90 1 1
+( -320 297 272 ) ( -319 297 272 ) ( -320 298 272 ) 128x128/Metal/Metal_05-128x128 12 0 90 1 1
+( -315 328 489 ) ( -315 329 489 ) ( -314 328 489 ) 128x128/Metal/Metal_05-128x128 12 1 0 1 1
+( -315 328 273 ) ( -314 328 273 ) ( -315 328 274 ) 128x128/Metal/Metal_05-128x128 12 0 0 1 1
+( -292 328 273 ) ( -292 328 274 ) ( -292 329 273 ) 128x128/Metal/Metal_05-128x128 -1 0 0 1 1
+}
+// brush 102
+{
+( -320 -80 521 ) ( -320 -79 521 ) ( -320 -80 522 ) 128x128/Metal/Metal_05-128x128 0 0 0 1 1
+( -320 -80 521 ) ( -320 -80 522 ) ( -319 -80 521 ) 128x128/Metal/Metal_05-128x128 0 0 0 1 1
+( -320 -80 521 ) ( -319 -80 521 ) ( -320 -79 521 ) 128x128/Metal/Metal_05-128x128 0 0 0 1 1
+( -312 -74 522 ) ( -312 -73 522 ) ( -311 -74 522 ) 128x128/Metal/Metal_05-128x128 0 0 0 1 1
+( -312 -74 522 ) ( -311 -74 522 ) ( -312 -74 523 ) 128x128/Metal/Metal_05-128x128 0 0 0 1 1
+( -277 -74 522 ) ( -277 -74 523 ) ( -277 -73 522 ) 128x128/Metal/Metal_05-128x128 0 0 0 1 1
+}
+// brush 103
+{
+( -321 -29 521 ) ( -321 -28 521 ) ( -321 -29 522 ) 128x128/Metal/Metal_05-128x128 -51 0 0 1 1
+( -321 -29 521 ) ( -321 -29 522 ) ( -320 -29 521 ) 128x128/Metal/Metal_05-128x128 1 0 0 1 1
+( -321 -29 521 ) ( -320 -29 521 ) ( -321 -28 521 ) 128x128/Metal/Metal_05-128x128 1 51 0 1 1
+( -313 -23 522 ) ( -313 -22 522 ) ( -312 -23 522 ) 128x128/Metal/Metal_05-128x128 1 51 0 1 1
+( -313 -23 522 ) ( -312 -23 522 ) ( -313 -23 523 ) 128x128/Metal/Metal_05-128x128 1 0 0 1 1
+( -277 -23 522 ) ( -277 -23 523 ) ( -277 -22 522 ) 128x128/Metal/Metal_05-128x128 -51 0 0 1 1
+}
+// brush 104
+{
+( -277 -37 521 ) ( -277 -37 522 ) ( -277 -38 521 ) 128x128/Metal/Metal_05-128x128 -101 0 180 1 -1
+( -271 -80 522 ) ( -271 -80 523 ) ( -270 -80 522 ) 128x128/Metal/Metal_05-128x128 69 0 0 1 1
+( -277 -37 521 ) ( -277 -38 521 ) ( -276 -37 521 ) 128x128/Metal/Metal_05-128x128 -101 -69 270 1 1
+( -271 -45 522 ) ( -270 -45 522 ) ( -271 -46 522 ) 128x128/Metal/Metal_05-128x128 -101 -69 270 1 1
+( -277 -23 521 ) ( -276 -23 521 ) ( -277 -23 522 ) 128x128/Metal/Metal_05-128x128 69 0 0 1 1
+( -271 -45 522 ) ( -271 -46 522 ) ( -271 -45 523 ) 128x128/Metal/Metal_05-128x128 -101 0 180 1 -1
+}
+// brush 105
+{
+( -320 -71 531 ) ( -320 -70 531 ) ( -320 -71 532 ) 128x128/Metal/Metal_06-128x128 0 0 0 1 1
+( -320 -71 531 ) ( -320 -71 532 ) ( -319 -71 531 ) 128x128/Metal/Metal_06-128x128 0 0 0 1 1
+( -320 -71 154 ) ( -319 -71 154 ) ( -320 -70 154 ) 128x128/Metal/Metal_06-128x128 0 0 0 1 1
+( -318 -64 532 ) ( -318 -63 532 ) ( -317 -64 532 ) 128x128/Metal/Metal_06-128x128 0 0 0 1 1
+( -318 -64 532 ) ( -317 -64 532 ) ( -318 -64 533 ) 128x128/Metal/Metal_06-128x128 0 0 0 1 1
+( -319 -64 532 ) ( -319 -64 533 ) ( -319 -63 532 ) 128x128/Metal/Metal_06-128x128 0 0 0 1 1
+}
+// brush 106
+{
+( -319 -43 531 ) ( -319 -42 531 ) ( -319 -43 532 ) 128x128/Metal/Metal_06-128x128 -28 0 0 1 1
+( -319 -43 531 ) ( -319 -43 532 ) ( -318 -43 531 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 154 ) ( -318 -43 154 ) ( -319 -42 154 ) 128x128/Metal/Metal_06-128x128 -1 28 0 1 1
+( -317 -36 532 ) ( -317 -35 532 ) ( -316 -36 532 ) 128x128/Metal/Metal_06-128x128 -1 28 0 1 1
+( -317 -36 532 ) ( -316 -36 532 ) ( -317 -36 533 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -318 -36 532 ) ( -318 -36 533 ) ( -318 -35 532 ) 128x128/Metal/Metal_06-128x128 -28 0 0 1 1
+}
+// brush 107
+{
+( -320 -64 160 ) ( -320 -63 160 ) ( -320 -64 161 ) 128x128/Metal/Metal_06-128x128 0 -2 0 1 1
+( -321 -64 160 ) ( -321 -64 161 ) ( -320 -64 160 ) 128x128/Metal/Metal_06-128x128 -1 -2 0 1 1
+( -321 -64 160 ) ( -320 -64 160 ) ( -321 -63 160 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 162 ) ( -319 -42 162 ) ( -318 -43 162 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 161 ) ( -318 -43 161 ) ( -319 -43 162 ) 128x128/Metal/Metal_06-128x128 -1 -2 0 1 1
+( -319 -43 161 ) ( -319 -43 162 ) ( -319 -42 161 ) 128x128/Metal/Metal_06-128x128 0 -2 0 1 1
+}
+// brush 108
+{
+( -320 -64 175 ) ( -320 -63 175 ) ( -320 -64 176 ) 128x128/Metal/Metal_06-128x128 0 13 0 1 1
+( -321 -64 175 ) ( -321 -64 176 ) ( -320 -64 175 ) 128x128/Metal/Metal_06-128x128 -1 13 0 1 1
+( -321 -64 175 ) ( -320 -64 175 ) ( -321 -63 175 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 177 ) ( -319 -42 177 ) ( -318 -43 177 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 176 ) ( -318 -43 176 ) ( -319 -43 177 ) 128x128/Metal/Metal_06-128x128 -1 13 0 1 1
+( -319 -43 176 ) ( -319 -43 177 ) ( -319 -42 176 ) 128x128/Metal/Metal_06-128x128 0 13 0 1 1
+}
+// brush 109
+{
+( -320 -64 191 ) ( -320 -63 191 ) ( -320 -64 192 ) 128x128/Metal/Metal_06-128x128 0 29 0 1 1
+( -321 -64 191 ) ( -321 -64 192 ) ( -320 -64 191 ) 128x128/Metal/Metal_06-128x128 -1 29 0 1 1
+( -321 -64 191 ) ( -320 -64 191 ) ( -321 -63 191 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 193 ) ( -319 -42 193 ) ( -318 -43 193 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 192 ) ( -318 -43 192 ) ( -319 -43 193 ) 128x128/Metal/Metal_06-128x128 -1 29 0 1 1
+( -319 -43 192 ) ( -319 -43 193 ) ( -319 -42 192 ) 128x128/Metal/Metal_06-128x128 0 29 0 1 1
+}
+// brush 110
+{
+( -320 -64 238 ) ( -320 -63 238 ) ( -320 -64 239 ) 128x128/Metal/Metal_06-128x128 0 76 0 1 1
+( -321 -64 238 ) ( -321 -64 239 ) ( -320 -64 238 ) 128x128/Metal/Metal_06-128x128 -1 76 0 1 1
+( -321 -64 238 ) ( -320 -64 238 ) ( -321 -63 238 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 240 ) ( -319 -42 240 ) ( -318 -43 240 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 239 ) ( -318 -43 239 ) ( -319 -43 240 ) 128x128/Metal/Metal_06-128x128 -1 76 0 1 1
+( -319 -43 239 ) ( -319 -43 240 ) ( -319 -42 239 ) 128x128/Metal/Metal_06-128x128 0 76 0 1 1
+}
+// brush 111
+{
+( -320 -64 207 ) ( -320 -63 207 ) ( -320 -64 208 ) 128x128/Metal/Metal_06-128x128 0 45 0 1 1
+( -321 -64 207 ) ( -321 -64 208 ) ( -320 -64 207 ) 128x128/Metal/Metal_06-128x128 -1 45 0 1 1
+( -321 -64 207 ) ( -320 -64 207 ) ( -321 -63 207 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 209 ) ( -319 -42 209 ) ( -318 -43 209 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 208 ) ( -318 -43 208 ) ( -319 -43 209 ) 128x128/Metal/Metal_06-128x128 -1 45 0 1 1
+( -319 -43 208 ) ( -319 -43 209 ) ( -319 -42 208 ) 128x128/Metal/Metal_06-128x128 0 45 0 1 1
+}
+// brush 112
+{
+( -320 -64 222 ) ( -320 -63 222 ) ( -320 -64 223 ) 128x128/Metal/Metal_06-128x128 0 60 0 1 1
+( -321 -64 222 ) ( -321 -64 223 ) ( -320 -64 222 ) 128x128/Metal/Metal_06-128x128 -1 60 0 1 1
+( -321 -64 222 ) ( -320 -64 222 ) ( -321 -63 222 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 224 ) ( -319 -42 224 ) ( -318 -43 224 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 223 ) ( -318 -43 223 ) ( -319 -43 224 ) 128x128/Metal/Metal_06-128x128 -1 60 0 1 1
+( -319 -43 223 ) ( -319 -43 224 ) ( -319 -42 223 ) 128x128/Metal/Metal_06-128x128 0 60 0 1 1
+}
+// brush 113
+{
+( -320 -64 287 ) ( -320 -63 287 ) ( -320 -64 288 ) 128x128/Metal/Metal_06-128x128 0 -3 0 1 1
+( -321 -64 287 ) ( -321 -64 288 ) ( -320 -64 287 ) 128x128/Metal/Metal_06-128x128 -1 -3 0 1 1
+( -321 -64 287 ) ( -320 -64 287 ) ( -321 -63 287 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 289 ) ( -319 -42 289 ) ( -318 -43 289 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 288 ) ( -318 -43 288 ) ( -319 -43 289 ) 128x128/Metal/Metal_06-128x128 -1 -3 0 1 1
+( -319 -43 288 ) ( -319 -43 289 ) ( -319 -42 288 ) 128x128/Metal/Metal_06-128x128 0 -3 0 1 1
+}
+// brush 114
+{
+( -320 -64 256 ) ( -320 -63 256 ) ( -320 -64 257 ) 128x128/Metal/Metal_06-128x128 0 94 0 1 1
+( -321 -64 256 ) ( -321 -64 257 ) ( -320 -64 256 ) 128x128/Metal/Metal_06-128x128 -1 94 0 1 1
+( -321 -64 256 ) ( -320 -64 256 ) ( -321 -63 256 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 258 ) ( -319 -42 258 ) ( -318 -43 258 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 257 ) ( -318 -43 257 ) ( -319 -43 258 ) 128x128/Metal/Metal_06-128x128 -1 94 0 1 1
+( -319 -43 257 ) ( -319 -43 258 ) ( -319 -42 257 ) 128x128/Metal/Metal_06-128x128 0 94 0 1 1
+}
+// brush 115
+{
+( -320 -64 271 ) ( -320 -63 271 ) ( -320 -64 272 ) 128x128/Metal/Metal_06-128x128 0 109 0 1 1
+( -321 -64 271 ) ( -321 -64 272 ) ( -320 -64 271 ) 128x128/Metal/Metal_06-128x128 -1 109 0 1 1
+( -321 -64 271 ) ( -320 -64 271 ) ( -321 -63 271 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 273 ) ( -319 -42 273 ) ( -318 -43 273 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 272 ) ( -318 -43 272 ) ( -319 -43 273 ) 128x128/Metal/Metal_06-128x128 -1 109 0 1 1
+( -319 -43 272 ) ( -319 -43 273 ) ( -319 -42 272 ) 128x128/Metal/Metal_06-128x128 0 109 0 1 1
+}
+// brush 116
+{
+( -320 -64 337 ) ( -320 -63 337 ) ( -320 -64 338 ) 128x128/Metal/Metal_06-128x128 0 47 0 1 1
+( -321 -64 337 ) ( -321 -64 338 ) ( -320 -64 337 ) 128x128/Metal/Metal_06-128x128 -1 47 0 1 1
+( -321 -64 337 ) ( -320 -64 337 ) ( -321 -63 337 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 339 ) ( -319 -42 339 ) ( -318 -43 339 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 338 ) ( -318 -43 338 ) ( -319 -43 339 ) 128x128/Metal/Metal_06-128x128 -1 47 0 1 1
+( -319 -43 338 ) ( -319 -43 339 ) ( -319 -42 338 ) 128x128/Metal/Metal_06-128x128 0 47 0 1 1
+}
+// brush 117
+{
+( -320 -64 306 ) ( -320 -63 306 ) ( -320 -64 307 ) 128x128/Metal/Metal_06-128x128 0 16 0 1 1
+( -321 -64 306 ) ( -321 -64 307 ) ( -320 -64 306 ) 128x128/Metal/Metal_06-128x128 -1 16 0 1 1
+( -321 -64 306 ) ( -320 -64 306 ) ( -321 -63 306 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 308 ) ( -319 -42 308 ) ( -318 -43 308 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 307 ) ( -318 -43 307 ) ( -319 -43 308 ) 128x128/Metal/Metal_06-128x128 -1 16 0 1 1
+( -319 -43 307 ) ( -319 -43 308 ) ( -319 -42 307 ) 128x128/Metal/Metal_06-128x128 0 16 0 1 1
+}
+// brush 118
+{
+( -320 -64 321 ) ( -320 -63 321 ) ( -320 -64 322 ) 128x128/Metal/Metal_06-128x128 0 31 0 1 1
+( -321 -64 321 ) ( -321 -64 322 ) ( -320 -64 321 ) 128x128/Metal/Metal_06-128x128 -1 31 0 1 1
+( -321 -64 321 ) ( -320 -64 321 ) ( -321 -63 321 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 323 ) ( -319 -42 323 ) ( -318 -43 323 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 322 ) ( -318 -43 322 ) ( -319 -43 323 ) 128x128/Metal/Metal_06-128x128 -1 31 0 1 1
+( -319 -43 322 ) ( -319 -43 323 ) ( -319 -42 322 ) 128x128/Metal/Metal_06-128x128 0 31 0 1 1
+}
+// brush 119
+{
+( -320 -64 387 ) ( -320 -63 387 ) ( -320 -64 388 ) 128x128/Metal/Metal_06-128x128 0 97 0 1 1
+( -321 -64 387 ) ( -321 -64 388 ) ( -320 -64 387 ) 128x128/Metal/Metal_06-128x128 -1 97 0 1 1
+( -321 -64 387 ) ( -320 -64 387 ) ( -321 -63 387 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 389 ) ( -319 -42 389 ) ( -318 -43 389 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 388 ) ( -318 -43 388 ) ( -319 -43 389 ) 128x128/Metal/Metal_06-128x128 -1 97 0 1 1
+( -319 -43 388 ) ( -319 -43 389 ) ( -319 -42 388 ) 128x128/Metal/Metal_06-128x128 0 97 0 1 1
+}
+// brush 120
+{
+( -320 -64 356 ) ( -320 -63 356 ) ( -320 -64 357 ) 128x128/Metal/Metal_06-128x128 0 66 0 1 1
+( -321 -64 356 ) ( -321 -64 357 ) ( -320 -64 356 ) 128x128/Metal/Metal_06-128x128 -1 66 0 1 1
+( -321 -64 356 ) ( -320 -64 356 ) ( -321 -63 356 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 358 ) ( -319 -42 358 ) ( -318 -43 358 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 357 ) ( -318 -43 357 ) ( -319 -43 358 ) 128x128/Metal/Metal_06-128x128 -1 66 0 1 1
+( -319 -43 357 ) ( -319 -43 358 ) ( -319 -42 357 ) 128x128/Metal/Metal_06-128x128 0 66 0 1 1
+}
+// brush 121
+{
+( -320 -64 371 ) ( -320 -63 371 ) ( -320 -64 372 ) 128x128/Metal/Metal_06-128x128 0 81 0 1 1
+( -321 -64 371 ) ( -321 -64 372 ) ( -320 -64 371 ) 128x128/Metal/Metal_06-128x128 -1 81 0 1 1
+( -321 -64 371 ) ( -320 -64 371 ) ( -321 -63 371 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 373 ) ( -319 -42 373 ) ( -318 -43 373 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 372 ) ( -318 -43 372 ) ( -319 -43 373 ) 128x128/Metal/Metal_06-128x128 -1 81 0 1 1
+( -319 -43 372 ) ( -319 -43 373 ) ( -319 -42 372 ) 128x128/Metal/Metal_06-128x128 0 81 0 1 1
+}
+// brush 122
+{
+( -320 -64 440 ) ( -320 -63 440 ) ( -320 -64 441 ) 128x128/Metal/Metal_06-128x128 0 22 0 1 1
+( -321 -64 440 ) ( -321 -64 441 ) ( -320 -64 440 ) 128x128/Metal/Metal_06-128x128 -1 22 0 1 1
+( -321 -64 440 ) ( -320 -64 440 ) ( -321 -63 440 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 442 ) ( -319 -42 442 ) ( -318 -43 442 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 441 ) ( -318 -43 441 ) ( -319 -43 442 ) 128x128/Metal/Metal_06-128x128 -1 22 0 1 1
+( -319 -43 441 ) ( -319 -43 442 ) ( -319 -42 441 ) 128x128/Metal/Metal_06-128x128 0 22 0 1 1
+}
+// brush 123
+{
+( -320 -64 409 ) ( -320 -63 409 ) ( -320 -64 410 ) 128x128/Metal/Metal_06-128x128 0 119 0 1 1
+( -321 -64 409 ) ( -321 -64 410 ) ( -320 -64 409 ) 128x128/Metal/Metal_06-128x128 -1 119 0 1 1
+( -321 -64 409 ) ( -320 -64 409 ) ( -321 -63 409 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 411 ) ( -319 -42 411 ) ( -318 -43 411 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 410 ) ( -318 -43 410 ) ( -319 -43 411 ) 128x128/Metal/Metal_06-128x128 -1 119 0 1 1
+( -319 -43 410 ) ( -319 -43 411 ) ( -319 -42 410 ) 128x128/Metal/Metal_06-128x128 0 119 0 1 1
+}
+// brush 124
+{
+( -320 -64 424 ) ( -320 -63 424 ) ( -320 -64 425 ) 128x128/Metal/Metal_06-128x128 0 6 0 1 1
+( -321 -64 424 ) ( -321 -64 425 ) ( -320 -64 424 ) 128x128/Metal/Metal_06-128x128 -1 6 0 1 1
+( -321 -64 424 ) ( -320 -64 424 ) ( -321 -63 424 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 426 ) ( -319 -42 426 ) ( -318 -43 426 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 425 ) ( -318 -43 425 ) ( -319 -43 426 ) 128x128/Metal/Metal_06-128x128 -1 6 0 1 1
+( -319 -43 425 ) ( -319 -43 426 ) ( -319 -42 425 ) 128x128/Metal/Metal_06-128x128 0 6 0 1 1
+}
+// brush 125
+{
+( -320 -64 460 ) ( -320 -63 460 ) ( -320 -64 461 ) 128x128/Metal/Metal_06-128x128 0 42 0 1 1
+( -321 -64 460 ) ( -321 -64 461 ) ( -320 -64 460 ) 128x128/Metal/Metal_06-128x128 -1 42 0 1 1
+( -321 -64 460 ) ( -320 -64 460 ) ( -321 -63 460 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 462 ) ( -319 -42 462 ) ( -318 -43 462 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 461 ) ( -318 -43 461 ) ( -319 -43 462 ) 128x128/Metal/Metal_06-128x128 -1 42 0 1 1
+( -319 -43 461 ) ( -319 -43 462 ) ( -319 -42 461 ) 128x128/Metal/Metal_06-128x128 0 42 0 1 1
+}
+// brush 126
+{
+( -320 -64 475 ) ( -320 -63 475 ) ( -320 -64 476 ) 128x128/Metal/Metal_06-128x128 0 57 0 1 1
+( -321 -64 475 ) ( -321 -64 476 ) ( -320 -64 475 ) 128x128/Metal/Metal_06-128x128 -1 57 0 1 1
+( -321 -64 475 ) ( -320 -64 475 ) ( -321 -63 475 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 477 ) ( -319 -42 477 ) ( -318 -43 477 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 476 ) ( -318 -43 476 ) ( -319 -43 477 ) 128x128/Metal/Metal_06-128x128 -1 57 0 1 1
+( -319 -43 476 ) ( -319 -43 477 ) ( -319 -42 476 ) 128x128/Metal/Metal_06-128x128 0 57 0 1 1
+}
+// brush 127
+{
+( -320 -64 491 ) ( -320 -63 491 ) ( -320 -64 492 ) 128x128/Metal/Metal_06-128x128 0 73 0 1 1
+( -321 -64 491 ) ( -321 -64 492 ) ( -320 -64 491 ) 128x128/Metal/Metal_06-128x128 -1 73 0 1 1
+( -321 -64 491 ) ( -320 -64 491 ) ( -321 -63 491 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 493 ) ( -319 -42 493 ) ( -318 -43 493 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 492 ) ( -318 -43 492 ) ( -319 -43 493 ) 128x128/Metal/Metal_06-128x128 -1 73 0 1 1
+( -319 -43 492 ) ( -319 -43 493 ) ( -319 -42 492 ) 128x128/Metal/Metal_06-128x128 0 73 0 1 1
+}
+// brush 128
+{
+( -320 -64 511 ) ( -320 -63 511 ) ( -320 -64 512 ) 128x128/Metal/Metal_06-128x128 0 93 0 1 1
+( -321 -64 511 ) ( -321 -64 512 ) ( -320 -64 511 ) 128x128/Metal/Metal_06-128x128 -1 93 0 1 1
+( -321 -64 511 ) ( -320 -64 511 ) ( -321 -63 511 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 513 ) ( -319 -42 513 ) ( -318 -43 513 ) 128x128/Metal/Metal_06-128x128 -1 0 0 1 1
+( -319 -43 512 ) ( -318 -43 512 ) ( -319 -43 513 ) 128x128/Metal/Metal_06-128x128 -1 93 0 1 1
+( -319 -43 512 ) ( -319 -43 513 ) ( -319 -42 512 ) 128x128/Metal/Metal_06-128x128 0 93 0 1 1
+}
+// brush 129
+{
+( -215 309 346 ) ( -215 310 346 ) ( -215 309 347 ) F1/CNSP8A -229 26 0 1 1
+( -183 289 330 ) ( -184 289 330 ) ( -183 289 331 ) all 283.00037 -111.74899 90 0.50000024 -0.65972805
+( -183 293 330 ) ( -183 294 330 ) ( -184 293 330 ) F1/CNSP8A -229 -9 90 1 1
+( -215 309 433 ) ( -216 309 433 ) ( -215 310 433 ) F1/CNSP8A -229 -9 90 1 1
+( -215 293 346 ) ( -215 293 347 ) ( -216 293 346 ) F1/CNSP8A 9 26 180 1 -1
+( -183 293 330 ) ( -183 293 331 ) ( -183 294 330 ) F1/CNSP8A -229 26 0 1 1
+}
+// brush 130
+{
+( -194 -302 533 ) ( -194 -301 533 ) ( -194 -302 534 ) newwithe/Facade007_1K-JPG_Emission 366 62.5 0 1 2
+( -192 -302 533 ) ( -192 -302 534 ) ( -191 -302 533 ) F1/CNSP8A 16 109 0 1 1
+( -192 -302 469 ) ( -191 -302 469 ) ( -192 -301 469 ) F1/CNSP8A 16 -166 0 1 1
+( -184 -262 541 ) ( -184 -261 541 ) ( -183 -262 541 ) F1/CNSP8A 16 -166 0 1 1
+( -184 -262 541 ) ( -183 -262 541 ) ( -184 -262 542 ) F1/CNSP8A 16 109 0 1 1
+( -184 -262 541 ) ( -184 -262 542 ) ( -184 -261 541 ) F1/CNSP8A 166 109 0 1 1
+}
+// brush 131
+{
+( -194 -448 533 ) ( -194 -447 533 ) ( -194 -448 534 ) newwithe/Facade007_1K-JPG_Emission 512 62.5 0 1 2
+( -192 -448 533 ) ( -192 -448 534 ) ( -191 -448 533 ) F1/CNSP8A 16 109 0 1 1
+( -192 -448 469 ) ( -191 -448 469 ) ( -192 -447 469 ) F1/CNSP8A 16 -56 0 1 1
+( -184 -408 541 ) ( -184 -407 541 ) ( -183 -408 541 ) F1/CNSP8A 16 -56 0 1 1
+( -184 -408 541 ) ( -183 -408 541 ) ( -184 -408 542 ) F1/CNSP8A 16 109 0 1 1
+( -184 -408 541 ) ( -184 -408 542 ) ( -184 -407 541 ) F1/CNSP8A 56 109 0 1 1
+}
+// brush 132
+{
+( -193 -373 533 ) ( -193 -372 533 ) ( -193 -373 534 ) newwithe/Facade007_1K-JPG_Emission 437 62.5 0 1 2
+( -191 -373 533 ) ( -191 -373 534 ) ( -190 -373 533 ) F1/CNSP8A 15 109 0 1 1
+( -191 -373 469 ) ( -190 -373 469 ) ( -191 -372 469 ) F1/CNSP8A 15 -237 0 1 1
+( -183 -333 541 ) ( -183 -332 541 ) ( -182 -333 541 ) F1/CNSP8A 15 -237 0 1 1
+( -183 -333 541 ) ( -182 -333 541 ) ( -183 -333 542 ) F1/CNSP8A 15 109 0 1 1
+( -183 -333 541 ) ( -183 -333 542 ) ( -183 -332 541 ) F1/CNSP8A 237 109 0 1 1
+}
+// brush 133
+{
+( -320 328 456 ) ( -320 329 456 ) ( -320 328 457 ) 128x128/Metal/Metal_06-128x128 1 0 0 1 1
+( -320 328 456 ) ( -320 328 457 ) ( -319 328 456 ) 128x128/Metal/Metal_06-128x128 0 0 0 1 1
+( -320 328 456 ) ( -319 328 456 ) ( -320 329 456 ) 128x128/Metal/Metal_06-128x128 0 -1 0 1 1
+( -292 352 489 ) ( -292 353 489 ) ( -291 352 489 ) 128x128/Metal/Metal_06-128x128 0 -1 0 1 1
+( -292 408 457 ) ( -291 408 457 ) ( -292 408 458 ) 128x128/Metal/Metal_06-128x128 0 0 0 1 1
+( -292 352 457 ) ( -292 352 458 ) ( -292 353 457 ) 128x128/Metal/Metal_06-128x128 1 0 0 1 1
+}
+// brush 134
+{
+( -292 331 303 ) ( -292 330 303 ) ( -292 331 302 ) 128x128/Metal/Metal_05-128x128 23 -87 180 1 1
+( -291 303 272 ) ( -290 303 272 ) ( -291 303 271 ) 128x128/Metal/Metal_05-128x128 12 0 90 1 1
+( -291 326 272 ) ( -291 325 272 ) ( -290 326 272 ) 128x128/Metal/Metal_05-128x128 12 0 90 1 1
+( -292 331 297 ) ( -291 331 297 ) ( -292 330 297 ) 128x128/Metal/Metal_05-128x128 23 76 270 1 1
+( -292 331 303 ) ( -292 331 302 ) ( -291 331 303 ) 128x128/Metal/Metal_05-128x128 87 76 270 1 1
+( -75 326 272 ) ( -75 326 271 ) ( -75 325 272 ) 128x128/Metal/Metal_05-128x128 23 -87 180 1 1
+}
+// brush 135
+{
+( -648 360 536 ) ( -648 232 536 ) ( -648 360 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -448 232 -16 ) ( -648 232 -16 ) ( -448 232 536 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -448 360 -16 ) ( -648 360 -16 ) ( -448 232 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 40 0 270 1 1
+( -448 232 536 ) ( -648 232 536 ) ( -448 360 536 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 40 0 270 1 1
+( -448 360 536 ) ( -648 360 536 ) ( -448 360 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -448 232 536 ) ( -448 360 536 ) ( -448 232 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 40 0 180 1 1
+}
+// brush 136
+{
+( -1120 232 -16 ) ( -1120 360 -16 ) ( -1120 232 536 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 40 0 180 1 1
+( -1120 232 536 ) ( -704 232 536 ) ( -1120 232 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -1120 232 -16 ) ( -704 232 -16 ) ( -1120 360 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 40 0 270 1 1
+( -1120 360 536 ) ( -704 360 536 ) ( -1120 232 536 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 40 0 270 1 1
+( -1120 360 -16 ) ( -704 360 -16 ) ( -1120 360 536 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -704 232 -16 ) ( -704 232 536 ) ( -704 360 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+}
+// brush 137
+{
+( -704 232 536 ) ( -704 232 120 ) ( -704 360 536 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -648 232 536 ) ( -648 232 120 ) ( -704 232 536 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -648 232 120 ) ( -648 360 120 ) ( -704 232 120 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -648 232 536 ) ( -704 232 536 ) ( -648 360 536 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 40 0 270 1 1
+( -704 360 536 ) ( -704 360 120 ) ( -648 360 536 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -648 360 536 ) ( -648 360 120 ) ( -648 232 536 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+}
+// brush 138
+{
+( -704 288 -8 ) ( -704 289 -8 ) ( -704 288 -7 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -704 288 -8 ) ( -704 288 -7 ) ( -703 288 -8 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -704 288 -8 ) ( -703 288 -8 ) ( -704 289 -8 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -648 360 0 ) ( -648 361 0 ) ( -647 360 0 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -648 360 0 ) ( -647 360 0 ) ( -648 360 1 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+( -648 360 0 ) ( -648 360 1 ) ( -648 361 0 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
+}
+// brush 139
+{
+( -1064 216 0 ) ( -1064 216 1 ) ( -1064 215 0 ) road -45 -13 180 1 -1
+( -1040 176 8 ) ( -1040 176 9 ) ( -1039 176 8 ) road 35 -13 0 1 1
+( -1064 216 0 ) ( -1064 215 0 ) ( -1063 216 0 ) Buildings/Materials/ceiling_utilities_02 43 -20 270 1 1
+( -1040 176 88 ) ( -1039 176 88 ) ( -1040 175 88 ) road 63 -5 270 1 1
+( -1064 216 0 ) ( -1063 216 0 ) ( -1064 216 1 ) road 35 -13 0 1 1
+( -1040 176 8 ) ( -1040 175 8 ) ( -1040 176 9 ) Doors/Materials/door_store_drinks_02 35 0 0 -0.32 0.60689646
+}
+// brush 140
+{
+( 56 48 24 ) ( 56 49 24 ) ( 56 48 25 ) Doors/Materials/door_store_drinks_01 -27 26.181839 0 0.2962963 0.61111104
+( 80 8 16 ) ( 79 8 16 ) ( 80 8 17 ) road 43 3 180 1 -1
+( 80 8 16 ) ( 80 9 16 ) ( 79 8 16 ) Buildings/Materials/ceiling_utilities_02 -64 -16 90 1 1
+( 56 48 104 ) ( 55 48 104 ) ( 56 49 104 ) road -37 -13 90 1 1
+( 56 48 24 ) ( 56 48 25 ) ( 55 48 24 ) road 43 3 180 1 -1
+( 80 8 16 ) ( 80 8 17 ) ( 80 9 16 ) road -21 3 0 1 1
+}
+// brush 141
+{
+( -140 -62 64 ) ( -140 -64 66 ) ( -140 -64 54 ) 128x128/Metal/Metal_05-128x128 0 0 0 0.3 0.3
+( -140 -64 66 ) ( -136 -64 66 ) ( -136 -64 54 ) 128x128/Metal/Metal_05-128x128 0 0 0 0.3 0.3
+( -136 -64 54 ) ( -136 -62 56 ) ( -140 -62 56 ) 128x128/Metal/Metal_05-128x128 0 0 0 0.3 0.3
+( -140 -62 64 ) ( -136 -62 64 ) ( -136 -64 66 ) 128x128/Metal/Metal_05-128x128 0 0 0 0.3 0.3
+( -136 -62 56 ) ( -136 -62 64 ) ( -140 -62 64 ) 128x128/Metal/Metal_05-128x128 0 0 0 0.3 0.3
+( -136 -64 66 ) ( -136 -62 64 ) ( -136 -62 56 ) 128x128/Metal/Metal_05-128x128 0 0 0 0.3 0.3
+}
+// brush 142
+{
+( -139 -61 62 ) ( -139 -62 61 ) ( -139 -62 60 ) 128x128/Metal/Metal_07-128x128 0 0 0 1 1
+( -139 -62 61 ) ( -137 -62 61 ) ( -137 -62 60 ) 128x128/Metal/Metal_07-128x128 0 0 0 1 1
+( -139 -61 62 ) ( -137 -61 62 ) ( -137 -62 61 ) 128x128/Metal/Metal_07-128x128 0 0 0 1 1
+( -137 -62 60 ) ( -137 -61 61 ) ( -139 -61 61 ) 128x128/Metal/Metal_07-128x128 0 0 0 1 1
+( -137 -61 61 ) ( -137 -61 62 ) ( -139 -61 62 ) 128x128/Metal/Metal_07-128x128 0 0 0 1 1
+( -137 -62 61 ) ( -137 -61 62 ) ( -137 -61 61 ) 128x128/Metal/Metal_07-128x128 0 0 0 1 1
+}
+// brush 143
+{
+( 149 -99 136 ) ( 149 -99 137 ) ( 149 -100 136 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 37 0 180 1 -1
+( 157 -107 144 ) ( 157 -107 145 ) ( 158 -107 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -29 0 0 1 1
+( 149 -99 132 ) ( 149 -100 132 ) ( 150 -99 132 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 37 29 270 1 1
+( 157 -107 144 ) ( 158 -107 144 ) ( 157 -108 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 37 29 270 1 1
+( 149 -99 136 ) ( 150 -99 136 ) ( 149 -99 137 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -29 0 0 1 1
+( 157 -107 144 ) ( 157 -108 144 ) ( 157 -107 145 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 37 0 180 1 -1
+}
+// brush 144
+{
+( 205 -99 136 ) ( 205 -99 137 ) ( 205 -100 136 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 37 0 180 1 -1
+( 213 -107 144 ) ( 213 -107 145 ) ( 214 -107 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -85 0 0 1 1
+( 205 -99 132 ) ( 205 -100 132 ) ( 206 -99 132 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 37 85 270 1 1
+( 213 -107 144 ) ( 214 -107 144 ) ( 213 -108 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 37 85 270 1 1
+( 205 -99 136 ) ( 206 -99 136 ) ( 205 -99 137 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -85 0 0 1 1
+( 213 -107 144 ) ( 213 -108 144 ) ( 213 -107 145 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 37 0 180 1 -1
+}
+// brush 145
+{
+( 145 -99 124 ) ( 145 -99 125 ) ( 145 -100 124 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 37 4 180 1 -1
+( 225 -115 132 ) ( 225 -115 133 ) ( 226 -115 132 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -97 4 0 1 1
+( 145 -99 128 ) ( 145 -100 128 ) ( 146 -99 128 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_5 37 97 270 1 1
+( 225 -107 132 ) ( 226 -107 132 ) ( 225 -108 132 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 37 97 270 1 1
+( 145 -91 124 ) ( 146 -91 124 ) ( 145 -91 125 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -97 4 0 1 1
+( 225 -107 132 ) ( 225 -108 132 ) ( 225 -107 133 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 37 4 180 1 -1
+}
+// brush 146
+{
+( 149 13 136 ) ( 149 13 137 ) ( 149 12 136 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 149 0 180 1 -1
+( 157 5 144 ) ( 157 5 145 ) ( 158 5 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -29 0 0 1 1
+( 149 13 132 ) ( 149 12 132 ) ( 150 13 132 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 149 29 270 1 1
+( 157 5 144 ) ( 158 5 144 ) ( 157 4 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 149 29 270 1 1
+( 149 13 136 ) ( 150 13 136 ) ( 149 13 137 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -29 0 0 1 1
+( 157 5 144 ) ( 157 4 144 ) ( 157 5 145 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 149 0 180 1 -1
+}
+// brush 147
+{
+( 205 13 136 ) ( 205 13 137 ) ( 205 12 136 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 149 0 180 1 -1
+( 213 5 144 ) ( 213 5 145 ) ( 214 5 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -85 0 0 1 1
+( 205 13 132 ) ( 205 12 132 ) ( 206 13 132 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 149 85 270 1 1
+( 213 5 144 ) ( 214 5 144 ) ( 213 4 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 149 85 270 1 1
+( 205 13 136 ) ( 206 13 136 ) ( 205 13 137 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -85 0 0 1 1
+( 213 5 144 ) ( 213 4 144 ) ( 213 5 145 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 149 0 180 1 -1
+}
+// brush 148
+{
+( 145 13 124 ) ( 145 13 125 ) ( 145 12 124 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 149 4 180 1 -1
+( 225 -3 132 ) ( 225 -3 133 ) ( 226 -3 132 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -97 4 0 1 1
+( 145 13 128 ) ( 145 12 128 ) ( 146 13 128 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_5 149 97 270 1 1
+( 225 5 132 ) ( 226 5 132 ) ( 225 4 132 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 149 97 270 1 1
+( 145 21 124 ) ( 146 21 124 ) ( 145 21 125 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -97 4 0 1 1
+( 225 5 132 ) ( 225 4 132 ) ( 225 5 133 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 149 4 180 1 -1
+}
+}

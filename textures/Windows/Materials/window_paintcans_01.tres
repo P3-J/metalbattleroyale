@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cudj5fbcy7x80"]
+
+[ext_resource type="Texture2D" uid="uid://brb8h4redclcp" path="res://textures/Windows/Materials/window_paintcans_01.jpg" id="1_tdbx5"]
+
+[resource]
+albedo_texture = ExtResource("1_tdbx5")
+metallic_specular = 0.0
+texture_filter = 0

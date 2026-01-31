@@ -9,6 +9,8 @@ public partial class Player : CharacterBody3D
 	[Export] private Camera3D _camera;
 	[Export] RayCast3D handRay;
 	[Export] Marker3D handMarker;
+	[Export] CashRegister reg;
+	[Export] Camera3D cashCam;
 
 	bool holdingObj = false;
 	bool canHoldItem = true;
@@ -24,6 +26,18 @@ public partial class Player : CharacterBody3D
 
 	public override void _UnhandledInput(InputEvent e)
 	{
+		if (inBenchMode)
+		{
+			HandleBenchInput(e);
+			return;
+		}
+
+		if (inConsoleMode)
+		{
+			HandleConsoleInput(e);
+			return;
+		}
+
 		if (e is InputEventMouseMotion mouseMotion)
 		{
 			RotateY(-mouseMotion.Relative.X * MouseSensitivity);
@@ -38,7 +52,23 @@ public partial class Player : CharacterBody3D
 		{
 			if (e.IsActionPressed("lmb"))
 			{
-				tryingToHoldItem = true;
+				if (canUseBench)
+				{
+					inBenchMode = true;
+					benchCam.Current = true;
+					keysParent.Visible = true;
+					lmbParent.Visible = false;
+				}
+				else if (canUseConsole)
+				{
+					inConsoleMode = true;
+					cashCam.Current = true;
+					lmbParent.Visible = false;
+				}
+				else
+				{
+					tryingToHoldItem = true;
+				}
 			}
 			if (e.IsActionReleased("lmb"))
 			{
@@ -64,13 +94,13 @@ public partial class Player : CharacterBody3D
 		if (!IsOnFloor())
 			velocity.Y -= ProjectSettings.GetSetting("physics/3d/default_gravity").AsSingle() * (float)delta;
 
-		if (Input.IsActionJustPressed("jump") && IsOnFloor())
+		if (Input.IsActionJustPressed("jump") && IsOnFloor() && !inBenchMode)
 			velocity.Y = JumpVelocity;
 
 		Vector2 inputDir = Input.GetVector("move_left", "move_right", "move_forward", "move_back");
 		Vector3 direction = (Transform.Basis * new Vector3(inputDir.X, 0, inputDir.Y)).Normalized();
 
-		if (direction != Vector3.Zero)
+		if (direction != Vector3.Zero && !inBenchMode)
 		{
 			velocity.X = direction.X * Speed;
 			velocity.Z = direction.Z * Speed;
