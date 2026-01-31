@@ -232,7 +232,7 @@ public partial class CashRegister : PanelContainer
         }
     }
 
-    public bool AttemptOrderFulfillment(Mask[] areaMasks)
+    public bool AttemptOrderFulfillment(string[] areaMaskNames)
     {
         int masksInCurrentOrderCount = masksInCurrentOrder.Count;
 
@@ -245,7 +245,7 @@ public partial class CashRegister : PanelContainer
 
         for (int i = 0; i < masksInCurrentOrderCount; i++)
         {
-            int indexOfAreaMask = System.Array.IndexOf(areaMasks, masksInCurrentOrder[i]);
+            int indexOfAreaMask = System.Array.IndexOf(areaMaskNames, masksInCurrentOrder[i].Name);
 
             HBoxContainer orderMaskRegisterItem = lineItemContainer.GetChild<HBoxContainer>(i);
 
