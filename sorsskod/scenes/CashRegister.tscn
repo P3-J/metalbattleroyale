@@ -7,8 +7,7 @@
 bg_color = Color(0, 0, 0, 1)
 
 [node name="PanelContainer" type="PanelContainer" unique_id=2018321194]
-offset_left = 4.0
-offset_right = 504.0
+offset_right = 500.0
 offset_bottom = 500.0
 theme = ExtResource("2_xr3lu")
 theme_override_styles/panel = SubResource("StyleBoxFlat_xr3lu")
@@ -70,3 +69,6 @@ theme_override_font_sizes/normal_font_size = 18
 text = "▉"
 fit_content = true
 autowrap_mode = 0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1490391067]
+position = Vector2(250, 248)
