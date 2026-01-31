@@ -1,9 +1,8 @@
 [gd_scene format=4 uid="uid://c18s6rmgqncl7"]
 
 [ext_resource type="Script" uid="uid://dwdg1dxd7usu1" path="res://sorsskod/kood/Workbench.cs" id="1_b0srp"]
-[ext_resource type="PackedScene" path="res://sorsskod/scenes/actObj.tscn" id="2_ms7d0"]
+[ext_resource type="PackedScene" uid="uid://dfke1ppgaoyi6" path="res://sorsskod/scenes/actObj.tscn" id="2_ms7d0"]
 [ext_resource type="Texture2D" uid="uid://bdyctxhvow0lp" path="res://textures/128x128/Wood/Wood_08-128x128.png" id="3_t33i6"]
-[ext_resource type="PackedScene" uid="uid://bd0aujv7pb4t4" path="res://sorsskod/scenes/actObj2.tscn" id="3_y4sto"]
 [ext_resource type="Texture2D" uid="uid://gcl208035odv" path="res://textures/128x128/Wood/Wood_11-128x128.png" id="4_6u5rf"]
 [ext_resource type="Material" uid="uid://2cb4hm4s74wl" path="res://textures/wood2.tres" id="5_xvejj"]
 [ext_resource type="Texture2D" uid="uid://ckgtlcbggvo2f" path="res://textures/Products/Materials/products_electronics.png" id="6_x84fn"]
@@ -192,8 +191,7 @@ size = Vector3(0.21801758, 1, 1.8912659)
 
 [node name="cbench" type="Node3D" unique_id=1892199109 node_paths=PackedStringArray("spawnPoint")]
 script = ExtResource("1_b0srp")
-fireMask = ExtResource("2_ms7d0")
-iceMask = ExtResource("3_y4sto")
+Mask = ExtResource("2_ms7d0")
 spawnPoint = NodePath("spawnpoint")
 
 [node name="entity_0_worldspawn" type="StaticBody3D" parent="." unique_id=1384118842]

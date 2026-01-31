@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://b6pa41dp40vxa"]
+
+[ext_resource type="Script" uid="uid://dnxk1rthaont8" path="res://sorsskod/kood/Collectionbox.cs" id="1_ibi3l"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_31dl0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ibi3l"]
+transparency = 1
+albedo_color = Color(0, 0.7921569, 0.043137256, 0.4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ibi3l"]
+material = SubResource("StandardMaterial3D_ibi3l")
+
+[node name="collectionbox" type="Area3D" unique_id=54289427]
+script = ExtResource("1_ibi3l")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1024628226]
+shape = SubResource("BoxShape3D_31dl0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1898638424]
+mesh = SubResource("BoxMesh_ibi3l")
