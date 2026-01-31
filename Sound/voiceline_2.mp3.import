@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://cq5n1do5saaxy"
-path="res://.godot/imported/voiceline_2.mp3-07ca117058d945691aa4810f26289100.mp3str"
+path="res://.godot/imported/voiceline_2.mp3-3bb3e05c0ad02f1a63deff3998e145d9.mp3str"
 
 [deps]
 
-source_file="res://sound/voiceline_2.mp3"
-dest_files=["res://.godot/imported/voiceline_2.mp3-07ca117058d945691aa4810f26289100.mp3str"]
+source_file="res://Sound/voiceline_2.mp3"
+dest_files=["res://.godot/imported/voiceline_2.mp3-3bb3e05c0ad02f1a63deff3998e145d9.mp3str"]
 
 [params]
 
