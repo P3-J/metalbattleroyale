@@ -9,4 +9,5 @@ script = ExtResource("1_4ausa")
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=246527003]
 stream = ExtResource("2_q3jgp")
 autoplay = true
+max_distance = 4096.0
 parameters/looping = false
