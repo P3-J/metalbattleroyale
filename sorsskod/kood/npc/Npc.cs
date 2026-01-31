@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using Godot;
 using Godot.Collections;
 
@@ -10,14 +12,28 @@ public partial class Npc : CharacterBody3D
 	private bool Connected = false;
 	Vector3 velocity;
 	Vector3 nextSpot;
+	List<Node3D> Skins = new List<Node3D>();
+	private AnimationPlayer animationPlayer;
 	[Signal]
 	public delegate void ReachedTargetEventHandler();	
 
 	public override void _Ready()
 	{
+		Skins.Add((Node3D)GetNode("Node3DTorsoHead2"));
+		Skins.Add((Node3D)GetNode("Node3DTorsoHead"));
 		base._Ready();
 		GD.Print("NPC Added.");
 		navagent = (NavigationAgent3D)GetNode("NavigationAgent3D");
+		animationPlayer = (AnimationPlayer)GetNode("Node3DTorsoHead/Node3DLegs/AnimationPlayer");
+		Random rnd = new Random();
+		int skinIndex = rnd.Next(0, Skins.Count);
+		for (int i = 0; i < Skins.Count; i++)
+		{
+			if (i == skinIndex)
+			{
+				Skins[i].Visible = true;
+			}
+		}
 	}
 
 
@@ -25,6 +41,7 @@ public partial class Npc : CharacterBody3D
 	{
 		if (Connected)
 		{
+			animationPlayer.Play("RESET");
 			return;
 		}
 		velocity = Velocity;
@@ -49,6 +66,8 @@ public partial class Npc : CharacterBody3D
 		}
 		velocity.X = dir.X * 5;
 		velocity.Z = dir.Z * 5;
+
+		animationPlayer.Play("LegMovement");
 	}
 
 	public void SetTargetPos(Vector3 pos)
@@ -85,6 +104,7 @@ public partial class Npc : CharacterBody3D
 		Connected = false;
 		Served = true;
 		GD.Print("NPC walking away: ", this);
+		animationPlayer.Play("LegMovement");
 	}
 
 	public void WalkUp(Vector3 queuePosition)
@@ -94,6 +114,7 @@ public partial class Npc : CharacterBody3D
 		navagent.TargetPosition = p;
 		Connected = false;
 		GD.Print("NPC walking up: ", this);
+		animationPlayer.Play("LegMovement");
 	}
 
 	public Vector3 getBackConnectorPosition() {

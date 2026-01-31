@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cvvpx8vrnsvcs"]
 
 [ext_resource type="Script" uid="uid://bgnu0tx3vjvx1" path="res://sorsskod/kood/npc/Npc.cs" id="1_acauy"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_skcfj"]
+[ext_resource type="PackedScene" uid="uid://c7qjbbqd5hy7h" path="res://sorsskod/scenes/3DModelTrash.tscn" id="2_ilbqd"]
+[ext_resource type="PackedScene" uid="uid://3uuauuweg2n6" path="res://sorsskod/scenes/3DModelDiverse.tscn" id="3_hdd1f"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_acauy"]
 
@@ -14,10 +14,6 @@ radius = 0.120948136
 [node name="Npc" type="CharacterBody3D" unique_id=149848484 groups=["npc"]]
 collision_layer = 0
 script = ExtResource("1_acauy")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=676101178]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86772686, 0)
-mesh = SubResource("CapsuleMesh_skcfj")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1654975118]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86772686, 0)
@@ -38,5 +34,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06716728, 0.08007777, 0.64
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 shape = SubResource("SphereShape3D_ilbqd")
 
+[node name="Node3DTorsoHead" parent="." unique_id=381438612 instance=ExtResource("2_ilbqd")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.051783085, 0.87592065, 0)
+visible = false
+
+[node name="Node3DTorsoHead2" parent="." unique_id=833920949 instance=ExtResource("3_hdd1f")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.045663834, 0.89192396, 0)
+visible = false
+
 [connection signal="area_entered" from="FrontConnector" to="." method="_on_front_connector_area_entered"]
 [connection signal="area_entered" from="BackConnector" to="." method="_on_back_connector_area_entered"]
+
+[editable path="Node3DTorsoHead"]
