@@ -1,6 +1,16 @@
 [gd_scene format=3 uid="uid://7qxve75y7w0q"]
 
 [ext_resource type="PackedScene" uid="uid://ci68fw2n1ryfk" path="res://sorsskod/scenes/player.tscn" id="1_akn88"]
+[ext_resource type="Script" uid="uid://dk8mtdcr8jq7u" path="res://sorsskod/kood/npc/QueueManager.cs" id="2_1hqeh"]
+[ext_resource type="PackedScene" uid="uid://cvvpx8vrnsvcs" path="res://sorsskod/scenes/npc.tscn" id="2_6if3s"]
+[ext_resource type="PackedScene" uid="uid://bqbedadekry3j" path="res://sorsskod/scenes/queue_connector.tscn" id="3_vlrdf"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_5rbxe"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_1hqeh"]
+vertices = PackedVector3Array(-3.9435568, 1, -5.8653684, -3.9435568, 1, 5.8846316, 4.056443, 1, 5.8846316, 4.056443, 1, -5.8653684)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5rbxe"]
 albedo_color = Color(0.36282945, 0.36282945, 0.36282945, 1)
@@ -8,20 +18,47 @@ albedo_color = Color(0.36282945, 0.36282945, 0.36282945, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_akn88"]
 material = SubResource("StandardMaterial3D_5rbxe")
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_5rbxe"]
-data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+[sub_resource type="CylinderMesh" id="CylinderMesh_1hqeh"]
 
 [node name="NpcTest" type="Node3D" unique_id=781300817]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=974802311]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=604948613]
-transform = Transform3D(8.887114, 0, 0, 0, 1, 0, 0, 0, 12.730737, 0, 0, 0)
-mesh = SubResource("BoxMesh_akn88")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.3730822)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=951823465]
 transform = Transform3D(8.887114, 0, 0, 0, 1, 0, 0, 0, 12.730737, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_5rbxe")
 
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="StaticBody3D" unique_id=102433196]
+navigation_mesh = SubResource("NavigationMesh_1hqeh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/NavigationRegion3D" unique_id=604948613]
+transform = Transform3D(8.887114, 0, 0, 0, 1, 0, 0, 0, 12.730737, 0, 0, 0)
+mesh = SubResource("BoxMesh_akn88")
+skeleton = NodePath("../..")
+
 [node name="player" parent="." unique_id=863523212 instance=ExtResource("1_akn88")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.6747706, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7244372, 2.6747706, 4.0258846)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1975437375]
+transform = Transform3D(1, 0, 0, 0, 0.008028378, 0.9999678, 0, -0.9999678, 0.008028378, 0, 9.20229, 0)
+
+[node name="QueueManager" type="Node3D" parent="." unique_id=1111828234 node_paths=PackedStringArray("QueueStart", "SpawnPoint", "WalkAwayPoint")]
+script = ExtResource("2_1hqeh")
+npc = ExtResource("2_6if3s")
+QueueStart = NodePath("QueueStart")
+SpawnPoint = NodePath("SpawnPoint")
+WalkAwayPoint = NodePath("LeavePoint")
+
+[node name="QueueStart" parent="QueueManager" unique_id=343868846 groups=["npcConnector"] instance=ExtResource("3_vlrdf")]
+transform = Transform3D(-0.030241929, 0, -0.9995426, 0, 1, 0, 0.9995426, 0, -0.030241929, 1.9557374, 1.909823, -4.118923)
+
+[node name="SpawnPoint" type="Node3D" parent="QueueManager" unique_id=1227498938]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3373654, 1.4184679, 3.8982463)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="QueueManager/SpawnPoint" unique_id=1070920974]
+transform = Transform3D(0.42879587, 0, 0, 0, 0.11839366, 0, 0, 0, 0.40779865, 0, 0, 0)
+mesh = SubResource("CylinderMesh_1hqeh")
+
+[node name="LeavePoint" type="Node3D" parent="QueueManager" unique_id=3266291]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0148025, 1.1640348, 5.8661814)

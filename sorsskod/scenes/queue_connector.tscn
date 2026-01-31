@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bqbedadekry3j"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_iqi2s"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iqi2s"]
+
+[node name="QueueConnector" type="Area3D" unique_id=343868846]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1260549778]
+transform = Transform3D(0.37665594, 0, 0, 0, 2.3920538, 0, 0, 0, 1.8834195, 0, 0, 0)
+mesh = SubResource("BoxMesh_iqi2s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=803789525]
+transform = Transform3D(0.37665594, 0, 0, 0, 2.3920538, 0, 0, 0, 1.8834195, 0, 0, 0)
+shape = SubResource("BoxShape3D_iqi2s")

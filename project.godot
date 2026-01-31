@@ -40,6 +40,8 @@ import/blender/enabled=false
 [global_group]
 
 moveableObject=""
+npcConnector="Group for area3D in NPC connectors."
+npc="Group for npc"
 
 [input]
 
