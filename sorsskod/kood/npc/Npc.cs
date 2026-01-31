@@ -22,7 +22,7 @@ public partial class Npc : CharacterBody3D
 		Skins.Add((Node3D)GetNode("Node3DTorsoHead2"));
 		Skins.Add((Node3D)GetNode("Node3DTorsoHead"));
 		base._Ready();
-		GD.Print("NPC Added.");
+		//GD.Print("NPC Added.");
 		navagent = (NavigationAgent3D)GetNode("NavigationAgent3D");
 		animationPlayer = (AnimationPlayer)GetNode("Node3DTorsoHead/Node3DLegs/AnimationPlayer");
 		Random rnd = new Random();
@@ -103,7 +103,7 @@ public partial class Npc : CharacterBody3D
 		backConnector.Visible = false;
 		Connected = false;
 		Served = true;
-		GD.Print("NPC walking away: ", this);
+		//GD.Print("NPC walking away: ", this);
 		animationPlayer.Play("LegMovement");
 	}
 
@@ -113,7 +113,7 @@ public partial class Npc : CharacterBody3D
 		var p = NavigationServer3D.MapGetClosestPoint(map, queuePosition);
 		navagent.TargetPosition = p;
 		Connected = false;
-		GD.Print("NPC walking up: ", this);
+		//GD.Print("NPC walking up: ", this);
 		animationPlayer.Play("LegMovement");
 	}
 

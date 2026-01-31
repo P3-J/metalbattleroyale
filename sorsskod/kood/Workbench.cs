@@ -4,38 +4,39 @@ using System;
 public partial class Workbench : Node3D
 {
 
-    private Globals glob;
-    [Export] PackedScene fireMask;
-    [Export] PackedScene iceMask;
-    [Export] Marker3D spawnPoint;
-    public override void _Ready()
-    {
-        base._Ready();
-        glob = GetNode<Globals>("/root/Globals");
+	private Globals glob;
+	[Export] PackedScene Mask;
+	[Export] Marker3D spawnPoint;
+	public override void _Ready()
+	{
+		base._Ready();
+		glob = GetNode<Globals>("/root/Globals");
 
-        glob.Connect("SpawnItem", new Callable(this, nameof(SpawnItem)));
-    }
+		glob.Connect("SpawnItem", new Callable(this, nameof(SpawnItem)));
+	}
 
-    public void SpawnItem(string itemName)
-    {
+	public void SpawnItem(string itemName)
+	{
 
-        switch (itemName)
-        {
+		switch (itemName)
+		{
 
-            case "FireMask":
-                RigidBody3D fireM = fireMask.Instantiate<RigidBody3D>();
-                GetParent().AddChild(fireM);
-                fireM.GlobalPosition = spawnPoint.GlobalPosition;
-                break;
-             case "IceMask":
-                RigidBody3D iceM = iceMask.Instantiate<RigidBody3D>();
-                GetParent().AddChild(iceM);
-                iceM.GlobalPosition = spawnPoint.GlobalPosition;
-                break;
+			case "Protective Mask":
+				ActObj fireM = Mask.Instantiate<ActObj>();
+				fireM.MakeMask("Protective Mask");
+				GetParent().AddChild(fireM);
+				fireM.GlobalPosition = spawnPoint.GlobalPosition;
+				break;
+			 case "Ninja Mask":
+				ActObj iceM = Mask.Instantiate<ActObj>();
+				iceM.MakeMask("Ninja Mask");
+				GetParent().AddChild(iceM);
+				iceM.GlobalPosition = spawnPoint.GlobalPosition;
+				break;
 
-        }
+		}
 
 
-    }
+	}
 
 }

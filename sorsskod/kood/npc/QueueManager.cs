@@ -16,10 +16,13 @@ public partial class QueueManager : Node3D
 	private Random random = new Random();
 	private Timer spawnTimer = new Timer();
 	private Queue npcQueue = new Queue();
+
+	Globals glob;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		Array<Node> temp = GetChildren();
+		glob = GetNode<Globals>("/root/Globals");
 		foreach (Node node in temp)
 		{
 			if (node.IsInGroup("npc")) {
@@ -31,15 +34,8 @@ public partial class QueueManager : Node3D
 		AddChild(spawnTimer);
 		spawnTimer.Timeout += () => OnSpawnTimerTimeout();
 		StartSpawnTimer();
-	}
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
-		if (Input.IsActionJustPressed("jump"))
-		{
-			ServeNpc(true);
-		}
+		glob.Connect("OrderDone", new Callable(this, nameof(ServeNpc)));
 	}
 
 	private void StartSpawnTimer()
@@ -73,13 +69,15 @@ public partial class QueueManager : Node3D
 
 	private void OnNpcReachedTarget(Npc a)
 	{
-		GD.Print("NPC reached target: ", a);
-		GD.Print("Spawning new NPC.");
+		//GD.Print("NPC reached target: ", a);
+		//GD.Print("Spawning new NPC.");
 		if (npcQueue.Count >= maxQueueLength)
 		{
-			GD.Print("Max queue length reached. Not spawning new NPC.");
+			//GD.Print("Max queue length reached. Not spawning new NPC.");
 			return;
 		}
+
+		glob.EmitSignal("OrderIn");
 
 		var queueArray = npcQueue.ToArray();
 		int idx = System.Array.IndexOf(queueArray, a);
