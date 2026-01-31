@@ -7,6 +7,13 @@ public partial class Player : CharacterBody3D
 	[Export] public float MouseSensitivity = 0.002f;
 	[Export] private Node3D _head;
 	[Export] private Camera3D _camera;
+	[Export] RayCast3D handRay;
+	[Export] Marker3D handMarker;
+
+	bool holdingObj = false;
+	bool canHoldItem = true;
+	bool tryingToHoldItem = false;
+	RigidBody3D objInHand = null;
 
 	public override void _Ready()
 	{
@@ -27,6 +34,18 @@ public partial class Player : CharacterBody3D
 			_head.Rotation = rot;
 		}
 
+		if (e is InputEventMouseButton)
+		{
+			if (e.IsActionPressed("lmb"))
+			{
+				tryingToHoldItem = true;
+			}
+			if (e.IsActionReleased("lmb"))
+			{
+				tryingToHoldItem = false;
+			}
+		}
+
 		if (e is InputEventKey)
 		{
 
@@ -34,6 +53,7 @@ public partial class Player : CharacterBody3D
 			{
 				Input.MouseMode = Input.MouseMode == Input.MouseModeEnum.Captured ? Input.MouseModeEnum.Visible : Input.MouseModeEnum.Captured;
 			}
+
 		}
 	}
 
@@ -64,4 +84,19 @@ public partial class Player : CharacterBody3D
 		Velocity = velocity;
 		MoveAndSlide();
 	}
+
+
+	public override void _Process(double delta)
+	{
+		base._Process(delta);
+
+		CheckHandCollisionAndHoldItem();
+
+
+	}
+
+
+
+
+
 }
