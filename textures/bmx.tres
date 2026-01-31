@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dwatj5mblbrig"]
+
+[ext_resource type="Texture2D" uid="uid://i5rfuiaps63q" path="res://textures/bmx.png" id="1_7gvpo"]
+
+[resource]
+albedo_texture = ExtResource("1_7gvpo")
+metallic_specular = 0.0
+texture_filter = 0

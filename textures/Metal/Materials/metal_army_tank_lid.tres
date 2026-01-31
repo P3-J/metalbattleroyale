@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cwt6vdh7dc0gc"]
+
+[ext_resource type="Texture2D" uid="uid://s6vum0yxjgrm" path="res://textures/Metal/Materials/metal_army_tank_lid.png" id="1_77br1"]
+
+[resource]
+albedo_texture = ExtResource("1_77br1")
+metallic_specular = 0.0
+texture_filter = 0
