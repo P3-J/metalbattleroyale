@@ -9,6 +9,8 @@ public class Mask : IEquatable<Mask>
     public string Name { get; set; }
     public int Price { get; set; }
 
+    public bool IsFulfilled { get; set; }
+
     // TODO: Add some sort of value to separate effects of masks
 
     public bool Equals(Mask mask) => mask.Name == Name;
@@ -32,10 +34,30 @@ public partial class CashRegister : PanelContainer
 
     private readonly Mask[] maskList =
     [
-        new Mask { Name = "Fire Mask", Price = 75 },
-        new Mask { Name = "Water Mask", Price = 175 },
-        new Mask { Name = "Earth Mask", Price = 225 },
-        new Mask { Name = "Air Mask", Price = 300 },
+        new Mask
+        {
+            Name = "Fire Mask",
+            Price = 75,
+            IsFulfilled = false,
+        },
+        new Mask
+        {
+            Name = "Water Mask",
+            Price = 175,
+            IsFulfilled = false,
+        },
+        new Mask
+        {
+            Name = "Earth Mask",
+            Price = 225,
+            IsFulfilled = false,
+        },
+        new Mask
+        {
+            Name = "Air Mask",
+            Price = 300,
+            IsFulfilled = false,
+        },
     ];
 
     const int maxAllowedMasksPerOrder = 5;
@@ -149,7 +171,7 @@ public partial class CashRegister : PanelContainer
     {
         bool entryValidity = CheckSumEntryValidity();
 
-        if (entryValidity == false)
+        if (entryValidity == false || !masksInCurrentOrder.All(mask => mask.IsFulfilled == true))
         {
             MakeResultMessageLabel("FAIL!");
         }
@@ -252,10 +274,12 @@ public partial class CashRegister : PanelContainer
             if (indexOfAreaMask == -1)
             {
                 orderCompleted = false;
+                masksInCurrentOrder[i].IsFulfilled = false;
                 HandleRegisterItemFulfillment(orderMaskRegisterItem, false);
             }
             else
             {
+                masksInCurrentOrder[i].IsFulfilled = true;
                 HandleRegisterItemFulfillment(orderMaskRegisterItem, true);
             }
         }
