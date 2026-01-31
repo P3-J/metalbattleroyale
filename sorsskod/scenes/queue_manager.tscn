@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://c01aatiq3b0ye"]
+
+[ext_resource type="Script" uid="uid://dk8mtdcr8jq7u" path="res://sorsskod/kood/npc/QueueManager.cs" id="1_qrcyu"]
+[ext_resource type="PackedScene" uid="uid://cvvpx8vrnsvcs" path="res://sorsskod/scenes/npc.tscn" id="2_xwj5q"]
+[ext_resource type="PackedScene" uid="uid://bqbedadekry3j" path="res://sorsskod/scenes/queue_connector.tscn" id="3_2oyny"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_1hqeh"]
+
+[node name="QueueManager" type="Node3D" unique_id=984014989 node_paths=PackedStringArray("QueueStart", "SpawnPoint", "WalkAwayPoint")]
+script = ExtResource("1_qrcyu")
+npc = ExtResource("2_xwj5q")
+QueueStart = NodePath("QueueStart")
+SpawnPoint = NodePath("SpawnPoint")
+WalkAwayPoint = NodePath("LeavePoint")
+minIntervalSpawns = 1.0
+maxIntervalSpawns = 5.0
+
+[node name="QueueStart" parent="." unique_id=343868846 groups=["npcConnector"] instance=ExtResource("3_2oyny")]
+transform = Transform3D(-0.030241929, 0, -0.9995426, 0, 1, 0, 0.9995426, 0, -0.030241929, 1.9557374, 1.909823, -4.118923)
+
+[node name="SpawnPoint" type="Node3D" parent="." unique_id=1328195025]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3373654, 1.4184679, 3.8982463)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="SpawnPoint" unique_id=232789187]
+transform = Transform3D(0.42879587, 0, 0, 0, 0.11839366, 0, 0, 0, 0.40779865, 0, 0, 0)
+mesh = SubResource("CylinderMesh_1hqeh")
+
+[node name="LeavePoint" type="Node3D" parent="." unique_id=991364164]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0148025, 1.1640348, 5.8661814)
