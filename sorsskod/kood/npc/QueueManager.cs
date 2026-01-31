@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Godot;
 using Godot.Collections;
@@ -10,6 +11,10 @@ public partial class QueueManager : Node3D
 	[Export] private Node3D SpawnPoint;
 	[Export] private int maxQueueLength = 3;
 	[Export] private Node3D WalkAwayPoint;
+	[Export] private double minIntervalSpawns = 0.3;
+	[Export] private double maxIntervalSpawns = 2.0;
+	private Random random = new Random();
+	private Timer spawnTimer = new Timer();
 	private Queue npcQueue = new Queue();
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -21,7 +26,11 @@ public partial class QueueManager : Node3D
 				npcQueue.Enqueue(node);
 			}
 		}
-		CreateNpc();
+		spawnTimer.Autostart = true;
+		spawnTimer.OneShot = true;
+		AddChild(spawnTimer);
+		spawnTimer.Timeout += () => OnSpawnTimerTimeout();
+		StartSpawnTimer();
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -29,9 +38,21 @@ public partial class QueueManager : Node3D
 	{
 		if (Input.IsActionJustPressed("jump"))
 		{
-			GD.Print("Serving an NPC from QueueManager.");
 			ServeNpc(true);
 		}
+	}
+
+	private void StartSpawnTimer()
+	{
+		double interval = random.NextDouble() * (maxIntervalSpawns - minIntervalSpawns) + minIntervalSpawns;
+		spawnTimer.WaitTime = interval;
+		spawnTimer.Start();
+	}
+
+	private void OnSpawnTimerTimeout()
+	{
+		CreateNpc();
+		StartSpawnTimer();
 	}
 
 	public void ServeNpc(bool served)
@@ -59,7 +80,6 @@ public partial class QueueManager : Node3D
 			GD.Print("Max queue length reached. Not spawning new NPC.");
 			return;
 		}
-		CreateNpc();
 
 		var queueArray = npcQueue.ToArray();
 		int idx = System.Array.IndexOf(queueArray, a);
@@ -72,6 +92,8 @@ public partial class QueueManager : Node3D
 
 	private Npc CreateNpc()
 	{
+		Random r = new Random();
+		spawnTimer.WaitTime = r.NextDouble() * minIntervalSpawns;
 		Npc newNpc = (Npc) npc.Instantiate();
 		AddChild(newNpc);
 		npcQueue.Enqueue(newNpc);

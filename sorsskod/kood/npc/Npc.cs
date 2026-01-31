@@ -76,6 +76,9 @@ public partial class Npc : CharacterBody3D
 		navagent.TargetPosition = p;
 		// Disable the BackConnector Area3D
 		var backConnector = (Area3D)GetNode("BackConnector");
+		var frontConnector = (Area3D)GetNode("FrontConnector");
+		frontConnector.Monitoring = false;
+		frontConnector.Monitorable = false;
 		backConnector.Monitoring = false;
 		backConnector.Monitorable = false;
 		backConnector.Visible = false;

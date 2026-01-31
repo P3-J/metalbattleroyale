@@ -21,6 +21,7 @@ shader_parameter/vignette_strength = 0.8
 shader_parameter/vignette_radius = 0.9
 
 [node name="player" type="CharacterBody3D" unique_id=863523212 node_paths=PackedStringArray("_head", "_camera", "handRay", "handMarker", "pupSprite", "uiSlots", "lmbParent", "keysParent")]
+collision_layer = 0
 script = ExtResource("1_whmsy")
 _head = NodePath("head")
 _camera = NodePath("head/Camera3D")
