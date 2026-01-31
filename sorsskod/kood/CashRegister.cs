@@ -2,6 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Godot;
+using Godot.Collections;
+
+public class Mask
+{
+    public string Name { get; set; }
+    public int Price { get; set; }
+    // TODO: Add some sort of value to separate effects of masks
+}
 
 public partial class CashRegister : PanelContainer
 {
@@ -16,6 +24,22 @@ public partial class CashRegister : PanelContainer
     private List<int> itemPrices = [];
 
     private MarginContainer marginContainer;
+
+    static Random random = new();
+
+    private readonly Mask[] maskList =
+    [
+        new Mask { Name = "Fire Mask", Price = 75 },
+        new Mask { Name = "Water Mask", Price = 175 },
+        new Mask { Name = "Earth Mask", Price = 225 },
+        new Mask { Name = "Air Mask", Price = 300 },
+    ];
+
+    const int maxAllowedMasksPerOrder = 5;
+
+    const int orderCountWeightedTowards = 2;
+
+    public bool orderInProgress = false;
 
     public override void _Ready()
     {
@@ -42,10 +66,6 @@ public partial class CashRegister : PanelContainer
         tween.TweenInterval(0.6f);
         tween.TweenProperty(cursor, "modulate:a", 0.0, 0);
         tween.TweenInterval(0.6f);
-
-        AddLineItem("PlaceHolder Mask A", 1000);
-        AddLineItem("PlaceHolder Mask B", 3000);
-        AddLineItem("PlaceHolder Mask C", 4500);
     }
 
     public void AddLineItem(string itemName, int itemPrice)
@@ -99,8 +119,45 @@ public partial class CashRegister : PanelContainer
 
         if (eventKey.Keycode == Key.Enter)
         {
-            MakeResultMessageLabel(CheckSumEntryValidity() ? "SUCCESS!" : "FAIL!");
+            HandleSumSubmit();
         }
+
+        if (!orderInProgress && eventKey.Keycode == Key.Space)
+        {
+            orderInProgress = true;
+            GenerateOrder();
+        }
+    }
+
+    private void ClearState()
+    {
+        Array<Node> lineItems = lineItemContainer.GetChildren();
+        int childCount = lineItems.Count;
+
+        for (int i = 0; i < childCount; i++)
+        {
+            lineItems[i].QueueFree();
+        }
+
+        itemPrices = [];
+    }
+
+    private void HandleSumSubmit()
+    {
+        bool entryValidity = CheckSumEntryValidity();
+
+        if (entryValidity == false)
+        {
+            MakeResultMessageLabel("FAIL!");
+        }
+        else
+        {
+            orderInProgress = false;
+            MakeResultMessageLabel("SOLD!");
+            ClearState();
+        }
+
+        ChangeSumAmount("0");
     }
 
     private void ChangeSumAmount(string sumInput)
@@ -130,8 +187,8 @@ public partial class CashRegister : PanelContainer
 
         resultLabel.Text = message;
 
-        resultLabel.SizeFlagsHorizontal = Control.SizeFlags.ShrinkCenter;
-        resultLabel.SizeFlagsVertical = Control.SizeFlags.ShrinkCenter;
+        resultLabel.SizeFlagsHorizontal = SizeFlags.ShrinkCenter;
+        resultLabel.SizeFlagsVertical = SizeFlags.ShrinkCenter;
         resultLabel.AutowrapMode = TextServer.AutowrapMode.Off;
         resultLabel.FitContent = true;
 
@@ -141,5 +198,34 @@ public partial class CashRegister : PanelContainer
         tween.TweenProperty(resultLabel, "modulate", Colors.Green, 1.0f);
         tween.TweenProperty(resultLabel, "scale", Vector2.Zero, 1.0f);
         tween.TweenCallback(Callable.From(resultLabel.QueueFree));
+    }
+
+    public void GenerateOrder()
+    {
+        int amountOfMasks = GenerateOrderMaskCount();
+
+        for (int i = 0; i < amountOfMasks; i++)
+        {
+            Mask randomMask = maskList[random.Next(maskList.Length)];
+            AddLineItem(randomMask.Name, randomMask.Price);
+        }
+    }
+
+    public static int GenerateOrderMaskCount()
+    {
+        List<int> possibleMaskCounts = Enumerable.Range(1, maxAllowedMasksPerOrder).ToList<int>();
+
+        possibleMaskCounts.Remove(orderCountWeightedTowards);
+
+        int randomInt = random.Next(101);
+
+        if (randomInt < 50) // Bad weighted random
+        {
+            return orderCountWeightedTowards;
+        }
+        else
+        {
+            return possibleMaskCounts[random.Next(possibleMaskCounts.Count)];
+        }
     }
 }
