@@ -1,22 +1,22 @@
-[gd_scene format=4 uid="uid://qflnhx1d4wrt"]
+[gd_scene format=4 uid="uid://dqajie5dswdh8"]
 
 [ext_resource type="Script" uid="uid://cn46hnbpnmitv" path="res://addons/func_godot/src/map/func_godot_map.gd" id="1_gytqk"]
 [ext_resource type="Resource" uid="uid://bkhxcqsquw1yg" path="res://addons/func_godot/func_godot_default_map_settings.tres" id="2_rcufq"]
-[ext_resource type="Material" uid="uid://c30cyb1ght36l" path="res://textures/FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6.tres" id="3_4lrl0"]
-[ext_resource type="Material" uid="uid://b8jlglt408m1f" path="res://textures/FoxTex_Vol1/Textures/F1/CNCC/CNCC2.tres" id="4_liabi"]
+[ext_resource type="Material" path="res://textures/FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6.tres" id="3_4lrl0"]
+[ext_resource type="Material" path="res://textures/FoxTex_Vol1/Textures/F1/CNCC/CNCC2.tres" id="4_liabi"]
 [ext_resource type="Material" uid="uid://b2o1td6ma8c1k" path="res://textures/128x128/Brick/Brick_07-128x128.tres" id="5_im4q2"]
 [ext_resource type="Material" uid="uid://du0ql81a46hdg" path="res://textures/rock_wall_13_diff_1k.tres" id="5_liabi"]
-[ext_resource type="Material" uid="uid://cf7ct11i5ionc" path="res://textures/FoxTex_Vol1/Textures/F1/CNCC/CNCC7_6.tres" id="6_uvhnp"]
-[ext_resource type="Material" uid="uid://b34hcb7xh5xbr" path="res://textures/FoxTex_Vol1/Textures/F1/CNCC/CNCC8_2.tres" id="7_ey61n"]
-[ext_resource type="Material" uid="uid://jfifu2eyytg5" path="res://textures/FoxTex_Vol1/Textures/F1/CNCC/CNCC4_1.tres" id="8_ey61n"]
+[ext_resource type="Material" path="res://textures/FoxTex_Vol1/Textures/F1/CNCC/CNCC7_6.tres" id="6_uvhnp"]
+[ext_resource type="Material" path="res://textures/FoxTex_Vol1/Textures/F1/CNCC/CNCC8_2.tres" id="7_ey61n"]
+[ext_resource type="Material" path="res://textures/FoxTex_Vol1/Textures/F1/CNCC/CNCC4_1.tres" id="8_ey61n"]
 [ext_resource type="Material" uid="uid://c7v3b6ygpqnrh" path="res://textures/F1/CNSP8A.tres" id="8_i6wos"]
 [ext_resource type="PackedScene" uid="uid://ci68fw2n1ryfk" path="res://sorsskod/scenes/player.tscn" id="8_rcufq"]
-[ext_resource type="Material" uid="uid://jnj8alo06y7s" path="res://textures/FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5.tres" id="9_pghho"]
+[ext_resource type="Material" path="res://textures/FoxTex_Vol1/Textures/F1/CNCC/CNCC6_5.tres" id="9_pghho"]
 [ext_resource type="Material" uid="uid://q6re8oi2wb2g" path="res://textures/FoxTex_Vol1/Textures/F1/CNCC/CNCC9.tres" id="10_4e0ni"]
 [ext_resource type="Material" uid="uid://bx5fl1krpq3b1" path="res://textures/F1/CNSP8B.tres" id="11_josvq"]
 [ext_resource type="Material" uid="uid://d0lss8enrcbln" path="res://textures/newwithe/Facade010_1K-JPG_Emission.tres" id="12_gy55w"]
-[ext_resource type="Material" uid="uid://dnynll5dsams8" path="res://textures/FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5.tres" id="12_n0ji8"]
-[ext_resource type="Material" uid="uid://1h3vwftreyi1" path="res://textures/FoxTex_Vol1/Textures/F1/CNCC/CNCC4.tres" id="13_pghho"]
+[ext_resource type="Material" path="res://textures/FoxTex_Vol1/Textures/F1/CNCC/CNCC3_5.tres" id="12_n0ji8"]
+[ext_resource type="Material" path="res://textures/FoxTex_Vol1/Textures/F1/CNCC/CNCC4.tres" id="13_pghho"]
 [ext_resource type="Material" uid="uid://cq1hwwcouqjo8" path="res://textures/F1/CNAL9.tres" id="15_nf8og"]
 [ext_resource type="Material" uid="uid://crbfunnr2djnl" path="res://textures/FoxTex_Vol1/Textures/F1/CNCC/CNCC2_5.tres" id="16_xuubr"]
 [ext_resource type="Material" uid="uid://cx5c43rqhj8wx" path="res://textures/Metal/Materials/metal_rusty_02.tres" id="17_bg8rx"]
@@ -32,19 +32,20 @@
 [ext_resource type="Material" uid="uid://cjx83hcyts6q" path="res://textures/Doors/Materials/door_business_01.tres" id="28_rhw6x"]
 [ext_resource type="Material" uid="uid://vw71eumem2pn" path="res://textures/F1/CNAL11_1.tres" id="29_n2mkf"]
 [ext_resource type="Material" uid="uid://drj8v13esblhu" path="res://textures/newwithe/Facade007_1K-JPG_Emission.tres" id="30_h5wrj"]
-[ext_resource type="Material" uid="uid://c7q177xahvi5c" path="res://textures/zoku2.tres" id="31_im4q2"]
-[ext_resource type="Material" uid="uid://v7rkjda5hyon" path="res://textures/torizoku.tres" id="32_i6wos"]
+[ext_resource type="Material" path="res://textures/zoku2.tres" id="31_im4q2"]
+[ext_resource type="Material" path="res://textures/torizoku.tres" id="32_i6wos"]
 [ext_resource type="Material" uid="uid://jd1crpnl7s4l" path="res://textures/Windows/Materials/window_shutter_blue_01.tres" id="33_josvq"]
-[ext_resource type="Material" uid="uid://ho0tvps0lr0s" path="res://textures/all.tres" id="34_nf8og"]
+[ext_resource type="Material" path="res://textures/all.tres" id="34_nf8og"]
 [ext_resource type="AudioStream" uid="uid://hvj87dp54dl2" path="res://sorsskod/sounds/calming-rain-257596.mp3" id="36_i6wos"]
-[ext_resource type="PackedScene" uid="uid://i5805cpltaqm" path="res://sorsskod/scenes/actObj.tscn" id="36_josvq"]
+[ext_resource type="PackedScene" path="res://sorsskod/scenes/actObj.tscn" id="36_josvq"]
 [ext_resource type="Material" uid="uid://cnirxa4p01kum" path="res://textures/128x128/Metal/Metal_05-128x128.tres" id="36_kg6n6"]
 [ext_resource type="Material" uid="uid://d2lfhjggyc67g" path="res://textures/128x128/Metal/Metal_06-128x128.tres" id="37_yfsq8"]
-[ext_resource type="Material" uid="uid://c0fv0fqib8nn8" path="res://textures/road.tres" id="38_fdpo0"]
+[ext_resource type="Material" path="res://textures/road.tres" id="38_fdpo0"]
 [ext_resource type="Texture2D" uid="uid://celfc5w2tjlff" path="res://textures/Buildings/Materials/ceiling_utilities_02.jpg" id="39_pwnhg"]
 [ext_resource type="Texture2D" uid="uid://dij43bpd44hy0" path="res://textures/Doors/Materials/door_store_drinks_02.jpg" id="40_ekqhr"]
 [ext_resource type="Texture2D" uid="uid://cma6nucolxfjh" path="res://textures/Doors/Materials/door_store_drinks_01.jpg" id="41_42uv0"]
 [ext_resource type="Texture2D" uid="uid://c0dhsubseed1m" path="res://textures/128x128/Metal/Metal_07-128x128.png" id="42_f5mh6"]
+[ext_resource type="PackedScene" uid="uid://ce44xntjk6bok" path="res://sorsskod/scenes/workbench.tscn" id="46_h5wrj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gutbc"]
 albedo_texture = ExtResource("18_n2mkf")
@@ -1509,8 +1510,9 @@ shape = SubResource("ConvexPolygonShape3D_c5r56")
 [node name="entity_0_brush_148_collision_shape" type="CollisionShape3D" parent="worlddefaults/FuncGodotMap/entity_0_worldspawn" unique_id=2012226558]
 shape = SubResource("ConvexPolygonShape3D_jythb")
 
-[node name="player" parent="worlddefaults" unique_id=863523212 instance=ExtResource("8_rcufq")]
+[node name="player" parent="worlddefaults" unique_id=863523212 node_paths=PackedStringArray("benchCam") instance=ExtResource("8_rcufq")]
 transform = Transform3D(-0.9945183, 0, 0.10456312, 0, 1, 0, -0.10456312, 0, -0.9945183, 2.5121698, 1.7494981, -3.661077)
+benchCam = NodePath("../../worldassets/bench/benchcam")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="worlddefaults" unique_id=216642279]
 environment = SubResource("Environment_x3o3n")
@@ -1617,3 +1619,9 @@ stream = ExtResource("36_i6wos")
 volume_db = -5.0
 autoplay = true
 max_distance = 10.0
+
+[node name="bench" parent="worldassets" unique_id=807213215 instance=ExtResource("46_h5wrj")]
+transform = Transform3D(0.032771397, 0, -0.9994629, 0, 1, 0, 0.9994629, 0, 0.032771397, -2.0380409, 0.26190138, 7.487893)
+
+[node name="benchcam" type="Camera3D" parent="worldassets/bench" unique_id=1924379292]
+transform = Transform3D(0.00058464333, 0.5465754, -0.8374096, 0.017248208, 0.8372798, 0.5465027, 0.999851, -0.014763324, -0.008937936, -0.7024412, 2.5675504, -0.023032427)
