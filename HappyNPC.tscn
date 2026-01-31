@@ -1,0 +1,120 @@
+[gd_scene format=3 uid="uid://cc4ptxxs618da"]
+
+[ext_resource type="ArrayMesh" uid="uid://nm8nj4ehs0of" path="res://sorsskod/assets/head.obj" id="1_joirg"]
+[ext_resource type="ArrayMesh" uid="uid://vku14kdie53o" path="res://sorsskod/assets/torso.obj" id="2_mnvn3"]
+[ext_resource type="Texture2D" uid="uid://bmv6ops50dx36" path="res://sorsskod/assets/spongebob.png" id="3_od5d3"]
+[ext_resource type="ArrayMesh" uid="uid://bp8sphu3m3i5q" path="res://sorsskod/assets/leg.obj" id="4_feck3"]
+[ext_resource type="ArrayMesh" uid="uid://cfvamy7vwvxck" path="res://sorsskod/assets/hand.obj" id="5_6mt4a"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e6cl1"]
+albedo_color = Color(0.8784314, 0.6745098, 0.4117647, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3uoyo"]
+shading_mode = 0
+diffuse_mode = 2
+specular_mode = 1
+albedo_color = Color(1, 0.98, 0.98, 1)
+albedo_texture = ExtResource("3_od5d3")
+albedo_texture_force_srgb = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cfs0j"]
+albedo_color = Color(1, 0.61960787, 0.27450982, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d6qgf"]
+albedo_color = Color(1, 0.61960787, 0.27450982, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_replq"]
+albedo_color = Color(0.8784314, 0.6745098, 0.4117647, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wtd05"]
+albedo_color = Color(0.8784314, 0.6745098, 0.4117647, 1)
+
+[sub_resource type="Animation" id="Animation_c8v8x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node3DHands/Hand2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.4088414, 0.0014492273, 0.00016796589)]
+}
+
+[sub_resource type="Animation" id="Animation_uwno7"]
+resource_name = "RaisedHands"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node3DHands/Hand2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.96666664, 1.9333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.4088414, 0.0014492273, 0.00016796589), Vector3(-1.4088414, 1.0664635, 0.00016796589), Vector3(-1.409, 0.001, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_utawf"]
+_data = {
+&"RESET": SubResource("Animation_c8v8x"),
+&"RaisedHands": SubResource("Animation_uwno7")
+}
+
+[node name="Node3DTorsoHead" type="Node3D" unique_id=381438612]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.087201476, 0)
+
+[node name="Head" type="MeshInstance3D" parent="." unique_id=1269352817]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0183103, 0.99194896, 0.042)
+mesh = ExtResource("1_joirg")
+surface_material_override/0 = SubResource("StandardMaterial3D_e6cl1")
+
+[node name="Torso" type="MeshInstance3D" parent="." unique_id=1016246282]
+transform = Transform3D(0.8, 0, 0, 0, 0.7, 0, 0, 0, 0.8, -0.81619346, -0.019490242, 0.019497156)
+mesh = ExtResource("2_mnvn3")
+surface_material_override/0 = SubResource("StandardMaterial3D_3uoyo")
+
+[node name="Node3DLegs" type="Node3D" parent="." unique_id=2105192173]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37011307, -0.59264135, 0)
+
+[node name="Leg" type="MeshInstance3D" parent="Node3DLegs" unique_id=1283419746]
+transform = Transform3D(0.83, 0, 0, 0, 0.8299999, 0, 0, 0, 0.8299999, -0.19531572, -0.66035163, 0)
+mesh = ExtResource("4_feck3")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_cfs0j")
+
+[node name="Leg2" type="MeshInstance3D" parent="Node3DLegs" unique_id=1159819131]
+transform = Transform3D(0.83, 0, 0, 0, 0.83, 0, 0, 0, 0.83, -0.79464775, -0.66564643, 0.025288865)
+mesh = ExtResource("4_feck3")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_d6qgf")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1589643423]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.18064964, 0)
+
+[node name="Node3DHands" type="Node3D" parent="." unique_id=953239936]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0.009070158, -0.043854, 0.04878664)
+
+[node name="Hand2" type="MeshInstance3D" parent="Node3DHands" unique_id=1891335785]
+transform = Transform3D(0.6999999, 0, 0, 0, 0.79997736, -0.0045133797, 0, 0.0060178386, 0.59998304, -1.4088414, 0.0014492273, 0.00016796589)
+mesh = ExtResource("5_6mt4a")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_replq")
+
+[node name="Hand" type="MeshInstance3D" parent="Node3DHands" unique_id=240216672]
+transform = Transform3D(0.7000001, 0, 0, 0, 0.80000013, 0, 0, 0, 0.6000001, -0.030650117, -0.013927458, 0.024887204)
+mesh = ExtResource("5_6mt4a")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_wtd05")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node3DHands" unique_id=1936703327]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_utawf")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3DHands" unique_id=1958567466]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, -4.656613e-10, 0, 0, 1, 0, -0.08011818, -5.820766e-11)
