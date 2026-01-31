@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://cvvpx8vrnsvcs"]
+
+[ext_resource type="Script" uid="uid://bgnu0tx3vjvx1" path="res://sorsskod/kood/npc/Npc.cs" id="1_acauy"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_skcfj"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_acauy"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_skcfj"]
+radius = 0.120948136
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ilbqd"]
+
+[node name="Npc" type="CharacterBody3D" unique_id=149848484 groups=["npc"]]
+collision_layer = 0
+script = ExtResource("1_acauy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=676101178]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86772686, 0)
+mesh = SubResource("CapsuleMesh_skcfj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1654975118]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86772686, 0)
+shape = SubResource("CapsuleShape3D_acauy")
+
+[node name="FrontConnector" type="Area3D" parent="." unique_id=2090704629 groups=["npcConnector"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.011219591, 0.16594815, -0.8698529)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FrontConnector" unique_id=308370179]
+shape = SubResource("SphereShape3D_skcfj")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1369403969]
+
+[node name="BackConnector" type="Area3D" parent="." unique_id=1358741831 groups=["npcConnector"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06716728, 0.08007777, 0.64137065)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BackConnector" unique_id=990984570]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+shape = SubResource("SphereShape3D_ilbqd")
+
+[connection signal="area_entered" from="FrontConnector" to="." method="_on_front_connector_area_entered"]
+[connection signal="area_entered" from="BackConnector" to="." method="_on_back_connector_area_entered"]

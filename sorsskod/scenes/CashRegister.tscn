@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://35ytmfv6gslp"]
+
+[ext_resource type="Script" uid="uid://bhcr3h7q0283m" path="res://sorsskod/kood/CashRegister.cs" id="2_vwdvq"]
+[ext_resource type="Theme" uid="uid://w8nk6qlxe2jo" path="res://textures/register_theme.tres" id="2_xr3lu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xr3lu"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="PanelContainer" type="PanelContainer" unique_id=2018321194]
+offset_right = 500.0
+offset_bottom = 500.0
+theme = ExtResource("2_xr3lu")
+theme_override_styles/panel = SubResource("StyleBoxFlat_xr3lu")
+script = ExtResource("2_vwdvq")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1202462744]
+layout_mode = 2
+
+[node name="CashRegisterContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1541049724]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/CashRegisterContainer" unique_id=1159088413]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/normal_font_size = 24
+text = "Mask Management System"
+fit_content = true
+autowrap_mode = 0
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/CashRegisterContainer" unique_id=668393770]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/line_separation = 30
+theme_override_font_sizes/normal_font_size = 14
+text = "(V1.32)"
+fit_content = true
+autowrap_mode = 0
+
+[node name="LineItemContainer" type="VBoxContainer" parent="MarginContainer/CashRegisterContainer" unique_id=112184847]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="SumLineContainer" type="HBoxContainer" parent="MarginContainer/CashRegisterContainer" unique_id=235432962]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme = ExtResource("2_xr3lu")
+
+[node name="SumText" type="RichTextLabel" parent="MarginContainer/CashRegisterContainer/SumLineContainer" unique_id=771078931]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 26
+text = "ENTER TOTAL : "
+fit_content = true
+autowrap_mode = 0
+
+[node name="SumAmountLabel" type="RichTextLabel" parent="MarginContainer/CashRegisterContainer/SumLineContainer" unique_id=336936136]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "$0
+
+"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Cursor" type="RichTextLabel" parent="MarginContainer/CashRegisterContainer/SumLineContainer" unique_id=1618574493]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 18
+text = "▉"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1490391067]
+position = Vector2(250, 248)

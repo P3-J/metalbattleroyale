@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://jfwc734eqbjw"]
+
+[ext_resource type="Texture2D" uid="uid://cma6nucolxfjh" path="res://textures/Doors/Materials/door_store_drinks_01.jpg" id="1_7l8se"]
+
+[resource]
+albedo_texture = ExtResource("1_7l8se")
+metallic_specular = 0.0
+texture_filter = 0

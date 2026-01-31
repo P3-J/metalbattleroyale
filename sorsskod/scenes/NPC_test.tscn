@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://7qxve75y7w0q"]
+
+[ext_resource type="PackedScene" uid="uid://ci68fw2n1ryfk" path="res://sorsskod/scenes/player.tscn" id="1_akn88"]
+[ext_resource type="PackedScene" uid="uid://c01aatiq3b0ye" path="res://sorsskod/scenes/queue_manager.tscn" id="2_6if3s"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_5rbxe"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_1hqeh"]
+vertices = PackedVector3Array(-3.9435568, 1, -5.8653684, -3.9435568, 1, 5.8846316, 4.056443, 1, 5.8846316, 4.056443, 1, -5.8653684)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5rbxe"]
+albedo_color = Color(0.36282945, 0.36282945, 0.36282945, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_akn88"]
+material = SubResource("StandardMaterial3D_5rbxe")
+
+[node name="NpcTest" type="Node3D" unique_id=781300817]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=974802311]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.3730822)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=951823465]
+transform = Transform3D(8.887114, 0, 0, 0, 1, 0, 0, 0, 12.730737, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_5rbxe")
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="StaticBody3D" unique_id=102433196]
+navigation_mesh = SubResource("NavigationMesh_1hqeh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/NavigationRegion3D" unique_id=604948613]
+transform = Transform3D(8.887114, 0, 0, 0, 1, 0, 0, 0, 12.730737, 0, 0, 0)
+mesh = SubResource("BoxMesh_akn88")
+skeleton = NodePath("../..")
+
+[node name="player" parent="." unique_id=863523212 node_paths=PackedStringArray("uiSlots") instance=ExtResource("1_akn88")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7244372, 2.6747706, 4.0258846)
+uiSlots = []
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1975437375]
+transform = Transform3D(1, 0, 0, 0, 0.008028378, 0.9999678, 0, -0.9999678, 0.008028378, 0, 9.20229, 0)
+
+[node name="QueueManager" parent="." unique_id=984014989 instance=ExtResource("2_6if3s")]

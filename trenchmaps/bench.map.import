@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://dxmivycjw8tpx"
+path="res://.godot/imported/bench.map-1cdffc2020f69e76a983fd2dbcee2032.tres"
+
+[deps]
+
+source_file="res://trenchmaps/bench.map"
+dest_files=["res://.godot/imported/bench.map-1cdffc2020f69e76a983fd2dbcee2032.tres"]
+
+[params]
+

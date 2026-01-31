@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://0o878hudvo0v"
+path="res://.godot/imported/shop.2.map-13f001e7be32f84b00c0920bc357a401.tres"
+
+[deps]
+
+source_file="res://trenchmaps/autosave/shop.2.map"
+dest_files=["res://.godot/imported/shop.2.map-13f001e7be32f84b00c0920bc357a401.tres"]
+
+[params]
+

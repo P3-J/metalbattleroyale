@@ -7,16 +7,38 @@ public partial class Player : CharacterBody3D
 	[Export] public float MouseSensitivity = 0.002f;
 	[Export] private Node3D _head;
 	[Export] private Camera3D _camera;
+	[Export] RayCast3D handRay;
+	[Export] Marker3D handMarker;
+	[Export] CashRegister reg;
+	[Export] Camera3D cashCam;
+
+	bool holdingObj = false;
+	bool canHoldItem = true;
+	bool tryingToHoldItem = false;
+	RigidBody3D objInHand = null;
 
 	public override void _Ready()
 	{
 
 		Input.MouseMode = Input.MouseModeEnum.Captured;
+		glob = GetNode<Globals>("/root/Globals");
 
 	}
 
 	public override void _UnhandledInput(InputEvent e)
 	{
+		if (inBenchMode)
+		{
+			HandleBenchInput(e);
+			return;
+		}
+
+		if (inConsoleMode)
+		{
+			HandleConsoleInput(e);
+			return;
+		}
+
 		if (e is InputEventMouseMotion mouseMotion)
 		{
 			RotateY(-mouseMotion.Relative.X * MouseSensitivity);
@@ -27,6 +49,34 @@ public partial class Player : CharacterBody3D
 			_head.Rotation = rot;
 		}
 
+		if (e is InputEventMouseButton)
+		{
+			if (e.IsActionPressed("lmb"))
+			{
+				if (canUseBench)
+				{
+					inBenchMode = true;
+					benchCam.Current = true;
+					keysParent.Visible = true;
+					lmbParent.Visible = false;
+				}
+				else if (canUseConsole)
+				{
+					inConsoleMode = true;
+					cashCam.Current = true;
+					lmbParent.Visible = false;
+				}
+				else
+				{
+					tryingToHoldItem = true;
+				}
+			}
+			if (e.IsActionReleased("lmb"))
+			{
+				tryingToHoldItem = false;
+			}
+		}
+
 		if (e is InputEventKey)
 		{
 
@@ -34,6 +84,7 @@ public partial class Player : CharacterBody3D
 			{
 				Input.MouseMode = Input.MouseMode == Input.MouseModeEnum.Captured ? Input.MouseModeEnum.Visible : Input.MouseModeEnum.Captured;
 			}
+
 		}
 	}
 
@@ -44,13 +95,13 @@ public partial class Player : CharacterBody3D
 		if (!IsOnFloor())
 			velocity.Y -= ProjectSettings.GetSetting("physics/3d/default_gravity").AsSingle() * (float)delta;
 
-		if (Input.IsActionJustPressed("jump") && IsOnFloor())
+		if (Input.IsActionJustPressed("jump") && IsOnFloor() && !inBenchMode)
 			velocity.Y = JumpVelocity;
 
 		Vector2 inputDir = Input.GetVector("move_left", "move_right", "move_forward", "move_back");
 		Vector3 direction = (Transform.Basis * new Vector3(inputDir.X, 0, inputDir.Y)).Normalized();
 
-		if (direction != Vector3.Zero)
+		if (direction != Vector3.Zero && !inBenchMode)
 		{
 			velocity.X = direction.X * Speed;
 			velocity.Z = direction.Z * Speed;
@@ -64,4 +115,19 @@ public partial class Player : CharacterBody3D
 		Velocity = velocity;
 		MoveAndSlide();
 	}
+
+
+	public override void _Process(double delta)
+	{
+		base._Process(delta);
+
+		CheckHandCollisionAndHoldItem();
+
+
+	}
+
+
+
+
+
 }

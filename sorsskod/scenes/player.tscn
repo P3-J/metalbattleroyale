@@ -2,13 +2,15 @@
 
 [ext_resource type="Script" uid="uid://bas57x0npfova" path="res://sorsskod/kood/Player.cs" id="1_whmsy"]
 [ext_resource type="Shader" uid="uid://g5a0bn1xs00x" path="res://sorsskod/shaders/ps1.gdshader" id="2_4o5ng"]
+[ext_resource type="Texture2D" uid="uid://b2tuuog2h2neq" path="res://sorsskod/assets/lmb.png" id="3_lmh14"]
+[ext_resource type="Texture2D" uid="uid://bu5r4s2avp3us" path="res://sorsskod/assets/arrowdir.png" id="4_mpllb"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_wygqo"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4o5ng"]
 shader = ExtResource("2_4o5ng")
-shader_parameter/resolution_x = 640
-shader_parameter/resolution_y = 480
+shader_parameter/resolution_x = 1280
+shader_parameter/resolution_y = 720
 shader_parameter/color_bit_depth = 4
 shader_parameter/dither_strength = 0.01
 shader_parameter/jitter_amount = 0.008
@@ -18,10 +20,17 @@ shader_parameter/chromatic_aberration_strength = 0.015
 shader_parameter/vignette_strength = 0.8
 shader_parameter/vignette_radius = 0.9
 
-[node name="player" type="CharacterBody3D" unique_id=863523212 node_paths=PackedStringArray("_head", "_camera")]
+[node name="player" type="CharacterBody3D" unique_id=863523212 node_paths=PackedStringArray("_head", "_camera", "handRay", "handMarker", "pupSprite", "uiSlots", "lmbParent", "keysParent")]
+collision_layer = 0
 script = ExtResource("1_whmsy")
 _head = NodePath("head")
 _camera = NodePath("head/Camera3D")
+handRay = NodePath("head/Camera3D/handRay")
+handMarker = NodePath("head/Camera3D/handHoldSpot")
+pupSprite = NodePath("head/Camera3D/Control/lmb/pupsprite")
+uiSlots = [NodePath("head/Camera3D/Control/craftingGame/k1"), NodePath("head/Camera3D/Control/craftingGame/k2"), NodePath("head/Camera3D/Control/craftingGame/k3"), NodePath("head/Camera3D/Control/craftingGame/k4")]
+lmbParent = NodePath("head/Camera3D/Control/lmb")
+keysParent = NodePath("head/Camera3D/Control/craftingGame")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=393090299]
 shape = SubResource("SphereShape3D_wygqo")
@@ -34,16 +43,64 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3045752, 0)
 [node name="Control" type="Control" parent="head/Camera3D" unique_id=1629114769]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_right = 1280.0
+offset_bottom = 720.0
 mouse_filter = 2
 
 [node name="ColorRect" type="ColorRect" parent="head/Camera3D/Control" unique_id=412218603]
 material = SubResource("ShaderMaterial_4o5ng")
 layout_mode = 0
-offset_right = 504.0
-offset_bottom = 504.0
+offset_right = 1280.0
+offset_bottom = 720.0
 mouse_filter = 2
+
+[node name="lmb" type="Node2D" parent="head/Camera3D/Control" unique_id=867079726]
+
+[node name="pupsprite" type="Sprite2D" parent="head/Camera3D/Control/lmb" unique_id=2036218445]
+visible = false
+position = Vector2(680, 360)
+scale = Vector2(0.6333333, 0.6333333)
+texture = ExtResource("3_lmh14")
+
+[node name="crosshair" type="Node2D" parent="head/Camera3D/Control" unique_id=1895449]
+
+[node name="ColorRect3" type="ColorRect" parent="head/Camera3D/Control/crosshair" unique_id=252575920]
+offset_left = 640.0
+offset_top = 360.0
+offset_right = 644.0
+offset_bottom = 364.0
+mouse_filter = 2
+color = Color(0, 0.5398852, 0.07927399, 0.18431373)
+
+[node name="craftingGame" type="Node2D" parent="head/Camera3D/Control" unique_id=1579820445]
+
+[node name="k1" type="Sprite2D" parent="head/Camera3D/Control/craftingGame" unique_id=1198584711]
+visible = false
+position = Vector2(368, 360)
+rotation = 1.5707964
+texture = ExtResource("4_mpllb")
+
+[node name="k2" type="Sprite2D" parent="head/Camera3D/Control/craftingGame" unique_id=2061337161]
+visible = false
+position = Vector2(544, 360)
+texture = ExtResource("4_mpllb")
+
+[node name="k3" type="Sprite2D" parent="head/Camera3D/Control/craftingGame" unique_id=1278362]
+visible = false
+position = Vector2(728, 360)
+texture = ExtResource("4_mpllb")
+
+[node name="k4" type="Sprite2D" parent="head/Camera3D/Control/craftingGame" unique_id=1714425081]
+visible = false
+position = Vector2(904, 360)
+texture = ExtResource("4_mpllb")
+
+[node name="handRay" type="RayCast3D" parent="head/Camera3D" unique_id=609430703]
+target_position = Vector3(0, 0, -2.5)
+collide_with_areas = true
+
+[node name="handHoldSpot" type="Marker3D" parent="head/Camera3D" unique_id=1087110508]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.1897058)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="head" unique_id=459677977]
 visible = false

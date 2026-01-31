@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://02of4rd4no08"]
+
+[ext_resource type="Theme" uid="uid://w8nk6qlxe2jo" path="res://textures/register_theme.tres" id="1_8vbf7"]
+
+[node name="RegisterItem" type="HBoxContainer" unique_id=2050517956]
+offset_right = 499.0
+offset_bottom = 62.0
+size_flags_vertical = 2
+theme = ExtResource("1_8vbf7")
+
+[node name="ItemName" type="RichTextLabel" parent="." unique_id=700953521]
+layout_mode = 2
+size_flags_horizontal = 2
+fit_content = true
+autowrap_mode = 0
+
+[node name="ItemPrice" type="RichTextLabel" parent="." unique_id=1703428115]
+layout_mode = 2
+size_flags_horizontal = 10
+fit_content = true
+autowrap_mode = 0

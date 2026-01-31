@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cf7ct11i5ionc"]
+
+[ext_resource type="Texture2D" uid="uid://cki8mgkhe2558" path="res://textures/FoxTex_Vol1/Textures/F1/CNCC/CNCC7_6.png" id="1_p8r74"]
+
+[resource]
+albedo_texture = ExtResource("1_p8r74")
+metallic_specular = 0.0
+texture_filter = 0

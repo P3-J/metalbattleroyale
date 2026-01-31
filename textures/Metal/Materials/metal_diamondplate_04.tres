@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://d21tf3dsavrc4"]
+
+[ext_resource type="Texture2D" uid="uid://hpimd7o408x6" path="res://textures/Metal/Materials/metal_diamondplate_04.jpg" id="1_7ineg"]
+
+[resource]
+albedo_texture = ExtResource("1_7ineg")
+metallic_specular = 0.0
+texture_filter = 2
