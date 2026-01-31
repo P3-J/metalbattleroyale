@@ -165,13 +165,13 @@ public partial class Player
 
 		if (isFireMask)
 		{
-			glob.EmitSignal("SpawnItem", "FireMask");
+			glob.EmitSignal("SpawnItem", "Protective Mask");
 			DisableBenchMode();
 		}
 
 		if (isIceMask)
 		{
-			glob.EmitSignal("SpawnItem", "IceMask");
+			glob.EmitSignal("SpawnItem", "Ninja Mask");
 			DisableBenchMode();
 		}
 		

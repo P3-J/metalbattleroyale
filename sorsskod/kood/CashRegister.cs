@@ -6,297 +6,305 @@ using Godot.Collections;
 
 public class Mask : IEquatable<Mask>
 {
-    public string Name { get; set; }
-    public int Price { get; set; }
+	public string Name { get; set; }
+	public int Price { get; set; }
 
-    public bool IsFulfilled { get; set; }
+	public bool IsFulfilled { get; set; }
 
-    // TODO: Add some sort of value to separate effects of masks
+	// TODO: Add some sort of value to separate effects of masks
 
-    public bool Equals(Mask mask) => mask.Name == Name;
+	public bool Equals(Mask mask) => mask.Name == Name;
 }
 
 public partial class CashRegister : PanelContainer
 {
-    private string sum = "0";
+	private string sum = "0";
 
-    private RichTextLabel sumAmountLabel;
+	private RichTextLabel sumAmountLabel;
 
-    private VBoxContainer lineItemContainer;
+	private VBoxContainer lineItemContainer;
 
-    const int maxSumLength = 10;
+	const int maxSumLength = 10;
 
-    private List<Mask> masksInCurrentOrder = [];
+	private List<Mask> masksInCurrentOrder = [];
 
-    private MarginContainer marginContainer;
+	private MarginContainer marginContainer;
 
-    static Random random = new();
+	static Random random = new();
 
-    private readonly Mask[] maskList =
-    [
-        new Mask
-        {
-            Name = "Fire Mask",
-            Price = 75,
-            IsFulfilled = false,
-        },
-        new Mask
-        {
-            Name = "Water Mask",
-            Price = 175,
-            IsFulfilled = false,
-        },
-        new Mask
-        {
-            Name = "Earth Mask",
-            Price = 225,
-            IsFulfilled = false,
-        },
-        new Mask
-        {
-            Name = "Air Mask",
-            Price = 300,
-            IsFulfilled = false,
-        },
-    ];
+	Globals glob;
 
-    const int maxAllowedMasksPerOrder = 5;
+	private readonly Mask[] maskList =
+	[
+		new Mask
+		{
+			Name = "Protective Mask",
+			Price = 75,
+			IsFulfilled = false,
+		},
+		new Mask
+		{
+			Name = "Ninja Mask",
+			Price = 175,
+			IsFulfilled = false,
+		},
+	];
 
-    const int orderCountWeightedTowards = 2;
+	const int maxAllowedMasksPerOrder = 5;
 
-    public bool orderInProgress = false;
+	const int orderCountWeightedTowards = 2;
 
-    public override void _Ready()
-    {
-        sumAmountLabel = GetNode<RichTextLabel>(
+	public bool orderInProgress = false;
+
+	public override void _Ready()
+	{
+		sumAmountLabel = GetNode<RichTextLabel>(
             "MarginContainer/CashRegisterContainer/SumLineContainer/SumAmountLabel"
-        );
+		);
 
-        ChangeSumAmount(sum);
+		glob = GetNode<Globals>("/root/Globals");
+		glob.Connect("SendItemsToRegister", new Callable(this, nameof(AttemptOrderFulfillment)));
+		glob.Connect("OrderIn", new Callable(this, nameof(OrderCameIn)));
 
-        lineItemContainer = GetNode<VBoxContainer>(
+		ChangeSumAmount(sum);
+
+		lineItemContainer = GetNode<VBoxContainer>(
             "MarginContainer/CashRegisterContainer/LineItemContainer"
-        );
+		);
 
-        marginContainer = GetNode<MarginContainer>("MarginContainer");
+		marginContainer = GetNode<MarginContainer>("MarginContainer");
 
-        RichTextLabel cursor = GetNode<RichTextLabel>(
+		RichTextLabel cursor = GetNode<RichTextLabel>(
             "MarginContainer/CashRegisterContainer/SumLineContainer/Cursor"
-        );
+		);
 
-        Tween tween = GetTree().CreateTween();
+		Tween tween = GetTree().CreateTween();
 
-        tween.SetLoops();
-        tween.TweenProperty(cursor, "modulate:a", 1.0, 0);
-        tween.TweenInterval(0.6f);
-        tween.TweenProperty(cursor, "modulate:a", 0.0, 0);
-        tween.TweenInterval(0.6f);
-    }
+		tween.SetLoops();
+		tween.TweenProperty(cursor, "modulate:a", 1.0, 0);
+		tween.TweenInterval(0.6f);
+		tween.TweenProperty(cursor, "modulate:a", 0.0, 0);
+		tween.TweenInterval(0.6f);
+	}
 
-    public void AddLineItem(Mask mask)
-    {
-        PackedScene scene = GD.Load<PackedScene>("res://sorsskod/scenes/RegisterItem.tscn");
+	public void AddLineItem(Mask mask)
+	{
+		PackedScene scene = GD.Load<PackedScene>("res://sorsskod/scenes/RegisterItem.tscn");
 
-        HBoxContainer registerItem = scene.Instantiate<HBoxContainer>();
+		HBoxContainer registerItem = scene.Instantiate<HBoxContainer>();
 
-        RichTextLabel itemNameNode = registerItem.GetNode<RichTextLabel>("ItemName");
-        RichTextLabel itemPriceNode = registerItem.GetNode<RichTextLabel>("ItemPrice");
+		RichTextLabel itemNameNode = registerItem.GetNode<RichTextLabel>("ItemName");
+		RichTextLabel itemPriceNode = registerItem.GetNode<RichTextLabel>("ItemPrice");
 
-        itemNameNode.Text = $"{mask.Name} : ";
-        itemPriceNode.Text = $"${mask.Price}";
+		itemNameNode.Text = $"{mask.Name} : ";
+		itemPriceNode.Text = $"${mask.Price}";
 
-        lineItemContainer.AddChild(registerItem);
+		lineItemContainer.AddChild(registerItem);
 
-        masksInCurrentOrder.Add(mask);
-    }
+		masksInCurrentOrder.Add(mask);
+	}
 
-    public void UseKeyInput(InputEventKey eventKey)
-    {
-        if (!eventKey.Pressed)
-            return;
+	public void UseKeyInput(InputEventKey eventKey)
+	{
+		if (!eventKey.Pressed)
+			return;
 
-        if (
-            eventKey.Keycode >= Key.Key0 && eventKey.Keycode <= Key.Key9
-            || eventKey.Keycode >= Key.Kp0 && eventKey.Keycode <= Key.Kp9
-        )
-        {
-            if (sum.Length > maxSumLength)
-            {
-                return;
-            }
+		if (
+			eventKey.Keycode >= Key.Key0 && eventKey.Keycode <= Key.Key9
+			|| eventKey.Keycode >= Key.Kp0 && eventKey.Keycode <= Key.Kp9
+		)
+		{
+			if (sum.Length > maxSumLength)
+			{
+				return;
+			}
 
-            int pressedNumber = (char)eventKey.Unicode - '0';
+			int pressedNumber = (char)eventKey.Unicode - '0';
 
-            if (sum == "0")
-            {
-                ChangeSumAmount(pressedNumber.ToString());
-            }
-            else
-            {
-                ChangeSumAmount(sum + pressedNumber.ToString());
-            }
-        }
+			if (sum == "0")
+			{
+				ChangeSumAmount(pressedNumber.ToString());
+			}
+			else
+			{
+				ChangeSumAmount(sum + pressedNumber.ToString());
+			}
+		}
 
-        if (eventKey.Keycode == Key.Backspace && sum.Length > 0)
-        {
-            ChangeSumAmount(sum[..^1]);
-        }
+		if (eventKey.Keycode == Key.Backspace && sum.Length > 0)
+		{
+			ChangeSumAmount(sum[..^1]);
+		}
 
-        if (eventKey.Keycode == Key.Enter)
-        {
-            HandleSumSubmit();
-        }
+		if (eventKey.Keycode == Key.Enter)
+		{
+			HandleSumSubmit();
+		}
 
-        if (!orderInProgress && eventKey.Keycode == Key.Space)
-        {
-            orderInProgress = true;
-            GenerateOrder();
-        }
-    }
+		/* if (!orderInProgress && eventKey.Keycode == Key.Space)
+		{
+			orderInProgress = true;
+			GenerateOrder();
+		} */
+	}
 
-    private void ClearState()
-    {
-        Array<Node> lineItems = lineItemContainer.GetChildren();
-        int childCount = lineItems.Count;
+	private void OrderCameIn()
+	{
+		orderInProgress = true;
+		GenerateOrder();
+	}
 
-        for (int i = 0; i < childCount; i++)
-        {
-            lineItems[i].QueueFree();
-        }
+	private void ClearState()
+	{
+		Array<Node> lineItems = lineItemContainer.GetChildren();
+		int childCount = lineItems.Count;
 
-        masksInCurrentOrder = [];
-    }
+		for (int i = 0; i < childCount; i++)
+		{
+			lineItems[i].QueueFree();
+		}
 
-    private void HandleSumSubmit()
-    {
-        bool entryValidity = CheckSumEntryValidity();
+		masksInCurrentOrder = [];
+	}
 
-        if (entryValidity == false || !masksInCurrentOrder.All(mask => mask.IsFulfilled == true))
-        {
-            MakeResultMessageLabel("FAIL!");
-        }
-        else
-        {
-            orderInProgress = false;
-            MakeResultMessageLabel("SOLD!");
-            ClearState();
-        }
+	private void HandleSumSubmit()
+	{
+		bool entryValidity = CheckSumEntryValidity();
 
-        ChangeSumAmount("0");
-    }
+		if (entryValidity == false || !masksInCurrentOrder.All(mask => mask.IsFulfilled == true))
+		{
+			MakeResultMessageLabel("FAIL!");
+			glob.EmitSignal("OrderDone", true); // fix this later
+ 		}
+		else
+		{
+			orderInProgress = false;
+			MakeResultMessageLabel("SOLD!");
+			glob.EmitSignal("OrderDone", true);
+			ClearState();
+		}
 
-    private void ChangeSumAmount(string sumInput)
-    {
-        sum = sumInput;
+		ChangeSumAmount("0");
+	}
 
-        sumAmountLabel.Text = $"${sum}";
-    }
+	private void ChangeSumAmount(string sumInput)
+	{
+		sum = sumInput;
 
-    private bool CheckSumEntryValidity()
-    {
-        if (!(sum.Length > 0))
-        {
-            return false;
-        }
-        int realSum = masksInCurrentOrder.Sum(mask => mask.Price);
-        long userSum = Convert.ToInt64(sum);
+		sumAmountLabel.Text = $"${sum}";
+	}
 
-        return realSum == userSum;
-    }
+	private bool CheckSumEntryValidity()
+	{
+		if (!(sum.Length > 0))
+		{
+			return false;
+		}
+		int realSum = masksInCurrentOrder.Sum(mask => mask.Price);
+		long userSum = Convert.ToInt64(sum);
 
-    private void MakeResultMessageLabel(string message)
-    {
-        RichTextLabel resultLabel = new();
+		return realSum == userSum;
+	}
 
-        resultLabel.AddThemeFontSizeOverride("normal_font_size", 50);
+	private void MakeResultMessageLabel(string message)
+	{
+		RichTextLabel resultLabel = new();
 
-        resultLabel.Text = message;
+		resultLabel.AddThemeFontSizeOverride("normal_font_size", 50);
 
-        resultLabel.SizeFlagsHorizontal = SizeFlags.ShrinkCenter;
-        resultLabel.SizeFlagsVertical = SizeFlags.ShrinkCenter;
-        resultLabel.AutowrapMode = TextServer.AutowrapMode.Off;
-        resultLabel.FitContent = true;
+		resultLabel.Text = message;
 
-        marginContainer.AddChild(resultLabel);
+		resultLabel.SizeFlagsHorizontal = SizeFlags.ShrinkCenter;
+		resultLabel.SizeFlagsVertical = SizeFlags.ShrinkCenter;
+		resultLabel.AutowrapMode = TextServer.AutowrapMode.Off;
+		resultLabel.FitContent = true;
 
-        Tween tween = GetTree().CreateTween();
-        tween.TweenProperty(resultLabel, "modulate", Colors.Green, 1.0f);
-        tween.TweenProperty(resultLabel, "scale", Vector2.Zero, 1.0f);
-        tween.TweenCallback(Callable.From(resultLabel.QueueFree));
-    }
+		marginContainer.AddChild(resultLabel);
 
-    public void GenerateOrder()
-    {
-        int amountOfMasks = GenerateOrderMaskCount();
+		Tween tween = GetTree().CreateTween();
+		tween.TweenProperty(resultLabel, "modulate", Colors.Green, 1.0f);
+		tween.TweenProperty(resultLabel, "scale", Vector2.Zero, 1.0f);
+		tween.TweenCallback(Callable.From(resultLabel.QueueFree));
+	}
 
-        for (int i = 0; i < amountOfMasks; i++)
-        {
-            Mask randomMask = maskList[random.Next(maskList.Length)];
-            AddLineItem(randomMask);
-        }
-    }
+	public void GenerateOrder()
+	{
+		int amountOfMasks = GenerateOrderMaskCount();
 
-    public static int GenerateOrderMaskCount()
-    {
-        List<int> possibleMaskCounts = Enumerable.Range(1, maxAllowedMasksPerOrder).ToList<int>();
+		for (int i = 0; i < amountOfMasks; i++)
+		{
+			Mask randomMask = maskList[random.Next(maskList.Length)];
+			AddLineItem(randomMask);
+		}
+	}
 
-        possibleMaskCounts.Remove(orderCountWeightedTowards);
+	public static int GenerateOrderMaskCount()
+	{
+		List<int> possibleMaskCounts = Enumerable.Range(1, maxAllowedMasksPerOrder).ToList<int>();
 
-        int randomInt = random.Next(101);
+		possibleMaskCounts.Remove(orderCountWeightedTowards);
 
-        if (randomInt < 50) // Bad weighted random
-        {
-            return orderCountWeightedTowards;
-        }
-        else
-        {
-            return possibleMaskCounts[random.Next(possibleMaskCounts.Count)];
-        }
-    }
+		int randomInt = random.Next(101);
 
-    public bool AttemptOrderFulfillment(string[] areaMaskNames)
-    {
-        int masksInCurrentOrderCount = masksInCurrentOrder.Count;
+		if (randomInt < 50) // Bad weighted random
+		{
+			return orderCountWeightedTowards;
+		}
+		else
+		{
+			return possibleMaskCounts[random.Next(possibleMaskCounts.Count)];
+		}
+	}
 
-        if (masksInCurrentOrderCount == 0)
-        {
-            return false;
-        }
+	public bool AttemptOrderFulfillment(string[] areaMaskNames)
+	{
 
-        bool orderCompleted = true;
+		foreach (string m in areaMaskNames)
+		{
+			GD.Print(m);
+		}
 
-        for (int i = 0; i < masksInCurrentOrderCount; i++)
-        {
-            int indexOfAreaMask = System.Array.IndexOf(areaMaskNames, masksInCurrentOrder[i].Name);
+		int masksInCurrentOrderCount = masksInCurrentOrder.Count;
 
-            HBoxContainer orderMaskRegisterItem = lineItemContainer.GetChild<HBoxContainer>(i);
+		if (masksInCurrentOrderCount == 0)
+		{
+			return false;
+		}
 
-            if (indexOfAreaMask == -1)
-            {
-                orderCompleted = false;
-                masksInCurrentOrder[i].IsFulfilled = false;
-                HandleRegisterItemFulfillment(orderMaskRegisterItem, false);
-            }
-            else
-            {
-                masksInCurrentOrder[i].IsFulfilled = true;
-                HandleRegisterItemFulfillment(orderMaskRegisterItem, true);
-            }
-        }
+		bool orderCompleted = true;
 
-        return orderCompleted;
-    }
+		for (int i = 0; i < masksInCurrentOrderCount; i++)
+		{
+			int indexOfAreaMask = System.Array.IndexOf(areaMaskNames, masksInCurrentOrder[i].Name);
 
-    private void HandleRegisterItemFulfillment(HBoxContainer registerItem, bool isFulfilled)
-    {
-        RichTextLabel checkBox = registerItem.GetNode<RichTextLabel>("CheckBox");
-        if (isFulfilled)
-        {
-            checkBox.Text = "[✓]";
-        }
-        else
-        {
-            checkBox.Text = "[ ]";
-        }
-    }
+			HBoxContainer orderMaskRegisterItem = lineItemContainer.GetChild<HBoxContainer>(i);
+
+			if (indexOfAreaMask == -1)
+			{
+				orderCompleted = false;
+				masksInCurrentOrder[i].IsFulfilled = false;
+				HandleRegisterItemFulfillment(orderMaskRegisterItem, false);
+			}
+			else
+			{
+				masksInCurrentOrder[i].IsFulfilled = true;
+				HandleRegisterItemFulfillment(orderMaskRegisterItem, true);
+			}
+		}
+
+		return orderCompleted;
+	}
+
+	private void HandleRegisterItemFulfillment(HBoxContainer registerItem, bool isFulfilled)
+	{
+		RichTextLabel checkBox = registerItem.GetNode<RichTextLabel>("CheckBox");
+		if (isFulfilled)
+		{
+			checkBox.Text = "[✓]";
+		}
+		else
+		{
+			checkBox.Text = "[ ]";
+		}
+	}
 }
