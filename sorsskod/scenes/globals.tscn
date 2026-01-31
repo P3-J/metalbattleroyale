@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bwc7mq7ontll0"]
+
+[ext_resource type="Script" uid="uid://b8jhtrkeobybh" path="res://sorsskod/kood/Globals.cs" id="1_4ausa"]
+
+[node name="globals" type="Node" unique_id=1430605477]
+script = ExtResource("1_4ausa")
