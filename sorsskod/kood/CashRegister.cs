@@ -4,11 +4,14 @@ using System.Linq;
 using Godot;
 using Godot.Collections;
 
-public class Mask
+public class Mask : IEquatable<Mask>
 {
     public string Name { get; set; }
     public int Price { get; set; }
+
     // TODO: Add some sort of value to separate effects of masks
+
+    public bool Equals(Mask mask) => mask.Name == Name;
 }
 
 public partial class CashRegister : PanelContainer
@@ -21,7 +24,7 @@ public partial class CashRegister : PanelContainer
 
     const int maxSumLength = 10;
 
-    private List<int> itemPrices = [];
+    private List<Mask> masksInCurrentOrder = [];
 
     private MarginContainer marginContainer;
 
@@ -68,7 +71,7 @@ public partial class CashRegister : PanelContainer
         tween.TweenInterval(0.6f);
     }
 
-    public void AddLineItem(string itemName, int itemPrice)
+    public void AddLineItem(Mask mask)
     {
         PackedScene scene = GD.Load<PackedScene>("res://sorsskod/scenes/RegisterItem.tscn");
 
@@ -77,12 +80,12 @@ public partial class CashRegister : PanelContainer
         RichTextLabel itemNameNode = registerItem.GetNode<RichTextLabel>("ItemName");
         RichTextLabel itemPriceNode = registerItem.GetNode<RichTextLabel>("ItemPrice");
 
-        itemNameNode.Text = $"{itemName} : ";
-        itemPriceNode.Text = $"${itemPrice}";
+        itemNameNode.Text = $"{mask.Name} : ";
+        itemPriceNode.Text = $"${mask.Price}";
 
         lineItemContainer.AddChild(registerItem);
 
-        itemPrices.Add(itemPrice);
+        masksInCurrentOrder.Add(mask);
     }
 
     public void UseKeyInput(InputEventKey eventKey)
@@ -139,7 +142,7 @@ public partial class CashRegister : PanelContainer
             lineItems[i].QueueFree();
         }
 
-        itemPrices = [];
+        masksInCurrentOrder = [];
     }
 
     private void HandleSumSubmit()
@@ -173,13 +176,13 @@ public partial class CashRegister : PanelContainer
         {
             return false;
         }
-        int realSum = itemPrices.Sum();
+        int realSum = masksInCurrentOrder.Sum(mask => mask.Price);
         long userSum = Convert.ToInt64(sum);
 
         return realSum == userSum;
     }
 
-    private async void MakeResultMessageLabel(String message)
+    private void MakeResultMessageLabel(string message)
     {
         RichTextLabel resultLabel = new();
 
@@ -207,7 +210,7 @@ public partial class CashRegister : PanelContainer
         for (int i = 0; i < amountOfMasks; i++)
         {
             Mask randomMask = maskList[random.Next(maskList.Length)];
-            AddLineItem(randomMask.Name, randomMask.Price);
+            AddLineItem(randomMask);
         }
     }
 
@@ -226,6 +229,50 @@ public partial class CashRegister : PanelContainer
         else
         {
             return possibleMaskCounts[random.Next(possibleMaskCounts.Count)];
+        }
+    }
+
+    public bool AttemptOrderFulfillment(Mask[] areaMasks)
+    {
+        int masksInCurrentOrderCount = masksInCurrentOrder.Count;
+
+        if (masksInCurrentOrderCount == 0)
+        {
+            return false;
+        }
+
+        bool orderCompleted = true;
+
+        for (int i = 0; i < masksInCurrentOrderCount; i++)
+        {
+            int indexOfAreaMask = System.Array.IndexOf(areaMasks, masksInCurrentOrder[i]);
+
+            HBoxContainer orderMaskRegisterItem = lineItemContainer.GetChild<HBoxContainer>(i);
+
+            if (indexOfAreaMask == -1)
+            {
+                orderCompleted = false;
+                HandleRegisterItemFulfillment(orderMaskRegisterItem, false);
+            }
+            else
+            {
+                HandleRegisterItemFulfillment(orderMaskRegisterItem, true);
+            }
+        }
+
+        return orderCompleted;
+    }
+
+    private void HandleRegisterItemFulfillment(HBoxContainer registerItem, bool isFulfilled)
+    {
+        RichTextLabel checkBox = registerItem.GetNode<RichTextLabel>("CheckBox");
+        if (isFulfilled)
+        {
+            checkBox.Text = "[✓]";
+        }
+        else
+        {
+            checkBox.Text = "[ ]";
         }
     }
 }

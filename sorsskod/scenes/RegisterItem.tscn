@@ -8,6 +8,13 @@ offset_bottom = 62.0
 size_flags_vertical = 2
 theme = ExtResource("1_8vbf7")
 
+[node name="CheckBox" type="RichTextLabel" parent="." unique_id=979136992]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 18
+text = "[ ] "
+fit_content = true
+autowrap_mode = 0
+
 [node name="ItemName" type="RichTextLabel" parent="." unique_id=700953521]
 layout_mode = 2
 size_flags_horizontal = 2
