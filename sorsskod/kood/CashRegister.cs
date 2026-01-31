@@ -65,44 +65,41 @@ public partial class CashRegister : PanelContainer
         itemPrices.Add(itemPrice);
     }
 
-    public override void _Input(InputEvent @event)
+    public void UseKeyInput(InputEventKey eventKey)
     {
-        if (@event is InputEventKey eventKey)
+        if (!eventKey.Pressed)
+            return;
+
+        if (
+            eventKey.Keycode >= Key.Key0 && eventKey.Keycode <= Key.Key9
+            || eventKey.Keycode >= Key.Kp0 && eventKey.Keycode <= Key.Kp9
+        )
         {
-            if (!eventKey.Pressed)
+            if (sum.Length > maxSumLength)
+            {
                 return;
-
-            if (
-                eventKey.Keycode >= Key.Key0 && eventKey.Keycode <= Key.Key9
-                || eventKey.Keycode >= Key.Kp0 && eventKey.Keycode <= Key.Kp9
-            )
-            {
-                if (sum.Length > maxSumLength)
-                {
-                    return;
-                }
-
-                int pressedNumber = (char)eventKey.Unicode - '0';
-
-                if (sum == "0")
-                {
-                    ChangeSumAmount(pressedNumber.ToString());
-                }
-                else
-                {
-                    ChangeSumAmount(sum + pressedNumber.ToString());
-                }
             }
 
-            if (eventKey.Keycode == Key.Backspace && sum.Length > 0)
-            {
-                ChangeSumAmount(sum[..^1]);
-            }
+            int pressedNumber = (char)eventKey.Unicode - '0';
 
-            if (eventKey.Keycode == Key.Enter)
+            if (sum == "0")
             {
-                MakeResultMessageLabel(CheckSumEntryValidity() ? "SUCCESS!" : "FAIL!");
+                ChangeSumAmount(pressedNumber.ToString());
             }
+            else
+            {
+                ChangeSumAmount(sum + pressedNumber.ToString());
+            }
+        }
+
+        if (eventKey.Keycode == Key.Backspace && sum.Length > 0)
+        {
+            ChangeSumAmount(sum[..^1]);
+        }
+
+        if (eventKey.Keycode == Key.Enter)
+        {
+            MakeResultMessageLabel(CheckSumEntryValidity() ? "SUCCESS!" : "FAIL!");
         }
     }
 
