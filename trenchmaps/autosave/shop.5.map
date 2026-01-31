@@ -8,7 +8,7 @@
 ( -64 -64 -16 ) ( -64 -63 -16 ) ( -64 -64 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
 ( -64 -68 -16 ) ( -64 -68 -15 ) ( -63 -68 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
 ( -64 -64 -16 ) ( -63 -64 -16 ) ( -64 -63 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
-( 64 64 16 ) ( 64 65 16 ) ( 65 64 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2 0 0 0 0.3 0.3
+( 64 64 16 ) ( 64 65 16 ) ( 65 64 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2 0 0 0 0.5 0.5
 ( 64 64 16 ) ( 65 64 16 ) ( 64 64 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
 ( 64 64 16 ) ( 64 64 17 ) ( 64 65 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
 }
@@ -17,7 +17,7 @@
 ( -192 -64 -16 ) ( -192 -63 -16 ) ( -192 -64 -15 ) 128x128/Brick/Brick_07-128x128 0 0 0 0.2 0.2
 ( -192 -64 -16 ) ( -192 -64 -15 ) ( -191 -64 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
 ( -192 -64 -16 ) ( -191 -64 -16 ) ( -192 -63 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
-( -64 64 16 ) ( -64 65 16 ) ( -63 64 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2 0 0 0 0.3 0.3
+( -64 64 16 ) ( -64 65 16 ) ( -63 64 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2 0 0 0 0.5 0.5
 ( -64 64 16 ) ( -63 64 16 ) ( -64 64 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
 ( -64 64 16 ) ( -64 64 17 ) ( -64 65 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
 }
@@ -26,7 +26,7 @@
 ( -192 64 -16 ) ( -192 65 -16 ) ( -192 64 -15 ) 128x128/Brick/Brick_07-128x128 0 0 0 0.2 0.2
 ( -192 64 -16 ) ( -192 64 -15 ) ( -191 64 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
 ( -192 64 -16 ) ( -191 64 -16 ) ( -192 65 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
-( -64 192 16 ) ( -64 193 16 ) ( -63 192 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2 0 0 0 0.3 0.3
+( -64 192 16 ) ( -64 193 16 ) ( -63 192 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2 0 0 0 0.5 0.5
 ( -64 177 16 ) ( -63 177 16 ) ( -64 177 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
 ( -64 192 16 ) ( -64 192 17 ) ( -64 193 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
 }
@@ -35,7 +35,7 @@
 ( -64 64 -16 ) ( -64 65 -16 ) ( -64 64 -15 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
 ( -64 64 -16 ) ( -64 64 -15 ) ( -63 64 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
 ( -64 64 -16 ) ( -63 64 -16 ) ( -64 65 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
-( 64 192 16 ) ( 64 193 16 ) ( 65 192 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2 0 0 0 0.3 0.3
+( 64 192 16 ) ( 64 193 16 ) ( 65 192 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2 0 0 0 0.5 0.5
 ( 64 192 16 ) ( 65 192 16 ) ( 64 192 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
 ( 64 192 16 ) ( 64 192 17 ) ( 64 193 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_6 0 0 0 1 1
 }
@@ -45,7 +45,7 @@
 ( -192 -736 -16 ) ( -192 -736 -15 ) ( -191 -736 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC8_2 0 0 90 0.25 0.25
 ( -192 -192 -16 ) ( -191 -192 -16 ) ( -192 -191 -16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC8_2 0 0 90 0.25 0.25
 ( -64 -64 584 ) ( -64 -63 584 ) ( -63 -64 584 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC8_2 0 0 90 0.25 0.25
-( -64 -64 16 ) ( -63 -64 16 ) ( -64 -64 17 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC4_1 0 0 0 0.2 0.2
+( -64 -64 16 ) ( -63 -64 16 ) ( -64 -64 17 ) F1/CNSP8A -16 0 0 0.2 0.2
 ( -64 -64 16 ) ( -64 -64 17 ) ( -64 -63 16 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC8_2 0 0 90 0.25 0.25
 }
 // brush 5
@@ -383,48 +383,48 @@
 }
 // brush 42
 {
-( 56 52 16 ) ( 56 53 16 ) ( 56 52 17 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
-( 32 52 16 ) ( 32 52 17 ) ( 33 52 16 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
-( 32 52 16 ) ( 33 52 16 ) ( 32 53 16 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
-( 80 180 56 ) ( 80 181 56 ) ( 81 180 56 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
-( 80 180 24 ) ( 81 180 24 ) ( 80 180 25 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
-( 80 180 24 ) ( 80 180 25 ) ( 80 181 24 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
+( 56 52 16 ) ( 56 53 16 ) ( 56 52 17 ) wood2 -4 0 0 1 1
+( 32 52 16 ) ( 32 52 17 ) ( 33 52 16 ) wood2 -8 0 0 1 1
+( 32 52 16 ) ( 33 52 16 ) ( 32 53 16 ) wood2 -8 4 0 1 1
+( 80 180 56 ) ( 80 181 56 ) ( 81 180 56 ) wood2 -8 4 0 1 1
+( 80 180 24 ) ( 81 180 24 ) ( 80 180 25 ) wood2 -8 0 0 1 1
+( 80 180 24 ) ( 80 180 25 ) ( 80 181 24 ) wood2 -4 0 0 1 1
 }
 // brush 43
 {
-( -8 50 16 ) ( -8 51 16 ) ( -8 50 17 ) Roof/Materials/shingles_wood_01 -2 0 0 0.4 0.4
-( -28 50 16 ) ( -28 50 17 ) ( -27 50 16 ) Roof/Materials/shingles_wood_01 40 0 0 0.4 0.4
-( -28 50 16 ) ( -27 50 16 ) ( -28 51 16 ) Roof/Materials/shingles_wood_01 40 2 0 0.4 0.4
-( 20 178 56 ) ( 20 179 56 ) ( 21 178 56 ) Roof/Materials/shingles_wood_01 40 2 0 0.4 0.4
-( 20 178 24 ) ( 21 178 24 ) ( 20 178 25 ) Roof/Materials/shingles_wood_01 40 0 0 0.4 0.4
-( 20 178 24 ) ( 20 178 25 ) ( 20 179 24 ) Roof/Materials/shingles_wood_01 -2 0 0 0.4 0.4
+( -12 50 16 ) ( -12 51 16 ) ( -12 50 17 ) wood2 -2 0 0 1 1
+( -36 50 16 ) ( -36 50 17 ) ( -35 50 16 ) wood2 60 0 0 1 1
+( -36 50 16 ) ( -35 50 16 ) ( -36 51 16 ) wood2 60 2 0 1 1
+( 12 178 56 ) ( 12 179 56 ) ( 13 178 56 ) wood2 60 2 0 1 1
+( 12 178 24 ) ( 13 178 24 ) ( 12 178 25 ) wood2 60 0 0 1 1
+( 12 178 24 ) ( 12 178 25 ) ( 12 179 24 ) wood2 -2 0 0 1 1
 }
 // brush 44
 {
-( 62 52 52 ) ( 62 53 52 ) ( 62 52 53 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
-( 32 52 52 ) ( 32 52 53 ) ( 33 52 52 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
-( 32 52 78 ) ( 33 52 78 ) ( 32 53 78 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
-( 80 180 80 ) ( 80 181 80 ) ( 81 180 80 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
-( 80 180 60 ) ( 81 180 60 ) ( 80 180 61 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
-( 80 180 60 ) ( 80 180 61 ) ( 80 181 60 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
+( 62 52 52 ) ( 62 53 52 ) ( 62 52 53 ) wood2 -4 36 0 1 1
+( 32 52 52 ) ( 32 52 53 ) ( 33 52 52 ) wood2 -8 36 0 1 1
+( 32 52 78 ) ( 33 52 78 ) ( 32 53 78 ) wood2 -8 4 0 1 1
+( 80 180 80 ) ( 80 181 80 ) ( 81 180 80 ) wood2 -8 4 0 1 1
+( 80 180 60 ) ( 81 180 60 ) ( 80 180 61 ) wood2 -8 36 0 1 1
+( 80 180 60 ) ( 80 180 61 ) ( 80 181 60 ) wood2 -4 36 0 1 1
 }
 // brush 45
 {
-( 62 52 66 ) ( 62 53 66 ) ( 62 52 67 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
-( 32 52 66 ) ( 32 52 67 ) ( 33 52 66 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
-( 32 52 92 ) ( 33 52 92 ) ( 32 53 92 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
-( 80 180 94 ) ( 80 181 94 ) ( 81 180 94 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
-( 80 180 74 ) ( 81 180 74 ) ( 80 180 75 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
-( 80 180 74 ) ( 80 180 75 ) ( 80 181 74 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
+( 62 52 66 ) ( 62 53 66 ) ( 62 52 67 ) wood2 -4 50 0 1 1
+( 32 52 66 ) ( 32 52 67 ) ( 33 52 66 ) wood2 -8 50 0 1 1
+( 32 52 92 ) ( 33 52 92 ) ( 32 53 92 ) wood2 -8 4 0 1 1
+( 80 180 94 ) ( 80 181 94 ) ( 81 180 94 ) wood2 -8 4 0 1 1
+( 80 180 74 ) ( 81 180 74 ) ( 80 180 75 ) wood2 -8 50 0 1 1
+( 80 180 74 ) ( 80 180 75 ) ( 80 181 74 ) wood2 -4 50 0 1 1
 }
 // brush 46
 {
-( 62 52 80 ) ( 62 53 80 ) ( 62 52 81 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
-( 32 52 80 ) ( 32 52 81 ) ( 33 52 80 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
-( 32 52 106 ) ( 33 52 106 ) ( 32 53 106 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
-( 80 180 108 ) ( 80 181 108 ) ( 81 180 108 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
-( 80 180 88 ) ( 81 180 88 ) ( 80 180 89 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
-( 80 180 88 ) ( 80 180 89 ) ( 80 181 88 ) Roof/Materials/shingles_wood_01 60 2 0 0.4 0.4
+( 62 52 80 ) ( 62 53 80 ) ( 62 52 81 ) wood2 -4 64 0 1 1
+( 32 52 80 ) ( 32 52 81 ) ( 33 52 80 ) wood2 -8 64 0 1 1
+( 32 52 106 ) ( 33 52 106 ) ( 32 53 106 ) wood2 -8 4 0 1 1
+( 80 180 108 ) ( 80 181 108 ) ( 81 180 108 ) wood2 -8 4 0 1 1
+( 80 180 88 ) ( 81 180 88 ) ( 80 180 89 ) wood2 -8 64 0 1 1
+( 80 180 88 ) ( 80 180 89 ) ( 80 181 88 ) wood2 -4 64 0 1 1
 }
 // brush 47
 {
@@ -1254,92 +1254,11 @@
 }
 // brush 139
 {
-( -1064 216 0 ) ( -1064 216 1 ) ( -1064 215 0 ) road -45 -13 180 1 -1
-( -1040 176 8 ) ( -1040 176 9 ) ( -1039 176 8 ) road 35 -13 0 1 1
-( -1064 216 0 ) ( -1064 215 0 ) ( -1063 216 0 ) Buildings/Materials/ceiling_utilities_02 43 -20 270 1 1
-( -1040 176 88 ) ( -1039 176 88 ) ( -1040 175 88 ) road 63 -5 270 1 1
-( -1064 216 0 ) ( -1063 216 0 ) ( -1064 216 1 ) road 35 -13 0 1 1
-( -1040 176 8 ) ( -1040 175 8 ) ( -1040 176 9 ) Doors/Materials/door_store_drinks_02 35 0 0 -0.32 0.60689646
-}
-// brush 140
-{
-( 56 48 24 ) ( 56 49 24 ) ( 56 48 25 ) Doors/Materials/door_store_drinks_01 -27 26.181839 0 0.2962963 0.61111104
-( 80 8 16 ) ( 79 8 16 ) ( 80 8 17 ) road 43 3 180 1 -1
-( 80 8 16 ) ( 80 9 16 ) ( 79 8 16 ) Buildings/Materials/ceiling_utilities_02 -64 -16 90 1 1
-( 56 48 104 ) ( 55 48 104 ) ( 56 49 104 ) road -37 -13 90 1 1
-( 56 48 24 ) ( 56 48 25 ) ( 55 48 24 ) road 43 3 180 1 -1
-( 80 8 16 ) ( 80 8 17 ) ( 80 9 16 ) road -21 3 0 1 1
-}
-// brush 141
-{
-( -140 -62 64 ) ( -140 -64 66 ) ( -140 -64 54 ) 128x128/Metal/Metal_05-128x128 0 0 0 0.3 0.3
-( -140 -64 66 ) ( -136 -64 66 ) ( -136 -64 54 ) 128x128/Metal/Metal_05-128x128 0 0 0 0.3 0.3
-( -136 -64 54 ) ( -136 -62 56 ) ( -140 -62 56 ) 128x128/Metal/Metal_05-128x128 0 0 0 0.3 0.3
-( -140 -62 64 ) ( -136 -62 64 ) ( -136 -64 66 ) 128x128/Metal/Metal_05-128x128 0 0 0 0.3 0.3
-( -136 -62 56 ) ( -136 -62 64 ) ( -140 -62 64 ) 128x128/Metal/Metal_05-128x128 0 0 0 0.3 0.3
-( -136 -64 66 ) ( -136 -62 64 ) ( -136 -62 56 ) 128x128/Metal/Metal_05-128x128 0 0 0 0.3 0.3
-}
-// brush 142
-{
-( -139 -61 62 ) ( -139 -62 61 ) ( -139 -62 60 ) 128x128/Metal/Metal_07-128x128 0 0 0 1 1
-( -139 -62 61 ) ( -137 -62 61 ) ( -137 -62 60 ) 128x128/Metal/Metal_07-128x128 0 0 0 1 1
-( -139 -61 62 ) ( -137 -61 62 ) ( -137 -62 61 ) 128x128/Metal/Metal_07-128x128 0 0 0 1 1
-( -137 -62 60 ) ( -137 -61 61 ) ( -139 -61 61 ) 128x128/Metal/Metal_07-128x128 0 0 0 1 1
-( -137 -61 61 ) ( -137 -61 62 ) ( -139 -61 62 ) 128x128/Metal/Metal_07-128x128 0 0 0 1 1
-( -137 -62 61 ) ( -137 -61 62 ) ( -137 -61 61 ) 128x128/Metal/Metal_07-128x128 0 0 0 1 1
-}
-// brush 143
-{
-( 149 -99 136 ) ( 149 -99 137 ) ( 149 -100 136 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 37 0 180 1 -1
-( 157 -107 144 ) ( 157 -107 145 ) ( 158 -107 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -29 0 0 1 1
-( 149 -99 132 ) ( 149 -100 132 ) ( 150 -99 132 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 37 29 270 1 1
-( 157 -107 144 ) ( 158 -107 144 ) ( 157 -108 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 37 29 270 1 1
-( 149 -99 136 ) ( 150 -99 136 ) ( 149 -99 137 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -29 0 0 1 1
-( 157 -107 144 ) ( 157 -108 144 ) ( 157 -107 145 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 37 0 180 1 -1
-}
-// brush 144
-{
-( 205 -99 136 ) ( 205 -99 137 ) ( 205 -100 136 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 37 0 180 1 -1
-( 213 -107 144 ) ( 213 -107 145 ) ( 214 -107 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -85 0 0 1 1
-( 205 -99 132 ) ( 205 -100 132 ) ( 206 -99 132 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 37 85 270 1 1
-( 213 -107 144 ) ( 214 -107 144 ) ( 213 -108 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 37 85 270 1 1
-( 205 -99 136 ) ( 206 -99 136 ) ( 205 -99 137 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -85 0 0 1 1
-( 213 -107 144 ) ( 213 -108 144 ) ( 213 -107 145 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 37 0 180 1 -1
-}
-// brush 145
-{
-( 145 -99 124 ) ( 145 -99 125 ) ( 145 -100 124 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 37 4 180 1 -1
-( 225 -115 132 ) ( 225 -115 133 ) ( 226 -115 132 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -97 4 0 1 1
-( 145 -99 128 ) ( 145 -100 128 ) ( 146 -99 128 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_5 37 97 270 1 1
-( 225 -107 132 ) ( 226 -107 132 ) ( 225 -108 132 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 37 97 270 1 1
-( 145 -91 124 ) ( 146 -91 124 ) ( 145 -91 125 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -97 4 0 1 1
-( 225 -107 132 ) ( 225 -108 132 ) ( 225 -107 133 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 37 4 180 1 -1
-}
-// brush 146
-{
-( 149 13 136 ) ( 149 13 137 ) ( 149 12 136 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 149 0 180 1 -1
-( 157 5 144 ) ( 157 5 145 ) ( 158 5 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -29 0 0 1 1
-( 149 13 132 ) ( 149 12 132 ) ( 150 13 132 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 149 29 270 1 1
-( 157 5 144 ) ( 158 5 144 ) ( 157 4 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 149 29 270 1 1
-( 149 13 136 ) ( 150 13 136 ) ( 149 13 137 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -29 0 0 1 1
-( 157 5 144 ) ( 157 4 144 ) ( 157 5 145 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 149 0 180 1 -1
-}
-// brush 147
-{
-( 205 13 136 ) ( 205 13 137 ) ( 205 12 136 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 149 0 180 1 -1
-( 213 5 144 ) ( 213 5 145 ) ( 214 5 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -85 0 0 1 1
-( 205 13 132 ) ( 205 12 132 ) ( 206 13 132 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 149 85 270 1 1
-( 213 5 144 ) ( 214 5 144 ) ( 213 4 144 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 149 85 270 1 1
-( 205 13 136 ) ( 206 13 136 ) ( 205 13 137 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -85 0 0 1 1
-( 213 5 144 ) ( 213 4 144 ) ( 213 5 145 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 149 0 180 1 -1
-}
-// brush 148
-{
-( 145 13 124 ) ( 145 13 125 ) ( 145 12 124 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 149 4 180 1 -1
-( 225 -3 132 ) ( 225 -3 133 ) ( 226 -3 132 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -97 4 0 1 1
-( 145 13 128 ) ( 145 12 128 ) ( 146 13 128 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC2_5 149 97 270 1 1
-( 225 5 132 ) ( 226 5 132 ) ( 225 4 132 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 149 97 270 1 1
-( 145 21 124 ) ( 146 21 124 ) ( 145 21 125 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 -97 4 0 1 1
-( 225 5 132 ) ( 225 4 132 ) ( 225 5 133 ) FoxTex_Vol1/Textures/F1/CNCC/CNCC9 149 4 180 1 -1
+( -56 -64 16 ) ( -56 -63 16 ) ( -56 -64 17 ) Buildings/Materials/ceiling_utilities_02 0 0 0 1 1
+( -56 -64 16 ) ( -56 -64 17 ) ( -55 -64 16 ) Buildings/Materials/ceiling_utilities_02 0 0 0 1 1
+( -56 -64 16 ) ( -55 -64 16 ) ( -56 -63 16 ) Buildings/Materials/ceiling_utilities_02 0 0 0 1 1
+( -16 -40 104 ) ( -16 -39 104 ) ( -15 -40 104 ) Buildings/Materials/ceiling_utilities_02 0 0 0 1 1
+( -16 -40 24 ) ( -15 -40 24 ) ( -16 -40 25 ) Units/Materials/fridge_drinks_01 0 0 0 1 1
+( -16 -40 24 ) ( -16 -40 25 ) ( -16 -39 24 ) Buildings/Materials/ceiling_utilities_02 0 0 0 1 1
 }
 }
