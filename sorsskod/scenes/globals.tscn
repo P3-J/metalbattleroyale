@@ -1,6 +1,12 @@
-[gd_scene format=3 uid="uid://bwc7mq7ontll0"]
+[gd_scene format=3 uid="uid://0dc3u8t10akc"]
 
 [ext_resource type="Script" uid="uid://b8jhtrkeobybh" path="res://sorsskod/kood/Globals.cs" id="1_4ausa"]
+[ext_resource type="AudioStream" uid="uid://chvamc0dcaxa0" path="res://Sound/theme.mp3" id="2_q3jgp"]
 
 [node name="globals" type="Node" unique_id=1430605477]
 script = ExtResource("1_4ausa")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=246527003]
+stream = ExtResource("2_q3jgp")
+autoplay = true
+parameters/looping = false
