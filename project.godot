@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="metalmagnetmanprojectgamething"
-run/main_scene="uid://dqajie5dswdh8"
+run/main_scene="uid://qflnhx1d4wrt"
 config/features=PackedStringArray("4.6", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -41,6 +41,7 @@ import/blender/enabled=false
 
 moveableObject=""
 craftingBench=""
+console=""
 
 [input]
 

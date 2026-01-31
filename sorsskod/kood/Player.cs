@@ -9,6 +9,8 @@ public partial class Player : CharacterBody3D
 	[Export] private Camera3D _camera;
 	[Export] RayCast3D handRay;
 	[Export] Marker3D handMarker;
+	[Export] CashRegister reg;
+	[Export] Camera3D cashCam;
 
 	bool holdingObj = false;
 	bool canHoldItem = true;
@@ -27,6 +29,12 @@ public partial class Player : CharacterBody3D
 		if (inBenchMode)
 		{
 			HandleBenchInput(e);
+			return;
+		}
+
+		if (inConsoleMode)
+		{
+			HandleConsoleInput(e);
 			return;
 		}
 
@@ -49,6 +57,12 @@ public partial class Player : CharacterBody3D
 					inBenchMode = true;
 					benchCam.Current = true;
 					keysParent.Visible = true;
+					lmbParent.Visible = false;
+				}
+				else if (canUseConsole)
+				{
+					inConsoleMode = true;
+					cashCam.Current = true;
 					lmbParent.Visible = false;
 				}
 				else

@@ -17,6 +17,8 @@ public partial class Player
 	private List<MoveDirs> currentDirs = new List<MoveDirs>();
 	private bool inBenchMode = false;
 	private bool canUseBench = false;
+	private bool inConsoleMode = false;
+	private bool canUseConsole = false;
 
 	private readonly MoveDirs[] secretRecipe = { MoveDirs.UP, MoveDirs.UP, MoveDirs.DOWN, MoveDirs.RIGHT };
 
@@ -64,6 +66,18 @@ public partial class Player
 		{
 			canUseBench = false;
 		}
+
+		if (collider.IsInGroup("console"))
+		{
+			pupSprite.Visible = true;
+			canUseConsole = true;
+			return;
+		}
+		else
+		{
+			canUseConsole = false;
+		}
+
 
 		pupSprite.Visible = false;
 	}
@@ -150,9 +164,31 @@ public partial class Player
 		}
 
 		await Task.Delay(1000);
-    	currentDirs.Clear();
+		currentDirs.Clear();
 
 		currentDirs.Clear();
 		RefreshInputUi();
 	}
+
+
+	private void HandleConsoleInput(InputEvent e)
+	{
+		if (e is InputEventKey)
+		{
+			reg.UseKeyInput((InputEventKey)e);
+		}
+
+		if (e is InputEventMouseButton)
+		{
+
+			if (e.IsActionPressed("lmb"))
+			{
+				inConsoleMode = false;
+				cashCam.Current = false;
+				lmbParent.Visible = true;
+			}
+		}
+
+	}
+
 }
