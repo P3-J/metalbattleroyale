@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://bhcr3h7q0283m" path="res://sorsskod/kood/CashRegister.cs" id="2_vwdvq"]
 [ext_resource type="Theme" uid="uid://w8nk6qlxe2jo" path="res://textures/register_theme.tres" id="2_xr3lu"]
-[ext_resource type="PackedScene" uid="uid://02of4rd4no08" path="res://sorsskod/scenes/RegisterItem.tscn" id="3_xd1hs"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xr3lu"]
 bg_color = Color(0, 0, 0, 1)
@@ -13,7 +12,6 @@ offset_bottom = 500.0
 theme = ExtResource("2_xr3lu")
 theme_override_styles/panel = SubResource("StyleBoxFlat_xr3lu")
 script = ExtResource("2_vwdvq")
-LineItemScene = ExtResource("3_xd1hs")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1202462744]
 layout_mode = 2
@@ -43,6 +41,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 
 [node name="SumLineContainer" type="HBoxContainer" parent="MarginContainer/CashRegisterContainer" unique_id=235432962]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 10
@@ -69,6 +68,25 @@ autowrap_mode = 0
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 18
 text = "▉"
+fit_content = true
+autowrap_mode = 0
+
+[node name="WaitForCustomersLabel" type="RichTextLabel" parent="MarginContainer/CashRegisterContainer" unique_id=501614018]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_font_sizes/normal_font_size = 26
+text = "WAIT FOR CUSTOMERS"
+fit_content = true
+autowrap_mode = 0
+
+[node name="FulfillOrderLabel" type="RichTextLabel" parent="MarginContainer/CashRegisterContainer" unique_id=5538272]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_font_sizes/normal_font_size = 26
+text = "PLACE MASKS INTO PACKING AREA"
 fit_content = true
 autowrap_mode = 0
 
