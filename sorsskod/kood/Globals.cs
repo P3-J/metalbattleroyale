@@ -6,6 +6,8 @@ public partial class Globals : Node
 {
 	[Signal] public delegate void PassiveBenchInteractEventHandler(int money);
 	[Signal] public delegate void PassiveBenchResponseEventHandler(int moneyChange, int newNeededMoney);
+    [Signal] public delegate void PlayerMovementEventHandler(int moneyChange, int newNeededMoney);
+
 	[Signal]
 	public delegate void SpawnItemEventHandler(string itemName);
 
