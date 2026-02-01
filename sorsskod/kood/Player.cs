@@ -12,6 +12,7 @@ public partial class Player : CharacterBody3D
 	[Export] CashRegister reg;
 	[Export] Camera3D cashCam;
 	[Export] AudioStreamPlayer3D craftingAudio;
+	[Export] AudioStreamPlayer3D walkingPlayer;
 	Label toiletLabel;
 	Label infoTag;
 
@@ -134,9 +135,10 @@ public partial class Player : CharacterBody3D
 			inToiletMode = false;
 		}
 
-		if (!IsOnFloor())
+		if (!IsOnFloor()){
 			velocity.Y -=
 				ProjectSettings.GetSetting("physics/3d/default_gravity").AsSingle() * (float)delta;
+				walkingPlayer.Stop();}
 
 		if (Input.IsActionJustPressed("jump") && IsOnFloor() && !inBenchMode && !inConsoleMode && !inToiletMode)
 			velocity.Y = JumpVelocity;
@@ -146,11 +148,16 @@ public partial class Player : CharacterBody3D
 
 		if (direction != Vector3.Zero && !inBenchMode && !inConsoleMode && !inToiletMode)
 		{
+			if (!walkingPlayer.Playing && IsOnFloor())
+			{
+				walkingPlayer.Play();
+			}
 			velocity.X = direction.X * Speed;
 			velocity.Z = direction.Z * Speed;
 		}
 		else
 		{
+			walkingPlayer.Stop();
 			velocity.X = Mathf.MoveToward(velocity.X, 0, Speed);
 			velocity.Z = Mathf.MoveToward(velocity.Z, 0, Speed);
 		}
