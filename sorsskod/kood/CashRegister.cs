@@ -64,6 +64,12 @@ public partial class CashRegister : PanelContainer
 
 	HBoxContainer sumLineContainer;
 
+	[Export]
+	AudioStreamPlayer3D failSoundPlayer;
+
+	[Export]
+	AudioStreamPlayer3D successSoundPlayer;
+
 	public override void _Ready()
 	{
 		sumAmountLabel = GetNode<RichTextLabel>(
@@ -167,7 +173,7 @@ public partial class CashRegister : PanelContainer
 
 	public void SubmitOrder(InputEventKey eventKey)
 	{
-		if (orderInProgress)
+		if (orderIsFulfilled)
 		{
 			HandleSumSubmit();
 		}
@@ -209,16 +215,19 @@ public partial class CashRegister : PanelContainer
 
 		int returnSum = 0;
 
-		if (realSum == userSum || masksInCurrentOrder.All(mask => mask.IsFulfilled == true))
+		if (realSum == userSum)
 		{
 			returnSum = realSum;
 			MakeResultMessageLabel("SOLD!");
-			glob.EmitSignal("OrderDone", true, realSum);
+			string[] orderMaskNames = [.. masksInCurrentOrder.Select(mask => mask.Name)];
+			glob.EmitSignal("OrderDone", true, realSum, orderMaskNames);
+			successSoundPlayer.Play();
 		}
 		else
 		{
 			MakeResultMessageLabel("FAIL!");
-			glob.EmitSignal("OrderDone", true); // fix this later
+			glob.EmitSignal("OrderDone", true, 0, (string[])[]); // fix this later
+			failSoundPlayer.Play();
 		}
 
 		ClearState();

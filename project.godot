@@ -48,6 +48,7 @@ npcConnector="Group for area3D in NPC connectors."
 npc="Group for npc"
 craftingBench=""
 console=""
+passiveBench="Group for the passive income bench"
 
 [input]
 

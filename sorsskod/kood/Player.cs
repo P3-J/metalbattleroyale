@@ -25,6 +25,8 @@ public partial class Player : CharacterBody3D
 		base._Ready();
 		Input.MouseMode = Input.MouseModeEnum.Captured;
 		glob = GetNode<Globals>("/root/Globals");
+		glob.Connect("PassiveBenchResponse", new Callable(this, nameof(HandlePassiveBenchResponse)));
+		BalanceLabel.Text = "Balance: " + moneyBalance.ToString() + " $";
 
 	}
 
@@ -56,6 +58,11 @@ public partial class Player : CharacterBody3D
 		{
 			if (e.IsActionPressed("lmb"))
 			{
+				if (canUsePassiveBench)
+				{
+					HandlePassiveBenchInput(e);
+					return;
+				}
 				if (canUseBench)
 				{
 					inBenchMode = true;
