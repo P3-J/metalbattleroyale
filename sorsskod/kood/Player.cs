@@ -2,132 +2,156 @@ using Godot;
 
 public partial class Player : CharacterBody3D
 {
-	[Export] public float Speed = 6f;
-	[Export] public float JumpVelocity = 4.5f;
-	[Export] public float MouseSensitivity = 0.002f;
-	[Export] private Node3D _head;
-	[Export] private Camera3D _camera;
-	[Export] RayCast3D handRay;
-	[Export] Marker3D handMarker;
-	[Export] CashRegister reg;
-	[Export] Camera3D cashCam;
+    [Export]
+    public float Speed = 6f;
 
-	bool holdingObj = false;
-	bool canHoldItem = true;
-	bool tryingToHoldItem = false;
-	RigidBody3D objInHand = null;
+    [Export]
+    public float JumpVelocity = 4.5f;
 
-	public override void _Ready()
-	{
+    [Export]
+    public float MouseSensitivity = 0.002f;
 
-		Input.MouseMode = Input.MouseModeEnum.Captured;
-		glob = GetNode<Globals>("/root/Globals");
+    [Export]
+    private Node3D _head;
 
-	}
+    [Export]
+    private Camera3D _camera;
 
-	public override void _UnhandledInput(InputEvent e)
-	{
-		if (inBenchMode)
-		{
-			HandleBenchInput(e);
-			return;
-		}
+    [Export]
+    RayCast3D handRay;
 
-		if (inConsoleMode)
-		{
-			HandleConsoleInput(e);
-			return;
-		}
+    [Export]
+    Marker3D handMarker;
 
-		if (e is InputEventMouseMotion mouseMotion)
-		{
-			RotateY(-mouseMotion.Relative.X * MouseSensitivity);
-			_head.RotateX(-mouseMotion.Relative.Y * MouseSensitivity);
+    [Export]
+    CashRegister reg;
 
-			Vector3 rot = _head.Rotation;
-			rot.X = Mathf.Clamp(rot.X, Mathf.DegToRad(-89), Mathf.DegToRad(89));
-			_head.Rotation = rot;
-		}
+    [Export]
+    Camera3D cashCam;
 
-		if (e is InputEventMouseButton)
-		{
-			if (e.IsActionPressed("lmb"))
-			{
-				if (canUseBench)
-				{
-					inBenchMode = true;
-					benchCam.Current = true;
-					keysParent.Visible = true;
-					lmbParent.Visible = false;
-				}
-				else if (canUseConsole)
-				{
-					inConsoleMode = true;
-					cashCam.Current = true;
-					lmbParent.Visible = false;
-				}
-				else
-				{
-					tryingToHoldItem = true;
-				}
-			}
-			if (e.IsActionReleased("lmb"))
-			{
-				tryingToHoldItem = false;
-			}
-		}
+    bool holdingObj = false;
+    bool canHoldItem = true;
+    bool tryingToHoldItem = false;
+    RigidBody3D objInHand = null;
 
-		if (e is InputEventKey)
-		{
+    /// <summary>
+    ///  SWITCH START END POINT
+    /// </summary>
+    public override void _Ready()
+    {
+        base._Ready();
+        Input.MouseMode = Input.MouseModeEnum.Captured;
+        glob = GetNode<Globals>("/root/Globals");
+        glob.Connect(
+            "PassiveBenchResponse",
+            new Callable(this, nameof(HandlePassiveBenchResponse))
+        );
+        BalanceLabel.Text = "Balance: " + moneyBalance.ToString() + " $";
+    }
 
-			if (e.IsActionPressed("escape"))
-			{
-				Input.MouseMode = Input.MouseMode == Input.MouseModeEnum.Captured ? Input.MouseModeEnum.Visible : Input.MouseModeEnum.Captured;
-			}
+    public override void _UnhandledInput(InputEvent e)
+    {
+        if (inBenchMode)
+        {
+            HandleBenchInput(e);
+            return;
+        }
 
-		}
-	}
+        if (inConsoleMode)
+        {
+            HandleConsoleInput(e);
+            return;
+        }
 
-	public override void _PhysicsProcess(double delta)
-	{
-		Vector3 velocity = Velocity;
+        if (e is InputEventMouseMotion mouseMotion)
+        {
+            RotateY(-mouseMotion.Relative.X * MouseSensitivity);
+            _head.RotateX(-mouseMotion.Relative.Y * MouseSensitivity);
 
-		if (!IsOnFloor())
-			velocity.Y -= ProjectSettings.GetSetting("physics/3d/default_gravity").AsSingle() * (float)delta;
+            Vector3 rot = _head.Rotation;
+            rot.X = Mathf.Clamp(rot.X, Mathf.DegToRad(-89), Mathf.DegToRad(89));
+            _head.Rotation = rot;
+        }
 
-		if (Input.IsActionJustPressed("jump") && IsOnFloor() && !inBenchMode)
-			velocity.Y = JumpVelocity;
+        if (e is InputEventKey eventKey)
+        {
+            if (e.IsActionPressed("escape"))
+            {
+                Input.MouseMode =
+                    Input.MouseMode == Input.MouseModeEnum.Captured
+                        ? Input.MouseModeEnum.Visible
+                        : Input.MouseModeEnum.Captured;
+            }
 
-		Vector2 inputDir = Input.GetVector("move_left", "move_right", "move_forward", "move_back");
-		Vector3 direction = (Transform.Basis * new Vector3(inputDir.X, 0, inputDir.Y)).Normalized();
+            if (eventKey.Keycode == Key.E && eventKey.Pressed)
+            {
+                if (canUsePassiveBench)
+                {
+                    HandlePassiveBenchInput(e);
+                    return;
+                }
+                if (canUseBench)
+                {
+                    inBenchMode = true;
+                    benchCam.Current = true;
+                    keysParent.Visible = true;
+                    lmbParent.Visible = false;
+                }
+                else if (canUseConsole)
+                {
+                    inConsoleMode = true;
+                    cashCam.Current = true;
+                    lmbParent.Visible = false;
+                }
+            }
+        }
 
-		if (direction != Vector3.Zero && !inBenchMode)
-		{
-			velocity.X = direction.X * Speed;
-			velocity.Z = direction.Z * Speed;
-		}
-		else
-		{
-			velocity.X = Mathf.MoveToward(velocity.X, 0, Speed);
-			velocity.Z = Mathf.MoveToward(velocity.Z, 0, Speed);
-		}
+        if (e is InputEventMouseButton)
+        {
+            if (e.IsActionPressed("lmb"))
+            {
+                tryingToHoldItem = true;
+            }
+            if (e.IsActionReleased("lmb"))
+            {
+                tryingToHoldItem = false;
+            }
+        }
+    }
 
-		Velocity = velocity;
-		MoveAndSlide();
-	}
+    public override void _PhysicsProcess(double delta)
+    {
+        Vector3 velocity = Velocity;
 
+        if (!IsOnFloor())
+            velocity.Y -=
+                ProjectSettings.GetSetting("physics/3d/default_gravity").AsSingle() * (float)delta;
 
-	public override void _Process(double delta)
-	{
-		base._Process(delta);
+        if (Input.IsActionJustPressed("jump") && IsOnFloor() && !inBenchMode)
+            velocity.Y = JumpVelocity;
 
-		CheckHandCollisionAndHoldItem();
+        Vector2 inputDir = Input.GetVector("move_left", "move_right", "move_forward", "move_back");
+        Vector3 direction = (Transform.Basis * new Vector3(inputDir.X, 0, inputDir.Y)).Normalized();
 
+        if (direction != Vector3.Zero && !inBenchMode)
+        {
+            velocity.X = direction.X * Speed;
+            velocity.Z = direction.Z * Speed;
+        }
+        else
+        {
+            velocity.X = Mathf.MoveToward(velocity.X, 0, Speed);
+            velocity.Z = Mathf.MoveToward(velocity.Z, 0, Speed);
+        }
 
-	}
+        Velocity = velocity;
+        MoveAndSlide();
+    }
 
+    public override void _Process(double delta)
+    {
+        base._Process(delta);
 
-
-
-
+        CheckHandCollisionAndHoldItem();
+    }
 }

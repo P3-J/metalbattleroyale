@@ -21,7 +21,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Globals="*uid://bwc7mq7ontll0"
+Globals="*uid://0dc3u8t10akc"
 
 [display]
 
@@ -48,6 +48,7 @@ npcConnector="Group for area3D in NPC connectors."
 npc="Group for npc"
 craftingBench=""
 console=""
+passiveBench="Group for the passive income bench"
 
 [input]
 

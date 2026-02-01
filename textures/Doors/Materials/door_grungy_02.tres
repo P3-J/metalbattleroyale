@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://x1d45b4e186t" path="res://textures/Doors/Materials/door_grungy_02.jpg" id="1_aht48"]
 
 [resource]
+transparency = 1
 albedo_texture = ExtResource("1_aht48")
 metallic_specular = 0.0
 texture_filter = 0

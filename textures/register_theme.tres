@@ -2,6 +2,9 @@
 
 [ext_resource type="FontFile" uid="uid://4yl340lmt2v5" path="res://textures/Glass_TTY_VT220.ttf" id="1_jbgap"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jbgap"]
+bg_color = Color(0, 0, 0, 1)
+
 [resource]
 default_font = ExtResource("1_jbgap")
 default_font_size = 20
@@ -9,4 +12,5 @@ MarginContainer/constants/margin_bottom = 60
 MarginContainer/constants/margin_left = 60
 MarginContainer/constants/margin_right = 60
 MarginContainer/constants/margin_top = 15
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_jbgap")
 RichTextLabel/colors/default_color = Color(0.25490198, 1, 0, 1)
