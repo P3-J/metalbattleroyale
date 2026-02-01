@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b2tuuog2h2neq" path="res://sorsskod/assets/lmb.png" id="3_lmh14"]
 [ext_resource type="Texture2D" uid="uid://coyvthew7ly22" path="res://sorsskod/assets/ekey.png" id="4_4kom4"]
 [ext_resource type="Texture2D" uid="uid://bu5r4s2avp3us" path="res://sorsskod/assets/arrowdir.png" id="4_mpllb"]
+[ext_resource type="FontFile" uid="uid://c4vvc2e8g0yyq" path="res://sorsskod/assets/Daydream DEMO.otf" id="6_yv8ma"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mpllb"]
 height = 1.3647461
@@ -132,10 +133,13 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -0.5
-offset_right = 0.5
-offset_bottom = 23.0
+offset_left = 440.0
+offset_top = 48.0
+offset_right = 592.0
+offset_bottom = 76.0
 grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.4862745)
+theme_override_fonts/font = ExtResource("6_yv8ma")
 text = "Balance: 0$"
 
 [node name="Toilet" type="Label" parent="head/Camera3D/Control" unique_id=1192284729]
