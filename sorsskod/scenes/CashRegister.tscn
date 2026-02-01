@@ -33,7 +33,7 @@ autowrap_mode = 0
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/CashRegisterContainer" unique_id=668393770]
 layout_mode = 2
-size_flags_horizontal = 4
+size_flags_horizontal = 6
 theme_override_constants/line_separation = 30
 theme_override_font_sizes/normal_font_size = 14
 text = "(V1.32)"
@@ -84,13 +84,26 @@ text = "WAIT FOR CUSTOMERS"
 fit_content = true
 autowrap_mode = 0
 
-[node name="FulfillOrderLabel" type="RichTextLabel" parent="MarginContainer/CashRegisterContainer" unique_id=5538272]
+[node name="FulfillOrderContainer" type="VBoxContainer" parent="MarginContainer/CashRegisterContainer" unique_id=695489811]
 visible = false
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="FulfillOrderLabel" type="RichTextLabel" parent="MarginContainer/CashRegisterContainer/FulfillOrderContainer" unique_id=5538272]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 10
 theme_override_font_sizes/normal_font_size = 26
 text = "PLACE MASKS INTO PACKING AREA"
+fit_content = true
+autowrap_mode = 0
+
+[node name="OrderTimeLabel" type="RichTextLabel" parent="MarginContainer/CashRegisterContainer" unique_id=1118907517]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+text = "
+"
 fit_content = true
 autowrap_mode = 0
 
