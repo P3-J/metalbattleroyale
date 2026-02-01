@@ -67,7 +67,11 @@ public partial class Collectionbox : Area3D
         return [.. Bodies.Select(e => e.GetNameOfMask())];
     }
 
-    private void DeleteFulfilledItems(bool isFulfilled, int orderValue, string[] fulfilledMasks)
+    private void DeleteFulfilledItems(
+        bool isFulfilled,
+        int orderValue = 0,
+        string[] fulfilledMasks = null
+    )
     {
         foreach (string maskName in fulfilledMasks)
         {

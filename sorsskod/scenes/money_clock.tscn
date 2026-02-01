@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://3i02wkjyaorg"]
 
 [ext_resource type="Theme" uid="uid://w8nk6qlxe2jo" path="res://textures/register_theme.tres" id="1_yftd0"]
-[ext_resource type="Script" uid="uid://bce5pdyvlrwqy" path="res://sorsskod/scenes/MoneyClock.cs" id="2_ki07n"]
+[ext_resource type="Script" uid="uid://bce5pdyvlrwqy" path="res://sorsskod/kood/MoneyClock.cs" id="2_ki07n"]
 
 [node name="MoneyClock" type="PanelContainer" unique_id=662884703]
 offset_right = 688.0
