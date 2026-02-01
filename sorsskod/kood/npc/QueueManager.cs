@@ -51,7 +51,7 @@ public partial class QueueManager : Node3D
 		StartSpawnTimer();
 	}
 
-	public void ServeNpc(bool served)
+    public void ServeNpc(bool served, int orderValue)
 	{
 		if (served && npcQueue.Count > 0)
 		{

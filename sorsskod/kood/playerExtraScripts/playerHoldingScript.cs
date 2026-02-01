@@ -105,7 +105,14 @@ public partial class Player
 				DisableBenchMode();
 			}
 		}
+    }
 
+    private void AddBalance(bool isDone, int balance)
+    {
+        if (isDone)
+        {
+            moneyBalance += balance;
+        }
 	}
 
 	private void DisableBenchMode()
@@ -188,8 +195,7 @@ public partial class Player
 	{
 		if (e is InputEventKey eventKey && eventKey.Keycode == Key.Enter)
 		{
-			moneyBalance += reg.SubmitOrder(eventKey);
-			GD.Print(moneyBalance);
+            reg.SubmitOrder(eventKey);
 			return;
 		}
 

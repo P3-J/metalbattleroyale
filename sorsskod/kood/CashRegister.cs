@@ -165,14 +165,12 @@ public partial class CashRegister : PanelContainer
         } */
     }
 
-    public int SubmitOrder(InputEventKey eventKey)
+    public void SubmitOrder(InputEventKey eventKey)
     {
         if (orderInProgress)
         {
-            return HandleSumSubmit();
+            HandleSumSubmit();
         }
-
-        return 0;
     }
 
     private void OrderCameIn()
@@ -199,11 +197,11 @@ public partial class CashRegister : PanelContainer
         HandleRegisterUIState();
     }
 
-    private int HandleSumSubmit()
+    private void HandleSumSubmit()
     {
         if (!(sum.Length > 0))
         {
-            return 0;
+            return;
         }
 
         int realSum = masksInCurrentOrder.Sum(mask => mask.Price);
@@ -215,7 +213,7 @@ public partial class CashRegister : PanelContainer
         {
             returnSum = realSum;
             MakeResultMessageLabel("SOLD!");
-            glob.EmitSignal("OrderDone", true);
+            glob.EmitSignal("OrderDone", true, realSum);
         }
         else
         {
@@ -225,7 +223,6 @@ public partial class CashRegister : PanelContainer
 
         ClearState();
         ChangeSumAmount("0");
-        return returnSum;
     }
 
     private void ChangeSumAmount(string sumInput)
