@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bas57x0npfova" path="res://sorsskod/kood/Player.cs" id="1_whmsy"]
 [ext_resource type="Shader" uid="uid://g5a0bn1xs00x" path="res://sorsskod/shaders/ps1.gdshader" id="2_4o5ng"]
 [ext_resource type="Texture2D" uid="uid://b2tuuog2h2neq" path="res://sorsskod/assets/lmb.png" id="3_lmh14"]
+[ext_resource type="Texture2D" uid="uid://coyvthew7ly22" path="res://sorsskod/assets/ekey.png" id="4_4kom4"]
 [ext_resource type="Texture2D" uid="uid://bu5r4s2avp3us" path="res://sorsskod/assets/arrowdir.png" id="4_mpllb"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_wygqo"]
@@ -20,7 +21,7 @@ shader_parameter/chromatic_aberration_strength = 0.015
 shader_parameter/vignette_strength = 0.8
 shader_parameter/vignette_radius = 0.9
 
-[node name="player" type="CharacterBody3D" unique_id=863523212 node_paths=PackedStringArray("_head", "_camera", "handRay", "handMarker", "pupSprite", "uiSlots", "lmbParent", "keysParent", "PriceTag", "BalanceLabel")]
+[node name="player" type="CharacterBody3D" unique_id=863523212 node_paths=PackedStringArray("_head", "_camera", "handRay", "handMarker", "pupSprite", "eKeySprite", "uiSlots", "lmbParent", "keysParent", "PriceTag", "BalanceLabel")]
 collision_layer = 0
 script = ExtResource("1_whmsy")
 _head = NodePath("head")
@@ -28,6 +29,7 @@ _camera = NodePath("head/Camera3D")
 handRay = NodePath("head/Camera3D/handRay")
 handMarker = NodePath("head/Camera3D/handHoldSpot")
 pupSprite = NodePath("head/Camera3D/Control/lmb/pupsprite")
+eKeySprite = NodePath("head/Camera3D/Control/ekey/ekeysprite")
 uiSlots = [NodePath("head/Camera3D/Control/craftingGame/k1"), NodePath("head/Camera3D/Control/craftingGame/k2"), NodePath("head/Camera3D/Control/craftingGame/k3"), NodePath("head/Camera3D/Control/craftingGame/k4")]
 lmbParent = NodePath("head/Camera3D/Control/lmb")
 keysParent = NodePath("head/Camera3D/Control/craftingGame")
@@ -77,6 +79,14 @@ offset_right = 757.0
 offset_bottom = 370.0
 size_flags_horizontal = 4
 text = "500$"
+
+[node name="ekey" type="Node2D" parent="head/Camera3D/Control" unique_id=531328818]
+
+[node name="ekeysprite" type="Sprite2D" parent="head/Camera3D/Control/ekey" unique_id=1069110787]
+visible = false
+position = Vector2(680, 360)
+scale = Vector2(0.6333333, 0.6333333)
+texture = ExtResource("4_4kom4")
 
 [node name="crosshair" type="Node2D" parent="head/Camera3D/Control" unique_id=1895449]
 
