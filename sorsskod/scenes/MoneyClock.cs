@@ -15,7 +15,7 @@ public partial class MoneyClock : PanelContainer
         glob.Connect("OrderDone", new Callable(this, nameof(UpdateMoney)));
     }
 
-    private void UpdateMoney(bool isDone, int balance)
+    private void UpdateMoney(bool isDone, int balance, string[] maskNames)
     {
         if (isDone)
         {
