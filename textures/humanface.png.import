@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpypr8da3voia"
-path.s3tc="res://.godot/imported/CNDE1A.png-df7c6c9161fcde784cfbe92bc4957439.s3tc.ctex"
+uid="uid://bku1dmbaqcgrk"
+path.s3tc="res://.godot/imported/humanface.png-88a894e822bdb53bd5df3f034f5c07e1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/F1/CNDE1A.png"
-dest_files=["res://.godot/imported/CNDE1A.png-df7c6c9161fcde784cfbe92bc4957439.s3tc.ctex"]
+source_file="res://textures/humanface.png"
+dest_files=["res://.godot/imported/humanface.png-88a894e822bdb53bd5df3f034f5c07e1.s3tc.ctex"]
 
 [params]
 
