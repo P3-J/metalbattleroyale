@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cg4o4hy7731vs"]
+
+[ext_resource type="Texture2D" uid="uid://bck8wap2yrpa2" path="res://textures/ballin.png" id="1_j2usm"]
+
+[resource]
+albedo_texture = ExtResource("1_j2usm")
+metallic_specular = 0.0
+texture_filter = 0

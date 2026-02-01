@@ -6,7 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://coyvthew7ly22" path="res://sorsskod/assets/ekey.png" id="4_4kom4"]
 [ext_resource type="Texture2D" uid="uid://bu5r4s2avp3us" path="res://sorsskod/assets/arrowdir.png" id="4_mpllb"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_wygqo"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mpllb"]
+height = 1.3647461
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4o5ng"]
 shader = ExtResource("2_4o5ng")
@@ -37,7 +38,8 @@ PriceTag = NodePath("head/Camera3D/Control/lmb/Label")
 BalanceLabel = NodePath("head/Camera3D/Control/Balance")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=393090299]
-shape = SubResource("SphereShape3D_wygqo")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.30158246, 0)
+shape = SubResource("CapsuleShape3D_mpllb")
 
 [node name="head" type="Node3D" parent="." unique_id=150283022]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3045752, 0)
@@ -138,10 +140,3 @@ collide_with_areas = true
 
 [node name="handHoldSpot" type="Marker3D" parent="head/Camera3D" unique_id=1087110508]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.1897058)
-
-[node name="SpotLight3D" type="SpotLight3D" parent="head" unique_id=459677977]
-visible = false
-light_energy = 1.965
-shadow_enabled = true
-spot_range = 7.487002
-spot_angle = 29.531246

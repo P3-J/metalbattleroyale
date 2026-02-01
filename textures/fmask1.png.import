@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpypr8da3voia"
-path.s3tc="res://.godot/imported/CNDE1A.png-df7c6c9161fcde784cfbe92bc4957439.s3tc.ctex"
+uid="uid://c523euwbprs8o"
+path.s3tc="res://.godot/imported/fmask1.png-bd7bd23044b4e61c9de14debf22d2e29.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/F1/CNDE1A.png"
-dest_files=["res://.godot/imported/CNDE1A.png-df7c6c9161fcde784cfbe92bc4957439.s3tc.ctex"]
+source_file="res://textures/fmask1.png"
+dest_files=["res://.godot/imported/fmask1.png-bd7bd23044b4e61c9de14debf22d2e29.s3tc.ctex"]
 
 [params]
 
