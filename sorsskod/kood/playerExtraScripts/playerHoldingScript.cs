@@ -11,6 +11,8 @@ public partial class Player
 	[Export] Sprite2D[] uiSlots;
 	[Export] Node2D lmbParent;
 	[Export] Node2D keysParent;
+	[Export] Label PriceTag;
+	[Export] Label BalanceLabel;
 
 	enum MoveDirs { UP, DOWN, LEFT, RIGHT }
 
@@ -19,13 +21,13 @@ public partial class Player
 	private bool canUseBench = false;
 	private bool inConsoleMode = false;
 	private bool canUseConsole = false;
+	private bool canUsePassiveBench = false;
 	private Globals glob;
-
 	// sorri oleks ilusam viis teha ma ei viitsi
 	private readonly MoveDirs[] fireRecipe = { MoveDirs.UP, MoveDirs.UP, MoveDirs.DOWN, MoveDirs.RIGHT };
 	private readonly MoveDirs[] iceRecipe = { MoveDirs.RIGHT, MoveDirs.UP, MoveDirs.DOWN, MoveDirs.DOWN };
 
-	public int moneyBalance = 0;
+	public int moneyBalance = 500;
 
 	private void CheckHandCollisionAndHoldItem()
 	{
@@ -47,6 +49,7 @@ public partial class Player
 		if (!handRay.IsColliding())
 		{
 			pupSprite.Visible = false;
+			PriceTag.Visible = false;
 			canUseBench = false;
 			return;
 		}
@@ -72,6 +75,18 @@ public partial class Player
 			canUseBench = false;
 		}
 
+		if (collider.IsInGroup("passiveBench") && !holdingObj)
+		{
+			pupSprite.Visible = true;
+			PriceTag.Visible = true;
+			canUsePassiveBench = true;
+			return;
+		}
+		else
+		{
+			canUsePassiveBench = false;
+		}
+
 		if (collider.IsInGroup("console"))
 		{
 			pupSprite.Visible = true;
@@ -83,8 +98,28 @@ public partial class Player
 			canUseConsole = false;
 		}
 
-
+		PriceTag.Visible = false;
 		pupSprite.Visible = false;
+	}
+
+	private void HandlePassiveBenchInput(InputEvent e)
+	{
+		if (e is InputEventMouseButton)
+		{
+			if (e.IsActionPressed("lmb"))
+			{
+				glob.EmitSignal("PassiveBenchInteract", moneyBalance);
+			}
+		}
+	}
+
+	private void HandlePassiveBenchResponse(int balance, int newNeededMoney)
+	{
+		AddBalance(true, balance);
+		if (newNeededMoney > 0)
+		{
+			PriceTag.Text = "Upgrade Cost: " + newNeededMoney.ToString() + " $";
+		}
 	}
 
 	private void HandleBenchInput(InputEvent e)
@@ -112,6 +147,7 @@ public partial class Player
 		if (isDone)
 		{
 			moneyBalance += balance;
+			BalanceLabel.Text = "Balance: " + moneyBalance.ToString() + " $";
 		}
 	}
 
