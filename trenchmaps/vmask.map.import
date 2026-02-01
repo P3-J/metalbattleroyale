@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://bo1yt5fshijkx"
+path="res://.godot/imported/vmask.map-8e87e81838f6229a034de677d1467128.tres"
+
+[deps]
+
+source_file="res://trenchmaps/vmask.map"
+dest_files=["res://.godot/imported/vmask.map-8e87e81838f6229a034de677d1467128.tres"]
+
+[params]
+

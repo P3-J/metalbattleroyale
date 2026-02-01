@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://c8uwy8py4jf8w"
+path="res://.godot/imported/hmask.map-4921a78bfb7310395887ae927d71f828.tres"
+
+[deps]
+
+source_file="res://trenchmaps/hmask.map"
+dest_files=["res://.godot/imported/hmask.map-4921a78bfb7310395887ae927d71f828.tres"]
+
+[params]
+

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://v8j187bcv83s"]
+
+[ext_resource type="Texture2D" uid="uid://bku1dmbaqcgrk" path="res://textures/humanface.png" id="1_jjed4"]
+
+[resource]
+albedo_texture = ExtResource("1_jjed4")
+metallic_specular = 0.0
+texture_filter = 0
