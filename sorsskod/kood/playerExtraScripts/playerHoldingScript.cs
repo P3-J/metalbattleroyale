@@ -105,14 +105,14 @@ public partial class Player
 				DisableBenchMode();
 			}
 		}
-    }
+	}
 
-    private void AddBalance(bool isDone, int balance)
-    {
-        if (isDone)
-        {
-            moneyBalance += balance;
-        }
+	private void AddBalance(bool isDone, int balance)
+	{
+		if (isDone)
+		{
+			moneyBalance += balance;
+		}
 	}
 
 	private void DisableBenchMode()
@@ -195,7 +195,7 @@ public partial class Player
 	{
 		if (e is InputEventKey eventKey && eventKey.Keycode == Key.Enter)
 		{
-            reg.SubmitOrder(eventKey);
+			reg.SubmitOrder(eventKey);
 			return;
 		}
 

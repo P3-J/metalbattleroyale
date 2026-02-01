@@ -27,3 +27,5 @@ mesh = SubResource("CylinderMesh_1hqeh")
 
 [node name="LeavePoint" type="Node3D" parent="." unique_id=991364164]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0148025, 1.1640348, 5.8661814)
+
+[connection signal="area_entered" from="QueueStart" to="." method="_on_queue_start_area_entered"]
