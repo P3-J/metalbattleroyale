@@ -6,10 +6,11 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_acauy"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_skcfj"]
-radius = 0.120948136
+[sub_resource type="BoxShape3D" id="BoxShape3D_hdd1f"]
+size = Vector3(1.9299316, 0.40704346, 0.4836731)
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_ilbqd"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_aalwj"]
+size = Vector3(5.2192993, 1, 1)
 
 [node name="Npc" type="CharacterBody3D" unique_id=149848484 groups=["npc"]]
 collision_layer = 0
@@ -23,7 +24,8 @@ shape = SubResource("CapsuleShape3D_acauy")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.011219591, 0.16594815, -0.8698529)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FrontConnector" unique_id=308370179]
-shape = SubResource("SphereShape3D_skcfj")
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.027038574, -0.14823914, 0.28700483)
+shape = SubResource("BoxShape3D_hdd1f")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1369403969]
 
@@ -31,8 +33,8 @@ shape = SubResource("SphereShape3D_skcfj")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06716728, 0.08007777, 0.64137065)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BackConnector" unique_id=990984570]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
-shape = SubResource("SphereShape3D_ilbqd")
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.044110104, 0, -0.10761821)
+shape = SubResource("BoxShape3D_aalwj")
 
 [node name="Node3DTorsoHead" parent="." unique_id=381438612 instance=ExtResource("2_ilbqd")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.051783085, 0.87592065, 0)

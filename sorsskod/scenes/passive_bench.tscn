@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://brb8h4redclcp" path="res://textures/Windows/Materials/window_paintcans_01.jpg" id="1_0ieyu"]
 [ext_resource type="Script" uid="uid://cerv14pqr5rvu" path="res://sorsskod/kood/PassiveBench.cs" id="1_rt2p4"]
+[ext_resource type="Texture2D" uid="uid://gcl208035odv" path="res://textures/128x128/Wood/Wood_11-128x128.png" id="3_upgy4"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_g2tuf"]
 load_path = "res://.godot/imported/Wood_08-128x128.png-fd81d211abfb44ddb592838b3dc42e8e.s3tc.ctex"
@@ -130,6 +131,25 @@ _surfaces = [{
 [sub_resource type="BoxShape3D" id="BoxShape3D_0ieyu"]
 size = Vector3(1, 1, 3.1580162)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vdn4o"]
+albedo_color = Color(0.27752772, 0.27752772, 0.27752772, 1)
+albedo_texture = ExtResource("3_upgy4")
+metallic_specular = 0.0
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_on3jd"]
+material = SubResource("StandardMaterial3D_vdn4o")
+size = Vector3(0.1, 0.1, 0.1)
+
+[sub_resource type="Curve" id="Curve_on3jd"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0.9399293, -0.98401153), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_upgy4"]
+_data = [Vector2(0.06360424, 1), 0.0, 0.0, 0, 0, Vector2(0.869258, 0.34811056), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
 [node name="passiveBench" type="Node3D" unique_id=1182100414]
 transform = Transform3D(-0.9995864, 0, -0.028759003, 0, 1, 0, 0.028759003, 0, -0.9995864, 0, 0, 0)
 script = ExtResource("1_rt2p4")
@@ -151,5 +171,18 @@ transform = Transform3D(1.0000308, 0, -1.73226e-07, 0, 1, 0, 1.73226e-07, 0, 1.0
 shape = SubResource("BoxShape3D_0ieyu")
 
 [node name="IncomeInterval" type="Timer" parent="." unique_id=1423825613]
+wait_time = 5.0
+
+[node name="Particles" type="CPUParticles3D" parent="." unique_id=192247243]
+transform = Transform3D(0.9999995, 0, -3.7252903e-09, 0, 1, 0, 3.7252903e-09, 0, 0.9999995, 0.7324568, 1.8988695, 0.021073442)
+emitting = false
+randomness = 0.2
+lifetime_randomness = 0.24
+mesh = SubResource("BoxMesh_on3jd")
+emission_shape = 3
+emission_box_extents = Vector3(1, 0.5, 1)
+gravity = Vector3(0, 5, 0)
+angular_velocity_curve = SubResource("Curve_on3jd")
+scale_amount_curve = SubResource("Curve_upgy4")
 
 [connection signal="timeout" from="IncomeInterval" to="." method="_on_income_interval_timeout"]

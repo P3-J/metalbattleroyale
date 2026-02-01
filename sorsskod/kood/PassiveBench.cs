@@ -7,12 +7,14 @@ public partial class PassiveBench : Node3D
 	private Globals glob;
 	bool unlocked = false;
 	MeshInstance3D benchMesh;
+	CpuParticles3D workingParticles;
 	[Export] int neededMoney = 500;
 	[Export] int generatedIncome = 100;
 	Timer IncomeTimer;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		workingParticles = GetNode<CpuParticles3D>("Particles");
 		IncomeTimer = GetNode<Timer>("IncomeInterval");
 		benchMesh = GetNode<MeshInstance3D>("entity_0_mesh_instance");
 		glob = GetNode<Globals>("/root/Globals");
@@ -42,6 +44,7 @@ public partial class PassiveBench : Node3D
 		if (!unlocked)
 		{
 			unlocked = true;
+			workingParticles.Emitting = true;
 			GD.Print("Passive Bench upgraded! New features unlocked.");
 			benchMesh.Transparency = 0.0f;
 			IncomeTimer.Start();

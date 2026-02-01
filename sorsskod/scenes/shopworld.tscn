@@ -59,7 +59,7 @@
 [ext_resource type="PackedScene" uid="uid://c01aatiq3b0ye" path="res://sorsskod/scenes/queue_manager.tscn" id="49_fdpo0"]
 [ext_resource type="Material" uid="uid://b2wge06rtgw32" path="res://textures/Walls/Materials/wall_halfconcrete_07.tres" id="50_u1xct"]
 [ext_resource type="Material" uid="uid://ba4y7t5d0bgdp" path="res://textures/Doors/Materials/door_grungy_with_glass_no_handle.tres" id="51_4etio"]
-[ext_resource type="PackedScene" path="res://sorsskod/scenes/collectionbox.tscn" id="52_42uv0"]
+[ext_resource type="PackedScene" uid="uid://b6pa41dp40vxa" path="res://sorsskod/scenes/collectionbox.tscn" id="52_42uv0"]
 [ext_resource type="Material" uid="uid://cv815c1h58fdx" path="res://textures/hitbig.tres" id="52_cxi3f"]
 [ext_resource type="Material" uid="uid://yagslohi4y8y" path="res://textures/128x128/Dirt/Dirt_10-128x128.tres" id="53_strfb"]
 [ext_resource type="Material" uid="uid://moeuxem5006u" path="res://textures/Metal/Materials/rust_chrome_01.tres" id="54_06sir"]
@@ -2270,10 +2270,10 @@ maxIntervalSpawns = 10.0
 transform = Transform3D(-0.030241927, 0, -0.99954253, 0, 1, 0, 0.99954253, 0, -0.030241927, 3.2745883, 0.6372341, -1.2004639)
 
 [node name="SpawnPoint" parent="QueueManager" index="1" unique_id=1328195025]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.037312, 0.5791054, -14.824265)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.273165, 0.5791054, -11.058525)
 
 [node name="LeavePoint" parent="QueueManager" index="2" unique_id=991364164]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2201185, 0.51606464, -12.590413)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8608365, 0.51606464, -16.349535)
 
 [node name="passiveBench" parent="." unique_id=1182100414 groups=["passiveBench"] instance=ExtResource("69_06sir")]
 transform = Transform3D(-0.9995864, 0, -0.028759003, 0, 1, 0, 0.028759003, 0, -0.9995864, -4.54644, 0.30080533, 5.273734)
