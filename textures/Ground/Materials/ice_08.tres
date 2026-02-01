@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dsqho3wcs35ko"]
+
+[ext_resource type="Texture2D" uid="uid://cq4t2n5pvsmup" path="res://textures/Ground/Materials/ice_08.jpg" id="1_tuxlh"]
+
+[resource]
+albedo_texture = ExtResource("1_tuxlh")
+metallic_specular = 0.0
+texture_filter = 0

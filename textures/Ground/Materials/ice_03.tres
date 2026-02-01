@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dcg2fq3hn1s3b"]
+
+[ext_resource type="Texture2D" uid="uid://bpjmsr3if7j8u" path="res://textures/Ground/Materials/ice_03.jpg" id="1_pee32"]
+
+[resource]
+albedo_texture = ExtResource("1_pee32")
+metallic_specular = 0.0
+texture_filter = 0

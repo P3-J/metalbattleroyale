@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ba4y7t5d0bgdp"]
+
+[ext_resource type="Texture2D" uid="uid://denxnheevu5x1" path="res://textures/Doors/Materials/door_grungy_with_glass_no_handle.png" id="1_5whud"]
+
+[resource]
+transparency = 1
+albedo_texture = ExtResource("1_5whud")
+metallic_specular = 0.0
+texture_filter = 0

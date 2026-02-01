@@ -16,6 +16,9 @@ public partial class Player : CharacterBody3D
 	bool canHoldItem = true;
 	bool tryingToHoldItem = false;
 	RigidBody3D objInHand = null;
+	/// <summary>
+	///  SWITCH START END POINT
+	/// </summary>
 
 	public override void _Ready()
 	{
