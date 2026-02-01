@@ -24,8 +24,11 @@ public partial class Player
 	private bool canUsePassiveBench = false;
 	private Globals glob;
 	// sorri oleks ilusam viis teha ma ei viitsi
-	private readonly MoveDirs[] fireRecipe = { MoveDirs.UP, MoveDirs.UP, MoveDirs.DOWN, MoveDirs.RIGHT };
-	private readonly MoveDirs[] iceRecipe = { MoveDirs.RIGHT, MoveDirs.UP, MoveDirs.DOWN, MoveDirs.DOWN };
+	private readonly MoveDirs[] protRecipe = { MoveDirs.UP, MoveDirs.UP, MoveDirs.DOWN, MoveDirs.RIGHT };
+	private readonly MoveDirs[] ninjaRecipe = { MoveDirs.RIGHT, MoveDirs.UP, MoveDirs.DOWN, MoveDirs.DOWN };
+	private readonly MoveDirs[] skinRecipe = { MoveDirs.UP, MoveDirs.LEFT, MoveDirs.DOWN, MoveDirs.RIGHT };
+	private readonly MoveDirs[] gGlassesRecipe = { MoveDirs.DOWN, MoveDirs.UP, MoveDirs.UP, MoveDirs.LEFT };
+	private readonly MoveDirs[] FestivalRecipe = { MoveDirs.LEFT, MoveDirs.DOWN, MoveDirs.DOWN, MoveDirs.RIGHT };
 
 	public int moneyBalance = 500;
 
@@ -204,19 +207,31 @@ public partial class Player
 
 	private async void ConfirmCombination()
 	{
-		bool isFireMask = currentDirs.SequenceEqual(fireRecipe);
-		bool isIceMask = currentDirs.SequenceEqual(iceRecipe);
+		bool isProtMask = currentDirs.SequenceEqual(protRecipe);
+		bool isNinjaMask = currentDirs.SequenceEqual(ninjaRecipe);
+		bool isSkinMask = currentDirs.SequenceEqual(skinRecipe);
+		bool isGlassesMask = currentDirs.SequenceEqual(gGlassesRecipe);
+		bool isFestivalMask = currentDirs.SequenceEqual(FestivalRecipe);
 
 
-		if (isFireMask)
-		{
+		if (isProtMask){
 			glob.EmitSignal("SpawnItem", "Protective Mask");
 			DisableBenchMode();
 		}
-
-		if (isIceMask)
-		{
+		if (isNinjaMask){
 			glob.EmitSignal("SpawnItem", "Ninja Mask");
+			DisableBenchMode();
+		}
+		if (isSkinMask){
+			glob.EmitSignal("SpawnItem", "Human Skin Mask");
+			DisableBenchMode();
+		}
+		if (isGlassesMask){
+			glob.EmitSignal("SpawnItem", "Blinding Mask");
+			DisableBenchMode();
+		}
+		if (isFestivalMask){
+			glob.EmitSignal("SpawnItem", "Festival Mask");
 			DisableBenchMode();
 		}
 		

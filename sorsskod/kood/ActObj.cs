@@ -38,15 +38,15 @@ public partial class ActObj : RigidBody3D
 				break;
 			case "Festival Mask":
 				f3.Visible = true;
-				thisMask = "Ninja Mask";
+				thisMask = "Festival Mask";
 				break;
 			case "Human Skin Mask":
 				f4.Visible = true;
-				thisMask = "Ninja Mask";
+				thisMask = "Human Skin Mask";
 				break;
 			case "Blinding Mask":
 				f5.Visible = true;
-				thisMask = "Ninja Mask";
+				thisMask = "Blinding Mask";
 				break;
 
 		}
