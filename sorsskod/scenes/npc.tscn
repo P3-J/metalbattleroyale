@@ -58,6 +58,8 @@ visible = false
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=559175159]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2522266, 0)
 stream = SubResource("AudioStreamRandomizer_kx7mf")
+volume_db = -30.0
+pitch_scale = 1.6
 
 [connection signal="area_entered" from="FrontConnector" to="." method="_on_front_connector_area_entered"]
 [connection signal="area_entered" from="BackConnector" to="." method="_on_back_connector_area_entered"]

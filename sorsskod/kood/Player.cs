@@ -100,12 +100,14 @@ public partial class Player : CharacterBody3D
 					benchCam.Current = true;
 					keysParent.Visible = true;
 					lmbParent.Visible = false;
+					eKeySprite.Visible = false;
 				}
 				else if (canUseConsole)
 				{
 					inConsoleMode = true;
 					cashCam.Current = true;
 					lmbParent.Visible = false;
+					eKeySprite.Visible = false;
 				}
 			}
 		}
