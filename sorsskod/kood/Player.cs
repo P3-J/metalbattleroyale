@@ -40,47 +40,47 @@ public partial class Player : CharacterBody3D
 		GD.Print("Updated Info Label Text: ", text);
 	}
 
-    public override void _UnhandledInput(InputEvent e)
-    {
-        if (inBenchMode)
-        {
-            HandleBenchInput(e);
-            return;
-        }
+	public override void _UnhandledInput(InputEvent e)
+	{
+		if (inBenchMode)
+		{
+			HandleBenchInput(e);
+			return;
+		}
 
-        if (inConsoleMode)
-        {
-            HandleConsoleInput(e);
-            return;
-        }
+		if (inConsoleMode)
+		{
+			HandleConsoleInput(e);
+			return;
+		}
 
-        if (e is InputEventMouseMotion mouseMotion)
-        {
-            RotateY(-mouseMotion.Relative.X * MouseSensitivity);
-            _head.RotateX(-mouseMotion.Relative.Y * MouseSensitivity);
+		if (e is InputEventMouseMotion mouseMotion)
+		{
+			RotateY(-mouseMotion.Relative.X * MouseSensitivity);
+			_head.RotateX(-mouseMotion.Relative.Y * MouseSensitivity);
 
-            Vector3 rot = _head.Rotation;
-            rot.X = Mathf.Clamp(rot.X, Mathf.DegToRad(-89), Mathf.DegToRad(89));
-            _head.Rotation = rot;
-        }
+			Vector3 rot = _head.Rotation;
+			rot.X = Mathf.Clamp(rot.X, Mathf.DegToRad(-89), Mathf.DegToRad(89));
+			_head.Rotation = rot;
+		}
 
-        if (e is InputEventKey eventKey)
-        {
-            if (e.IsActionPressed("escape"))
-            {
-                Input.MouseMode =
-                    Input.MouseMode == Input.MouseModeEnum.Captured
-                        ? Input.MouseModeEnum.Visible
-                        : Input.MouseModeEnum.Captured;
-            }
+		if (e is InputEventKey eventKey)
+		{
+			if (e.IsActionPressed("escape"))
+			{
+				Input.MouseMode =
+					Input.MouseMode == Input.MouseModeEnum.Captured
+						? Input.MouseModeEnum.Visible
+						: Input.MouseModeEnum.Captured;
+			}
 
-            if (eventKey.Keycode == Key.E && eventKey.Pressed)
-            {
-                if (canUsePassiveBench)
-                {
-                    HandlePassiveBenchInput(e);
-                    return;
-                }
+			if (eventKey.Keycode == Key.E && eventKey.Pressed)
+			{
+				if (canUsePassiveBench)
+				{
+					HandlePassiveBenchInput(e);
+					return;
+				}
 				if (canClearToilet)
 				{
 					HandleClearToiletInput(e);
@@ -91,34 +91,34 @@ public partial class Player : CharacterBody3D
 					HandleToiletInput(e);
 					return;
 				}
-                if (canUseBench)
-                {
-                    inBenchMode = true;
-                    benchCam.Current = true;
-                    keysParent.Visible = true;
-                    lmbParent.Visible = false;
-                }
-                else if (canUseConsole)
-                {
-                    inConsoleMode = true;
-                    cashCam.Current = true;
-                    lmbParent.Visible = false;
-                }
-            }
-        }
+				if (canUseBench)
+				{
+					inBenchMode = true;
+					benchCam.Current = true;
+					keysParent.Visible = true;
+					lmbParent.Visible = false;
+				}
+				else if (canUseConsole)
+				{
+					inConsoleMode = true;
+					cashCam.Current = true;
+					lmbParent.Visible = false;
+				}
+			}
+		}
 
-        if (e is InputEventMouseButton)
-        {
-            if (e.IsActionPressed("lmb"))
-            {
-                tryingToHoldItem = true;
-            }
-            if (e.IsActionReleased("lmb"))
-            {
-                tryingToHoldItem = false;
-            }
-        }
-    }
+		if (e is InputEventMouseButton)
+		{
+			if (e.IsActionPressed("lmb"))
+			{
+				tryingToHoldItem = true;
+			}
+			if (e.IsActionReleased("lmb"))
+			{
+				tryingToHoldItem = false;
+			}
+		}
+	}
 
 	public override void _PhysicsProcess(double delta)
 	{
@@ -133,15 +133,15 @@ public partial class Player : CharacterBody3D
 			inToiletMode = false;
 		}
 
-        if (!IsOnFloor())
-            velocity.Y -=
-                ProjectSettings.GetSetting("physics/3d/default_gravity").AsSingle() * (float)delta;
+		if (!IsOnFloor())
+			velocity.Y -=
+				ProjectSettings.GetSetting("physics/3d/default_gravity").AsSingle() * (float)delta;
 
 		if (Input.IsActionJustPressed("jump") && IsOnFloor() && !inBenchMode && !inConsoleMode && !inToiletMode)
 			velocity.Y = JumpVelocity;
 
-        Vector2 inputDir = Input.GetVector("move_left", "move_right", "move_forward", "move_back");
-        Vector3 direction = (Transform.Basis * new Vector3(inputDir.X, 0, inputDir.Y)).Normalized();
+		Vector2 inputDir = Input.GetVector("move_left", "move_right", "move_forward", "move_back");
+		Vector3 direction = (Transform.Basis * new Vector3(inputDir.X, 0, inputDir.Y)).Normalized();
 
 		if (direction != Vector3.Zero && !inBenchMode && !inConsoleMode && !inToiletMode)
 		{
@@ -154,14 +154,14 @@ public partial class Player : CharacterBody3D
 			velocity.Z = Mathf.MoveToward(velocity.Z, 0, Speed);
 		}
 
-        Velocity = velocity;
-        MoveAndSlide();
-    }
+		Velocity = velocity;
+		MoveAndSlide();
+	}
 
-    public override void _Process(double delta)
-    {
-        base._Process(delta);
+	public override void _Process(double delta)
+	{
+		base._Process(delta);
 
-        CheckHandCollisionAndHoldItem();
-    }
+		CheckHandCollisionAndHoldItem();
+	}
 }
