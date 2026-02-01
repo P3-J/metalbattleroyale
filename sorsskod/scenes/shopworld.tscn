@@ -1454,6 +1454,10 @@ size = Vector2(1, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_yfsq8"]
 size = Vector3(1, 0.3330078, 1)
 
+[sub_resource type="TextMesh" id="TextMesh_a3xyb"]
+text = "YOU ARE NOT SUPPOSED TO BE HERE"
+font_size = 64
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_06sir"]
 size = Vector3(0.76171875, 1.1782837, 1.1849365)
 
@@ -2337,6 +2341,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0988457, 2.0490007, 2.13138
 stream = ExtResource("67_06sir")
 volume_db = -40.0
 autoplay = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="worldassets" unique_id=1242299172]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5638623, 17.287498, -13.340673)
+mesh = SubResource("TextMesh_a3xyb")
 
 [node name="QueueManager" parent="." unique_id=984014989 instance=ExtResource("49_fdpo0")]
 maxQueueLength = 2

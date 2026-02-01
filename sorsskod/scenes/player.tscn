@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bu5r4s2avp3us" path="res://sorsskod/assets/arrowdir.png" id="4_mpllb"]
 [ext_resource type="FontFile" uid="uid://c4vvc2e8g0yyq" path="res://sorsskod/assets/Daydream DEMO.otf" id="6_yv8ma"]
 [ext_resource type="AudioStream" uid="uid://bwgquq1k00kn3" path="res://sorsskod/assets/tile-mono-01_CatXYT3l.wav" id="7_cjds3"]
-[ext_resource type="AudioStream" uid="uid://cm8t05ymgght1" path="res://sound/hitHurt (1).mp3" id="8_7x33d"]
+[ext_resource type="AudioStream" uid="uid://cm8t05ymgght1" path="res://Sound/hitHurt (1).mp3" id="8_7x33d"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mpllb"]
 height = 1.3647461

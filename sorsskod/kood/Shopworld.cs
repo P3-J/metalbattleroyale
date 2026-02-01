@@ -12,7 +12,7 @@ public partial class Shopworld : Node3D
     {
         base._Ready();
         glob = GetNode<Globals>("/root/Globals");
-        glob.EmitSignal("PlayerMovement", false);
+        glob.EmitSignal("Wtf", false);
         Input.MouseMode = Input.MouseModeEnum.Visible;
     }
 
@@ -20,7 +20,7 @@ public partial class Shopworld : Node3D
     {
         startcam.Current = false;
         menustuff.Visible = false;
-        glob.EmitSignal("PlayerMovement", true);
+        glob.EmitSignal("Wtf", true);
         Input.MouseMode = Input.MouseModeEnum.Captured;
     }
 

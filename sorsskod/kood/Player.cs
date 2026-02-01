@@ -19,6 +19,7 @@ public partial class Player : CharacterBody3D
 	bool holdingObj = false;
 	bool canHoldItem = true;
 	bool tryingToHoldItem = false;
+	bool alive = true;
 	RigidBody3D objInHand = null;
 	/// <summary>
 	///  SWITCH START END POINT
@@ -35,6 +36,8 @@ public partial class Player : CharacterBody3D
 		glob.Connect("LabelTextResponse", new Callable(this, nameof(UpdateInfoLabelText)));
 		BalanceLabel.Text = "Balance: " + moneyBalance.ToString() + " $";
 		glob.Connect("OrderDone", new Callable(this, nameof(AddBalance)));
+
+		glob.Connect("Wtf", new Callable(this, nameof(DisableMov)));
 	}
 
 	public void UpdateInfoLabelText(string text)
@@ -43,8 +46,19 @@ public partial class Player : CharacterBody3D
 		GD.Print("Updated Info Label Text: ", text);
 	}
 
+	public void DisableMov(bool stat)
+	{
+		BalanceLabel.Visible = stat;
+		alive = stat;
+
+
+	}
+
+
 	public override void _UnhandledInput(InputEvent e)
 	{
+		if (!alive) return;
+
 		if (inBenchMode)
 		{
 			HandleBenchInput(e);
@@ -127,6 +141,7 @@ public partial class Player : CharacterBody3D
 
 	public override void _PhysicsProcess(double delta)
 	{
+		if (!alive) return;
 		Vector3 velocity = Velocity;
 
 		if (Input.IsActionJustPressed("poop") && inToiletMode)

@@ -25,6 +25,9 @@ public partial class Globals : Node
 	public delegate void GetToiletTextEventHandler(string text);
 
 	[Signal]
+	public delegate void WtfEventHandler(bool stat);
+
+	[Signal]
 	public delegate void OrderInEventHandler();
 
 	[Signal]

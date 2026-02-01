@@ -38,6 +38,8 @@ public partial class Player
 
 	private void CheckHandCollisionAndHoldItem()
 	{
+		if (!alive) return;
+
 		if (!tryingToHoldItem)
 		{
 			objInHand = null;
