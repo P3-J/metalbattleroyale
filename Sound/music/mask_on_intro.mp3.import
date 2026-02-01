@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://dwssgjlky55t6"
-path="res://.godot/imported/mask_on_intro.mp3-9be3378f4b4caa3abf227e590f8b1629.mp3str"
+path="res://.godot/imported/mask_on_intro.mp3-905f6db960ea654fb00b03df4d6dd6af.mp3str"
 
 [deps]
 
-source_file="res://Sound/music/mask_on_intro.mp3"
-dest_files=["res://.godot/imported/mask_on_intro.mp3-9be3378f4b4caa3abf227e590f8b1629.mp3str"]
+source_file="res://sound/music/mask_on_intro.mp3"
+dest_files=["res://.godot/imported/mask_on_intro.mp3-905f6db960ea654fb00b03df4d6dd6af.mp3str"]
 
 [params]
 
