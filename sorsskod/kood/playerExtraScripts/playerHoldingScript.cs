@@ -6,62 +6,36 @@ using Godot;
 
 public partial class Player
 {
-    [Export]
-    Sprite2D pupSprite;
+    [Export] Sprite2D pupSprite;
+    [Export] Sprite2D eKeySprite;
 
-    [Export]
-    Sprite2D eKeySprite;
+	private List<MoveDirs> currentDirs = new List<MoveDirs>();
+	private bool inBenchMode = false;
+	private bool canUseBench = false;
+	private bool inConsoleMode = false;
+	private bool canUseConsole = false;
+	private bool canUsePassiveBench = false;
+	private Globals glob;
+	// sorri oleks ilusam viis teha ma ei viitsi
+	private readonly MoveDirs[] protRecipe = { MoveDirs.UP, MoveDirs.UP, MoveDirs.DOWN, MoveDirs.RIGHT };
+	private readonly MoveDirs[] ninjaRecipe = { MoveDirs.RIGHT, MoveDirs.UP, MoveDirs.DOWN, MoveDirs.DOWN };
+	private readonly MoveDirs[] skinRecipe = { MoveDirs.UP, MoveDirs.LEFT, MoveDirs.DOWN, MoveDirs.RIGHT };
+	private readonly MoveDirs[] gGlassesRecipe = { MoveDirs.DOWN, MoveDirs.UP, MoveDirs.UP, MoveDirs.LEFT };
+	private readonly MoveDirs[] FestivalRecipe = { MoveDirs.LEFT, MoveDirs.DOWN, MoveDirs.DOWN, MoveDirs.RIGHT };
 
-    [Export]
-    Camera3D benchCam;
-
-    [Export]
-    Sprite2D[] uiSlots;
-
-    [Export]
-    Node2D lmbParent;
-
-    [Export]
-    Node2D keysParent;
-
-    [Export]
-    Label PriceTag;
-
-    [Export]
-    Label BalanceLabel;
-
+    [Export] Sprite2D[] uiSlots;
+    [Export] Node2D lmbParent;
+    [Export] Node2D keysParent;
+    [Export] Label PriceTag;
+    [Export] Label BalanceLabel;
+	[Export] Camera3D benchCam;
     enum MoveDirs
-    {
-        UP,
-        DOWN,
-        LEFT,
-        RIGHT,
-    }
-
-    private List<MoveDirs> currentDirs = new List<MoveDirs>();
-    private bool inBenchMode = false;
-    private bool canUseBench = false;
-    private bool inConsoleMode = false;
-    private bool canUseConsole = false;
-    private bool canUsePassiveBench = false;
-    private Globals glob;
-
-    // sorri oleks ilusam viis teha ma ei viitsi
-    private readonly MoveDirs[] fireRecipe =
-    {
-        MoveDirs.UP,
-        MoveDirs.UP,
-        MoveDirs.DOWN,
-        MoveDirs.RIGHT,
-    };
-    private readonly MoveDirs[] iceRecipe =
-    {
-        MoveDirs.RIGHT,
-        MoveDirs.UP,
-        MoveDirs.DOWN,
-        MoveDirs.DOWN,
-    };
-
+	{
+		UP,
+		DOWN,
+		LEFT,
+		RIGHT,
+	}
     public int moneyBalance = 500;
 
     private void CheckHandCollisionAndHoldItem()
@@ -246,20 +220,33 @@ public partial class Player
 
     private async void ConfirmCombination()
     {
-        bool isFireMask = currentDirs.SequenceEqual(fireRecipe);
-        bool isIceMask = currentDirs.SequenceEqual(iceRecipe);
+        bool isProtMask = currentDirs.SequenceEqual(protRecipe);
+        bool isNinjaMask = currentDirs.SequenceEqual(ninjaRecipe);
+		bool isSkinMask = currentDirs.SequenceEqual(skinRecipe);
+		bool isGlassesMask = currentDirs.SequenceEqual(gGlassesRecipe);
+		bool isFestivalMask = currentDirs.SequenceEqual(FestivalRecipe);
 
-        if (isFireMask)
-        {
-            glob.EmitSignal("SpawnItem", "Protective Mask");
-            DisableBenchMode();
-        }
-
-        if (isIceMask)
-        {
-            glob.EmitSignal("SpawnItem", "Ninja Mask");
-            DisableBenchMode();
-        }
+        if (isProtMask)
+		{
+			glob.EmitSignal("SpawnItem", "Protective Mask");
+			DisableBenchMode();
+		}
+		if (isNinjaMask){
+			glob.EmitSignal("SpawnItem", "Ninja Mask");
+			DisableBenchMode();
+		}
+		if (isSkinMask){
+			glob.EmitSignal("SpawnItem", "Human Skin Mask");
+			DisableBenchMode();
+		}
+		if (isGlassesMask){
+			glob.EmitSignal("SpawnItem", "Blinding Mask");
+			DisableBenchMode();
+		}
+		if (isFestivalMask){
+			glob.EmitSignal("SpawnItem", "Festival Mask");
+			DisableBenchMode();
+		}
 
         await Task.Delay(1000);
         currentDirs.Clear();

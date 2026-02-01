@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://ilddwbes8n6u"
+path="res://.godot/imported/nmask.map-e3a505360f44c39ae5c30d293f8febbe.tres"
+
+[deps]
+
+source_file="res://trenchmaps/nmask.map"
+dest_files=["res://.godot/imported/nmask.map-e3a505360f44c39ae5c30d293f8febbe.tres"]
+
+[params]
+

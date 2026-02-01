@@ -75,7 +75,7 @@ public partial class Collectionbox : Area3D
     {
         foreach (string maskName in fulfilledMasks)
         {
-            int idx = Bodies.FindIndex(body => body.thisMask == maskName);
+            int idx = Bodies.FindIndex(body => body.GetNameOfMask() == maskName);
 
             if (idx != -1)
             {
