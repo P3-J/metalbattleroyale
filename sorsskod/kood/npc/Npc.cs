@@ -8,6 +8,7 @@ public partial class Npc : CharacterBody3D
 	public const float Speed = 1.0f;
 	public const float JumpVelocity = 4.5f;
 	private NavigationAgent3D navagent;
+	private AudioStreamPlayer3D voiceLines;
 	private bool Served = false;
 	private bool Connected = false;
 	Vector3 velocity;
@@ -16,11 +17,13 @@ public partial class Npc : CharacterBody3D
 	private AnimationPlayer animationPlayer;
 	[Signal]
 	public delegate void ReachedTargetEventHandler();	
+	[Export] private float VoiceLineInterval = 10.0f;
 
 	public override void _Ready()
 	{
 		Skins.Add((Node3D)GetNode("Node3DWalking"));
 		Skins.Add((Node3D)GetNode("Node3DWalking2"));
+		voiceLines = (AudioStreamPlayer3D)GetNode("AudioStreamPlayer3D");
 		base._Ready();
 		//GD.Print("NPC Added.");
 		navagent = (NavigationAgent3D)GetNode("NavigationAgent3D");
@@ -34,6 +37,13 @@ public partial class Npc : CharacterBody3D
 				animationPlayer = (AnimationPlayer)Skins[i].GetNode("AnimationPlayer");
 			}
 		}
+
+		Timer voiceline = new Timer();
+		voiceline.WaitTime = VoiceLineInterval;
+		voiceline.Autostart = true;
+		voiceline.OneShot = false;
+		AddChild(voiceline);
+		voiceline.Timeout += () => voiceLines.Playing = true;
 	}
 
 
