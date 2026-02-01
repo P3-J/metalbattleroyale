@@ -23,7 +23,7 @@ shader_parameter/chromatic_aberration_strength = 0.015
 shader_parameter/vignette_strength = 0.8
 shader_parameter/vignette_radius = 0.9
 
-[node name="player" type="CharacterBody3D" unique_id=863523212 node_paths=PackedStringArray("_head", "_camera", "handRay", "handMarker", "pupSprite", "eKeySprite", "uiSlots", "lmbParent", "keysParent", "PriceTag", "BalanceLabel")]
+[node name="player" type="CharacterBody3D" unique_id=863523212 node_paths=PackedStringArray("_head", "_camera", "handRay", "handMarker", "pupSprite", "eKeySprite", "uiSlots", "lmbParent", "keysParent", "BalanceLabel")]
 collision_layer = 0
 script = ExtResource("1_whmsy")
 _head = NodePath("head")
@@ -35,7 +35,6 @@ eKeySprite = NodePath("head/Camera3D/Control/ekey/ekeysprite")
 uiSlots = [NodePath("head/Camera3D/Control/craftingGame/k1"), NodePath("head/Camera3D/Control/craftingGame/k2"), NodePath("head/Camera3D/Control/craftingGame/k3"), NodePath("head/Camera3D/Control/craftingGame/k4")]
 lmbParent = NodePath("head/Camera3D/Control/lmb")
 keysParent = NodePath("head/Camera3D/Control/craftingGame")
-PriceTag = NodePath("head/Camera3D/Control/lmb/Label")
 BalanceLabel = NodePath("head/Camera3D/Control/Balance")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=393090299]
@@ -69,7 +68,6 @@ mouse_filter = 2
 [node name="lmb" type="Node2D" parent="head/Camera3D/Control" unique_id=867079726]
 
 [node name="pupsprite" type="Sprite2D" parent="head/Camera3D/Control/lmb" unique_id=2036218445]
-visible = false
 position = Vector2(680, 360)
 scale = Vector2(0.6333333, 0.6333333)
 texture = ExtResource("3_lmh14")
@@ -81,7 +79,13 @@ offset_top = 347.0
 offset_right = 757.0
 offset_bottom = 370.0
 size_flags_horizontal = 4
-text = "500$"
+text = "500$ to unlock the Passive Bench."
+
+[node name="InfoTag" type="Label" parent="head/Camera3D/Control/lmb" unique_id=1896141597]
+offset_left = 706.0
+offset_top = 350.0
+offset_right = 746.0
+offset_bottom = 373.0
 
 [node name="ekey" type="Node2D" parent="head/Camera3D/Control" unique_id=531328818]
 
@@ -137,6 +141,19 @@ grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 1, 1, 0.4862745)
 theme_override_fonts/font = ExtResource("6_yv8ma")
 text = "Balance: 0$"
+
+[node name="Toilet" type="Label" parent="head/Camera3D/Control" unique_id=1192284729]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.559375
+anchor_top = 0.48472223
+anchor_right = 0.65
+anchor_bottom = 0.51666665
+grow_horizontal = 2
+grow_vertical = 2
+text = "Press f to poop"
+metadata/_edit_use_anchors_ = true
 
 [node name="handRay" type="RayCast3D" parent="head/Camera3D" unique_id=609430703]
 target_position = Vector3(0, 0, -2.5)

@@ -24,7 +24,7 @@ public partial class Npc : CharacterBody3D
 		base._Ready();
 		//GD.Print("NPC Added.");
 		navagent = (NavigationAgent3D)GetNode("NavigationAgent3D");
-		animationPlayer = (AnimationPlayer)GetNode("Node3DTorsoHead/Node3DLegs/AnimationPlayer");
+		animationPlayer = (AnimationPlayer)GetNode("Node3DTorsoHead2/Node3DHands/AnimationPlayer");
 		Random rnd = new Random();
 		int skinIndex = rnd.Next(0, Skins.Count);
 		for (int i = 0; i < Skins.Count; i++)

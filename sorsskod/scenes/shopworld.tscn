@@ -67,6 +67,9 @@
 [ext_resource type="Material" uid="uid://dsqho3wcs35ko" path="res://textures/Ground/Materials/ice_08.tres" id="56_bh5y7"]
 [ext_resource type="Material" uid="uid://c1b71wuiivmf8" path="res://textures/Books/Materials/book_blue_06.tres" id="57_i6tir"]
 [ext_resource type="Material" uid="uid://dshj72psu5mn2" path="res://textures/gamersonly.tres" id="58_a3xyb"]
+[ext_resource type="PackedScene" uid="uid://dbntmflogp2lt" path="res://sorsskod/scenes/passive_bench.tscn" id="69_06sir"]
+[ext_resource type="Script" uid="uid://4gtmmeuj51h5" path="res://sorsskod/kood/ToiletSystem.cs" id="70_bh5y7"]
+[ext_resource type="Texture2D" uid="uid://b0viuo120v8qw" path="res://textures/128x128/Dirt/Dirt_10-128x128.png" id="70_t0s3q"]
 [ext_resource type="Material" uid="uid://ko76u1asynsq" path="res://textures/guideplayer.tres" id="61_bh5y7"]
 [ext_resource type="FontFile" uid="uid://c4vvc2e8g0yyq" path="res://sorsskod/assets/Daydream DEMO.otf" id="64_bh5y7"]
 [ext_resource type="AudioStream" uid="uid://72cr55bai162" path="res://sound/music/theme.mp3" id="67_06sir"]
@@ -1453,6 +1456,30 @@ size = Vector2(1, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_yfsq8"]
 size = Vector3(1, 0.3330078, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_06sir"]
+size = Vector3(0.76171875, 1.1782837, 1.1849365)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i6tir"]
+albedo_color = Color(0.33660764, 0.3366076, 0.3366076, 1)
+albedo_texture = ExtResource("70_t0s3q")
+metallic_specular = 0.0
+texture_filter = 0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_a3xyb"]
+material = SubResource("StandardMaterial3D_i6tir")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rppdc"]
+albedo_color = Color(0.23031491, 0.23031494, 0.23031494, 1)
+albedo_texture = ExtResource("70_t0s3q")
+metallic_specular = 0.0
+texture_filter = 0
+
+[sub_resource type="SphereMesh" id="SphereMesh_rffc8"]
+material = SubResource("StandardMaterial3D_rppdc")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bh5y7"]
+size = Vector3(0.11364746, 0.13949585, 0.5545654)
+
 [node name="shopworld" type="Node3D" unique_id=1823792519 node_paths=PackedStringArray("startcam", "menustuff")]
 script = ExtResource("1_t0s3q")
 startcam = NodePath("worlddefaults/menu/Camera3D")
@@ -2328,6 +2355,45 @@ transform = Transform3D(-0.9995864, 0, -0.028759003, 0, 1, 0, 0.028759003, 0, -0
 [node name="entity_0_mesh_instance" parent="passiveBench" index="0" unique_id=1883212394]
 transparency = 0.5
 
+[node name="ToiletSystem" type="Node3D" parent="." unique_id=2079373376]
+script = ExtResource("70_bh5y7")
+
+[node name="Area3D" type="Area3D" parent="ToiletSystem" unique_id=2115017317 groups=["toilet"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.105999, 0.5597099, 8.533575)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ToiletSystem/Area3D" unique_id=994694503]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.119140625, 0.089141846, -0.02178955)
+shape = SubResource("BoxShape3D_06sir")
+
+[node name="Marker3D" type="Marker3D" parent="ToiletSystem" unique_id=2063337067]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2332354, 1.1891469, 8.355408)
+
+[node name="junnid" type="Node3D" parent="ToiletSystem" unique_id=1837564203]
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ToiletSystem/junnid" unique_id=29262927]
+transform = Transform3D(0.0085686995, -0.09854971, 0.014646804, 0.03560991, 0.016759112, 0.091929674, -0.09305112, -0.0026614657, 0.0365295, 4.3375907, 0.8888633, 8.267908)
+mesh = SubResource("CapsuleMesh_a3xyb")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ToiletSystem/junnid" unique_id=1087178084]
+transform = Transform3D(0.09255933, 0, -0.037851937, 0.033446986, -0.0468192, 0.0817879, -0.017721975, -0.08836267, -0.04333554, 4.142259, 0.8888633, 8.21181)
+mesh = SubResource("CapsuleMesh_a3xyb")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="ToiletSystem/junnid" unique_id=866502515]
+transform = Transform3D(0.11246941, -0.40155852, -0.2758648, 0.1672349, -0.23409595, 0.40893957, -0.457584, -0.18425483, 0.08165192, 4.2519526, 0.75743014, 8.55106)
+mesh = SubResource("SphereMesh_rffc8")
+skeleton = NodePath("../..")
+
+[node name="Area3D2" type="Area3D" parent="ToiletSystem" unique_id=407005598 groups=["clearToilet"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5867975, 1.5938424, 9.00715)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ToiletSystem/Area3D2" unique_id=147793068]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22845459, 0.07084656, -0.22271729)
+shape = SubResource("BoxShape3D_bh5y7")
+
+[editable path="worldassets/actObj"]
 [connection signal="pressed" from="worlddefaults/menu/Camera3D/menu/Button" to="." method="_on_button_pressed"]
 
 [editable path="QueueManager"]

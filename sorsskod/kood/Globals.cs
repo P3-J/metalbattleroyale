@@ -13,6 +13,16 @@ public partial class Globals : Node
 
 	[Signal]
 	public delegate void SendItemsToRegisterEventHandler(string[] itemNames);
+	[Signal]
+	public delegate void PlayerUsedToiletEventHandler();
+	[Signal]
+	public delegate void clearToiletEventHandler();
+	[Signal]
+	public delegate void RequestLabelTextEventHandler(string type);
+	[Signal]
+	public delegate void LabelTextResponseEventHandler(string text);
+	[Signal]
+	public delegate void GetToiletTextEventHandler(string text);
 
 	[Signal]
 	public delegate void OrderInEventHandler();

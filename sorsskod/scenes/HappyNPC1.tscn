@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://qg468g724kvf"]
+[gd_scene format=3 uid="uid://bqv1r5lhs0nfj"]
 
 [ext_resource type="ArrayMesh" uid="uid://nm8nj4ehs0of" path="res://sorsskod/assets/head.obj" id="1_xit0j"]
 [ext_resource type="ArrayMesh" uid="uid://vku14kdie53o" path="res://sorsskod/assets/torso.obj" id="2_aif18"]
