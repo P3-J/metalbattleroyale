@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://b88oa3tcccq4m"
-path="res://.godot/imported/bell_sound.mp3-558e9e96dcb9c4da56daa2b5b9a89110.mp3str"
+path="res://.godot/imported/bell_sound.mp3-2b9fab0fab870beda468e1f729e94173.mp3str"
 
 [deps]
 
-source_file="res://Sound/audio/bell_sound.mp3"
-dest_files=["res://.godot/imported/bell_sound.mp3-558e9e96dcb9c4da56daa2b5b9a89110.mp3str"]
+source_file="res://sound/audio/bell_sound.mp3"
+dest_files=["res://.godot/imported/bell_sound.mp3-2b9fab0fab870beda468e1f729e94173.mp3str"]
 
 [params]
 
