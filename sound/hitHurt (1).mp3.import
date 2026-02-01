@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://cm8t05ymgght1"
-path="res://.godot/imported/hitHurt (1).mp3-855a556c65467165f63825c751366f40.mp3str"
+path="res://.godot/imported/hitHurt (1).mp3-bb0d19c9f57e00f29271ed1f04fe3d2d.mp3str"
 
 [deps]
 
-source_file="res://sound/hitHurt (1).mp3"
-dest_files=["res://.godot/imported/hitHurt (1).mp3-855a556c65467165f63825c751366f40.mp3str"]
+source_file="res://Sound/hitHurt (1).mp3"
+dest_files=["res://.godot/imported/hitHurt (1).mp3-bb0d19c9f57e00f29271ed1f04fe3d2d.mp3str"]
 
 [params]
 

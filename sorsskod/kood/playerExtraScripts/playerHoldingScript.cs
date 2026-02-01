@@ -48,7 +48,7 @@ public partial class Player
 		{
 			Vector3 targetPosition = handMarker.GlobalPosition;
 			Vector3 startingPosition = objInHand.GlobalPosition;
-			int STR = 5; // crank that soulja
+			int STR = 10; // crank that soulja
 			objInHand.LinearVelocity = (targetPosition - startingPosition) * STR;
 			pupSprite.Visible = false;
 			return;
@@ -98,9 +98,10 @@ public partial class Player
 		}
 		else {
 			canUseToilet = false;
+			eKeySprite.Visible = false;
 		}
 
-		if (collider.IsInGroup("craftingBench") && !holdingObj)
+		if (collider.IsInGroup("craftingBench") && !holdingObj && !inBenchMode)
 		{
 			eKeySprite.Visible = true;
 			canUseBench = true;
@@ -109,6 +110,7 @@ public partial class Player
 		else
 		{
 			canUseBench = false;
+			eKeySprite.Visible = false;
 		}
 
 		if (collider.IsInGroup("passiveBench") && !holdingObj)
@@ -143,7 +145,7 @@ public partial class Player
 			canUsePassiveBench = false;
 		}
 
-		if (collider.IsInGroup("console"))
+		if (collider.IsInGroup("console")  && !inConsoleMode)
 		{
 			eKeySprite.Visible = true;
 			canUseConsole = true;
@@ -152,6 +154,7 @@ public partial class Player
 		else
 		{
 			canUseConsole = false;
+			eKeySprite.Visible = false;
 		}
 
 		eKeySprite.Visible = false;
