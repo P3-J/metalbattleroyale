@@ -20,7 +20,7 @@ shader_parameter/chromatic_aberration_strength = 0.015
 shader_parameter/vignette_strength = 0.8
 shader_parameter/vignette_radius = 0.9
 
-[node name="player" type="CharacterBody3D" unique_id=863523212 node_paths=PackedStringArray("_head", "_camera", "handRay", "handMarker", "pupSprite", "uiSlots", "lmbParent", "keysParent")]
+[node name="player" type="CharacterBody3D" unique_id=863523212 node_paths=PackedStringArray("_head", "_camera", "handRay", "handMarker", "pupSprite", "uiSlots", "lmbParent", "keysParent", "PriceTag", "BalanceLabel")]
 collision_layer = 0
 script = ExtResource("1_whmsy")
 _head = NodePath("head")
@@ -31,6 +31,8 @@ pupSprite = NodePath("head/Camera3D/Control/lmb/pupsprite")
 uiSlots = [NodePath("head/Camera3D/Control/craftingGame/k1"), NodePath("head/Camera3D/Control/craftingGame/k2"), NodePath("head/Camera3D/Control/craftingGame/k3"), NodePath("head/Camera3D/Control/craftingGame/k4")]
 lmbParent = NodePath("head/Camera3D/Control/lmb")
 keysParent = NodePath("head/Camera3D/Control/craftingGame")
+PriceTag = NodePath("head/Camera3D/Control/lmb/Label")
+BalanceLabel = NodePath("head/Camera3D/Control/Balance")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=393090299]
 shape = SubResource("SphereShape3D_wygqo")
@@ -42,16 +44,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3045752, 0)
 
 [node name="Control" type="Control" parent="head/Camera3D" unique_id=1629114769]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 1280.0
-offset_bottom = 720.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 
 [node name="ColorRect" type="ColorRect" parent="head/Camera3D/Control" unique_id=412218603]
 material = SubResource("ShaderMaterial_4o5ng")
-layout_mode = 0
-offset_right = 1280.0
-offset_bottom = 720.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 
 [node name="lmb" type="Node2D" parent="head/Camera3D/Control" unique_id=867079726]
@@ -61,6 +68,15 @@ visible = false
 position = Vector2(680, 360)
 scale = Vector2(0.6333333, 0.6333333)
 texture = ExtResource("3_lmh14")
+
+[node name="Label" type="Label" parent="head/Camera3D/Control/lmb" unique_id=976416346]
+visible = false
+offset_left = 703.0
+offset_top = 347.0
+offset_right = 757.0
+offset_bottom = 370.0
+size_flags_horizontal = 4
+text = "500$"
 
 [node name="crosshair" type="Node2D" parent="head/Camera3D/Control" unique_id=1895449]
 
@@ -94,6 +110,17 @@ texture = ExtResource("4_mpllb")
 visible = false
 position = Vector2(904, 360)
 texture = ExtResource("4_mpllb")
+
+[node name="Balance" type="Label" parent="head/Camera3D/Control" unique_id=656892211]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -0.5
+offset_right = 0.5
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Balance: 0$"
 
 [node name="handRay" type="RayCast3D" parent="head/Camera3D" unique_id=609430703]
 target_position = Vector3(0, 0, -2.5)

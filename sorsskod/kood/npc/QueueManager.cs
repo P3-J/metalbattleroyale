@@ -51,7 +51,7 @@ public partial class QueueManager : Node3D
 		StartSpawnTimer();
 	}
 
-	public void ServeNpc(bool served)
+	public void ServeNpc(bool served, int orderValue = 0, string[] maskNames = null)
 	{
 		if (served && npcQueue.Count > 0)
 		{
@@ -76,8 +76,6 @@ public partial class QueueManager : Node3D
 			//GD.Print("Max queue length reached. Not spawning new NPC.");
 			return;
 		}
-
-		glob.EmitSignal("OrderIn");
 
 		var queueArray = npcQueue.ToArray();
 		int idx = System.Array.IndexOf(queueArray, a);
@@ -105,5 +103,17 @@ public partial class QueueManager : Node3D
 		timer.Timeout += () => newNpc.SetTargetPos(QueueStart.GlobalPosition);
 		timer.Start();
 		return newNpc;
+	}
+
+	private void _on_queue_start_area_entered(Area3D area)
+	{
+		GD.Print("Queue Area entered: ", area);
+		// NPC has entered the queue start area.
+		// Order logic can be handled here if needed.
+		if (area.IsInGroup("npcConnector"))
+		{
+			GD.Print("NPC entered the queue and gets order: ", area);
+			glob.EmitSignal("OrderIn");
+		}
 	}
 }

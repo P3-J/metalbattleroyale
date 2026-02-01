@@ -16,12 +16,17 @@ public partial class Player : CharacterBody3D
 	bool canHoldItem = true;
 	bool tryingToHoldItem = false;
 	RigidBody3D objInHand = null;
+	/// <summary>
+	///  SWITCH START END POINT
+	/// </summary>
 
 	public override void _Ready()
 	{
 		base._Ready();
 		Input.MouseMode = Input.MouseModeEnum.Captured;
 		glob = GetNode<Globals>("/root/Globals");
+		glob.Connect("PassiveBenchResponse", new Callable(this, nameof(HandlePassiveBenchResponse)));
+		BalanceLabel.Text = "Balance: " + moneyBalance.ToString() + " $";
 
 	}
 
@@ -53,6 +58,11 @@ public partial class Player : CharacterBody3D
 		{
 			if (e.IsActionPressed("lmb"))
 			{
+				if (canUsePassiveBench)
+				{
+					HandlePassiveBenchInput(e);
+					return;
+				}
 				if (canUseBench)
 				{
 					inBenchMode = true;
