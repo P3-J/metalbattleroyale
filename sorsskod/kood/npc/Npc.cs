@@ -19,12 +19,11 @@ public partial class Npc : CharacterBody3D
 
 	public override void _Ready()
 	{
-		Skins.Add((Node3D)GetNode("Node3DTorsoHead2"));
-		Skins.Add((Node3D)GetNode("Node3DTorsoHead"));
+		Skins.Add((Node3D)GetNode("Node3DWalking"));
+		Skins.Add((Node3D)GetNode("Node3DWalking2"));
 		base._Ready();
 		//GD.Print("NPC Added.");
 		navagent = (NavigationAgent3D)GetNode("NavigationAgent3D");
-		animationPlayer = (AnimationPlayer)GetNode("Node3DTorsoHead2/Node3DHands/AnimationPlayer");
 		Random rnd = new Random();
 		int skinIndex = rnd.Next(0, Skins.Count);
 		for (int i = 0; i < Skins.Count; i++)
@@ -32,6 +31,7 @@ public partial class Npc : CharacterBody3D
 			if (i == skinIndex)
 			{
 				Skins[i].Visible = true;
+				animationPlayer = (AnimationPlayer)Skins[i].GetNode("AnimationPlayer");
 			}
 		}
 	}
@@ -39,6 +39,14 @@ public partial class Npc : CharacterBody3D
 
 	public override void _PhysicsProcess(double delta)
 	{
+		if (IsOnFloor() == false)
+		{
+			velocity.Y -= 9.8f * (float)delta;
+		}
+		else
+		{
+			velocity.Y = 0;
+		}
 		if (Connected)
 		{
 			animationPlayer.Play("RESET");
