@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://bgnu0tx3vjvx1" path="res://sorsskod/kood/npc/Npc.cs" id="1_acauy"]
 [ext_resource type="PackedScene" uid="uid://c7qjbbqd5hy7h" path="res://sorsskod/scenes/3DModelTrash.tscn" id="2_ilbqd"]
 [ext_resource type="PackedScene" uid="uid://3uuauuweg2n6" path="res://sorsskod/scenes/3DModelDiverse.tscn" id="3_hdd1f"]
+[ext_resource type="AudioStream" uid="uid://d4je2dke11lhi" path="res://Sound/audio/voiceline_2.mp3" id="4_kx7mf"]
+[ext_resource type="AudioStream" uid="uid://dxkf61nmbl2ku" path="res://Sound/audio/voiceline_3.mp3" id="5_xj272"]
+[ext_resource type="AudioStream" uid="uid://cjrr3iikntasy" path="res://Sound/audio/voiceline_china.mp3" id="6_ql2q4"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_acauy"]
 radius = 0.29785156
@@ -12,6 +15,12 @@ size = Vector3(1.9299316, 0.40704346, 0.4836731)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_aalwj"]
 size = Vector3(5.2192993, 1, 1)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_kx7mf"]
+streams_count = 3
+stream_0/stream = ExtResource("6_ql2q4")
+stream_1/stream = ExtResource("5_xj272")
+stream_2/stream = ExtResource("4_kx7mf")
 
 [node name="Npc" type="CharacterBody3D" unique_id=149848484 groups=["npc"]]
 collision_layer = 0
@@ -45,6 +54,10 @@ visible = false
 [node name="Node3DWalking2" parent="." unique_id=1330115232 instance=ExtResource("2_ilbqd")]
 transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, 0, 0.94134974, 0)
 visible = false
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=559175159]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2522266, 0)
+stream = SubResource("AudioStreamRandomizer_kx7mf")
 
 [connection signal="area_entered" from="FrontConnector" to="." method="_on_front_connector_area_entered"]
 [connection signal="area_entered" from="BackConnector" to="." method="_on_back_connector_area_entered"]

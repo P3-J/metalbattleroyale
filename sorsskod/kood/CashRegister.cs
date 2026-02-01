@@ -87,9 +87,9 @@ public partial class CashRegister : PanelContainer
 	[Export]
 	AudioStreamPlayer3D successSoundPlayer;
 
-    double orderTime = 0;
+	double orderTime = 0;
 
-    RichTextLabel orderTimeLabel;
+	RichTextLabel orderTimeLabel;
 
 	public override void _Ready()
 	{
@@ -135,26 +135,26 @@ public partial class CashRegister : PanelContainer
 
 		HandleRegisterUIState();
 
-        orderTimeLabel = GetNode<RichTextLabel>(
+		orderTimeLabel = GetNode<RichTextLabel>(
             "MarginContainer/CashRegisterContainer/OrderTimeLabel"
 		);
 	}
 
-    public override void _Process(double delta)
-    {
-        orderTime += delta;
-        useOrderSeconds();
-    }
+	public override void _Process(double delta)
+	{
+		orderTime += delta;
+		useOrderSeconds();
+	}
 
-    private void useOrderSeconds()
-    {
-       double thing = orderTime / (double)60;
-       double minutes = Math.Floor(thing);
-       double seconds = Math.Round((thing - minutes) * 60);
+	private void useOrderSeconds()
+	{
+	   double thing = orderTime / (double)60;
+	   double minutes = Math.Floor(thing);
+	   double seconds = Math.Round((thing - minutes) * 60);
 
-       orderTimeLabel.Text = $"{minutes.ToString().PadLeft(2,'0')}:{seconds.ToString().PadLeft(2,'0')}";
+	   orderTimeLabel.Text = $"{minutes.ToString().PadLeft(2,'0')}:{seconds.ToString().PadLeft(2,'0')}";
 
-    }
+	}
 
 	public void AddLineItem(Mask mask)
 	{
@@ -224,8 +224,8 @@ public partial class CashRegister : PanelContainer
 	{
 		orderInProgress = true;
 		orderIsFulfilled = false;
-        orderTime = 0;
-        orderTimeLabel.Visible = true;
+		orderTime = 0;
+		orderTimeLabel.Visible = true;
 		HandleRegisterUIState();
 		GenerateOrder();
 	}
@@ -252,7 +252,7 @@ public partial class CashRegister : PanelContainer
 		{
 			return;
 		}
-        orderTimeLabel.Visible = false;
+		orderTimeLabel.Visible = false;
 
 		int realSum = masksInCurrentOrder.Sum(mask => mask.Price);
 		long userSum = Convert.ToInt64(sum);
