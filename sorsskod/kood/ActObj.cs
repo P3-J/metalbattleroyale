@@ -8,7 +8,7 @@ public partial class ActObj : RigidBody3D
 	[Export] MeshInstance3D f2;
 
 	string[] masks = ["Protective Mask", "Ninja Mask"];
-	string thisMask = "Protective Mask";
+	public string thisMask = "Protective Mask";
 
 
 	public override void _Ready()
