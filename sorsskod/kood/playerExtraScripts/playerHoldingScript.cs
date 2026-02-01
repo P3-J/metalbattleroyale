@@ -197,7 +197,7 @@ public partial class Player
 
 	private void HandlePassiveBenchResponse(int balance, int newNeededMoney)
 	{
-		AddBalance(true, balance);
+		AddBalance(true, balance, []);
 	}
 
 	private void HandleBenchInput(InputEvent e)
@@ -230,7 +230,7 @@ public partial class Player
 		}
 	}
 
-	private void AddBalance(bool isDone, int balance)
+	private void AddBalance(bool isDone, int balance, string[] soldItems)
 	{
 		if (isDone)
 		{

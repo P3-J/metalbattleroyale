@@ -34,6 +34,7 @@ public partial class Player : CharacterBody3D
 		glob.Connect("PassiveBenchResponse", new Callable(this, nameof(HandlePassiveBenchResponse)));
 		glob.Connect("LabelTextResponse", new Callable(this, nameof(UpdateInfoLabelText)));
 		BalanceLabel.Text = "Balance: " + moneyBalance.ToString() + " $";
+		glob.Connect("OrderDone", new Callable(this, nameof(AddBalance)));
 	}
 
 	public void UpdateInfoLabelText(string text)
