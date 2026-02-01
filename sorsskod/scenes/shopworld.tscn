@@ -65,9 +65,9 @@
 [ext_resource type="Material" uid="uid://dcg2fq3hn1s3b" path="res://textures/Ground/Materials/ice_03.tres" id="55_t0s3q"]
 [ext_resource type="Material" uid="uid://dsqho3wcs35ko" path="res://textures/Ground/Materials/ice_08.tres" id="56_bh5y7"]
 [ext_resource type="Material" uid="uid://c1b71wuiivmf8" path="res://textures/Books/Materials/book_blue_06.tres" id="57_i6tir"]
-[ext_resource type="AudioStream" uid="uid://chvamc0dcaxa0" path="res://sound/theme.mp3" id="57_s0yl4"]
 [ext_resource type="Material" uid="uid://dshj72psu5mn2" path="res://textures/gamersonly.tres" id="58_a3xyb"]
 [ext_resource type="Material" uid="uid://ko76u1asynsq" path="res://textures/guideplayer.tres" id="61_bh5y7"]
+[ext_resource type="AudioStream" uid="uid://72cr55bai162" path="res://sound/music/theme.mp3" id="67_06sir"]
 [ext_resource type="PackedScene" path="res://sorsskod/scenes/passive_bench.tscn" id="69_06sir"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_yfsq8"]
@@ -2258,7 +2258,7 @@ collision_layer = 2
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="worldassets" unique_id=1009174119]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0988457, 2.0490007, 2.1313841)
-stream = ExtResource("57_s0yl4")
+stream = ExtResource("67_06sir")
 volume_db = -40.0
 autoplay = true
 
