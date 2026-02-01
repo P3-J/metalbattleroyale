@@ -11,7 +11,6 @@ public partial class Player
 	[Export] Sprite2D[] uiSlots;
 	[Export] Node2D lmbParent;
 	[Export] Node2D keysParent;
-	[Export] Label PriceTag;
 	[Export] Label BalanceLabel;
 
 	enum MoveDirs { UP, DOWN, LEFT, RIGHT }
@@ -22,6 +21,11 @@ public partial class Player
 	private bool inConsoleMode = false;
 	private bool canUseConsole = false;
 	private bool canUsePassiveBench = false;
+	private bool canUseToilet = false;
+	private bool usedToilet = false;
+	private bool inToiletMode = false;
+	private bool canClearToilet = false;
+	private Vector3 resetPos = new Vector3(0, 1, 0);
 	private Globals glob;
 	// sorri oleks ilusam viis teha ma ei viitsi
 	private readonly MoveDirs[] fireRecipe = { MoveDirs.UP, MoveDirs.UP, MoveDirs.DOWN, MoveDirs.RIGHT };
@@ -49,7 +53,7 @@ public partial class Player
 		if (!handRay.IsColliding())
 		{
 			pupSprite.Visible = false;
-			PriceTag.Visible = false;
+			infoTag.Visible = false;
 			canUseBench = false;
 			return;
 		}
@@ -62,6 +66,34 @@ public partial class Player
 			holdingObj = true;
 			objInHand = obj;
 			return;
+		}
+
+		if (collider.IsInGroup("clearToilet"))
+		{
+			pupSprite.Visible = true;
+			canClearToilet = true;
+			infoTag.Text = "Clear Toilet";
+			infoTag.Visible = true;
+			return;
+		}
+		else
+		{
+			canClearToilet = false;
+		}
+
+		if (collider.IsInGroup("toilet"))
+		{
+			pupSprite.Visible = true;
+			canUseToilet = true;
+			if (infoTag.Visible == false)
+				{
+					glob.EmitSignal("RequestLabelText", "Toilet");
+				}
+			infoTag.Visible = true;
+			return;
+		}
+		else {
+			canUseToilet = false;
 		}
 
 		if (collider.IsInGroup("craftingBench") && !holdingObj)
@@ -78,7 +110,12 @@ public partial class Player
 		if (collider.IsInGroup("passiveBench") && !holdingObj)
 		{
 			pupSprite.Visible = true;
-			PriceTag.Visible = true;
+			//InfoTag.Visible = true;
+			if (infoTag.Visible == false)
+			{
+				glob.EmitSignal("RequestLabelText", "PassiveBench");
+			}
+			infoTag.Visible = true;
 			canUsePassiveBench = true;
 			return;
 		}
@@ -97,8 +134,7 @@ public partial class Player
 		{
 			canUseConsole = false;
 		}
-
-		PriceTag.Visible = false;
+		infoTag.Visible = false;
 		pupSprite.Visible = false;
 	}
 
@@ -113,13 +149,38 @@ public partial class Player
 		}
 	}
 
+	private void HandleClearToiletInput(InputEvent e)
+	{
+		if (e is InputEventMouseButton)
+		{
+			if (e.IsActionPressed("lmb"))
+			{
+				glob.EmitSignal("clearToilet");
+				usedToilet = false;
+				return;
+			}
+		}
+	}
+
+	private void HandleToiletInput(InputEvent e)
+	{
+		if (e is InputEventMouseButton)
+		{
+			if (e.IsActionPressed("lmb"))
+			{
+				inToiletMode = true;
+				resetPos = GlobalPosition;
+				GlobalPosition = new Vector3(4.233f, 1.189f, 8.355f); // toilet location
+				toiletLabel.Visible = true;
+				usedToilet = true;
+				return;
+			}
+		}
+	}
+
 	private void HandlePassiveBenchResponse(int balance, int newNeededMoney)
 	{
 		AddBalance(true, balance);
-		if (newNeededMoney > 0)
-		{
-			PriceTag.Text = "Upgrade Cost: " + newNeededMoney.ToString() + " $";
-		}
 	}
 
 	private void HandleBenchInput(InputEvent e)

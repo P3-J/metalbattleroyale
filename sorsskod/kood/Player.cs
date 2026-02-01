@@ -11,6 +11,8 @@ public partial class Player : CharacterBody3D
 	[Export] Marker3D handMarker;
 	[Export] CashRegister reg;
 	[Export] Camera3D cashCam;
+	Label toiletLabel;
+	Label infoTag;
 
 	bool holdingObj = false;
 	bool canHoldItem = true;
@@ -23,11 +25,19 @@ public partial class Player : CharacterBody3D
 	public override void _Ready()
 	{
 		base._Ready();
+		toiletLabel = GetNode<Label>("head/Camera3D/Control/Toilet");
+		infoTag = GetNode<Label>("head/Camera3D/Control/lmb/InfoTag");
 		Input.MouseMode = Input.MouseModeEnum.Captured;
 		glob = GetNode<Globals>("/root/Globals");
 		glob.Connect("PassiveBenchResponse", new Callable(this, nameof(HandlePassiveBenchResponse)));
+		glob.Connect("LabelTextResponse", new Callable(this, nameof(UpdateInfoLabelText)));
 		BalanceLabel.Text = "Balance: " + moneyBalance.ToString() + " $";
+	}
 
+	public void UpdateInfoLabelText(string text)
+	{
+		infoTag.Text = text;
+		GD.Print("Updated Info Label Text: ", text);
 	}
 
 	public override void _UnhandledInput(InputEvent e)
@@ -61,6 +71,16 @@ public partial class Player : CharacterBody3D
 				if (canUsePassiveBench)
 				{
 					HandlePassiveBenchInput(e);
+					return;
+				}
+				if (canClearToilet)
+				{
+					HandleClearToiletInput(e);
+					return;
+				}
+				if (canUseToilet && !usedToilet)
+				{
+					HandleToiletInput(e);
 					return;
 				}
 				if (canUseBench)
@@ -102,16 +122,25 @@ public partial class Player : CharacterBody3D
 	{
 		Vector3 velocity = Velocity;
 
+		if (Input.IsActionJustPressed("poop") && inToiletMode)
+		{
+			toiletLabel.Visible = false;
+			// play sound and then inToiletMode = false after some time
+			glob.EmitSignal("PlayerUsedToilet");
+			GlobalPosition = resetPos;
+			inToiletMode = false;
+		}
+
 		if (!IsOnFloor())
 			velocity.Y -= ProjectSettings.GetSetting("physics/3d/default_gravity").AsSingle() * (float)delta;
 
-		if (Input.IsActionJustPressed("jump") && IsOnFloor() && !inBenchMode)
+		if (Input.IsActionJustPressed("jump") && IsOnFloor() && !inBenchMode && !inConsoleMode && !inToiletMode)
 			velocity.Y = JumpVelocity;
 
 		Vector2 inputDir = Input.GetVector("move_left", "move_right", "move_forward", "move_back");
 		Vector3 direction = (Transform.Basis * new Vector3(inputDir.X, 0, inputDir.Y)).Normalized();
 
-		if (direction != Vector3.Zero && !inBenchMode)
+		if (direction != Vector3.Zero && !inBenchMode && !inConsoleMode && !inToiletMode)
 		{
 			velocity.X = direction.X * Speed;
 			velocity.Z = direction.Z * Speed;
