@@ -39,13 +39,31 @@ public partial class CashRegister : PanelContainer
 		new Mask
 		{
 			Name = "Protective Mask",
-			Price = 75,
+			Price = 15,
 			IsFulfilled = false,
 		},
 		new Mask
 		{
 			Name = "Ninja Mask",
 			Price = 175,
+			IsFulfilled = false,
+		},
+		new Mask
+		{
+			Name = "Human Skin Mask",
+			Price = 300,
+			IsFulfilled = false,
+		},
+		new Mask
+		{
+			Name = "Blinding Mask",
+			Price = 40,
+			IsFulfilled = false,
+		},
+		new Mask
+		{
+			Name = "Festival Mask",
+			Price = 35,
 			IsFulfilled = false,
 		},
 	];
