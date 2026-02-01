@@ -8,6 +8,9 @@
 [ext_resource type="FontFile" uid="uid://c4vvc2e8g0yyq" path="res://sorsskod/assets/Daydream DEMO.otf" id="6_yv8ma"]
 [ext_resource type="AudioStream" uid="uid://bwgquq1k00kn3" path="res://sorsskod/assets/tile-mono-01_CatXYT3l.wav" id="7_cjds3"]
 [ext_resource type="AudioStream" uid="uid://cm8t05ymgght1" path="res://Sound/hitHurt (1).mp3" id="8_7x33d"]
+[ext_resource type="AudioStream" uid="uid://vn707uavvaqv" path="res://Sound/audio/fart1.mp3" id="9_6maki"]
+[ext_resource type="AudioStream" uid="uid://qg54vsb70lrt" path="res://Sound/audio/fart2.mp3" id="10_olqxi"]
+[ext_resource type="AudioStream" uid="uid://dfwq123l7r1bl" path="res://Sound/audio/fart3.mp3" id="11_yg72m"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mpllb"]
 height = 1.3647461
@@ -25,14 +28,19 @@ shader_parameter/chromatic_aberration_strength = 0.015
 shader_parameter/vignette_strength = 0.8
 shader_parameter/vignette_radius = 0.9
 
-[node name="player" type="CharacterBody3D" unique_id=863523212 node_paths=PackedStringArray("_head", "_camera", "handRay", "handMarker", "craftingAudio", "walkingPlayer", "pupSprite", "eKeySprite", "uiSlots", "lmbParent", "keysParent", "BalanceLabel")]
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_w7rnl"]
+streams_count = 3
+stream_0/stream = ExtResource("9_6maki")
+stream_1/stream = ExtResource("10_olqxi")
+stream_2/stream = ExtResource("11_yg72m")
+
+[node name="player" type="CharacterBody3D" unique_id=863523212 node_paths=PackedStringArray("_head", "_camera", "handRay", "handMarker", "walkingPlayer", "pupSprite", "eKeySprite", "uiSlots", "lmbParent", "keysParent", "BalanceLabel")]
 collision_layer = 0
 script = ExtResource("1_whmsy")
 _head = NodePath("head")
 _camera = NodePath("head/Camera3D")
 handRay = NodePath("head/Camera3D/handRay")
 handMarker = NodePath("head/Camera3D/handHoldSpot")
-craftingAudio = NodePath("soundcraft")
 walkingPlayer = NodePath("AudioStreamPlayer3D")
 pupSprite = NodePath("head/Camera3D/Control/lmb/pupsprite")
 eKeySprite = NodePath("head/Camera3D/Control/ekey/ekeysprite")
@@ -172,3 +180,6 @@ stream = ExtResource("7_cjds3")
 [node name="soundcraft" type="AudioStreamPlayer3D" parent="." unique_id=620499671]
 stream = ExtResource("8_7x33d")
 volume_db = -10.0
+
+[node name="Fart" type="AudioStreamPlayer3D" parent="." unique_id=1548090582]
+stream = SubResource("AudioStreamRandomizer_w7rnl")

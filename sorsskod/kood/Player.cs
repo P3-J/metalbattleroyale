@@ -15,6 +15,7 @@ public partial class Player : CharacterBody3D
 	[Export] AudioStreamPlayer3D walkingPlayer;
 	Label toiletLabel;
 	Label infoTag;
+	private AudioStreamPlayer3D fartAudio;
 
 	bool holdingObj = false;
 	bool canHoldItem = true;
@@ -28,6 +29,7 @@ public partial class Player : CharacterBody3D
 	public override void _Ready()
 	{
 		base._Ready();
+		fartAudio = GetNode<AudioStreamPlayer3D>("Fart");
 		toiletLabel = GetNode<Label>("head/Camera3D/Control/Toilet");
 		infoTag = GetNode<Label>("head/Camera3D/Control/lmb/InfoTag");
 		Input.MouseMode = Input.MouseModeEnum.Captured;
@@ -53,7 +55,6 @@ public partial class Player : CharacterBody3D
 
 
 	}
-
 
 	public override void _UnhandledInput(InputEvent e)
 	{
@@ -148,9 +149,14 @@ public partial class Player : CharacterBody3D
 		{
 			toiletLabel.Visible = false;
 			// play sound and then inToiletMode = false after some time
-			glob.EmitSignal("PlayerUsedToilet");
-			GlobalPosition = resetPos;
-			inToiletMode = false;
+			fartAudio.Playing = true;
+			fartAudio.Finished += () =>
+			{
+				glob.EmitSignal("PlayerUsedToilet");
+				GlobalPosition = resetPos;
+				inToiletMode = false;
+			};
+			return;
 		}
 
 		if (!IsOnFloor()){
