@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://coyvthew7ly22" path="res://sorsskod/assets/ekey.png" id="4_4kom4"]
 [ext_resource type="Texture2D" uid="uid://bu5r4s2avp3us" path="res://sorsskod/assets/arrowdir.png" id="4_mpllb"]
 [ext_resource type="FontFile" uid="uid://c4vvc2e8g0yyq" path="res://sorsskod/assets/Daydream DEMO.otf" id="6_yv8ma"]
+[ext_resource type="AudioStream" uid="uid://bwgquq1k00kn3" path="res://sorsskod/assets/tile-mono-01_CatXYT3l.wav" id="7_cjds3"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mpllb"]
 height = 1.3647461
@@ -23,13 +24,14 @@ shader_parameter/chromatic_aberration_strength = 0.015
 shader_parameter/vignette_strength = 0.8
 shader_parameter/vignette_radius = 0.9
 
-[node name="player" type="CharacterBody3D" unique_id=863523212 node_paths=PackedStringArray("_head", "_camera", "handRay", "handMarker", "pupSprite", "eKeySprite", "uiSlots", "lmbParent", "keysParent", "BalanceLabel")]
+[node name="player" type="CharacterBody3D" unique_id=863523212 node_paths=PackedStringArray("_head", "_camera", "handRay", "handMarker", "walkingPlayer", "pupSprite", "eKeySprite", "uiSlots", "lmbParent", "keysParent", "BalanceLabel")]
 collision_layer = 0
 script = ExtResource("1_whmsy")
 _head = NodePath("head")
 _camera = NodePath("head/Camera3D")
 handRay = NodePath("head/Camera3D/handRay")
 handMarker = NodePath("head/Camera3D/handHoldSpot")
+walkingPlayer = NodePath("AudioStreamPlayer3D")
 pupSprite = NodePath("head/Camera3D/Control/lmb/pupsprite")
 eKeySprite = NodePath("head/Camera3D/Control/ekey/ekeysprite")
 uiSlots = [NodePath("head/Camera3D/Control/craftingGame/k1"), NodePath("head/Camera3D/Control/craftingGame/k2"), NodePath("head/Camera3D/Control/craftingGame/k3"), NodePath("head/Camera3D/Control/craftingGame/k4")]
@@ -161,3 +163,6 @@ collide_with_areas = true
 
 [node name="handHoldSpot" type="Marker3D" parent="head/Camera3D" unique_id=1087110508]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.1897058)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=365242011]
+stream = ExtResource("7_cjds3")

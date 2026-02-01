@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using Godot;
 using Godot.Collections;
 
@@ -10,8 +11,6 @@ public class Mask : IEquatable<Mask>
 	public int Price { get; set; }
 
 	public bool IsFulfilled { get; set; }
-
-	// TODO: Add some sort of value to separate effects of masks
 
 	public bool Equals(Mask mask) => mask.Name == Name;
 }
@@ -76,7 +75,7 @@ public partial class CashRegister : PanelContainer
 
 	bool orderIsFulfilled = false;
 
-	RichTextLabel fulfillOrderLabel;
+	VBoxContainer fullfillOrderContainer;
 
 	RichTextLabel waitForCustomersLabel;
 
@@ -87,6 +86,10 @@ public partial class CashRegister : PanelContainer
 
 	[Export]
 	AudioStreamPlayer3D successSoundPlayer;
+
+    double orderTime = 0;
+
+    RichTextLabel orderTimeLabel;
 
 	public override void _Ready()
 	{
@@ -118,8 +121,8 @@ public partial class CashRegister : PanelContainer
 		tween.TweenProperty(cursor, "modulate:a", 0.0, 0);
 		tween.TweenInterval(0.6f);
 
-		fulfillOrderLabel = GetNode<RichTextLabel>(
-            "MarginContainer/CashRegisterContainer/FulfillOrderLabel"
+		fullfillOrderContainer = GetNode<VBoxContainer>(
+            "MarginContainer/CashRegisterContainer/FulfillOrderContainer"
 		);
 
 		waitForCustomersLabel = GetNode<RichTextLabel>(
@@ -131,7 +134,27 @@ public partial class CashRegister : PanelContainer
 		);
 
 		HandleRegisterUIState();
+
+        orderTimeLabel = GetNode<RichTextLabel>(
+            "MarginContainer/CashRegisterContainer/OrderTimeLabel"
+		);
 	}
+
+    public override void _Process(double delta)
+    {
+        orderTime += delta;
+        useOrderSeconds();
+    }
+
+    private void useOrderSeconds()
+    {
+       double thing = orderTime / (double)60;
+       double minutes = Math.Floor(thing);
+       double seconds = Math.Round((thing - minutes) * 60);
+
+       orderTimeLabel.Text = $"{minutes.ToString().PadLeft(2,'0')}:{seconds.ToString().PadLeft(2,'0')}";
+
+    }
 
 	public void AddLineItem(Mask mask)
 	{
@@ -201,6 +224,8 @@ public partial class CashRegister : PanelContainer
 	{
 		orderInProgress = true;
 		orderIsFulfilled = false;
+        orderTime = 0;
+        orderTimeLabel.Visible = true;
 		HandleRegisterUIState();
 		GenerateOrder();
 	}
@@ -227,6 +252,7 @@ public partial class CashRegister : PanelContainer
 		{
 			return;
 		}
+        orderTimeLabel.Visible = false;
 
 		int realSum = masksInCurrentOrder.Sum(mask => mask.Price);
 		long userSum = Convert.ToInt64(sum);
@@ -370,7 +396,7 @@ public partial class CashRegister : PanelContainer
 	private void HandleRegisterUIState()
 	{
 		sumLineContainer.Visible = orderIsFulfilled;
-		fulfillOrderLabel.Visible = orderInProgress && !orderIsFulfilled;
+		fullfillOrderContainer.Visible = orderInProgress && !orderIsFulfilled;
 		waitForCustomersLabel.Visible = !orderInProgress;
 	}
 }
