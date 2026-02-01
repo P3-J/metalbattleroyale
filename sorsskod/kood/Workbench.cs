@@ -3,7 +3,6 @@ using System;
 
 public partial class Workbench : Node3D
 {
-
 	private Globals glob;
 	[Export] PackedScene Mask;
 	[Export] Marker3D spawnPoint;

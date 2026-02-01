@@ -11,6 +11,7 @@ public partial class Player : CharacterBody3D
 	[Export] Marker3D handMarker;
 	[Export] CashRegister reg;
 	[Export] Camera3D cashCam;
+	[Export] AudioStreamPlayer3D craftingAudio;
 	[Export] AudioStreamPlayer3D walkingPlayer;
 	Label toiletLabel;
 	Label infoTag;

@@ -220,6 +220,13 @@ public partial class Player
 				AddInput(MoveDirs.RIGHT);
 			else if (keyEvent.Keycode == Key.E)
 				DisableBenchMode();
+
+			var rng = new Godot.RandomNumberGenerator();
+			rng.Randomize(); 
+			float randomValue = rng.RandfRange(0.8f, 1.5f);
+
+			craftingAudio.PitchScale = randomValue;
+			craftingAudio.Play();
 		}
 	}
 

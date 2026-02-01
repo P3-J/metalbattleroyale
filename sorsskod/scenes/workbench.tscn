@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://brb8h4redclcp" path="res://textures/Windows/Materials/window_paintcans_01.jpg" id="7_n41sh"]
 [ext_resource type="Texture2D" uid="uid://cmleho84ej3sl" path="res://textures/FoxTex_Vol1/Textures/F1/CNCC/CNCC2_1.png" id="8_nyj4q"]
 [ext_resource type="Material" uid="uid://crbfunnr2djnl" path="res://textures/FoxTex_Vol1/Textures/F1/CNCC/CNCC2_5.tres" id="9_j5yqr"]
+[ext_resource type="AudioStream" uid="uid://cm8t05ymgght1" path="res://sound/hitHurt (1).mp3" id="10_y4sto"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vu6p0"]
 albedo_texture = ExtResource("3_t33i6")
@@ -277,3 +278,7 @@ shape = SubResource("BoxShape3D_ms7d0")
 
 [node name="spawnpoint" type="Marker3D" parent="." unique_id=808726731]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35437804, 1.8167126, 0)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1144976768]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6246395, 1.2963498, 0)
+stream = ExtResource("10_y4sto")
