@@ -2,15 +2,14 @@
 
 [ext_resource type="ArrayMesh" uid="uid://nm8nj4ehs0of" path="res://sorsskod/assets/head.obj" id="1_cbpvv"]
 [ext_resource type="ArrayMesh" uid="uid://vku14kdie53o" path="res://sorsskod/assets/torso.obj" id="2_3x8wm"]
-[ext_resource type="Texture2D" uid="uid://dten1u6g765rl" path="res://sorsskod/assets/glock18.png" id="3_cbpvv"]
 [ext_resource type="ArrayMesh" uid="uid://bp8sphu3m3i5q" path="res://sorsskod/assets/leg.obj" id="4_dv7ix"]
+[ext_resource type="Texture2D" uid="uid://burq0rpdvhokv" path="res://sorsskod/assets/glizzymask.png" id="5_cbpvv"]
 [ext_resource type="ArrayMesh" uid="uid://cfvamy7vwvxck" path="res://sorsskod/assets/hand.obj" id="5_vclto"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oy3px"]
 albedo_color = Color(0.42745098, 0.21960784, 0, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1ma4m"]
-albedo_texture = ExtResource("3_cbpvv")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3x8wm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mkdsw"]
 albedo_color = Color(0.42745098, 0.21960784, 0, 1)
@@ -134,6 +133,11 @@ _data = {
 &"RESET": SubResource("Animation_vhwux")
 }
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_76e2d"]
+albedo_texture = ExtResource("5_cbpvv")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_dv7ix"]
+
 [node name="Node3DWalking" type="Node3D" unique_id=833920949]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.087201476, 0)
 
@@ -145,7 +149,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_oy3px")
 [node name="Torso" type="MeshInstance3D" parent="." unique_id=108419634]
 transform = Transform3D(0.8, 0, 0, 0, 0.7, 0, 0, 0, 0.8, -0.81619346, -0.019490242, 0.019497156)
 mesh = ExtResource("2_3x8wm")
-surface_material_override/0 = SubResource("StandardMaterial3D_1ma4m")
+surface_material_override/0 = SubResource("StandardMaterial3D_3x8wm")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1771483802]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.18064964, 0)
@@ -191,3 +195,9 @@ surface_material_override/0 = SubResource("StandardMaterial3D_qw5e1")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=410556006]
 libraries/ = SubResource("AnimationLibrary_c3nu3")
 speed_scale = 3.0
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1227001287]
+transform = Transform3D(0.583, 0, 0, 0, -0.0017623932, -0.58299905, 0, 0.98999834, -0.0010378537, -0.01250509, -0.016209006, 0.35850808)
+material_override = SubResource("StandardMaterial3D_76e2d")
+mesh = SubResource("PlaneMesh_dv7ix")
+skeleton = NodePath("../Node3DHands")
