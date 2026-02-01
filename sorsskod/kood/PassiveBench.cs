@@ -19,6 +19,7 @@ public partial class PassiveBench : Node3D
 		benchMesh = GetNode<MeshInstance3D>("entity_0_mesh_instance");
 		glob = GetNode<Globals>("/root/Globals");
 		glob.Connect("PassiveBenchInteract", new Callable(this, nameof(OnPassiveBenchInteract)));
+		glob.Connect("RequestLabelText", new Callable(this, nameof(GetPassiveBenchText)));
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -51,6 +52,7 @@ public partial class PassiveBench : Node3D
 			int temp = neededMoney;
 			neededMoney = (int)(neededMoney * 1.5);
 			glob.EmitSignal("PassiveBenchResponse", -temp, neededMoney);
+			GetPassiveBenchText("PassiveBench");
 		}
 		else
 		{
@@ -58,6 +60,7 @@ public partial class PassiveBench : Node3D
 			int temp = neededMoney;
 			neededMoney = (int)(neededMoney * 1.5);
 			glob.EmitSignal("PassiveBenchResponse", -temp, neededMoney);
+			GetPassiveBenchText("PassiveBench");
 		}
 	}
 
@@ -67,6 +70,22 @@ public partial class PassiveBench : Node3D
 		{
 			GD.Print("Passive Bench generated income.");
 			glob.EmitSignal("PassiveBenchResponse", generatedIncome, -1);
+		}
+	}
+
+	public void GetPassiveBenchText(string type)
+	{
+		if (type != "PassiveBench")
+		{
+			return;
+		}
+		if (!unlocked)
+		{
+			glob.EmitSignal("LabelTextResponse", neededMoney.ToString() + " $ to unlock. \nGenerates " + generatedIncome.ToString() + " $ every " + IncomeTimer.WaitTime.ToString() + " seconds.");
+		}
+		else
+		{
+			glob.EmitSignal("LabelTextResponse", neededMoney.ToString() + " $ to upgrade. \nGenerates " + ((int)(generatedIncome * 1.5)).ToString() + " $ every " + IncomeTimer.WaitTime.ToString() + " seconds.");
 		}
 	}
 }
